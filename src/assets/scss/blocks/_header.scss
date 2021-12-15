@@ -1,19 +1,7 @@
 .header {
+    transition: $transition;
     &__container {
         padding-right: 28px;
-        &.first {
-            .header__box {
-                width: 627px;
-            }
-            .header__content {
-                padding: 37px 0 18px;
-            }
-            .header__wrapper {
-                &_basket {
-                    margin-left: 0;
-                }
-            }
-        }
     }
     &__content {
         padding: 15px 0 17px;
@@ -75,6 +63,29 @@
         &:hover {
             color: $black;
         }
+    }
+    &_first {
+        .header__box {
+            width: 627px;
+        }
+        .header__content {
+            padding: 37px 0 18px;
+        }
+        .header__wrapper {
+            &_basket {
+                margin-left: 0;
+            }
+        }
+    }
+    &_main {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: $white;
+    }
+    &.hide {
+        transform: translateY(-100%);
     }
 }
 .headerSocial {
