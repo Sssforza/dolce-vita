@@ -8,7 +8,7 @@ $xs: 376px;
 // Colors
 $white: #FFFFFF;
 $black: #171719;
-$dolceColor: #171719;
+$dolceColor: #8D5287;
 $black50: #A2A2A3;
 $blackLight: #DBE1E9;
 $blackLight2: #B0B9C4;
@@ -32,6 +32,13 @@ $transition: all .3s;
 	@media (max-width:$xs) {
 		padding: 0px 30px;
 		max-width: 376px;
+	}
+}
+
+%link {
+	pointer-events: none;
+	@media (max-width:$xs) {
+		pointer-events: auto;
 	}
 }
 

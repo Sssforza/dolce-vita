@@ -15,7 +15,9 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
+svg {
+    display: block;
+}
 body {
     font: {
         family: 'SuisseIntl', serif;
@@ -24,4 +26,23 @@ body {
     color: $black;
     background: $white;
     overflow-x: hidden;
+}
+.container {
+    @extend %container;
+}
+
+// btns
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    transition: $transition;
+    cursor: pointer;
+    &_black {
+        font-size: 20px;
+        line-height: 34px;
+        color: $white;
+        background: $black;
+    }
 }
