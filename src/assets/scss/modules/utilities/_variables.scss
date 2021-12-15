@@ -2,12 +2,45 @@
 $imgUrl: '/dist/img/';
 
 // Breakpoints
-
+$md: 1280px;
+$xs: 376px;
 
 // Colors
-
+$white: #FFFFFF;
+$black: #171719;
+$dolceColor: #171719;
+$black50: #A2A2A3;
+$blackLight: #DBE1E9;
+$blackLight2: #B0B9C4;
+$bgSkin: #CBB7C0;
+$bgWarm: #EBE8E3;
+$bgCold: #D9EBEF;
+$bgGrey: #F2F2F2;
+$bgCosmetic: #F9F9F9;
 
 $transition: all .3s;
+
+%container {
+	position: relative;
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0px 40px;
+	@media (max-width:$md) {
+		max-width: 1280px;
+		padding: 0px 26px;
+	}
+	@media (max-width:$xs) {
+		padding: 0px 30px;
+		max-width: 376px;
+	}
+}
+
+%indentLeft {
+	padding-left: 198px;
+}
+%indentRight {
+	padding-right: 198px;
+}
 
 %stretch {
 	position: absolute;

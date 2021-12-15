@@ -103,7 +103,6 @@ var __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - type
 // Device.js is freely distributable under the MIT license.
 // For all details and documentation:
 // http://matthewhudson.me/projects/device.js/
-console.log("device.js");
 (function () {
   var device, previousDevice, addClass, documentElement, find, handleOrientation, hasClass, orientationEvent, removeClass, userAgent; // Save the previous value of the device variable.
 
