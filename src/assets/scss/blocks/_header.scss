@@ -71,6 +71,10 @@
         font-size: 20px;
         line-height: 28px;
         color: $dolceColor;
+        transition: $transition;
+        &:hover {
+            color: $black;
+        }
     }
 }
 .headerSocial {

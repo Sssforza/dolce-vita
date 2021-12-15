@@ -44,5 +44,8 @@ body {
         line-height: 34px;
         color: $white;
         background: $black;
+        &:hover {
+            background: $dolceColor;
+        }
     }
 }
