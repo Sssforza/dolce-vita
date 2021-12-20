@@ -48,5 +48,25 @@ body {
         &:hover {
             background: $dolceColor;
         }
+        &:active {
+            background: $activeColor;
+        }
+    }
+    &_blackBorder {
+        padding-top: 2px;
+        font-size: 20px;
+        line-height: 34px;
+        color: $black;
+        border: 1px solid $blackLight2;
+        background: transparent;
+        &:hover {
+            color: $white;
+            border: 1px solid $dolceColor;
+            background: $dolceColor;
+        }
+        &:active {
+            border: 1px solid $activeColor;
+            background: $activeColor;
+        }
     }
 }

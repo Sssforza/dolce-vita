@@ -387,14 +387,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 /* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(magnific_popup__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
 
  //📁 /node_modules/  magnific-popup 1.1.0
 
+ //📁 /assets/js/blocks  _sliders.js
 
-document.addEventListener("DOMContentLoaded", function () {});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // slider main page
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_3__["mainSlider"])();
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
 /***/ }),
@@ -16188,6 +16194,37 @@ $.magnificPopup.registerModule(RETINA_NS, {
 
 /*>>retina*/
  _checkInstance(); }));
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mainSlider", function() { return mainSlider; });
+// mainSlider
+function mainSlider() {
+  var slickMain = $(".mainSlider_js");
+
+  if (slickMain.length) {
+    slickMain.slick({
+      fade: true,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 9500,
+      speed: 1000,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      pauseOnDotsHover: false,
+      slickPause: false,
+      slidesToShow: 1,
+      cssEase: 'ease',
+      arrows: false,
+      dots: true
+    });
+  }
+}
+;
 
 /***/ })
 /******/ ]);

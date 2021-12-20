@@ -1,5 +1,10 @@
 .header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     transition: $transition;
+    z-index: 10;
     &__container {
         padding-right: 28px;
     }
@@ -92,9 +97,6 @@
     }
     &_main {
         position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
         background: $white;
     }
     &.hide {

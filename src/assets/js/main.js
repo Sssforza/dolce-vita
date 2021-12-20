@@ -8,4 +8,10 @@ import 'slick-carousel';
 //📁 /node_modules/  magnific-popup 1.1.0
 import 'magnific-popup';
 
-document.addEventListener("DOMContentLoaded", function () {});
+//📁 /assets/js/blocks  _sliders.js
+import {mainSlider} from "./blocks/_sliders.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+    // slider main page
+    mainSlider();
+});
