@@ -27,6 +27,9 @@
     &__logo {
         transition: $transition;
         &:hover {
+            opacity: 0.8;
+        }
+        &:active {
             opacity: 0.6;
         }
     }
@@ -41,6 +44,13 @@
             svg {
                 path {
                     stroke: $dolceColor;
+                }
+            }
+        }
+        &:active {
+            svg {
+                path {
+                    stroke: $activeColor;
                 }
             }
         }
@@ -62,6 +72,9 @@
         transition: $transition;
         &:hover {
             color: $black;
+        }
+        &:active {
+            color: $activeColor;
         }
     }
     &_first {
@@ -101,6 +114,13 @@
                 }
             }
         }
+        &:active {
+            svg {
+                path {
+                    fill: $activeColor;
+                }
+            }
+        }
     }
     svg {
         path {
@@ -121,6 +141,9 @@
     transition: $transition;
     &:hover {
         background: $bgGrey;
+    }
+    &:active {
+        background: $bgCold;
     }
     &__box {
         position: relative;
