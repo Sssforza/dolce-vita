@@ -31,6 +31,54 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </div>
         </div>
     </section>
+    <section class="mainDolce">
+        <div class="mainDolce__about">
+            Уже 15&nbsp;лет мы&nbsp;выбираем и&nbsp;привозим в&nbsp;Омск всё самое лучшее в&nbsp;области
+            косметологии и&nbsp;красоты: инновационные решения, передовые технологии
+        </div>
+        <div class="mainDolce__content">
+            <div class="mainDolce__item mainDolce__item_left">
+                <div class="mainDolce__box">
+                    <div class="mainDolce__wrapper">
+                        <div class="mainDolce__title">Ultherapy</div>
+                        <div class="mainDolce__text">
+                            Альтера-терапия&nbsp;&mdash; технология микро-сфокусированного ультразвука для лифтинга кожи,
+                            одобренная FDA и&nbsp;разрешенная к&nbsp;применению в&nbsp;России, Западной Европе и&nbsp;США.
+                            Действие процедуры направлено на&nbsp;низлежащий мышечно-апоневротический слой (SMAS), который
+                            образует поддерживающий каркас лица и&nbsp;плотно фиксирует мягкие ткани
+                        </div>
+                        <div class="mainDolce__all">
+                            <a href="#" class="mainDolce__link">Все процедуры</a>
+                        </div>
+                    </div>
+                    <div class="mainDolce__img mainDolce__small" style="background-image:url(/dist/img/trash/mainDolceSmall1.jpg)">
+                        <a href="#" class="mainDolce__video">
+                            <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
+                        </a>
+                    </div>
+                </div>
+                <div class="mainDolce__img mainDolce__big" style="background-image:url(/dist/img/trash/mainDolceBig1.jpg)"></div>
+            </div>
+            <div class="mainDolce__item mainDolce__item_right">
+                <div class="mainDolce__img mainDolce__big" style="background-image:url(/dist/img/trash/mainDolceBig2.jpg)"></div>
+                <div class="mainDolce__box">
+                    <div class="mainDolce__wrapper">
+                        <div class="mainDolce__title">Fotona</div>
+                        <div class="mainDolce__text">
+                            Лазерное омоложение на&nbsp;аппарате FOTONA позволяет в&nbsp;рамках одной процедуры выполнить
+                            комплекс из&nbsp;четырех запатентованных anti-age технологий, направленных на&nbsp;восстановление
+                            поверхностных, средних и&nbsp;глубоких структур кожи. Вы&nbsp;получаете впечатляющий результат
+                            лифтинга всего за&nbsp;1&nbsp;сеанс
+                        </div>
+                        <div class="mainDolce__all">
+                            <a href="#" class="mainDolce__link">Все процедуры</a>
+                        </div>
+                    </div>
+                    <div class="mainDolce__img mainDolce__small" style="background-image:url(/dist/img/trash/mainDolceSmall2.jpg)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");

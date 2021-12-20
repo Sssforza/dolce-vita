@@ -18,7 +18,7 @@
         }
     }
     &__content {
-        padding: 198px 138px 70px 60px;
+        padding: 198px 128px 70px 60px;
         max-height: 88vh;
         display: flex;
         flex-direction: column;
@@ -63,6 +63,117 @@
             button {
                 display: none;
             }
+        }
+    }
+}
+.mainDolce {
+    margin-top: 200px;
+    &__about {
+        padding-left: 343px;
+        @extend %indentRight;
+        font-size: 66px;
+        line-height: 72px;
+        color: $black;
+    }
+    &__item {
+        margin-top: 200px;
+        display: flex;
+        &_right {
+            .mainDolce__wrapper {
+                @extend %indentRight;
+            }
+            .mainDolce__box {
+                margin-left: 60px;
+            }
+        }
+        &_left {
+            .mainDolce__wrapper {
+                @extend %indentLeft;
+            }
+            .mainDolce__box {
+                margin-right: 60px;
+            }
+        }
+    }
+    &__img {
+        flex: none;
+        background: {
+            repeat: no-repeat;
+            size: cover;
+            position: center;
+        }
+    }
+    &__small {
+        position: relative;
+        margin-top: 99px;
+        width: 772px;
+        height: 542px;
+    }
+    &__big {
+        width: 1088px;
+        height: 940px;
+    }
+    &__title {
+        font-size: 56px;
+        line-height: 62px;
+        color: $black;
+    }
+    &__text {
+        margin-top: 50px;
+        font-size: 20px;
+        line-height: 34px;
+        color: $black;
+    }
+    &__all {
+        margin-top: 50px;
+    }
+    &__link {
+        position: relative;
+        font-size: 20px;
+        line-height: 34px;
+        font-weight: 500;
+        color: $black;
+        transition: $transition;
+        &:hover {
+            color: $dolceColor;
+            &:after {
+                background: $dolceColor;
+            }
+        }
+        &:active {
+            color: $activeColor;
+            &:after {
+                background: $activeColor;
+            }
+        }
+        &:after {
+            content:'';
+            position: absolute;
+            right: 0;
+            bottom: -4px;
+            left: 0;
+            height: 1px;
+            background: $blackLight2;
+            transition: $transition;
+        }
+    }
+    &__video {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 96px;
+        height: 96px;
+        border: 2px solid $black;
+        border-radius: 50%;
+        transition: $transition;
+        &:hover {
+            opacity: .8;
+        }
+        &:active {
+            opacity: .6;
         }
     }
 }
