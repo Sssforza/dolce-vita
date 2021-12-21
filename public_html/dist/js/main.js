@@ -388,6 +388,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 /* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(magnific_popup__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
+/* harmony import */ var _blocks_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -396,10 +397,16 @@ global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁
 
  //📁 /assets/js/blocks  _sliders.js
 
+ //📁 /assets/js/blocks  index.js
+
 
 document.addEventListener("DOMContentLoaded", function () {
-  // slider main page
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_3__["mainSlider"])();
+  // slider main
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_3__["mainSlider"])(); // slider specialist
+
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_3__["specialistSlider"])(); // specialist hover
+
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["specialistHover"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -16202,6 +16209,7 @@ $.magnificPopup.registerModule(RETINA_NS, {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mainSlider", function() { return mainSlider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "specialistSlider", function() { return specialistSlider; });
 // mainSlider
 function mainSlider() {
   var slickMain = $(".mainSlider_js");
@@ -16224,7 +16232,60 @@ function mainSlider() {
     });
   }
 }
+; // specialistSlider
+
+function specialistSlider() {
+  var slickSpecialist = $(".specialistSlider_js");
+
+  if (slickSpecialist.length) {
+    slickSpecialist.slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 900,
+      draggable: false,
+      infinite: true,
+      variableWidth: true,
+      arrows: true,
+      appendArrows: '.specialist__arrows',
+      prevArrow: '<div class="specialist__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
+      nextArrow: '<div class="specialist__next"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>'
+    });
+  }
+}
 ;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "specialistHover", function() { return specialistHover; });
+// specialist hover
+function specialistHover() {
+  if (document.querySelector('.specialistHover_js')) {
+    var list = document.querySelector('.specialist__list ');
+    var hoversElem = list.querySelectorAll('.specialistHover_js');
+    var parent;
+    hoversElem.forEach(function (item) {
+      item.onmouseover = function (elem) {
+        parent = item.closest('.specialist__item');
+        parent.classList.add('hover');
+      };
+
+      item.onmouseout = function (elem) {
+        parent = item.closest('.specialist__item');
+        parent.classList.remove('hover');
+        parent.classList.remove('active');
+      };
+
+      item.onmousedown = function (elem) {
+        parent = item.closest('.specialist__item');
+        parent.classList.add('active');
+      };
+    });
+  }
+}
 
 /***/ })
 /******/ ]);

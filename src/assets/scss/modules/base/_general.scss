@@ -49,6 +49,51 @@ main {
     @extend %container;
 }
 
+// heading
+.heading {
+    display: inline-flex;
+    align-items: center;
+    &__link {
+        position: relative;
+        margin-left: 60px;
+        font-size: 20px;
+        line-height: 34px;
+        color: $black;
+        vertical-align: text-bottom;
+        transition: $transition;
+        &:hover {
+            color: $dolceColor;
+            &:after {
+                background: $dolceColor;
+            }
+        }
+        &:active {
+            color: $activeColor;
+            &:after {
+                background: $activeColor;
+            }
+        }
+        &:after {
+            content:'';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            background: $blackLight2;
+            transition: $transition;
+        }
+    }
+    &__wrapper {
+        display: inline-flex;
+        align-items: center;
+    }
+    span {
+        font-size: 66px;
+        line-height: 72px;
+        color: $black;
+    }
+}
 // btns
 .btn {
     flex: none;

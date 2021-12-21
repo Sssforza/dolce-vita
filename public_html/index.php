@@ -180,6 +180,67 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </div>
         </div>
     </section>
+    <section class="specialist">
+        <div class="specialist__content">
+            <div class="heading">
+                <div class="heading__wrapper">
+                    <span>Специалисты</span>
+                    <a href="#" class="heading__link">Смотреть всех</a>
+                </div>
+                <div class="specialist__arrows"></div>
+            </div>
+            <div class="specialist__list specialistSlider_js">
+                <div class="specialist__item">
+                    <a href="#" class="specialist__img specialistHover_js">
+                        <div class="specialist__people" style="background-image:url(/dist/img/trash/specialistPeople1.png)"></div>
+                    </a>
+                    <div class="specialist__box">
+                        <a href="#" class="specialist__title specialistHover_js">Людмила Буркина</a>
+                        <div class="specialist__text">
+                            <span>Косметолог-эстетист</span>
+                            <span>опыт работы: 2 года</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="specialist__item">
+                    <a href="#" class="specialist__img specialistHover_js">
+                        <div class="specialist__people" style="background-image:url(/dist/img/trash/specialistPeople2.png)"></div>
+                    </a>
+                    <div class="specialist__box">
+                        <a href="#" class="specialist__title specialistHover_js">Людмила Буркина</a>
+                        <div class="specialist__text">
+                            <span>Косметолог-эстетист</span>
+                            <span>опыт работы: 5 года</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="specialist__item">
+                    <a href="#" class="specialist__img specialistHover_js">
+                        <div class="specialist__people" style="background-image:url(/dist/img/trash/specialistPeople3.png)"></div>
+                    </a>
+                    <div class="specialist__box">
+                        <a href="#" class="specialist__title specialistHover_js">Федурина Надежда</a>
+                        <div class="specialist__text">
+                            <span>Косметолог-эстетист</span>
+                            <span>опыт работы: 7 лет</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="specialist__item">
+                    <a href="#" class="specialist__img specialistHover_js">
+                        <div class="specialist__people" style="background-image:url(/dist/img/trash/specialistPeople2.png)"></div>
+                    </a>
+                    <div class="specialist__box">
+                        <a href="#" class="specialist__title specialistHover_js">Федурина Надежда</a>
+                        <div class="specialist__text">
+                            <span>Косметолог-эстетист</span>
+                            <span>опыт работы: 12 лет</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");

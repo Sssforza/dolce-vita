@@ -9,9 +9,18 @@ import 'slick-carousel';
 import 'magnific-popup';
 
 //📁 /assets/js/blocks  _sliders.js
-import {mainSlider} from "./blocks/_sliders.js";
+import {mainSlider, specialistSlider} from "./blocks/_sliders.js";
+
+//📁 /assets/js/blocks  index.js
+import {specialistHover} from "./blocks/index.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-    // slider main page
+    // slider main
     mainSlider();
+
+    // slider specialist
+    specialistSlider();
+
+    // specialist hover
+    specialistHover();
 });
