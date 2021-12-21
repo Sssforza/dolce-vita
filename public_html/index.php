@@ -120,6 +120,30 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </div>
         </div>
     </section>
+    <section class="signConsultation">
+        <div class="signConsultation__content">
+            <form class="signConsultation__form">
+                <div class="signConsultation__title">Запишитесь <br>на консультацию</div>
+                <div class="signConsultation__fileds">
+                    <div class="envelopeInput">
+                        <input type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="envelopeInput">
+                        <input type="text" placeholder="Телефон">
+                    </div>
+                </div>
+                <div class="signConsultation__bottom">
+                    <div class="signConsultation__wrapper">
+                        <button class="btn btn_black signConsultation__btn">Записаться</button>
+                        <div class="signConsultation__info">Подберем процедуры подходящие вам</div>
+                    </div>
+                    <div class="signConsultation__privacy">Нажимая на&nbsp;кнопку, я&nbsp;соглашаюсь на&nbsp;обработку
+                        <a href="#">персональных данных</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
 </main>
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");

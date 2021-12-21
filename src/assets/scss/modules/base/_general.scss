@@ -47,6 +47,7 @@ body {
 
 // btns
 .btn {
+    flex: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,5 +83,25 @@ body {
             border: 1px solid $activeColor;
             background: $activeColor;
         }
+    }
+}
+// input
+.envelopeInput {
+    border-bottom: 1px solid $blackLight2;
+    padding-bottom: 28px;
+    &:not(:first-child) {
+        margin-top: 52px;
+    }
+    input {
+        padding: 0 10px 0 0;
+        width: 100%;
+        font-size: 34px;
+        line-height: 40px;
+        font: {
+            family: 'SuisseIntl', serif;
+            weight: 400;
+        }
+        border: none;
+        @include placeholder(34px, $blackLight2, 'SuisseIntl');
     }
 }

@@ -256,3 +256,50 @@
         }
     }
 }
+.signConsultation {
+    margin-top: 281px;
+    &__content {
+        width: 660px;
+        @extend %indentLeft;
+    }
+    &__title {
+        font-size: 56px;
+        line-height: 62px;
+        color: $black;
+    }
+    &__form {
+        width: 574px;
+    }
+    &__fileds {
+        margin-top: 48px;
+    }
+    &__bottom {
+        margin-top: 51px;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    &__btn {
+        width: 314px;
+        height: 76px;
+        font-size: 20px;
+        line-height: 34px;
+    }
+    &__info {
+        font-size: 20px;
+        line-height: 34px;
+        color: $dolceColor;
+    }
+    &__privacy {
+        margin-top: 50px;
+        width: 50%;
+        font-size: 16px;
+        line-height: 24px;
+        color: $blackLight2;
+        a {
+            text-decoration: underline;
+        }
+    }
+}
