@@ -11,11 +11,7 @@
         flex: none;
         width: 1247px;
         height: 100vh;
-        background: {
-            repeat: no-repeat;
-            size: cover;
-            position: center;
-        }
+        @extend %imgBg;
     }
     &__content {
         padding: 198px 128px 70px 60px;
@@ -96,12 +92,7 @@
         }
     }
     &__img {
-        flex: none;
-        background: {
-            repeat: no-repeat;
-            size: cover;
-            position: center;
-        }
+        @extend %imgBg;
     }
     &__small {
         position: relative;
@@ -174,6 +165,94 @@
         }
         &:active {
             opacity: .6;
+        }
+    }
+}
+.moreDolce {
+    margin-top: 200px;
+    &__content {
+        display: flex;
+        padding-right: 25px;
+        @extend %indentLeft;
+    }
+    &__box {
+        padding-top: 192px;
+    }
+    &__title {
+        max-width: 634px;
+        font-size: 100px;
+        line-height: 100px;
+        color: $black;
+    }
+    &__all {
+        margin-top: 93px;
+    }
+    &__link {
+        font-size: 28px;
+        line-height: 40px;
+        color: $black;
+        transition: $transition;
+        &:hover {
+            color: $dolceColor;
+            .moreDolce__svg {
+                border: 2px solid $dolceColor;
+                svg {
+                    path {
+                        stroke: $dolceColor;
+                    }
+                }
+            }
+        }
+    }
+    &__svg {
+        margin-left: 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border: 2px solid $black;
+        border-radius: 50%;
+        transition: $transition;
+        &:hover {
+            border: 2px solid $dolceColor;
+            svg {
+                path {
+                    stroke: $dolceColor;
+                }
+            }
+        }
+        svg {
+            path {
+                transition: $transition;
+            }
+        }
+    }
+    &__pictures {
+        position: relative;
+        display: flex;
+        margin-left: 158px;
+        &:after {
+            content:'';
+            position: absolute;
+            top: 178px;
+            right: 317px;
+            width: 415px;
+            height: 554px;
+            background: $bgSkin;
+        }
+    }
+    &__img {
+        position: relative;
+        width: 415px;
+        height: 554px;
+        z-index: 1;
+        @extend %imgBg;
+        &_left {
+            margin-top: 100px;
+        }
+        &_right {
+            margin-left: 60px;
         }
     }
 }

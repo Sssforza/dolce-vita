@@ -50,6 +50,15 @@ $transition: all .3s;
 	padding-right: 198px;
 }
 
+%imgBg {
+	flex: none;
+	background: {
+		repeat: no-repeat;
+		size: cover;
+		position: center;
+	}
+}
+
 %stretch {
 	position: absolute;
 	left: 0;

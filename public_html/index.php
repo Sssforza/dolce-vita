@@ -77,6 +77,47 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     <div class="mainDolce__img mainDolce__small" style="background-image:url(/dist/img/trash/mainDolceSmall2.jpg)"></div>
                 </div>
             </div>
+            <div class="mainDolce__item mainDolce__item_left">
+                <div class="mainDolce__box">
+                    <div class="mainDolce__wrapper">
+                        <div class="mainDolce__title">Cocoon</div>
+                        <div class="mainDolce__text">
+                            Современная станция для криомоделирования фигуры. В&nbsp;основе работы аппарата лежит высокая
+                            чувствительность жировых клеток к&nbsp;низким температурам. При помощи манипул аппарата жировые
+                            ткани в&nbsp;проблемных зонах тела охлаждаются до&nbsp;температуры от&nbsp;0 ⁰С до&nbsp;8 ⁰С.
+                            Это запускает процесс постепенной физиологической гибели жировых клеток
+                        </div>
+                        <div class="mainDolce__all">
+                            <a href="#" class="mainDolce__link">Все процедуры</a>
+                        </div>
+                    </div>
+                    <div class="mainDolce__img mainDolce__small" style="background-image:url(/dist/img/trash/mainDolceSmall3.jpg)">
+                        <a href="#" class="mainDolce__video">
+                            <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
+                        </a>
+                    </div>
+                </div>
+                <div class="mainDolce__img mainDolce__big" style="background-image:url(/dist/img/trash/mainDolceBig3.jpg)"></div>
+            </div>
+        </div>
+        <div class="moreDolce">
+            <div class="moreDolce__content">
+                <div class="moreDolce__box">
+                    <div class="moreDolce__title">Еще более 80 процедур</div>
+                    <div class="moreDolce__all">
+                        <a href="#" class="moreDolce__link">
+                            Смотерть все
+                            <div class="moreDolce__svg">
+                                <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowRight.svg';?>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="moreDolce__pictures">
+                    <div class="moreDolce__img moreDolce__img_left" style="background-image:url(/dist/img/trash/moreDolceImg1.jpg)"></div>
+                    <div class="moreDolce__img moreDolce__img_right" style="background-image:url(/dist/img/trash/moreDolceImg2.jpg)"></div>
+                </div>
+            </div>
         </div>
     </section>
 </main>
