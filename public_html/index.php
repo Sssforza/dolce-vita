@@ -144,6 +144,42 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </form>
         </div>
     </section>
+    <section class="aboutDolce">
+        <div class="aboutDolce__picture" style="background-image:url(/dist/img/trash/aboutDolcePicture.jpg)"></div>
+        <div class="aboutDolce__content">
+            <div class="aboutDolce__main">
+                <div class="aboutDolce__title">Dolce Vita <br>15 лет</div>
+            </div>
+            <div class="aboutDolce__list">
+                <div class="aboutDolce__item">
+                    <div class="aboutDolce__title">
+                        <span>100+</span>процедур
+                    </div>
+                    <div class="aboutDolce__description">
+                        LPG массаж&nbsp;&mdash; это процедура, основанная на&nbsp;технологии воздействия
+                        на&nbsp;проблемные участки тела механической и&nbsp;вакуумной
+                    </div>
+                </div>
+                <div class="aboutDolce__item">
+                    <div class="aboutDolce__title">
+                        <span>15</span>лет опыта
+                    </div>
+                    <div class="aboutDolce__description">
+                        Целью воздействия является уменьшение подкожной прослойки жировой ткани и&nbsp;коррекция фигуры
+                    </div>
+                </div>
+                <div class="aboutDolce__item">
+                    <div class="aboutDolce__title">
+                        <span>23</span>специалиста
+                    </div>
+                    <div class="aboutDolce__description">
+                        Самый большой опыт работы с&nbsp;методиками в&nbsp;Омске, без осложнений,
+                        ведь главное в&nbsp;нашей работе это опыт специалиста
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");

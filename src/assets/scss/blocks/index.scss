@@ -303,3 +303,43 @@
         }
     }
 }
+.aboutDolce {
+    margin-top: 200px;
+    &__picture {
+        width: 100%;
+        height: 800px;
+        @extend %imgBg;
+    }
+    &__content {
+        margin-top: 200px;
+        padding-right: 180px;
+        display: flex;
+        @extend %indentLeft;
+    }
+    &__main {
+        width: 634px;
+        flex: none;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px 60px;
+    }
+    &__item {
+        width: 415px;
+    }
+    &__title {
+        font-size: 66px;
+        line-height: 72px;
+        color: $black;
+        span {
+            display: block;
+        }
+    }
+    &__description {
+        margin-top: 50px;
+        font-size: 20px;
+        line-height: 34px;
+        color: $black;
+    }
+}
