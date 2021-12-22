@@ -278,7 +278,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     <div class="reviews__box">
                         <div class="reviews__name">Ольга 34 года</div>
                         <div class="reviews__read">
-                            <a href="" class="reviews__link" target="_blank">Читать в facebook</a>
+                            <a href="#" class="reviews__link" target="_blank">Читать в facebook</a>
                         </div>
                     </div>
                     <div class="reviews__text">
@@ -334,6 +334,54 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         <li class="guestCard__li"><span>&mdash;</span>Действительна в течение месяца</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="blogArticles">
+        <div class="blogArticles__content">
+            <div class="blogArticles__wrapper">
+                <div class="heading blogArticles__heading">
+                    <span>Блог</span>
+                </div>
+            </div>
+            <div class="blogArticles__box">
+                <div class="blogArticles__list">
+                    <div class="blogArticles__item">
+                        <a href="#" class="blogArticles__img blogArticles_js" style="background-image:url(/dist/img/trash/blogArticles1.jpg)"></a>
+                        <div class="blogArticles__title">
+                            <a href="#" class="blogArticles__link blogArticles_js">
+                                Аппарат М-22 от Lumenis является последней новинкой от компании Lumenis
+                            </a>
+                        </div>
+                        <div class="blogArticles__date">25 марта 2021</div>
+                    </div>
+                    <div class="blogArticles__item">
+                        <a href="#" class="blogArticles__img blogArticles_js" style="background-image:url(/dist/img/trash/blogArticles2.jpg)"></a>
+                        <div class="blogArticles__title">
+                            <a href="#" class="blogArticles__link blogArticles_js">
+                                Криолиполиз — что это такое? Преимущества и недостатки
+                            </a>
+                        </div>
+                        <div class="blogArticles__date">25 марта 2021</div>
+                    </div>
+                    <div class="blogArticles__item">
+                        <a href="#" class="blogArticles__img blogArticles_js" style="background-image:url(/dist/img/trash/blogArticles3.jpg)"></a>
+                        <div class="blogArticles__title">
+                            <a href="#" class="blogArticles__link blogArticles_js">
+                                Технология омоложения Fotona 4D
+                            </a>
+                        </div>
+                        <div class="blogArticles__date">25 марта 2021</div>
+                    </div>
+                </div>
+            </div>
+            <div class="blogArticles__see">
+                <a href="#" class="seeAll">
+                    Все статьи
+                    <div class="seeAll__svg">
+                        <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowRight.svg';?>
+                    </div>
+                </a>
             </div>
         </div>
     </section>

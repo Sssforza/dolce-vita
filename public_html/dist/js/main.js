@@ -406,7 +406,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_3__["specialistSlider"])(); // specialist hover
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["specialistHover"])(); // show reviews
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["specialistHover"])(); // blogArticlesHover hover
+
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["blogArticlesHover"])(); // show reviews
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["showReviews"])();
 });
@@ -16264,10 +16266,11 @@ function specialistSlider() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "specialistHover", function() { return specialistHover; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showReviews", function() { return showReviews; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "blogArticlesHover", function() { return blogArticlesHover; });
 // specialist hover
 function specialistHover() {
   if (document.querySelector('.specialistHover_js')) {
-    var list = document.querySelector('.specialist__list ');
+    var list = document.querySelector('.specialist__list');
     var hoversElem = list.querySelectorAll('.specialistHover_js');
     var parent;
     hoversElem.forEach(function (item) {
@@ -16309,6 +16312,31 @@ function showReviews() {
           text.innerHTML = 'Скрыть';
         }
       });
+    });
+  }
+} // blogArticles hover
+
+function blogArticlesHover() {
+  if (document.querySelector('.blogArticles_js')) {
+    var list = document.querySelector('.blogArticles__list');
+    var hoversElem = list.querySelectorAll('.blogArticles_js');
+    var parent;
+    hoversElem.forEach(function (item) {
+      item.onmouseover = function (elem) {
+        parent = item.closest('.blogArticles__item');
+        parent.classList.add('hover');
+      };
+
+      item.onmouseout = function (elem) {
+        parent = item.closest('.blogArticles__item');
+        parent.classList.remove('hover');
+        parent.classList.remove('active');
+      };
+
+      item.onmousedown = function (elem) {
+        parent = item.closest('.blogArticles__item');
+        parent.classList.add('active');
+      };
     });
   }
 }
