@@ -6,7 +6,8 @@
     transition: $transition;
     z-index: 10;
     &__container {
-        padding-right: 28px;
+        //padding-right: 28px;
+        padding: 0 40px;
     }
     &__content {
         padding: 15px 0 17px;

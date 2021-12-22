@@ -2,7 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?>
 <link rel='stylesheet' href="/dist/css/blocks/index.css">
-<main class="main">
+<main class="main page_main">
     <section class="mainSlider">
         <div class="mainSlider__container mainSlider_js">
             <div class="mainSlider__item">

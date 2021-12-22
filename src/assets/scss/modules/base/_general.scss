@@ -43,7 +43,16 @@ body {
     overflow-x: hidden;
 }
 main {
+    position: relative;
+    margin-bottom: 684px;
+    background: $white;
+    z-index: 1;
     @extend %container;
+}
+.page {
+    &_main {
+        padding-bottom: 200px;
+    }
 }
 .container {
     @extend %container;
