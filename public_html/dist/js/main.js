@@ -389,6 +389,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(magnific_popup__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
 /* harmony import */ var _blocks_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
+/* harmony import */ var _blocks_header_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(10);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -398,6 +399,8 @@ global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁
  //📁 /assets/js/blocks  _sliders.js
 
  //📁 /assets/js/blocks  index.js
+
+ //📁 /assets/js/blocks  _header.js
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -410,7 +413,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["blogArticlesHover"])(); // show reviews
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["showReviews"])();
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["showReviews"])(); // drop last header
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["dropLastHeader"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -16337,6 +16342,29 @@ function blogArticlesHover() {
         parent = item.closest('.blogArticles__item');
         parent.classList.add('active');
       };
+    });
+  }
+}
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dropLastHeader", function() { return dropLastHeader; });
+// drop last header
+function dropLastHeader() {
+  if (document.querySelector('.header_main')) {
+    var header = document.querySelector('.header_main');
+    var headerHeight = document.querySelector('.header_main').offsetHeight;
+    var emergence = document.querySelector('.firstSection_js').offsetHeight;
+    window.addEventListener('scroll', function () {
+      if (pageYOffset > emergence - headerHeight) {
+        header.classList.remove('hide');
+      } else {
+        header.classList.add('hide');
+      }
     });
   }
 }

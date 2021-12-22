@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?>
 <link rel='stylesheet' href="/dist/css/blocks/index.css">
 <main class="main page_main">
-    <section class="mainSlider">
+    <section class="mainSlider firstSection_js">
         <div class="mainSlider__container mainSlider_js">
             <div class="mainSlider__item">
                 <div class="mainSlider__img" style="background-image:url(/dist/img/trash/mainSlider1.jpg)"></div>

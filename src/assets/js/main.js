@@ -14,6 +14,9 @@ import {mainSlider, specialistSlider} from "./blocks/_sliders.js";
 //📁 /assets/js/blocks  index.js
 import {specialistHover, blogArticlesHover, showReviews} from "./blocks/index.js";
 
+//📁 /assets/js/blocks  _header.js
+import {dropLastHeader} from "./blocks/_header.js";
+
 document.addEventListener("DOMContentLoaded", function () {
     // slider main
     mainSlider();
@@ -29,4 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // show reviews
     showReviews();
+
+    // drop last header
+    dropLastHeader();
 });
