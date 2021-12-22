@@ -301,6 +301,42 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </div>
         </div>
     </section>
+    <section class="guestCard">
+        <div class="guestCard__content">
+            <div class="guestCard__picture" style="background-image:url(/dist/img/trash/guestCard.jpg)"></div>
+            <div class="guestCard__box">
+                <div class="heading guestCard__heading">
+                    <span>Гостевая <br>карта</span>
+                </div>
+                <div class="guestCard__list">
+                    <a href="#" class="guestCard__item">
+                        <div class="guestCard__question">
+                            <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/question.svg';?>
+                        </div>
+                        <div class="guestCard__discount">
+                            <span>&minus;20%</span>на процедуры
+                        </div>
+                    </a>
+                    <a href="#" class="guestCard__item">
+                        <div class="guestCard__question">
+                            <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/question.svg';?>
+                        </div>
+                        <div class="guestCard__discount">
+                            <span>&minus;10%</span>на косметику
+                        </div>
+                    </a>
+                </div>
+                <div class="guestCard__benefits">
+                    <ul class="guestCard__ul">
+                        <li class="guestCard__li"><span>&mdash;</span>Можно оформить у администратора в салоне</li>
+                        <li class="guestCard__li"><span>&mdash;</span>Скидки применимы к одной процедуре</li>
+                        <li class="guestCard__li"><span>&mdash;</span>Можно воспользоваться со второго посещения</li>
+                        <li class="guestCard__li"><span>&mdash;</span>Действительна в течение месяца</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
