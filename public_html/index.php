@@ -105,9 +105,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 <div class="moreDolce__box">
                     <div class="moreDolce__title">Еще более 80 процедур</div>
                     <div class="moreDolce__all">
-                        <a href="#" class="moreDolce__link">
+                        <a href="#" class="seeAll">
                             Смотерть все
-                            <div class="moreDolce__svg">
+                            <div class="seeAll__svg">
                                 <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowRight.svg';?>
                             </div>
                         </a>
@@ -290,6 +290,14 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="reviews__see">
+                <a href="#" class="seeAll">
+                    Смотерть все
+                    <div class="seeAll__svg">
+                        <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowRight.svg';?>
+                    </div>
+                </a>
             </div>
         </div>
     </section>

@@ -187,47 +187,6 @@
     &__all {
         margin-top: 93px;
     }
-    &__link {
-        font-size: 28px;
-        line-height: 40px;
-        color: $black;
-        transition: $transition;
-        &:hover {
-            color: $dolceColor;
-            .moreDolce__svg {
-                border: 2px solid $dolceColor;
-                svg {
-                    path {
-                        stroke: $dolceColor;
-                    }
-                }
-            }
-        }
-    }
-    &__svg {
-        margin-left: 24px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 60px;
-        height: 60px;
-        border: 2px solid $black;
-        border-radius: 50%;
-        transition: $transition;
-        &:hover {
-            border: 2px solid $dolceColor;
-            svg {
-                path {
-                    stroke: $dolceColor;
-                }
-            }
-        }
-        svg {
-            path {
-                transition: $transition;
-            }
-        }
-    }
     &__pictures {
         position: relative;
         display: flex;
@@ -561,5 +520,9 @@
                 transition: $transition;
             }
         }
+    }
+    &__see {
+        margin-top: 50px;
+        margin-left: 634px;
     }
 }

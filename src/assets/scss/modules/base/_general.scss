@@ -134,6 +134,47 @@ main {
         }
     }
 }
+.seeAll {
+    font-size: 28px;
+    line-height: 40px;
+    color: $black;
+    transition: $transition;
+    &:hover {
+        color: $dolceColor;
+        .seeAll__svg {
+            border: 2px solid $dolceColor;
+            svg {
+                path {
+                    stroke: $dolceColor;
+                }
+            }
+        }
+    }
+    &__svg {
+        margin-left: 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border: 2px solid $black;
+        border-radius: 50%;
+        transition: $transition;
+        &:hover {
+            border: 2px solid $dolceColor;
+            svg {
+                path {
+                    stroke: $dolceColor;
+                }
+            }
+        }
+        svg {
+            path {
+                transition: $transition;
+            }
+        }
+    }
+}
 // input
 .envelopeInput {
     border-bottom: 1px solid $blackLight2;
