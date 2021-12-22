@@ -312,8 +312,8 @@
     }
     &__content {
         margin-top: 200px;
-        padding-right: 180px;
         display: flex;
+        @extend %indentRight;
         @extend %indentLeft;
     }
     &__main {
@@ -437,6 +437,129 @@
     .heading {
         display: flex;
         justify-content: space-between;
-        padding-right: 181px;
+        @extend %indentRight;
+    }
+}
+.reviews {
+    margin-top: 140px;
+    padding: 140px 0;
+    background: $bgGrey;
+    &__content {
+        @extend %indentRight;
+        @extend %indentLeft;
+    }
+    &__list {
+        margin-top: 70px;
+        border-top: 1px solid $blackLight2;
+    }
+    &__item {
+        padding: 50px 100px 50px 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $blackLight2;
+        &.show {
+            .reviews__recall {
+                max-height: 100%;
+            }
+            .reviews__whole {
+                svg {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+    &__box {
+        max-width: 570px;
+    }
+    &__name {
+        font-size: 34px;
+        line-height: 40px;
+        color: $black;
+    }
+    &__read {
+        margin-top: 10px;
+    }
+    &__link {
+        position: relative;
+        font-size: 20px;
+        line-height: 34px;
+        font-weight: 500;
+        color: $black;
+        transition: $transition;
+        &:hover {
+            color: $dolceColor;
+            &:after {
+                background: $dolceColor;
+            }
+        }
+        &:active {
+            color: $activeColor;
+            &:after {
+                background: $activeColor;
+            }
+        }
+        &:after {
+            content:'';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            background: $blackLight2;
+            transition: $transition;
+        }
+    }
+    &__text {
+        max-width: 791px;
+    }
+    &__recall {
+        max-height: 172px;
+        font-size: 24px;
+        line-height: 43px;
+        color: $black;
+        overflow: hidden;
+        transition: $transition;
+    }
+    &__all {
+        margin-top: 30px;
+    }
+    &__whole {
+        display: inline-flex;
+        align-items: center;
+        gap: 0 20px;
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+            span {
+                color: $dolceColor;
+            }
+            svg {
+                path {
+                    stroke: $dolceColor;
+                }
+            }
+        }
+        &:active {
+            span {
+                color: $activeColor;
+            }
+            svg {
+                path {
+                    stroke: $activeColor;
+                }
+            }
+        }
+        span {
+            font-size: 20px;
+            line-height: 34px;
+            font-weight: 500;
+            color: $black;
+            transition: $transition;
+        }
+        svg {
+            path {
+                transition: $transition;
+            }
+        }
     }
 }

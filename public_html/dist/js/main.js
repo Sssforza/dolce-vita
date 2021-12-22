@@ -406,7 +406,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_3__["specialistSlider"])(); // specialist hover
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["specialistHover"])();
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["specialistHover"])(); // show reviews
+
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["showReviews"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -16261,6 +16263,7 @@ function specialistSlider() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "specialistHover", function() { return specialistHover; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showReviews", function() { return showReviews; });
 // specialist hover
 function specialistHover() {
   if (document.querySelector('.specialistHover_js')) {
@@ -16283,6 +16286,29 @@ function specialistHover() {
         parent = item.closest('.specialist__item');
         parent.classList.add('active');
       };
+    });
+  }
+} // show reviews
+
+function showReviews() {
+  if (document.querySelector('.reviewsWhole_js')) {
+    var wrapper = document.querySelector('.reviewsList_js');
+    var whole = wrapper.querySelectorAll('.reviewsWhole_js');
+    var parent;
+    var text;
+    whole.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        parent = item.closest('.reviews__item');
+        text = item.querySelector('.reviewsWhole_js span');
+
+        if (parent.classList.contains('show')) {
+          parent.classList.remove('show');
+          text.innerHTML = 'Весь отзыв';
+        } else {
+          parent.classList.add('show');
+          text.innerHTML = 'Скрыть';
+        }
+      });
     });
   }
 }

@@ -12,7 +12,7 @@ import 'magnific-popup';
 import {mainSlider, specialistSlider} from "./blocks/_sliders.js";
 
 //📁 /assets/js/blocks  index.js
-import {specialistHover} from "./blocks/index.js";
+import {specialistHover, showReviews} from "./blocks/index.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     // slider main
@@ -23,4 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // specialist hover
     specialistHover();
+
+    // show reviews
+    showReviews();
 });
