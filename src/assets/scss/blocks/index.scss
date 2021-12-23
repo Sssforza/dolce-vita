@@ -543,9 +543,17 @@
         display: flex;
         @extend %indentRight;
     }
-    &__picture {
+    &__bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 1088px;
         height: 740px;
+        background: linear-gradient(114.94deg, #D0E2E6 10.66%, #E5F7FB 91.05%);
+    }
+    &__picture {
+        width: 527.23px;
+        height: 334px;
         @extend %imgBg;
     }
     &__box {
@@ -563,18 +571,36 @@
         height: 183.45px;
         border: 1px solid $blackLight2;
         border-radius: 12px;
+        cursor: pointer;
         transition: $transition;
         &:hover {
             background: $bgCosmetic;
-        }
-        &:active {
-            opacity: 0.6;
+            .guestCard__clue {
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .guestCard__question {
+                svg {
+                    path {
+                        fill: $black;
+                    }
+                    circle {
+                        stroke: $black;
+                    }
+                }
+            }
         }
     }
     &__question {
         position: absolute;
         top: 30px;
         right: 30px;
+        svg {
+            path,
+            circle {
+                transition: $transition;
+            }
+        }
     }
     &__discount {
         position: absolute;
@@ -586,6 +612,22 @@
         span {
             display: block;
         }
+    }
+    &__clue {
+        padding: 20px;
+        width: 263px;
+        position: absolute;
+        bottom: 90%;
+        left: 76%;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+        background: $white;
+        border: 1px solid rgba(23, 23, 25, 0.4);
+        z-index: 1;
+        opacity: 0;
+        pointer-events: none;
+        transition: $transition;
     }
     &__benefits {
         margin-top: 70px;

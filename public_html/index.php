@@ -305,28 +305,36 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
     </section>
     <section class="guestCard">
         <div class="guestCard__content">
-            <div class="guestCard__picture" style="background-image:url(/dist/img/trash/guestCard.jpg)"></div>
+            <div class="guestCard__bg">
+                <div class="guestCard__picture" style="background-image:url(/dist/img/guestCard.png)"></div>
+            </div>
             <div class="guestCard__box">
                 <div class="heading guestCard__heading">
                     <span>Гостевая <br>карта</span>
                 </div>
                 <div class="guestCard__list">
-                    <a href="#" class="guestCard__item">
+                    <div class="guestCard__item">
                         <div class="guestCard__question">
                             <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/question.svg';?>
                         </div>
                         <div class="guestCard__discount">
                             <span>&minus;20%</span>на процедуры
                         </div>
-                    </a>
-                    <a href="#" class="guestCard__item">
+                        <div class="guestCard__clue">
+                            На&nbsp;первую процедуру по&nbsp;уходу&nbsp;за: лицом, телом, волосами, руками и&nbsp;ногами
+                        </div>
+                    </div>
+                    <div class="guestCard__item">
                         <div class="guestCard__question">
                             <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/question.svg';?>
                         </div>
                         <div class="guestCard__discount">
                             <span>&minus;10%</span>на косметику
                         </div>
-                    </a>
+                        <div class="guestCard__clue">
+                            На&nbsp;лечебную, декоративную косметику
+                        </div>
+                    </div>
                 </div>
                 <div class="guestCard__benefits">
                     <ul class="guestCard__ul">
