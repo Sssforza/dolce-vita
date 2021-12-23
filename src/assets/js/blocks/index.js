@@ -66,3 +66,39 @@ export function blogArticlesHover () {
         });
     }
 }
+// anim scroll more dolce pictures
+export function animScrollMoreDolce () {
+    if(document.querySelector('.moreDolce_js')) {
+        var element = $(".moreDolce__pictures");
+        var elementAdd = $(".moreDolce_js");
+		var height_el = element.offset().top;
+		var element_stop = $(".aboutDolce_js");
+		var height_el_stop = element_stop.offset().top;
+		var height_header = $('.header_main').height();
+        var elementMargin = document.querySelector('.aboutDolce_js');
+        var elementPadding = document.querySelector('.moreDolce__content');
+        var margin = getComputedStyle(elementMargin).marginTop.replace(/[\D]+/g, '');
+        var padding = getComputedStyle(elementPadding).paddingRight.replace(/[\D]+/g, '');
+		$(".moreDolce_js").css({
+			"width": element.outerWidth(),
+			"height": element.outerHeight()
+		});
+		$(window).scroll(function() {
+			if($(window).scrollTop() > height_el_stop - elementAdd.outerHeight() - height_header - margin) {
+				elementAdd.css({
+					"top": elementAdd.offset().top,
+                    "right": padding + 'px',
+				}).removeClass("fixed").addClass("absolute");
+			} else {
+				if($(window).scrollTop() > height_el) {
+					elementAdd.addClass("fixed").removeClass("absolute").css({
+                        "top": height_header,
+                        "right": padding + 'px',
+                    });
+				} else {
+					elementAdd.removeClass("fixed absolute").attr("style", "");
+				}
+			}
+		});
+    }
+}

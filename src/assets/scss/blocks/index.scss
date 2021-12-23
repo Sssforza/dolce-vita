@@ -191,14 +191,25 @@
         position: relative;
         display: flex;
         margin-left: 158px;
+        padding-bottom: 80px;
         &:after {
             content:'';
             position: absolute;
             top: 178px;
-            right: 317px;
+            right: 160px;
             width: 415px;
             height: 554px;
             background: $bgSkin;
+        }
+    }
+    &__position {
+        &.fixed {
+            position: fixed;
+            z-index: 5;
+        }
+        &.absolute {
+            position: absolute;
+            z-index: 5;
         }
     }
     &__img {

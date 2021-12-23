@@ -113,9 +113,11 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </a>
                     </div>
                 </div>
-                <div class="moreDolce__pictures">
-                    <div class="moreDolce__img moreDolce__img_left" style="background-image:url(/dist/img/trash/moreDolceImg1.jpg)"></div>
-                    <div class="moreDolce__img moreDolce__img_right" style="background-image:url(/dist/img/trash/moreDolceImg2.jpg)"></div>
+                <div class="moreDolce__position moreDolce_js">
+                    <div class="moreDolce__pictures">
+                        <div class="moreDolce__img moreDolce__img_left" style="background-image:url(/dist/img/trash/moreDolceImg1.jpg)"></div>
+                        <div class="moreDolce__img moreDolce__img_right" style="background-image:url(/dist/img/trash/moreDolceImg2.jpg)"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -144,7 +146,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </form>
         </div>
     </section>
-    <section class="aboutDolce">
+    <section class="aboutDolce aboutDolce_js">
         <div class="aboutDolce__picture" style="background-image:url(/dist/img/trash/aboutDolcePicture.jpg)"></div>
         <div class="aboutDolce__content">
             <div class="aboutDolce__main">
