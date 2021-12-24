@@ -17,6 +17,9 @@ import {specialistHover, blogArticlesHover, showReviews, animMainDolce1, animMai
 //📁 /assets/js/blocks  _header.js
 import {dropLastHeader} from "./blocks/_header.js";
 
+//📁 /assets/js/blocks  validation.js
+import {} from "./blocks/validation.js";
+
 document.addEventListener("DOMContentLoaded", function () {
     // slider main
     mainSlider();
