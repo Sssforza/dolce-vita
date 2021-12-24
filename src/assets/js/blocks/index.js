@@ -66,39 +66,60 @@ export function blogArticlesHover () {
         });
     }
 }
-// anim scroll more dolce pictures
-export function animScrollMoreDolce () {
-    if(document.querySelector('.moreDolce_js')) {
-        var element = $(".moreDolce__pictures");
-        var elementAdd = $(".moreDolce_js");
-		var height_el = element.offset().top;
-		var element_stop = $(".aboutDolce_js");
-		var height_el_stop = element_stop.offset().top;
-		var height_header = $('.header_main').height();
-        var elementMargin = document.querySelector('.aboutDolce_js');
-        var elementPadding = document.querySelector('.moreDolce__content');
-        var margin = getComputedStyle(elementMargin).marginTop.replace(/[\D]+/g, '');
-        var padding = getComputedStyle(elementPadding).paddingRight.replace(/[\D]+/g, '');
-		$(".moreDolce_js").css({
-			"width": element.outerWidth(),
-			"height": element.outerHeight()
-		});
-		$(window).scroll(function() {
-			if($(window).scrollTop() > height_el_stop - elementAdd.outerHeight() - height_header - margin) {
-				elementAdd.css({
-					"top": elementAdd.offset().top,
-                    "right": padding + 'px',
-				}).removeClass("fixed").addClass("absolute");
-			} else {
-				if($(window).scrollTop() > height_el) {
-					elementAdd.addClass("fixed").removeClass("absolute").css({
-                        "top": height_header,
-                        "right": padding + 'px',
-                    });
-				} else {
-					elementAdd.removeClass("fixed absolute").attr("style", "");
-				}
-			}
-		});
+// anim scroll main dolce pictures 1
+export function animMainDolce1 () {
+    if(document.querySelector('.mainDolceItem1_js')) {
+        const dolceItem1 = document.querySelector('.mainDolceItem1_js');
+        let clientHeight = document.documentElement.clientHeight/2;
+        let clientRectTop;
+        window.addEventListener('scroll', function() {
+            clientRectTop = dolceItem1.getBoundingClientRect().top;
+            if(clientRectTop < clientHeight) {
+                dolceItem1.classList.add('show');
+            }
+        });
+    }
+}
+// anim scroll main dolce pictures 2
+export function animMainDolce2 () {
+    if(document.querySelector('.mainDolceItem2_js')) {
+        const dolceItem2 = document.querySelector('.mainDolceItem2_js');
+        let clientHeight = document.documentElement.clientHeight/2;
+        let clientRectTop;
+        window.addEventListener('scroll', function() {
+            clientRectTop = dolceItem2.getBoundingClientRect().top;
+            if(clientRectTop < clientHeight) {
+                dolceItem2.classList.add('show');
+            }
+        });
+    }
+}
+// anim scroll main dolce pictures 3
+export function animMainDolce3 () {
+    if(document.querySelector('.mainDolceItem3_js')) {
+        const dolceItem3 = document.querySelector('.mainDolceItem3_js');
+        let clientHeight = document.documentElement.clientHeight/2;
+        let clientRectTop;
+        window.addEventListener('scroll', function() {
+            clientRectTop = dolceItem3.getBoundingClientRect().top;
+            if(clientRectTop < clientHeight) {
+                dolceItem3.classList.add('show');
+            }
+        });
+    }
+}
+// animation for text
+export function animationForText () {
+    if(document.querySelector('.mainDolceAbout_js')) {
+        const dolceAbout = document.querySelector('.mainDolceAbout_js');
+        let clientHeight = document.documentElement.clientHeight/2;
+        let headerHeight = document.querySelector('.header_main').clientHeight;
+        let clientRectTop;
+        window.addEventListener('scroll', function() {
+            clientRectTop = dolceAbout.getBoundingClientRect().top;
+            if(clientRectTop < clientHeight + headerHeight) {
+                dolceAbout.classList.add('show');
+            }
+        });
     }
 }

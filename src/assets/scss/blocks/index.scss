@@ -1,5 +1,6 @@
 @import "../modules/utilities/_variables.scss";
 @import "_slick.scss";
+@import "animate.min.css";
 
 .mainSlider {
     &__container {
@@ -65,15 +66,37 @@
 .mainDolce {
     margin-top: 200px;
     &__about {
+        position: relative;
         padding-left: 343px;
         @extend %indentRight;
         font-size: 66px;
         line-height: 72px;
         color: $black;
+        &.show {
+            &:after {
+                transform: translateX(100%);
+            }
+        }
+        &:after {
+            content:'';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: $white;
+            transition: all 1.5s;
+        }
+    }
+    &__content {
+        margin-top: 200px;
     }
     &__item {
-        margin-top: 200px;
+        position: relative;
         display: flex;
+        &:not(:first-child) {
+            margin-top: 200px;
+        }
         &_right {
             .mainDolce__wrapper {
                 @extend %indentRight;
@@ -90,8 +113,39 @@
                 margin-right: 60px;
             }
         }
+        &.show {
+            .mainDolce__mask {
+                width: 0;
+            }
+            .mainDolce__picture {
+                .mainDolce__img {
+                    background-position: 0 -70px;
+                }
+            }
+            .mainDolce__box {
+                transform: translateY(0);
+            }
+        }
+    }
+    &__mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        background: $white;
+        transition: width 1.1s;
+    }
+    &__box {
+        position: relative;
+        width: 772px;
+        z-index: 1;
+        transform: translateY(100%);
+        transition: transform 1s;
+        transition-delay: .7s;
     }
     &__img {
+        flex: none;
         @extend %imgBg;
     }
     &__small {
@@ -100,9 +154,21 @@
         width: 772px;
         height: 542px;
     }
-    &__big {
+    &__picture {
+        flex: none;
         width: 1088px;
-        height: 940px;
+        height: calc(100vh - 100px);
+        position: sticky;
+        top: 0;
+        right: 0;
+        .mainDolce__img {
+            background-position: 0 0;
+            transition: background-position 1.5s;
+        }
+    }
+    &__big {
+        width: 100%;
+        height: calc(100vh - 90px);
     }
     &__title {
         font-size: 56px;
@@ -188,7 +254,9 @@
         margin-top: 93px;
     }
     &__pictures {
-        position: relative;
+        position: sticky;
+        top: 100px;
+        right: 0;
         display: flex;
         margin-left: 158px;
         padding-bottom: 80px;
@@ -200,16 +268,6 @@
             width: 415px;
             height: 554px;
             background: $bgSkin;
-        }
-    }
-    &__position {
-        &.fixed {
-            position: fixed;
-            z-index: 5;
-        }
-        &.absolute {
-            position: absolute;
-            z-index: 5;
         }
     }
     &__img {
@@ -227,7 +285,7 @@
     }
 }
 .signConsultation {
-    margin-top: 281px;
+    margin-top: 282px;
     &__content {
         width: 660px;
         @extend %indentLeft;

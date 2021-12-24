@@ -12,7 +12,7 @@ import 'magnific-popup';
 import {mainSlider, specialistSlider} from "./blocks/_sliders.js";
 
 //📁 /assets/js/blocks  index.js
-import {specialistHover, blogArticlesHover, showReviews, animScrollMoreDolce} from "./blocks/index.js";
+import {specialistHover, blogArticlesHover, showReviews, animMainDolce1, animMainDolce2, animMainDolce3, animationForText} from "./blocks/index.js";
 
 //📁 /assets/js/blocks  _header.js
 import {dropLastHeader} from "./blocks/_header.js";
@@ -33,8 +33,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // show reviews
     showReviews();
 
-    // anim scroll more dolce pictures
-    animScrollMoreDolce();
+    // anim scroll main dolce pictures 1
+    animMainDolce1();
+
+    // anim scroll main dolce pictures 2
+    animMainDolce2();
+
+    // anim scroll main dolce pictures 3
+    animMainDolce3();
+
+    // animation for text
+    animationForText();
 
     // drop last header
     dropLastHeader();

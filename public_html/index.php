@@ -32,12 +32,12 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
         </div>
     </section>
     <section class="mainDolce">
-        <div class="mainDolce__about">
+        <div class="mainDolce__about mainDolceAbout_js">
             Уже 15&nbsp;лет мы&nbsp;выбираем и&nbsp;привозим в&nbsp;Омск всё самое лучшее в&nbsp;области
             косметологии и&nbsp;красоты: инновационные решения, передовые технологии
         </div>
         <div class="mainDolce__content">
-            <div class="mainDolce__item mainDolce__item_left">
+            <div class="mainDolce__item mainDolce__item_left mainDolceItem1_js">
                 <div class="mainDolce__box">
                     <div class="mainDolce__wrapper">
                         <div class="mainDolce__title">Ultherapy</div>
@@ -57,10 +57,15 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </a>
                     </div>
                 </div>
-                <div class="mainDolce__img mainDolce__big" style="background-image:url(/dist/img/trash/mainDolceBig1.jpg)"></div>
+                <div class="mainDolce__picture mainDolcePicture_js">
+                    <div class="mainDolce__img mainDolce__big" style="background-image:url(/dist/img/trash/mainDolceBig1.jpg)"></div>
+                </div>
+                <div class="mainDolce__mask"></div>
             </div>
-            <div class="mainDolce__item mainDolce__item_right">
-                <div class="mainDolce__img mainDolce__big" style="background-image:url(/dist/img/trash/mainDolceBig2.jpg)"></div>
+            <div class="mainDolce__item mainDolce__item_right mainDolceItem2_js">
+                <div class="mainDolce__picture mainDolcePicture_js">
+                    <div class="mainDolce__img mainDolce__big" style="background-image:url(/dist/img/trash/mainDolceBig2.jpg)"></div>
+                </div>
                 <div class="mainDolce__box">
                     <div class="mainDolce__wrapper">
                         <div class="mainDolce__title">Fotona</div>
@@ -76,8 +81,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     </div>
                     <div class="mainDolce__img mainDolce__small" style="background-image:url(/dist/img/trash/mainDolceSmall2.jpg)"></div>
                 </div>
+                <div class="mainDolce__mask"></div>
             </div>
-            <div class="mainDolce__item mainDolce__item_left">
+            <div class="mainDolce__item mainDolce__item_left mainDolceItem3_js">
                 <div class="mainDolce__box">
                     <div class="mainDolce__wrapper">
                         <div class="mainDolce__title">Cocoon</div>
@@ -97,53 +103,54 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </a>
                     </div>
                 </div>
-                <div class="mainDolce__img mainDolce__big" style="background-image:url(/dist/img/trash/mainDolceBig3.jpg)"></div>
-            </div>
-        </div>
-        <div class="moreDolce">
-            <div class="moreDolce__content">
-                <div class="moreDolce__box">
-                    <div class="moreDolce__title">Еще более 80 процедур</div>
-                    <div class="moreDolce__all">
-                        <a href="#" class="seeAll">
-                            Смотерть все
-                            <div class="seeAll__svg">
-                                <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowRight.svg';?>
-                            </div>
-                        </a>
-                    </div>
+                <div class="mainDolce__picture mainDolcePicture_js">
+                    <div class="mainDolce__img mainDolce__big" style="background-image:url(/dist/img/trash/mainDolceBig3.jpg)"></div>
                 </div>
-                <div class="moreDolce__position moreDolce_js">
-                    <div class="moreDolce__pictures">
-                        <div class="moreDolce__img moreDolce__img_left" style="background-image:url(/dist/img/trash/moreDolceImg1.jpg)"></div>
-                        <div class="moreDolce__img moreDolce__img_right" style="background-image:url(/dist/img/trash/moreDolceImg2.jpg)"></div>
-                    </div>
-                </div>
+                <div class="mainDolce__mask"></div>
             </div>
         </div>
     </section>
-    <section class="signConsultation">
-        <div class="signConsultation__content">
-            <form class="signConsultation__form">
-                <div class="signConsultation__title">Запишитесь <br>на консультацию</div>
-                <div class="signConsultation__fileds">
-                    <div class="envelopeInput">
-                        <input type="text" placeholder="Ваше имя">
-                    </div>
-                    <div class="envelopeInput">
-                        <input type="text" placeholder="Телефон">
-                    </div>
+    <section class="moreDolce">
+        <div class="moreDolce__content">
+            <div class="moreDolce__box">
+                <div class="moreDolce__title">Еще более 80 процедур</div>
+                <div class="moreDolce__all">
+                    <a href="#" class="seeAll">
+                        Смотерть все
+                        <div class="seeAll__svg">
+                            <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowRight.svg';?>
+                        </div>
+                    </a>
                 </div>
-                <div class="signConsultation__bottom">
-                    <div class="signConsultation__wrapper">
-                        <button class="btn btn_black signConsultation__btn">Записаться</button>
-                        <div class="signConsultation__info">Подберем процедуры подходящие вам</div>
-                    </div>
-                    <div class="signConsultation__privacy">Нажимая на&nbsp;кнопку, я&nbsp;соглашаюсь на&nbsp;обработку
-                        <a href="#">персональных данных</a>
-                    </div>
+                <div class="signConsultation">
+                    <form class="signConsultation__form">
+                        <div class="signConsultation__title">Запишитесь <br>на консультацию</div>
+                        <div class="signConsultation__fileds">
+                            <div class="envelopeInput">
+                                <input type="text" placeholder="Ваше имя">
+                            </div>
+                            <div class="envelopeInput">
+                                <input type="text" placeholder="Телефон">
+                            </div>
+                        </div>
+                        <div class="signConsultation__bottom">
+                            <div class="signConsultation__wrapper">
+                                <button class="btn btn_black signConsultation__btn">Записаться</button>
+                                <div class="signConsultation__info">Подберем процедуры подходящие вам</div>
+                            </div>
+                            <div class="signConsultation__privacy">Нажимая на&nbsp;кнопку, я&nbsp;соглашаюсь на&nbsp;обработку
+                                <a href="#">персональных данных</a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
+            <div class="moreDolce__position moreDolce_js">
+                <div class="moreDolce__pictures">
+                    <div class="moreDolce__img moreDolce__img_left" style="background-image:url(/dist/img/trash/moreDolceImg1.jpg)"></div>
+                    <div class="moreDolce__img moreDolce__img_right" style="background-image:url(/dist/img/trash/moreDolceImg2.jpg)"></div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="aboutDolce aboutDolce_js">

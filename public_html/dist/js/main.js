@@ -413,9 +413,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["blogArticlesHover"])(); // show reviews
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["showReviews"])(); // anim scroll more dolce pictures
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["showReviews"])(); // anim scroll main dolce pictures 1
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["animScrollMoreDolce"])(); // drop last header
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["animMainDolce1"])(); // anim scroll main dolce pictures 2
+
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["animMainDolce2"])(); // anim scroll main dolce pictures 3
+
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["animMainDolce3"])(); // animation for text
+
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["animationForText"])(); // drop last header
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["dropLastHeader"])();
 });
@@ -16274,7 +16280,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "specialistHover", function() { return specialistHover; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showReviews", function() { return showReviews; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "blogArticlesHover", function() { return blogArticlesHover; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animScrollMoreDolce", function() { return animScrollMoreDolce; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animMainDolce1", function() { return animMainDolce1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animMainDolce2", function() { return animMainDolce2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animMainDolce3", function() { return animMainDolce3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animationForText", function() { return animationForText; });
 // specialist hover
 function specialistHover() {
   if (document.querySelector('.specialistHover_js')) {
@@ -16347,39 +16356,64 @@ function blogArticlesHover() {
       };
     });
   }
-} // anim scroll more dolce pictures
+} // anim scroll main dolce pictures 1
 
-function animScrollMoreDolce() {
-  if (document.querySelector('.moreDolce_js')) {
-    var element = $(".moreDolce__pictures");
-    var elementAdd = $(".moreDolce_js");
-    var height_el = element.offset().top;
-    var element_stop = $(".aboutDolce_js");
-    var height_el_stop = element_stop.offset().top;
-    var height_header = $('.header_main').height();
-    var elementMargin = document.querySelector('.aboutDolce_js');
-    var elementPadding = document.querySelector('.moreDolce__content');
-    var margin = getComputedStyle(elementMargin).marginTop.replace(/[\D]+/g, '');
-    var padding = getComputedStyle(elementPadding).paddingRight.replace(/[\D]+/g, '');
-    $(".moreDolce_js").css({
-      "width": element.outerWidth(),
-      "height": element.outerHeight()
+function animMainDolce1() {
+  if (document.querySelector('.mainDolceItem1_js')) {
+    var dolceItem1 = document.querySelector('.mainDolceItem1_js');
+    var clientHeight = document.documentElement.clientHeight / 2;
+    var clientRectTop;
+    window.addEventListener('scroll', function () {
+      clientRectTop = dolceItem1.getBoundingClientRect().top;
+
+      if (clientRectTop < clientHeight) {
+        dolceItem1.classList.add('show');
+      }
     });
-    $(window).scroll(function () {
-      if ($(window).scrollTop() > height_el_stop - elementAdd.outerHeight() - height_header - margin) {
-        elementAdd.css({
-          "top": elementAdd.offset().top,
-          "right": padding + 'px'
-        }).removeClass("fixed").addClass("absolute");
-      } else {
-        if ($(window).scrollTop() > height_el) {
-          elementAdd.addClass("fixed").removeClass("absolute").css({
-            "top": height_header,
-            "right": padding + 'px'
-          });
-        } else {
-          elementAdd.removeClass("fixed absolute").attr("style", "");
-        }
+  }
+} // anim scroll main dolce pictures 2
+
+function animMainDolce2() {
+  if (document.querySelector('.mainDolceItem2_js')) {
+    var dolceItem2 = document.querySelector('.mainDolceItem2_js');
+    var clientHeight = document.documentElement.clientHeight / 2;
+    var clientRectTop;
+    window.addEventListener('scroll', function () {
+      clientRectTop = dolceItem2.getBoundingClientRect().top;
+
+      if (clientRectTop < clientHeight) {
+        dolceItem2.classList.add('show');
+      }
+    });
+  }
+} // anim scroll main dolce pictures 3
+
+function animMainDolce3() {
+  if (document.querySelector('.mainDolceItem3_js')) {
+    var dolceItem3 = document.querySelector('.mainDolceItem3_js');
+    var clientHeight = document.documentElement.clientHeight / 2;
+    var clientRectTop;
+    window.addEventListener('scroll', function () {
+      clientRectTop = dolceItem3.getBoundingClientRect().top;
+
+      if (clientRectTop < clientHeight) {
+        dolceItem3.classList.add('show');
+      }
+    });
+  }
+} // animation for text
+
+function animationForText() {
+  if (document.querySelector('.mainDolceAbout_js')) {
+    var dolceAbout = document.querySelector('.mainDolceAbout_js');
+    var clientHeight = document.documentElement.clientHeight / 2;
+    var headerHeight = document.querySelector('.header_main').clientHeight;
+    var clientRectTop;
+    window.addEventListener('scroll', function () {
+      clientRectTop = dolceAbout.getBoundingClientRect().top;
+
+      if (clientRectTop < clientHeight + headerHeight) {
+        dolceAbout.classList.add('show');
       }
     });
   }
