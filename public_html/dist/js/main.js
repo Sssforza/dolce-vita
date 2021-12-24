@@ -423,7 +423,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["animationForText"])(); // drop last header
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["dropLastHeader"])();
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["dropLastHeader"])(); // first animation main page
+
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["firstAnimation"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -16284,6 +16286,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animMainDolce2", function() { return animMainDolce2; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animMainDolce3", function() { return animMainDolce3; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animationForText", function() { return animationForText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "firstAnimation", function() { return firstAnimation; });
 // specialist hover
 function specialistHover() {
   if (document.querySelector('.specialistHover_js')) {
@@ -16377,11 +16380,12 @@ function animMainDolce2() {
   if (document.querySelector('.mainDolceItem2_js')) {
     var dolceItem2 = document.querySelector('.mainDolceItem2_js');
     var clientHeight = document.documentElement.clientHeight / 2;
+    var headerHeight = document.querySelector('.header_main').clientHeight;
     var clientRectTop;
     window.addEventListener('scroll', function () {
       clientRectTop = dolceItem2.getBoundingClientRect().top;
 
-      if (clientRectTop < clientHeight) {
+      if (clientRectTop < clientHeight + headerHeight) {
         dolceItem2.classList.add('show');
       }
     });
@@ -16392,11 +16396,12 @@ function animMainDolce3() {
   if (document.querySelector('.mainDolceItem3_js')) {
     var dolceItem3 = document.querySelector('.mainDolceItem3_js');
     var clientHeight = document.documentElement.clientHeight / 2;
+    var headerHeight = document.querySelector('.header_main').clientHeight;
     var clientRectTop;
     window.addEventListener('scroll', function () {
       clientRectTop = dolceItem3.getBoundingClientRect().top;
 
-      if (clientRectTop < clientHeight) {
+      if (clientRectTop < clientHeight + headerHeight) {
         dolceItem3.classList.add('show');
       }
     });
@@ -16416,6 +16421,12 @@ function animationForText() {
         dolceAbout.classList.add('show');
       }
     });
+  }
+} // first animation main page
+
+function firstAnimation() {
+  if (document.querySelector('.firstAnimation') && pageYOffset === 0) {// document.body.classList.add('overflowHidden');
+    // document.body.classList.add('firstAnimation');
   }
 }
 

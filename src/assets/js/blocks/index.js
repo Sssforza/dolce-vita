@@ -85,10 +85,11 @@ export function animMainDolce2 () {
     if(document.querySelector('.mainDolceItem2_js')) {
         const dolceItem2 = document.querySelector('.mainDolceItem2_js');
         let clientHeight = document.documentElement.clientHeight/2;
+        let headerHeight = document.querySelector('.header_main').clientHeight;
         let clientRectTop;
         window.addEventListener('scroll', function() {
             clientRectTop = dolceItem2.getBoundingClientRect().top;
-            if(clientRectTop < clientHeight) {
+            if(clientRectTop < clientHeight + headerHeight) {
                 dolceItem2.classList.add('show');
             }
         });
@@ -99,10 +100,11 @@ export function animMainDolce3 () {
     if(document.querySelector('.mainDolceItem3_js')) {
         const dolceItem3 = document.querySelector('.mainDolceItem3_js');
         let clientHeight = document.documentElement.clientHeight/2;
+        let headerHeight = document.querySelector('.header_main').clientHeight;
         let clientRectTop;
         window.addEventListener('scroll', function() {
             clientRectTop = dolceItem3.getBoundingClientRect().top;
-            if(clientRectTop < clientHeight) {
+            if(clientRectTop < clientHeight + headerHeight) {
                 dolceItem3.classList.add('show');
             }
         });
@@ -121,5 +123,13 @@ export function animationForText () {
                 dolceAbout.classList.add('show');
             }
         });
+    }
+}
+
+// first animation main page
+export function firstAnimation () {
+    if(document.querySelector('.firstAnimation') && pageYOffset === 0) {
+        // document.body.classList.add('overflowHidden');
+        // document.body.classList.add('firstAnimation');
     }
 }
