@@ -18,7 +18,7 @@ import {specialistHover, blogArticlesHover, showReviews, animMainDolce1, animMai
 import {dropLastHeader} from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  validation.js
-import {} from "./blocks/validation.js";
+import {signConsultation} from "./blocks/validations.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     // slider main
@@ -53,4 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // first animation main page
     firstAnimation();
+
+    // form in the main page
+    signConsultation();
 });

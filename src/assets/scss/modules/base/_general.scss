@@ -189,21 +189,50 @@ main {
 }
 // input
 .envelopeInput {
-    border-bottom: 1px solid $blackLight2;
-    padding-bottom: 28px;
     &:not(:first-child) {
         margin-top: 52px;
+    }
+    &.error {
+        input {
+            color: $error;
+            border-bottom: 2px solid $error;
+            @include placeholder(34px, $error, 'SuisseIntl');
+            &:hover {
+                border-bottom: 1px solid $error;
+            }
+        }
+        .envelopeInput__warning {
+            margin-top: 20px;
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+    &__warning {
+        display: block;
+        font-size: 16px;
+        line-height: 24px;
+        color: $error;
+        opacity: 0;
+        pointer-events: none;
+        transition: $transition;
     }
     input {
         padding: 0 10px 0 0;
         width: 100%;
+        height: 69px;
         font-size: 34px;
         line-height: 40px;
+        color: $black;
         font: {
             family: 'SuisseIntl', serif;
             weight: 400;
         }
         border: none;
+        border-bottom: 1px solid $blackLight2;
+        transition: $transition;
         @include placeholder(34px, $blackLight2, 'SuisseIntl');
+        &:hover {
+            border-bottom: 1px solid $black;
+        }
     }
 }

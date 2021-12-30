@@ -123,14 +123,15 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     </a>
                 </div>
                 <div class="signConsultation">
-                    <form class="signConsultation__form">
+                    <form class="signConsultation__form signConsultation_js">
                         <div class="signConsultation__title">Запишитесь <br>на консультацию</div>
                         <div class="signConsultation__fileds">
                             <div class="envelopeInput">
-                                <input type="text" placeholder="Ваше имя">
+                                <input type="text" placeholder="Ваше имя" class="name fileds_js">
                             </div>
                             <div class="envelopeInput">
-                                <input type="text" placeholder="Телефон">
+                                <input type="text" placeholder="Телефон" class="tel">
+                                <span class="envelopeInput__warning">Некорректный формат телефона</span>
                             </div>
                         </div>
                         <div class="signConsultation__bottom">
