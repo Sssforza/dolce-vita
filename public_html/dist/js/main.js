@@ -427,7 +427,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["animationForText"])(); // drop last header
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["dropLastHeader"])(); // first animation main page
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["dropLastHeader"])(); // open/close hamburger
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openCloseHamburger"])(); // first animation main page
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["firstAnimation"])(); // form in the main page
 
@@ -16443,6 +16445,7 @@ function firstAnimation() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dropLastHeader", function() { return dropLastHeader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openCloseHamburger", function() { return openCloseHamburger; });
 // drop last header
 function dropLastHeader() {
   if (document.querySelector('.header_main')) {
@@ -16455,6 +16458,27 @@ function dropLastHeader() {
       } else {
         header.classList.add('hide');
       }
+    });
+  }
+} // open/close hamburger
+
+function openCloseHamburger() {
+  if (document.querySelector('.hamburger_js')) {
+    var hamburger = document.querySelectorAll('.hamburger_js');
+    hamburger.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        if (item.classList.contains('active')) {
+          hamburger.forEach(function (i) {
+            i.classList.remove('active');
+          });
+          document.body.classList.remove('overflowHidden');
+          document.body.classList.remove('openServicesMenu');
+        } else {
+          item.classList.add('active');
+          document.body.classList.add('overflowHidden');
+          document.body.classList.add('openServicesMenu');
+        }
+      });
     });
   }
 }
