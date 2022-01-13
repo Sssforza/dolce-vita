@@ -4,7 +4,6 @@ $imgUrl: '/dist/img/';
 // Breakpoints
 $md: 1280px;
 $xs: 376px;
-$hover: 1px;
 
 // Colors
 $white: #FFFFFF;
@@ -20,12 +19,8 @@ $bgGrey: #F2F2F2;
 $bgCosmetic: #F9F9F9;
 $activeColor: #BB5EB2;
 $error: #FF3C6A;
-$purple: #FF3C6A;
-$blueDark: #FF3C6A;
-$greenMedium: #FF3C6A;
 
 $transition: all .3s;
-$transition5: all .5s;
 
 %container {
 	position: relative;

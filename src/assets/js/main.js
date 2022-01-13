@@ -15,7 +15,7 @@ import {mainSlider, specialistSlider} from "./blocks/_sliders.js";
 import {specialistHover, blogArticlesHover, showReviews, animMainDolce1, animMainDolce2, animMainDolce3, animationForText, firstAnimation} from "./blocks/index.js";
 
 //📁 /assets/js/blocks  _header.js
-import {dropLastHeader, openCloseHamburger} from "./blocks/_header.js";
+import {dropLastHeader} from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  validation.js
 import {signConsultation} from "./blocks/validations.js";
@@ -50,9 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // drop last header
     dropLastHeader();
-
-    // open/close hamburger
-    openCloseHamburger();
 
     // first animation main page
     firstAnimation();

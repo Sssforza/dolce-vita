@@ -13,25 +13,3 @@ export function dropLastHeader () {
         });
     }
 }
-
-// open/close hamburger
-export function openCloseHamburger () {
-    if(document.querySelector('.hamburger_js')) {
-        let hamburger = document.querySelectorAll('.hamburger_js');
-        hamburger.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                if(item.classList.contains('active')) {
-                    hamburger.forEach((i) => {
-                        i.classList.remove('active');
-                    });
-                    document.body.classList.remove('overflowHidden');
-                    document.body.classList.remove('openServicesMenu');
-                } else {
-                    item.classList.add('active');
-                    document.body.classList.add('overflowHidden');
-                    document.body.classList.add('openServicesMenu');
-                }
-            });
-        });
-    }
-}
