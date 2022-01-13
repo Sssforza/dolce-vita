@@ -427,7 +427,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["animationForText"])(); // drop last header
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["dropLastHeader"])(); // first animation main page
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["dropLastHeader"])(); // open/close hamburger
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openCloseHamburger"])(); // header menu selection
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["menuSelection"])(); // first animation main page
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["firstAnimation"])(); // form in the main page
 
@@ -16443,6 +16447,8 @@ function firstAnimation() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dropLastHeader", function() { return dropLastHeader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openCloseHamburger", function() { return openCloseHamburger; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "menuSelection", function() { return menuSelection; });
 // drop last header
 function dropLastHeader() {
   if (document.querySelector('.header_main')) {
@@ -16455,6 +16461,161 @@ function dropLastHeader() {
       } else {
         header.classList.add('hide');
       }
+    });
+  }
+} // open/close hamburger
+
+function openCloseHamburger() {
+  if (document.querySelector('.hamburger_js')) {
+    var hamburger = document.querySelectorAll('.hamburger_js');
+    hamburger.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        if (item.classList.contains('active')) {
+          hamburger.forEach(function (i) {
+            i.classList.remove('active');
+          });
+          document.body.classList.remove('overflowHidden');
+          document.body.classList.remove('openHeaderMenu');
+        } else {
+          item.classList.add('active');
+          document.body.classList.add('overflowHidden');
+          document.body.classList.add('openHeaderMenu');
+        }
+      });
+    });
+  }
+} // header menu selection
+
+function menuSelection() {
+  if (document.querySelector('.menuMain_js')) {
+    var wrapper = document.querySelector('.headerMenu_js');
+    var menuMain = wrapper.querySelectorAll('.menuMain_js');
+    var menuMiddle = wrapper.querySelectorAll('.menuMiddle_js');
+    var menuMiddleDetail = wrapper.querySelectorAll('.menuMiddleDetail_js');
+    var menuInterim = wrapper.querySelectorAll('.menuInterim_js');
+    var menuInterimDetail = wrapper.querySelectorAll('.menuInterimDetail_js');
+    var menuProcedures = wrapper.querySelectorAll('.menuProcedures_js');
+    var mainActive;
+    var middleDetailActive;
+    var interimDetailActive;
+
+    var removeActive = function removeActive() {
+      menuMiddle.forEach(function (i) {
+        i.classList.remove('active');
+      });
+      menuMiddleDetail.forEach(function (i) {
+        i.classList.remove('active');
+      });
+      menuInterim.forEach(function (i) {
+        i.classList.remove('active');
+      });
+      menuInterimDetail.forEach(function (i) {
+        i.classList.remove('active');
+      });
+    };
+
+    var addHidden = function addHidden() {
+      menuMiddle.forEach(function (elem) {
+        elem.classList.add('hidden');
+      });
+      menuInterim.forEach(function (elem) {
+        elem.classList.add('hidden');
+      });
+      menuProcedures.forEach(function (elem) {
+        elem.classList.add('hidden');
+      });
+    };
+
+    var menuInterimForEach = function menuInterimForEach() {
+      menuInterim.forEach(function (elem) {
+        if (elem.hasAttribute('data-menuInterim') === middleDetailActive) {
+          console.log('da');
+        } else {
+          console.log('not');
+        }
+
+        if (elem.getAttribute('data-menuInterim') === middleDetailActive) {
+          //нашла по menuMiddleDetail menuInterim
+          elem.classList.remove('hidden');
+          var neededInterimDetail = elem.querySelectorAll('.menuInterimDetail_js'); //взяла нужные menuInterimDetail
+
+          neededInterimDetail[0].classList.add('active'); //первому menuInterimDetail add active
+
+          interimDetailActive = neededInterimDetail[0].getAttribute('data-menuInterimDetail'); //взяла аттр первого menuInterimDetail
+        }
+      });
+    };
+
+    var menuProceduresForEach = function menuProceduresForEach() {
+      menuProcedures.forEach(function (elem) {
+        if (elem.getAttribute('data-menuProcedures') === interimDetailActive) {
+          elem.classList.remove('hidden');
+        }
+      });
+    };
+
+    menuMain.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        mainActive = item.getAttribute('data-menuMain'); //нашла menuMain
+
+        console.log('mainActive ' + mainActive);
+        menuMain.forEach(function (i) {
+          i.classList.remove('active');
+        });
+        item.classList.add('active');
+        removeActive();
+        addHidden();
+        menuMiddle.forEach(function (elem) {
+          if (elem.getAttribute('data-menuMiddle') === mainActive) {
+            //нашла по menuMain menuMiddle
+            elem.classList.remove('hidden');
+            var neededMiddleDetail = elem.querySelectorAll('.menuMiddleDetail_js'); //взяла нужные menuMiddleDetail
+
+            neededMiddleDetail[0].classList.add('active'); //первому menuMiddleDetail add active
+
+            middleDetailActive = neededMiddleDetail[0].getAttribute('data-menuMiddleDetail'); //взяла аттр первого menuMiddleDetail
+          }
+        });
+        menuInterimForEach();
+        menuProceduresForEach();
+      });
+    });
+    menuMiddleDetail.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        middleDetailActive = item.getAttribute('data-menuMiddleDetail'); //нашла menuMiddleDetail
+
+        console.log('middleDetailActive ' + middleDetailActive);
+        menuMiddleDetail.forEach(function (i) {
+          i.classList.remove('active');
+        });
+        item.classList.add('active');
+        menuInterimDetail.forEach(function (i) {
+          i.classList.remove('active');
+        });
+        menuInterim.forEach(function (elem) {
+          elem.classList.add('hidden');
+        });
+        menuProcedures.forEach(function (elem) {
+          elem.classList.add('hidden');
+        });
+        menuInterimForEach();
+        menuProceduresForEach();
+      });
+    });
+    menuInterimDetail.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        interimDetailActive = item.getAttribute('data-menuInterimDetail'); //нашла menuInterimDetail
+
+        console.log('menuInterimDetail ' + interimDetailActive);
+        menuInterimDetail.forEach(function (i) {
+          i.classList.remove('active');
+        });
+        item.classList.add('active');
+        menuProcedures.forEach(function (elem) {
+          elem.classList.add('hidden');
+        });
+        menuProceduresForEach();
+      });
     });
   }
 }

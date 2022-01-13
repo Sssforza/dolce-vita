@@ -17,7 +17,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 ::-webkit-scrollbar {
     background-color: transparent;
-    //width: 15px;
+    width: 15px;
 }
 ::-webkit-scrollbar-thumb {
     background-color: $black;
@@ -43,6 +43,27 @@ body {
     overflow-x: hidden;
     &.overflowHidden {
         overflow: hidden;
+        .header {
+            padding-right: 15px;
+        }
+    }
+    &.openHeaderMenu {
+        overflow: hidden;
+        .headerMenu {
+            transform: translateY(0);
+            border-radius: 0;
+            opacity: 1;
+        }
+        .menuMain {
+            &:after {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        .menuMain, .menuMain__ul, .menuMainSocial, .menuMiddle__list:nth-child(1), .menuMiddle__list:nth-child(2), .menuProcedures {
+            transform: translateY(0px);
+            opacity: 1;
+        }
     }
 }
 main {
