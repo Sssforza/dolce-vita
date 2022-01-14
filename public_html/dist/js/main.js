@@ -16526,14 +16526,22 @@ function menuSelection() {
       });
     };
 
+    var menuMiddleForEach = function menuMiddleForEach() {
+      menuMiddle.forEach(function (elem) {
+        if (elem.getAttribute('data-menuMiddle') === mainActive) {
+          //нашла по menuMain menuMiddle
+          elem.classList.remove('hidden');
+          var neededMiddleDetail = elem.querySelectorAll('.menuMiddleDetail_js'); //взяла нужные menuMiddleDetail
+
+          neededMiddleDetail[0].classList.add('active'); //первому menuMiddleDetail add active
+
+          middleDetailActive = neededMiddleDetail[0].getAttribute('data-menuMiddleDetail'); //взяла аттр первого menuMiddleDetail
+        }
+      });
+    };
+
     var menuInterimForEach = function menuInterimForEach() {
       menuInterim.forEach(function (elem) {
-        if (elem.hasAttribute('data-menuInterim') === middleDetailActive) {
-          console.log('da');
-        } else {
-          console.log('not');
-        }
-
         if (elem.getAttribute('data-menuInterim') === middleDetailActive) {
           //нашла по menuMiddleDetail menuInterim
           elem.classList.remove('hidden');
@@ -16556,35 +16564,21 @@ function menuSelection() {
 
     menuMain.forEach(function (item) {
       item.addEventListener("click", function (e) {
-        mainActive = item.getAttribute('data-menuMain'); //нашла menuMain
-
-        console.log('mainActive ' + mainActive);
+        mainActive = item.getAttribute('data-menuMain');
         menuMain.forEach(function (i) {
           i.classList.remove('active');
         });
         item.classList.add('active');
         removeActive();
         addHidden();
-        menuMiddle.forEach(function (elem) {
-          if (elem.getAttribute('data-menuMiddle') === mainActive) {
-            //нашла по menuMain menuMiddle
-            elem.classList.remove('hidden');
-            var neededMiddleDetail = elem.querySelectorAll('.menuMiddleDetail_js'); //взяла нужные menuMiddleDetail
-
-            neededMiddleDetail[0].classList.add('active'); //первому menuMiddleDetail add active
-
-            middleDetailActive = neededMiddleDetail[0].getAttribute('data-menuMiddleDetail'); //взяла аттр первого menuMiddleDetail
-          }
-        });
+        menuMiddleForEach();
         menuInterimForEach();
         menuProceduresForEach();
       });
     });
     menuMiddleDetail.forEach(function (item) {
       item.addEventListener("click", function (e) {
-        middleDetailActive = item.getAttribute('data-menuMiddleDetail'); //нашла menuMiddleDetail
-
-        console.log('middleDetailActive ' + middleDetailActive);
+        middleDetailActive = item.getAttribute('data-menuMiddleDetail');
         menuMiddleDetail.forEach(function (i) {
           i.classList.remove('active');
         });
@@ -16598,15 +16592,19 @@ function menuSelection() {
         menuProcedures.forEach(function (elem) {
           elem.classList.add('hidden');
         });
-        menuInterimForEach();
+
+        if (item.classList.contains('notInterim')) {
+          interimDetailActive = item.getAttribute('data-menuMiddleDetail');
+        } else {
+          menuInterimForEach();
+        }
+
         menuProceduresForEach();
       });
     });
     menuInterimDetail.forEach(function (item) {
       item.addEventListener("click", function (e) {
-        interimDetailActive = item.getAttribute('data-menuInterimDetail'); //нашла menuInterimDetail
-
-        console.log('menuInterimDetail ' + interimDetailActive);
+        interimDetailActive = item.getAttribute('data-menuInterimDetail');
         menuInterimDetail.forEach(function (i) {
           i.classList.remove('active');
         });

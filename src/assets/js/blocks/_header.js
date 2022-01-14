@@ -77,13 +77,18 @@ export function menuSelection () {
             });
         }
 
+        var menuMiddleForEach = function () {
+            menuMiddle.forEach((elem) => {
+                if (elem.getAttribute('data-menuMiddle') === mainActive) {     //нашла по menuMain menuMiddle
+                    elem.classList.remove('hidden');
+                    let neededMiddleDetail = elem.querySelectorAll('.menuMiddleDetail_js');     //взяла нужные menuMiddleDetail
+                    neededMiddleDetail[0].classList.add('active');     //первому menuMiddleDetail add active
+                    middleDetailActive = neededMiddleDetail[0].getAttribute('data-menuMiddleDetail');     //взяла аттр первого menuMiddleDetail
+                }
+            });
+        }
         var menuInterimForEach = function () {
             menuInterim.forEach((elem) => {
-                if (elem.hasAttribute('data-menuInterim') === middleDetailActive){
-                    console.log('da')
-                } else {
-                    console.log('not')
-                }
                 if (elem.getAttribute('data-menuInterim') === middleDetailActive) {     //нашла по menuMiddleDetail menuInterim
                     elem.classList.remove('hidden');
                     let neededInterimDetail = elem.querySelectorAll('.menuInterimDetail_js');     //взяла нужные menuInterimDetail
@@ -102,8 +107,7 @@ export function menuSelection () {
 
         menuMain.forEach((item) => {
             item.addEventListener("click", (e) => {
-                mainActive = item.getAttribute('data-menuMain');    //нашла menuMain
-                console.log('mainActive ' + mainActive)
+                mainActive = item.getAttribute('data-menuMain');
                 menuMain.forEach((i) => {
                     i.classList.remove('active');
                 });
@@ -111,14 +115,7 @@ export function menuSelection () {
                 removeActive();
                 addHidden();
 
-                menuMiddle.forEach((elem) => {
-                    if (elem.getAttribute('data-menuMiddle') === mainActive) {     //нашла по menuMain menuMiddle
-                        elem.classList.remove('hidden');
-                        let neededMiddleDetail = elem.querySelectorAll('.menuMiddleDetail_js');     //взяла нужные menuMiddleDetail
-                        neededMiddleDetail[0].classList.add('active');     //первому menuMiddleDetail add active
-                        middleDetailActive = neededMiddleDetail[0].getAttribute('data-menuMiddleDetail');     //взяла аттр первого menuMiddleDetail
-                    }
-                });
+                menuMiddleForEach();
                 menuInterimForEach();
                 menuProceduresForEach();
             });
@@ -126,8 +123,7 @@ export function menuSelection () {
 
         menuMiddleDetail.forEach((item) => {
             item.addEventListener("click", (e) => {
-                middleDetailActive = item.getAttribute('data-menuMiddleDetail');    //нашла menuMiddleDetail
-                console.log('middleDetailActive ' + middleDetailActive)
+                middleDetailActive = item.getAttribute('data-menuMiddleDetail');
 
                 menuMiddleDetail.forEach((i) => {
                     i.classList.remove('active');
@@ -143,15 +139,18 @@ export function menuSelection () {
                     elem.classList.add('hidden');
                 });
 
-                menuInterimForEach();
+                if (item.classList.contains('notInterim')) {
+                    interimDetailActive = item.getAttribute('data-menuMiddleDetail');
+                } else {
+                    menuInterimForEach();
+                }
                 menuProceduresForEach();
             });
         });
 
         menuInterimDetail.forEach((item) => {
             item.addEventListener("click", (e) => {
-                interimDetailActive = item.getAttribute('data-menuInterimDetail');    //нашла menuInterimDetail
-                console.log('menuInterimDetail ' + interimDetailActive)
+                interimDetailActive = item.getAttribute('data-menuInterimDetail');
 
                 menuInterimDetail.forEach((i) => {
                     i.classList.remove('active');
