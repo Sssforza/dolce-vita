@@ -9,8 +9,6 @@
         height: 100vh;
     }
     &__img {
-        width: 1247px;
-
         width: calc(100vw - 673px);
         height: 100vh;
         @extend %imgBg;
@@ -158,8 +156,6 @@
     }
     &__picture {
         flex: none;
-        // width: calc(100vw - 40.2vw);
-        // width: calc(100vw - 43.4vw);
         width: calc(100vw - 44vw);
         height: calc(100vh - 100px);
         position: sticky;
@@ -173,7 +169,6 @@
     }
     &__big {
         width: 100%;
-        //height: calc(100vh - 90px);
         height: 110%;
     }
     &__title {

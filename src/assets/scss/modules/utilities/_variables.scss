@@ -29,10 +29,10 @@ $transition: all .3s;
 	//padding: 0px 40px;
 	@media (max-width:$md) {
 		max-width: 1280px;
-		padding: 0px 26px;
+		//padding: 0px 26px;
 	}
 	@media (max-width:$xs) {
-		padding: 0px 30px;
+		//padding: 0px 30px;
 		max-width: 376px;
 	}
 }
