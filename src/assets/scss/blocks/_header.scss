@@ -6,32 +6,53 @@
     transition: transform .8s;
     z-index: 10;
     &__container {
-        //padding-right: 28px;
         padding: 0 40px;
+        @media (max-width:$md) {
+            padding-left: 26px;
+            padding-right: 23px;
+        }
     }
     &__content {
         padding: 21px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width:$md) {
+            padding: 10px 0;
+        }
     }
     &__box {
         padding-left: 46px;
         display: flex;
         justify-content: space-between;
+        @media (max-width:$md) {
+            padding-left: 63px;
+        }
     }
     &__wrapper {
         display: flex;
         align-items: center;
         &_btns {
             margin-left: 58px;
+            @media (max-width:$md) {
+                margin-left: 41px;
+            }
         }
         &_basket {
             margin-left: 58px;
+            @media (max-width:$md) {
+                margin-left: 38px;
+            }
         }
     }
     &__logo {
         transition: $transition;
+        svg {
+            @media (max-width:$md) {
+                width: 142px;
+                height: 20px;
+            }
+        }
         &:hover {
             opacity: 0.8;
         }
@@ -44,6 +65,10 @@
         line-height: 38px;
         color: $black;
         @extend %link;
+        @media (max-width:$md) {
+            font-size: 16px;
+            line-height: 28px;
+        }
     }
     &__basket {
         &:hover {
@@ -61,6 +86,10 @@
             }
         }
         svg {
+            @media (max-width:$md) {
+                width: 25px;
+                height: 25px;
+            }
             path {
                 transition: $transition;
             }
@@ -69,6 +98,10 @@
     &__btn {
         width: 234px;
         height: 58px;
+        @media (max-width:$md) {
+            width: 144px;
+            height: 38px;
+        }
     }
     &__certificate {
         margin-left: 30px;
@@ -76,6 +109,11 @@
         line-height: 28px;
         color: $dolceColor;
         transition: $transition;
+        @media (max-width:$md) {
+            margin-left: 20px;
+            font-size: 14px;
+            line-height: 16px;
+        }
         &:hover {
             color: $black;
         }
@@ -86,6 +124,9 @@
     &_first {
         .header__box {
             width: 627px;
+            @media (max-width:$md) {
+                width: 449px;
+            }
         }
         .header__content {
             padding: 37px 0 18px;
@@ -93,6 +134,11 @@
         .header__wrapper {
             &_basket {
                 margin-left: 0;
+            }
+        }
+        .hamburger {
+            @media (max-width:$md) {
+                margin-left: 26px;
             }
         }
     }
@@ -126,6 +172,10 @@
         }
     }
     svg {
+        @media (max-width:$md) {
+            width: 26px;
+            height: 26px;
+        }
         path {
             transition: $transition;
         }
@@ -142,6 +192,11 @@
     border-radius: 50%;
     background: transparent;
     transition: $transition;
+    @media (max-width:$md) {
+        margin-left: 34px;
+        width: 34px;
+        height: 12px;
+    }
     &:hover {
         background: $bgGrey;
     }

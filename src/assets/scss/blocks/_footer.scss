@@ -6,6 +6,9 @@
     z-index: 0;
     padding: 142px 0;
     background: $black;
+    @media (max-width:$md) {
+        padding: 64px 0;
+    }
     &__content {
         @extend %indentRight;
         @extend %indentLeft;
@@ -16,6 +19,10 @@
         justify-content: space-between;
         font-size: 20px;
         line-height: 34px;
+        @media (max-width:$md) {
+            font-size: 14px;
+            line-height: 26px;
+        }
     }
     &__top {
         color: $white;
@@ -23,17 +30,29 @@
     &__bottom {
         margin-top: 194px;
         color: $blackLight2;
+        @media (max-width:$md) {
+            margin-top: 130px;
+        }
     }
     &__box {
         flex: none;
         &:first-child {
             width: 403px;
+            @media (max-width:$md) {
+                width: 422px;
+            }
         }
         &:nth-child(2) {
             width: 504px;
+            @media (max-width:$md) {
+                width: 497px;
+            }
         }
         &:last-child {
             width: 156px;
+            @media (max-width:$md) {
+                width: 201px;
+            }
         }
     }
     &__yandex,
@@ -50,6 +69,10 @@
         position: relative;
         top: -6px;
         margin-left: 33px;
+        @media (max-width:$md) {
+            top: -10px;
+            margin-left: 5px;
+        }
         &:hover {
             svg {
                 path {
@@ -69,6 +92,10 @@
             position: absolute;
             top: -1px;
             left: -93px;
+            @media (max-width:$md) {
+                top: -5px;
+                left: -109px;
+            }
             path {
                 transition: $transition;
             }
@@ -78,6 +105,10 @@
             line-height: 24px;
             color: $white;
             white-space: nowrap;
+            @media (max-width:$md) {
+                font-size: 12px;
+                line-height: 20px;
+            }
         }
     }
 }
@@ -86,6 +117,9 @@
     &__li {
         display: flex;
         gap: 0 30px;
+        @media (max-width:$md) {
+            gap: 0 20px;
+        }
         &:not(:first-child) {
             margin-top: 2px;
         }
@@ -94,6 +128,9 @@
         &:first-child {
             flex: none;
             width: 71px;
+            @media (max-width:$md) {
+                width: 50px;
+            }
         }
     }
 }
@@ -101,6 +138,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 12px 60px;
+    @media (max-width:$md) {
+        gap: 10px 0px;
+        max-width: 80%;
+    }
     &__li {
         flex: none;
         width: 133px;
@@ -119,6 +160,9 @@
     display: flex;
     align-items: center;
     gap: 0 38px;
+    @media (max-width:$md) {
+        gap: 0 19px;
+    }
     &__link {
         display: block;
         &:hover {
@@ -137,6 +181,9 @@
         }
     }
     svg {
+        @media (max-width:$md) {
+            zoom: 0.75;
+        }
         path {
             transition: $transition;
         }

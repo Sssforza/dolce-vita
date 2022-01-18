@@ -13,7 +13,7 @@
         height: 100vh;
         @extend %imgBg;
         @media (max-width:$md) {
-            width: calc(100vw - 435px);
+            width: calc(100vw - 449px);
         }
     }
     &__content {
