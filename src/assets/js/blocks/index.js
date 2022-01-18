@@ -133,3 +133,14 @@ export function firstAnimation () {
         // document.body.classList.add('firstAnimation');
     }
 }
+
+// hide error form
+export function hideErrorForm () {
+    if (document.querySelector('.signMessageBtn_js')) {
+        let signMessage = document.querySelector('.signMessageError_js');
+        let btn = signMessage.querySelector('.signMessageBtn_js');
+        btn.addEventListener("click", () => {
+            signMessage.classList.remove('show');
+        });
+    }
+}

@@ -12,7 +12,7 @@ import 'magnific-popup';
 import {mainSlider, specialistSlider} from "./blocks/_sliders.js";
 
 //📁 /assets/js/blocks  index.js
-import {specialistHover, blogArticlesHover, showReviews, animMainDolce1, animMainDolce2, animMainDolce3, animationForText, firstAnimation} from "./blocks/index.js";
+import {specialistHover, blogArticlesHover, showReviews, animMainDolce1, animMainDolce2, animMainDolce3, animationForText, firstAnimation, hideErrorForm} from "./blocks/index.js";
 
 //📁 /assets/js/blocks  _header.js
 import {dropLastHeader, openCloseHamburger, menuSelection} from "./blocks/_header.js";
@@ -62,4 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // form in the main page
     signConsultation();
+
+    // hide error form in the main page
+    hideErrorForm();
 });

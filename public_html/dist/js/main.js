@@ -435,7 +435,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["firstAnimation"])(); // form in the main page
 
-  Object(_blocks_validations_js__WEBPACK_IMPORTED_MODULE_6__["signConsultation"])();
+  Object(_blocks_validations_js__WEBPACK_IMPORTED_MODULE_6__["signConsultation"])(); // hide error form in the main page
+
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["hideErrorForm"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -16297,6 +16299,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animMainDolce3", function() { return animMainDolce3; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animationForText", function() { return animationForText; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "firstAnimation", function() { return firstAnimation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hideErrorForm", function() { return hideErrorForm; });
 // specialist hover
 function specialistHover() {
   if (document.querySelector('.specialistHover_js')) {
@@ -16437,6 +16440,16 @@ function animationForText() {
 function firstAnimation() {
   if (document.querySelector('.firstAnimation') && pageYOffset === 0) {// document.body.classList.add('overflowHidden');
     // document.body.classList.add('firstAnimation');
+  }
+} // hide error form
+
+function hideErrorForm() {
+  if (document.querySelector('.signMessageBtn_js')) {
+    var signMessage = document.querySelector('.signMessageError_js');
+    var btn = signMessage.querySelector('.signMessageBtn_js');
+    btn.addEventListener("click", function () {
+      signMessage.classList.remove('show');
+    });
   }
 }
 

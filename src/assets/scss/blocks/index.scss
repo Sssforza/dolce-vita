@@ -413,6 +413,7 @@
     }
 }
 .signConsultation {
+    position: relative;
     margin-top: 282px;
     @media (max-width:$md) {
         margin-top: 268px;
@@ -1140,5 +1141,44 @@
         @media (max-width:$md) {
             top: 319px;
         }
+    }
+}
+.signMessage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $white;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-30px);
+    transition: all .5s;
+    &__title {
+        font-size: 56px;
+        line-height: 62px;
+        color: $black;
+    }
+    &__text {
+        margin-top: 50px;
+        max-width: 64%;
+        font-size: 24px;
+        line-height: 38px;
+        color: $black;
+    }
+    &__btn {
+        margin-top: 50px;
+        width: 261px;
+        height: 76px;
+    }
+    &_error {
+        .signMessage__title {
+            color: $error;
+        }
+    }
+    &.show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0px);
     }
 }

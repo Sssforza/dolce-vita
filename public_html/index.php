@@ -144,6 +144,19 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                             </div>
                         </div>
                     </form>
+                    <div class="signConsultation__message signMessage signMessage_error signMessageError_js">
+                        <div class="signMessage__content">
+                            <div class="signMessage__title">Произошла <br>ошибка</div>
+                            <div class="signMessage__text">Пожалуйста попробуйте отправить форму еще раз</div>
+                            <div class="btn btn_black signMessage__btn signMessageBtn_js">Назад</div>
+                        </div>
+                    </div>
+                    <div class="signConsultation__message signMessage">
+                        <div class="signMessage__content">
+                            <div class="signMessage__title">Спасибо <br>за&nbsp;обращение</div>
+                            <div class="signMessage__text">Менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время</div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="moreDolce__position moreDolce_js">
