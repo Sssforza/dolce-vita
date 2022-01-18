@@ -5,6 +5,7 @@
     left: 0;
     z-index: 0;
     padding: 142px 0;
+    @extend %container;
     background: $black;
     @media (max-width:$md) {
         padding: 64px 0;
@@ -35,7 +36,7 @@
         }
     }
     &__box {
-        flex: none;
+        //flex: none;
         &:first-child {
             width: 403px;
             @media (max-width:$md) {
