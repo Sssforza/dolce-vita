@@ -90,7 +90,8 @@
 
 __webpack_require__(1);
 __webpack_require__(3);
-module.exports = __webpack_require__(12);
+__webpack_require__(12);
+module.exports = __webpack_require__(13);
 
 
 /***/ }),
@@ -16722,6 +16723,22 @@ function signConsultation() {
 
 /***/ }),
 /* 12 */
+/***/ (function(module, exports) {
+
+var lg = 1024;
+var xs = 376;
+var viewport = $('meta[name="viewport"]');
+
+if (window.screen.availWidth <= lg || device.tablet()) {
+  viewport.attr("content", "width=1024");
+}
+
+if (window.screen.availWidth <= xs || device.mobile()) {
+  viewport.attr("content", "width=376");
+}
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
