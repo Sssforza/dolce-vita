@@ -76,6 +76,9 @@ main {
 .page {
     &_main {
         padding-bottom: 200px;
+        @media (max-width:$md) {
+            padding-bottom: 127px;
+        }
     }
 }
 .container {
@@ -94,6 +97,11 @@ main {
         color: $black;
         vertical-align: text-bottom;
         transition: $transition;
+        @media (max-width:$md) {
+            margin-left: 40px;
+            font-size: 14px;
+            line-height: 26px;
+        }
         &:hover {
             color: $dolceColor;
             &:after {
@@ -125,6 +133,10 @@ main {
         font-size: 66px;
         line-height: 72px;
         color: $black;
+        @media (max-width:$md) {
+            font-size: 44px;
+            line-height: 50px;
+        }
     }
 }
 // btns
@@ -142,6 +154,10 @@ main {
         line-height: 34px;
         color: $white;
         background: $black;
+        @media (max-width:$md) {
+            font-size: 14px;
+            line-height: 26px;
+        }
         &:hover {
             background: $dolceColor;
         }
@@ -156,6 +172,10 @@ main {
         color: $black;
         border: 1px solid $blackLight2;
         background: transparent;
+        @media (max-width:$md) {
+            font-size: 14px;
+            line-height: 26px;
+        }
         &:hover {
             color: $white;
             border: 1px solid $dolceColor;
@@ -172,6 +192,10 @@ main {
     line-height: 40px;
     color: $black;
     transition: $transition;
+    @media (max-width:$md) {
+        font-size: 18px;
+        line-height: 26px;
+    }
     &:hover {
         color: $dolceColor;
         .seeAll__svg {
@@ -193,6 +217,12 @@ main {
         border: 2px solid $black;
         border-radius: 50%;
         transition: $transition;
+        @media (max-width:$md) {
+            margin-left: 16px;
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid $black;
+        }
         &:hover {
             border: 2px solid $dolceColor;
             svg {
@@ -202,6 +232,9 @@ main {
             }
         }
         svg {
+            @media (max-width:$md) {
+                zoom: 0.7;
+            }
             path {
                 transition: $transition;
             }
@@ -212,6 +245,9 @@ main {
 .envelopeInput {
     &:not(:first-child) {
         margin-top: 52px;
+        @media (max-width:$md) {
+            margin-top: 17px;
+        }
     }
     &.error {
         input {
@@ -252,6 +288,12 @@ main {
         border-bottom: 1px solid $blackLight2;
         transition: $transition;
         @include placeholder(34px, $blackLight2, 'SuisseIntl');
+        @media (max-width:$md) {
+            height: 63px;
+            font-size: 22px;
+            line-height: 26px;
+            @include placeholder(22px, $blackLight2, 'SuisseIntl');
+        }
         &:hover {
             border-bottom: 1px solid $black;
         }

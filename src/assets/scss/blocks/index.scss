@@ -12,14 +12,23 @@
         width: calc(100vw - 673px);
         height: 100vh;
         @extend %imgBg;
+        @media (max-width:$md) {
+            width: calc(100vw - 435px);
+        }
     }
     &__content {
+        flex: none;
         padding: 198px 128px 70px 60px;
         width: 673px;
         max-height: 88vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @media (max-width:$md) {
+            padding: 142px 30px 46px 40px;
+            width: 449px;
+            max-height: 91.5vh;
+        }
     }
     &__item {
         display: flex !important;
@@ -30,16 +39,29 @@
         font-size: 66px;
         line-height: 72px;
         color: $black;
+        @media (max-width:$md) {
+            font-size: 44px;
+            line-height: 50px;
+        }
     }
     &__text {
         margin-top: 50px;
         font-size: 24px;
         line-height: 38px;
         color: $black;
+        @media (max-width:$md) {
+            margin-top: 32px;
+            font-size: 16px;
+            line-height: 28px;
+        }
     }
     &__btn {
         width: 311px;
         height: 76px;
+        @media (max-width:$md) {
+            width: 206px;
+            height: 50px;
+        }
     }
     .slick-dots {
         position: absolute;
@@ -47,6 +69,11 @@
         left: 1307px;
         display: flex;
         gap: 0 50px;
+        @media (max-width:$md) {
+            bottom: 45px;
+            left: 871px;
+            gap: 0 39px;
+        }
         li {
             width: 10px;
             height: 10px;
@@ -54,6 +81,10 @@
             border-radius: 50%;
             overflow: hidden;
             transition: $transition;
+            @media (max-width:$md) {
+                width: 8px;
+                height: 8px;
+            }
             &.slick-active {
                 background: $black;
             }
@@ -65,6 +96,9 @@
 }
 .mainDolce {
     margin-top: 200px;
+    @media (max-width:$md) {
+        margin-top: 128px;
+    }
     &__about {
         position: relative;
         padding-left: 343px;
@@ -72,6 +106,12 @@
         font-size: 66px;
         line-height: 72px;
         color: $black;
+        @media (max-width:$md) {
+            padding-left: 237px;
+            padding-right: 110px;
+            font-size: 44px;
+            line-height: 50px;
+        }
         &.show {
             &:after {
                 transform: translateX(100%);
@@ -90,12 +130,18 @@
     }
     &__content {
         margin-top: 200px;
+        @media (max-width:$md) {
+            margin-top: 128px;
+        }
     }
     &__item {
         position: relative;
         display: flex;
         &:not(:first-child) {
             margin-top: 200px;
+            @media (max-width:$md) {
+                margin-top: 128px;
+            }
         }
         &_right {
             .mainDolce__wrapper {
@@ -103,6 +149,9 @@
             }
             .mainDolce__box {
                 margin-left: 60px;
+                @media (max-width:$md) {
+                    margin-left: 40px;
+                }
             }
         }
         &_left {
@@ -111,6 +160,9 @@
             }
             .mainDolce__box {
                 margin-right: 60px;
+                @media (max-width:$md) {
+                    margin-right: 40px;
+                }
             }
         }
         &.show {
@@ -143,6 +195,9 @@
         transform: translateY(100%);
         transition: transform 1s;
         transition-delay: .7s;
+        @media (max-width:$md) {
+            width: 40.7vw;
+        }
     }
     &__img {
         flex: none;
@@ -153,6 +208,10 @@
         margin-top: 99px;
         width: 100%;
         height: 542px;
+        @media (max-width:$md) {
+            margin-top: 64px;
+            height: 360px;
+        }
     }
     &__picture {
         flex: none;
@@ -162,6 +221,10 @@
         top: 100px;
         right: 0;
         overflow: hidden;
+        @media (max-width:$md) {
+            width: calc(100vw - 45vw);
+            height: calc(100vh - 110px);
+        }
         .mainDolce__img {
             background-position: 0 0;
             transition: background-position 1.5s;
@@ -175,15 +238,27 @@
         font-size: 56px;
         line-height: 62px;
         color: $black;
+        @media (max-width:$md) {
+            font-size: 36px;
+            line-height: 40px;
+        }
     }
     &__text {
         margin-top: 50px;
         font-size: 20px;
         line-height: 34px;
         color: $black;
+        @media (max-width:$md) {
+            margin-top: 32px;
+            font-size: 14px;
+            line-height: 26px;
+        }
     }
     &__all {
         margin-top: 50px;
+        @media (max-width:$md) {
+            margin-top: 32px;
+        }
     }
     &__link {
         position: relative;
@@ -192,6 +267,10 @@
         font-weight: 500;
         color: $black;
         transition: $transition;
+        @media (max-width:$md) {
+            font-size: 14px;
+            line-height: 26px;
+        }
         &:hover {
             color: $dolceColor;
             &:after {
@@ -213,6 +292,9 @@
             height: 1px;
             background: $blackLight2;
             transition: $transition;
+            @media (max-width:$md) {
+                bottom: -7px;
+            }
         }
     }
     &__video {
@@ -227,16 +309,31 @@
         border: 2px solid $black;
         border-radius: 50%;
         transition: $transition;
+        @media (max-width:$md) {
+            top: 20px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            border: 1px solid $black;
+        }
         &:hover {
             opacity: .8;
         }
         &:active {
             opacity: .6;
         }
+        svg {
+            @media (max-width:$md) {
+                zoom: 0.5;
+            }
+        }
     }
 }
 .moreDolce {
     margin-top: 200px;
+    @media (max-width:$md) {
+        margin-top: 128px;
+    }
     &__content {
         display: flex;
         padding-right: 25px;
@@ -244,15 +341,26 @@
     }
     &__box {
         padding-top: 192px;
+        @media (max-width:$md) {
+            padding-top: 120px;
+        }
     }
     &__title {
         max-width: 634px;
         font-size: 100px;
         line-height: 100px;
         color: $black;
+        @media (max-width:$md) {
+            max-width: 420px;
+            font-size: 64px;
+            line-height: 64px;
+        }
     }
     &__all {
         margin-top: 93px;
+        @media (max-width:$md) {
+            margin-top: 63px;
+        }
     }
     &__pictures {
         position: sticky;
@@ -261,6 +369,9 @@
         display: flex;
         margin-left: 158px;
         padding-bottom: 80px;
+        @media (max-width:$md) {
+            margin-left: 40px;
+        }
         &:after {
             content:'';
             position: absolute;
@@ -269,6 +380,12 @@
             width: 415px;
             height: 554px;
             background: $bgSkin;
+            @media (max-width:$md) {
+                top: 118px;
+                right: 213px;
+                width: 277px;
+                height: 370px;
+            }
         }
     }
     &__img {
@@ -277,49 +394,88 @@
         height: 554px;
         z-index: 1;
         @extend %imgBg;
+        @media (max-width:$md) {
+            width: 277px;
+            height: 370px;
+        }
         &_left {
             margin-top: 100px;
+            @media (max-width:$md) {
+                margin-top: 68px;
+            }
         }
         &_right {
             margin-left: 60px;
+            @media (max-width:$md) {
+                margin-left: 40px;
+            }
         }
     }
 }
 .signConsultation {
     margin-top: 282px;
+    @media (max-width:$md) {
+        margin-top: 268px;
+    }
     &__content {
         width: 660px;
         @extend %indentLeft;
+        @media (max-width:$md) {
+            width: 488px;
+        }
     }
     &__title {
         font-size: 56px;
         line-height: 62px;
         color: $black;
+        @media (max-width:$md) {
+            font-size: 36px;
+            line-height: 40px;
+        }
     }
     &__form {
         width: 574px;
+        @media (max-width:$md) {
+            width: 488px;
+        }
     }
     &__fileds {
         margin-top: 48px;
+        @media (max-width:$md) {
+            margin-top: 13px;
+        }
     }
     &__bottom {
         margin-top: 51px;
+        @media (max-width:$md) {
+            margin-top: 6px;
+        }
     }
     &__wrapper {
         display: flex;
         align-items: center;
         gap: 30px;
+        @media (max-width:$md) {
+            gap: 21px;
+        }
     }
     &__btn {
         width: 314px;
         height: 76px;
-        font-size: 20px;
-        line-height: 34px;
+        @media (max-width:$md) {
+            width: 208px;
+            height: 50px;
+        }
     }
     &__info {
         font-size: 20px;
         line-height: 34px;
         color: $dolceColor;
+        @media (max-width:$md) {
+            max-width: 40%;
+            font-size: 14px;
+            line-height: 26px;
+        }
     }
     &__privacy {
         margin-top: 50px;
@@ -327,6 +483,12 @@
         font-size: 16px;
         line-height: 24px;
         color: $blackLight2;
+        @media (max-width:$md) {
+            margin-top: 34px;
+            width: 60%;
+            font-size: 12px;
+            line-height: 20px;
+        }
         a {
             text-decoration: underline;
         }
@@ -334,33 +496,55 @@
 }
 .aboutDolce {
     margin-top: 200px;
+    @media (max-width:$md) {
+        margin-top: 128px;
+    }
     &__picture {
         width: 100%;
         height: 800px;
         @extend %imgBg;
+        @media (max-width:$md) {
+            height: 600px;
+        }
     }
     &__content {
         margin-top: 200px;
         display: flex;
         @extend %indentRight;
         @extend %indentLeft;
+        @media (max-width:$md) {
+            margin-top: 128px;
+        }
     }
     &__main {
         width: 634px;
         flex: none;
+        @media (max-width:$md) {
+            width: 422px;
+        }
     }
     &__list {
         display: flex;
         flex-wrap: wrap;
         gap: 100px 60px;
+        @media (max-width:$md) {
+            gap: 64px 35px;
+        }
     }
     &__item {
         width: 415px;
+        @media (max-width:$md) {
+            width: 272px;
+        }
     }
     &__title {
         font-size: 66px;
         line-height: 72px;
         color: $black;
+        @media (max-width:$md) {
+            font-size: 44px;
+            line-height: 50px;
+        }
         span {
             display: block;
         }
@@ -370,20 +554,36 @@
         font-size: 20px;
         line-height: 34px;
         color: $black;
+        @media (max-width:$md) {
+            margin-top: 32px;
+            font-size: 14px;
+            line-height: 26px;
+        }
     }
 }
 .specialist {
     margin-top: 202px;
+    @media (max-width:$md) {
+        margin-top: 128px;
+    }
     &__content {
         @extend %indentLeft;
     }
     &__list {
         margin-top: 66px;
         margin-left: -30px;
+        @media (max-width:$md) {
+            margin-top: 41px;
+            margin-left: -20px;
+        }
     }
     &__item {
         width: 534px !important;
         margin: 0 30px;
+        @media (max-width:$md) {
+            width: 356px !important;
+            margin: 0 20px;
+        }
         &.hover {
             .specialist__img {
                 opacity: .8;
@@ -409,6 +609,9 @@
         height: 536px;
         background: $bgGrey;
         transition: $transition;
+        @media (max-width:$md) {
+            height: 356px;
+        }
     }
     &__people {
         width: 100%;
@@ -417,18 +620,29 @@
     }
     &__box {
         margin-top: 50px;
+        @media (max-width:$md) {
+            margin-top: 34px;
+        }
     }
     &__title {
         font-size: 24px;
         line-height: 38px;
         color: $black;
         transition: $transition;
+        @media (max-width:$md) {
+            font-size: 16px;
+            line-height: 28px;
+        }
     }
     &__text {
         margin-top: 6px;
         font-size: 24px;
         line-height: 38px;
         color: $blackLight2;
+        @media (max-width:$md) {
+            font-size: 16px;
+            line-height: 28px;
+        }
         span {
             display: block;
         }
@@ -436,6 +650,9 @@
     &__arrows {
         display: flex;
         gap: 0 49px;
+        @media (max-width:$md) {
+            gap: 0 22px;
+        }
     }
     &__prev {
         transform: rotate(180deg);
@@ -458,6 +675,10 @@
             }
         }
         svg {
+            @media (max-width:$md) {
+                width: 50px;
+                height: 18px;
+            }
             path {
                 transition: $transition;
             }
@@ -473,6 +694,10 @@
     margin-top: 140px;
     padding: 140px 0;
     background: $bgGrey;
+    @media (max-width:$md) {
+        margin-top: 90px;
+        padding: 93px 0;
+    }
     &__content {
         @extend %indentRight;
         @extend %indentLeft;
@@ -480,12 +705,18 @@
     &__list {
         margin-top: 70px;
         border-top: 1px solid $blackLight2;
+        @media (max-width:$md) {
+            margin-top: 41px;
+        }
     }
     &__item {
         padding: 50px 100px 50px 0;
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid $blackLight2;
+        @media (max-width:$md) {
+            padding: 32px 0 30px;
+        }
         &.show {
             .reviews__recall {
                 max-height: 100%;
@@ -499,11 +730,18 @@
     }
     &__box {
         max-width: 570px;
+        @media (max-width:$md) {
+            max-width: 370px;
+        }
     }
     &__name {
         font-size: 34px;
         line-height: 40px;
         color: $black;
+        @media (max-width:$md) {
+            font-size: 22px;
+            line-height: 26px;
+        }
     }
     &__read {
         margin-top: 10px;
@@ -515,6 +753,10 @@
         font-weight: 500;
         color: $black;
         transition: $transition;
+        @media (max-width:$md) {
+            font-size: 14px;
+            line-height: 26px;
+        }
         &:hover {
             color: $dolceColor;
             &:after {
@@ -536,10 +778,16 @@
             height: 1px;
             background: $blackLight2;
             transition: $transition;
+            @media (max-width:$md) {
+                bottom: -8px;
+            }
         }
     }
     &__text {
         max-width: 791px;
+        @media (max-width:$md) {
+            max-width: 579px;
+        }
     }
     &__recall {
         max-height: 172px;
@@ -548,9 +796,17 @@
         color: $black;
         overflow: hidden;
         transition: $transition;
+        @media (max-width:$md) {
+            max-height: 112px;
+            font-size: 16px;
+            line-height: 28px;
+        }
     }
     &__all {
         margin-top: 30px;
+        @media (max-width:$md) {
+            margin-top: 21px;
+        }
     }
     &__whole {
         display: inline-flex;
@@ -558,6 +814,9 @@
         gap: 0 20px;
         cursor: pointer;
         transition: $transition;
+        @media (max-width:$md) {
+            gap: 0 10px;
+        }
         &:hover {
             span {
                 color: $dolceColor;
@@ -584,8 +843,15 @@
             font-weight: 500;
             color: $black;
             transition: $transition;
+            @media (max-width:$md) {
+                font-size: 14px;
+                line-height: 26px;
+            }
         }
         svg {
+            @media (max-width:$md) {
+                zoom: 0.6;
+            }
             path {
                 transition: $transition;
             }
@@ -594,34 +860,60 @@
     &__see {
         margin-top: 50px;
         margin-left: 634px;
+        @media (max-width:$md) {
+            margin-top: 32px;
+            margin-left: 422px;
+        }
     }
 }
 .guestCard {
     margin-top: 140px;
+    @media (max-width:$md) {
+        margin-top: 90px;
+    }
     &__content {
         display: flex;
         @extend %indentRight;
     }
     &__bg {
+        flex: none;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 1088px;
         height: 740px;
         background: linear-gradient(114.94deg, #D0E2E6 10.66%, #E5F7FB 91.05%);
+        @media (max-width:$md) {
+            width: 726px;
+            height: 540px;
+        }
     }
     &__picture {
         width: 527.23px;
         height: 334px;
         @extend %imgBg;
+        @media (max-width:$md) {
+            position: relative;
+            left: 29px;
+            width: 352px;
+            height: 227px;
+        }
     }
     &__box {
         margin-left: 60px;
+        @media (max-width:$md) {
+            margin-left: 37px;
+        }
     }
     &__list {
         margin-top: 100px;
         display: flex;
         gap: 0 30px;
+        @media (max-width:$md) {
+            margin-top: 63px;
+            margin-left: 2px;
+            gap: 0 20px;
+        }
     }
     &__item {
         position: relative;
@@ -632,6 +924,10 @@
         border-radius: 12px;
         cursor: pointer;
         transition: $transition;
+        @media (max-width:$md) {
+            width: 164px;
+            height: 135.45px;
+        }
         &:hover {
             background: $bgCosmetic;
             .guestCard__clue {
@@ -649,12 +945,27 @@
                 }
             }
         }
+        &:nth-child(2) {
+            .guestCard__clue {
+                @media (max-width:$md) {
+                    width: 162px;
+                }
+            }
+        }
     }
     &__question {
         position: absolute;
         top: 30px;
         right: 30px;
+        @media (max-width:$md) {
+            top: 20px;
+            right: 20px;
+        }
         svg {
+            @media (max-width:$md) {
+                width: 24px;
+                height: 24px;
+            }
             path,
             circle {
                 transition: $transition;
@@ -668,6 +979,12 @@
         font-size: 28px;
         line-height: 40px;
         color: $black;
+        @media (max-width:$md) {
+            bottom: 20px;
+            left: 20px;
+            font-size: 18px;
+            line-height: 26px;
+        }
         span {
             display: block;
         }
@@ -690,21 +1007,37 @@
     }
     &__benefits {
         margin-top: 70px;
+        @media (max-width:$md) {
+            margin-top: 44px;
+        }
     }
     &__li {
         font-size: 20px;
         line-height: 34px;
         color: $black;
+        @media (max-width:$md) {
+            font-size: 14px;
+            line-height: 26px;
+        }
         &:not(:first-child) {
             margin-top: 9px;
+            @media (max-width:$md) {
+                margin-top: 1px;
+            }
         }
         span {
             margin-right: 20px;
+            @media (max-width:$md) {
+                margin-right: 18px;
+            }
         }
     }
 }
 .blogArticles {
     margin-top: 140px;
+    @media (max-width:$md) {
+        margin-top: 90px;
+    }
     &__content {
         position: relative;
         display: flex;
@@ -714,13 +1047,28 @@
     &__wrapper {
         flex: none;
         width: 634px;
+        @media (max-width:$md) {
+            width: 421px;
+        }
     }
     &__item {
         width: 415px;
+        @media (max-width:$md) {
+            width: 277px;
+        }
         &:first-child {
             width: 790px;
+            @media (max-width:$md) {
+                width: 523.76px;
+            }
             .blogArticles__img {
                 height: 543px;
+                @media (max-width:$md) {
+                    height: 360px;
+                }
+            }
+            .blogArticles__title {
+                max-width: 80%;
             }
         }
         &.hover {
@@ -744,6 +1092,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 100px 60px;
+        @media (max-width:$md) {
+            margin-right: -14px;
+            gap: 65px 40px;
+        }
     }
     &__img {
         display: block;
@@ -751,24 +1103,42 @@
         height: 292px;
         transition: $transition;
         @extend %imgBg;
+        @media (max-width:$md) {
+            height: 196px;
+        }
     }
     &__title {
         margin-top: 50px;
+        max-width: 88%;
+        @media (max-width:$md) {
+            margin-top: 32px;
+        }
     }
     &__link {
         font-size: 24px;
         line-height: 38px;
         color: $black;
         transition: $transition;
+        @media (max-width:$md) {
+            font-size: 16px;
+            line-height: 28px;
+        }
     }
     &__date {
         margin-top: 10px;
         font-size: 24px;
         line-height: 38px;
         color: $blackLight2;
+        @media (max-width:$md) {
+            font-size: 16px;
+            line-height: 28px;
+        }
     }
     &__see {
         position: absolute;
         top: 484px;
+        @media (max-width:$md) {
+            top: 319px;
+        }
     }
 }

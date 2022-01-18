@@ -46,9 +46,15 @@ $transition: all .3s;
 
 %indentLeft {
 	padding-left: 198px;
+	@media (max-width:$md) {
+		padding-left: 132px;
+	}
 }
 %indentRight {
 	padding-right: 180px;
+	@media (max-width:$md) {
+		padding-right: 132px;
+	}
 }
 
 %imgBg {

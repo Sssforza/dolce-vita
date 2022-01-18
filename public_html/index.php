@@ -303,7 +303,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </div>
             <div class="reviews__see">
                 <a href="#" class="seeAll">
-                    Смотерть все
+                    Все отзывы
                     <div class="seeAll__svg">
                         <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowRight.svg';?>
                     </div>
