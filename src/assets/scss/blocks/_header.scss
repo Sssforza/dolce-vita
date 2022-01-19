@@ -294,6 +294,9 @@
         @media (max-width:$md) {
             padding-right: 31px;
         }
+        @media (max-width:$lg) {
+            padding-right: 11px;
+        }
     }
     &__container {
         height: 100%;
@@ -302,6 +305,9 @@
         @media (max-width:$md) {
             padding-top: 133px;
             padding-bottom: 44px;
+        }
+        @media (max-width:$lg) {
+            padding-bottom: 42px;
         }
     }
 }
@@ -313,6 +319,10 @@
     @media (max-width:$md) {
         width: calc(100% - 784px);
         min-width: 400px;
+    }
+    @media (max-width:$lg) {
+        width: 242px;
+        min-width: 242px;
     }
     &:after {
         content:'';
@@ -334,6 +344,9 @@
         justify-content: space-between;
         @media (max-width:$md) {
             padding-left: 80px
+        }
+        @media (max-width:$lg) {
+            padding-left: 22px;
         }
     }
     &__ul {
@@ -366,6 +379,9 @@
             @media (max-width:$md) {
                 margin-top: 32px;
             }
+            @media (max-width:$lg) {
+                gap: 0 17px;
+            }
             .menuMain__li {
                 flex: none;
                 width: 168px;
@@ -375,6 +391,9 @@
                     width: 116px;
                     font-size: 14px;
                     line-height: 32px;
+                }
+                @media (max-width:$lg) {
+                    width: 100px;
                 }
             }
         }
@@ -473,6 +492,9 @@
     @media (max-width:$md) {
         margin-left: 39px;
         width: 200px;
+    }
+    @media (max-width:$lg) {
+        margin-left: 34px;
     }
     &__content {
         display: flex;
@@ -575,6 +597,9 @@
     @media (max-width:$md) {
         margin-left: 62px;
     }
+    @media (max-width:$lg) {
+        margin-left: 56px;
+    }
     &__content {
         position: relative;
         padding-top: 0 !important;
@@ -585,6 +610,9 @@
         @media (max-width:$md) {
             margin-top: 128px;
             margin-bottom: 44px;
+        }
+        @media (max-width:$lg) {
+            margin-bottom: 42px;
         }
         &:after,
         &:before {
@@ -615,6 +643,10 @@
             padding-right: 18px;
             padding-bottom: 7px;
             height: calc(100vh - 172px);
+        }
+        @media (max-width:$lg) {
+            flex-wrap: nowrap;
+            flex-direction: column;
         }
         &_big {
             .menuProcedures__li {
@@ -655,6 +687,9 @@
         padding-right: 40px;
         @media (max-width:$md) {
             padding-right: 25px;
+        }
+        @media (max-width:$lg) {
+            width: 100%;
         }
     }
     &__li {
