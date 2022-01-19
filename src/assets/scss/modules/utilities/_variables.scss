@@ -3,6 +3,7 @@ $imgUrl: '/dist/img/';
 
 // Breakpoints
 $md: 1366px;
+$lg: 1024px;
 $xs: 376px;
 
 // Colors
@@ -31,6 +32,11 @@ $transition: all .3s;
 		max-width: 100%;
 		//padding: 0px 26px;
 	}
+	@media (max-width:$lg) {
+		width: 1024px;
+		max-width: 1024px;
+		//padding: 0px 26px;
+	}
 	@media (max-width:$xs) {
 		//padding: 0px 30px;
 		max-width: 376px;
@@ -49,11 +55,17 @@ $transition: all .3s;
 	@media (max-width:$md) {
 		padding-left: 132px;
 	}
+	@media (max-width:$lg) {
+		padding-left: 106px;
+	}
 }
 %indentRight {
 	padding-right: 180px;
 	@media (max-width:$md) {
 		padding-right: 132px;
+	}
+	@media (max-width:$lg) {
+		padding-right: 106px;
 	}
 }
 

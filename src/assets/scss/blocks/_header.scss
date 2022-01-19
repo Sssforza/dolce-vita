@@ -11,6 +11,10 @@
             padding-left: 26px;
             padding-right: 23px;
         }
+        @media (max-width:$lg) {
+            padding-left: 21px;
+            padding-right: 16px;
+        }
     }
     &__content {
         padding: 21px 0;
@@ -51,6 +55,10 @@
             @media (max-width:$md) {
                 width: 142px;
                 height: 20px;
+            }
+            @media (max-width:$lg) {
+                width: 135px;
+                height: 19px;
             }
         }
         &:hover {
@@ -127,18 +135,32 @@
             @media (max-width:$md) {
                 width: 449px;
             }
+            @media (max-width:$lg) {
+                width: 374px;
+            }
         }
         .header__content {
             padding: 37px 0 18px;
+            @media (max-width:$lg) {
+                padding: 20px 0;
+            }
         }
         .header__wrapper {
             &_basket {
                 margin-left: 0;
             }
         }
+        .headerSocial {
+            @media (max-width:$lg) {
+                margin-left: 11px;
+            }
+        }
         .hamburger {
             @media (max-width:$md) {
                 margin-left: 20px;
+            }
+            @media (max-width:$lg) {
+                margin-left: 12px;
             }
         }
     }
@@ -154,6 +176,10 @@
     margin-left: 20px;
     display: flex;
     gap: 8px;
+    @media (max-width:$lg) {
+        margin-left: 21px;
+        gap: 10px;
+    }
     &__link {
         display: block;
         &:hover {
@@ -196,6 +222,9 @@
         margin-left: 28px;
         width: 40px;
         height: 40px;
+    }
+    @media (max-width:$lg) {
+        margin-left: 35px;
     }
     &:hover {
         background: $bgGrey;

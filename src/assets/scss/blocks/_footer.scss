@@ -34,13 +34,18 @@
         @media (max-width:$md) {
             margin-top: 130px;
         }
+        @media (max-width:$lg) {
+            margin-top: 136px;
+        }
     }
     &__box {
-        //flex: none;
         &:first-child {
             width: 403px;
             @media (max-width:$md) {
                 width: 422px;
+            }
+            @media (max-width:$lg) {
+                width: 380px;
             }
         }
         &:nth-child(2) {
@@ -48,11 +53,17 @@
             @media (max-width:$md) {
                 width: 497px;
             }
+            @media (max-width:$lg) {
+                width: 420px;
+            }
         }
         &:last-child {
             width: 156px;
             @media (max-width:$md) {
                 width: 201px;
+            }
+            @media (max-width:$lg) {
+                width: 111px;
             }
         }
     }
@@ -96,6 +107,9 @@
             @media (max-width:$md) {
                 top: -5px;
                 left: -109px;
+            }
+            @media (max-width:$lg) {
+                left: -98px;
             }
             path {
                 transition: $transition;
