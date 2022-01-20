@@ -15,7 +15,7 @@ import {mainSlider, specialistSlider} from "./blocks/_sliders.js";
 import {specialistHover, blogArticlesHover, showReviews, animMainDolce1, animMainDolce2, animMainDolce3, animationForText, firstAnimation, hideErrorForm} from "./blocks/index.js";
 
 //📁 /assets/js/blocks  _header.js
-import {dropLastHeader, openCloseHamburger, menuSelection} from "./blocks/_header.js";
+import {dropLastHeader, openCloseHamburger, openCloseSearch, closeSearch, menuSelection} from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  validation.js
 import {signConsultation} from "./blocks/validations.js";
@@ -53,6 +53,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // open/close hamburger
     openCloseHamburger();
+
+    // open/close search
+    openCloseSearch();
+
+    // clear search
+    closeSearch();
 
     // header menu selection
     menuSelection();

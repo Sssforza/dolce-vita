@@ -21,17 +21,44 @@ export function openCloseHamburger () {
         hamburger.forEach((item) => {
             item.addEventListener("click", (e) => {
                 if(item.classList.contains('active')) {
-                    hamburger.forEach((i) => {
-                        i.classList.remove('active');
+                    hamburger.forEach((item) => {
+                        item.classList.remove('active');
                     });
                     document.body.classList.remove('overflowHidden');
                     document.body.classList.remove('openHeaderMenu');
                 } else {
-                    item.classList.add('active');
+                    hamburger.forEach((item) => {
+                        item.classList.add('active');
+                    });
                     document.body.classList.add('overflowHidden');
                     document.body.classList.add('openHeaderMenu');
                 }
             });
+        });
+    }
+}
+
+// open search
+export function openCloseSearch () {
+    if(document.querySelector('.searchLoupe_js')) {
+        let parent = document.querySelector('.headerSearch_js');
+        let loupe = parent.querySelector('.searchLoupe_js');
+        loupe.addEventListener("click", (e) => {
+            if(!parent.classList.contains('show')) {
+                e.preventDefault;
+                parent.classList.add('show');
+            }
+        });
+    }
+}
+
+// close search
+export function closeSearch () {
+    if(document.querySelector('.searchСross_js')) {
+        let parent = document.querySelector('.headerSearch_js');
+        let сross = parent.querySelector('.searchСross_js');
+        сross.addEventListener("click", (e) => {
+            parent.classList.remove('show');
         });
     }
 }

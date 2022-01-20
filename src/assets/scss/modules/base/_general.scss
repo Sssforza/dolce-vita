@@ -43,9 +43,6 @@ body {
     overflow-x: hidden;
     &.overflowHidden {
         overflow: hidden;
-        .header {
-            padding-right: 15px;
-        }
     }
     &.openHeaderMenu {
         overflow: hidden;
@@ -60,7 +57,9 @@ body {
                 opacity: 1;
             }
         }
-        .menuMain, .menuMain__ul, .menuMainSocial, .menuMiddle__list:nth-child(1), .menuMiddle__list:nth-child(2), .menuProcedures {
+        .menuMain, .menuMain__ul, .headerMenu__logo, .menuMainSocial,
+        .menuMiddle__list:nth-child(1), .menuMiddle__list:nth-child(2),
+        .header__tel, .headerSocial, .menuProcedures {
             transform: translateY(0px);
             opacity: 1;
         }

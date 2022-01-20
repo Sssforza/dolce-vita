@@ -430,7 +430,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["dropLastHeader"])(); // open/close hamburger
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openCloseHamburger"])(); // header menu selection
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openCloseHamburger"])(); // open/close search
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openCloseSearch"])(); // clear search
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["closeSearch"])(); // header menu selection
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["menuSelection"])(); // first animation main page
 
@@ -16462,6 +16466,8 @@ function hideErrorForm() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dropLastHeader", function() { return dropLastHeader; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openCloseHamburger", function() { return openCloseHamburger; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openCloseSearch", function() { return openCloseSearch; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeSearch", function() { return closeSearch; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "menuSelection", function() { return menuSelection; });
 // drop last header
 function dropLastHeader() {
@@ -16485,17 +16491,42 @@ function openCloseHamburger() {
     hamburger.forEach(function (item) {
       item.addEventListener("click", function (e) {
         if (item.classList.contains('active')) {
-          hamburger.forEach(function (i) {
-            i.classList.remove('active');
+          hamburger.forEach(function (item) {
+            item.classList.remove('active');
           });
           document.body.classList.remove('overflowHidden');
           document.body.classList.remove('openHeaderMenu');
         } else {
-          item.classList.add('active');
+          hamburger.forEach(function (item) {
+            item.classList.add('active');
+          });
           document.body.classList.add('overflowHidden');
           document.body.classList.add('openHeaderMenu');
         }
       });
+    });
+  }
+} // open search
+
+function openCloseSearch() {
+  if (document.querySelector('.searchLoupe_js')) {
+    var parent = document.querySelector('.headerSearch_js');
+    var loupe = parent.querySelector('.searchLoupe_js');
+    loupe.addEventListener("click", function (e) {
+      if (!parent.classList.contains('show')) {
+        e.preventDefault;
+        parent.classList.add('show');
+      }
+    });
+  }
+} // close search
+
+function closeSearch() {
+  if (document.querySelector('.searchСross_js')) {
+    var parent = document.querySelector('.headerSearch_js');
+    var сross = parent.querySelector('.searchСross_js');
+    сross.addEventListener("click", function (e) {
+      parent.classList.remove('show');
     });
   }
 } // header menu selection
