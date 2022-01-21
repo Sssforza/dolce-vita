@@ -57,8 +57,10 @@ export function closeSearch () {
     if(document.querySelector('.searchСross_js')) {
         let parent = document.querySelector('.headerSearch_js');
         let сross = parent.querySelector('.searchСross_js');
+        let clue = document.querySelector('.searchContextual_js');
         сross.addEventListener("click", (e) => {
             parent.classList.remove('show');
+            clue.classList.remove('show');
         });
     }
 }
@@ -190,6 +192,22 @@ export function menuSelection () {
 
                 menuProceduresForEach();
             });
+        });
+    }
+}
+
+// open context clue
+export function openContextClue () {
+    if(document.querySelector('.searchContextual_js')) {
+        let parent = document.querySelector('.headerMenu_js');
+        let clue = parent.querySelector('.searchContextual_js');
+        let input = parent.querySelector('.searchInput_js');
+        input.addEventListener("keyup", (e) => {
+            if(input.value.length > 2) {
+                clue.classList.add('show');
+            } else {
+                clue.classList.remove('show');
+            }
         });
     }
 }

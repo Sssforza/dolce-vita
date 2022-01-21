@@ -436,7 +436,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["closeSearch"])(); // header menu selection
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["menuSelection"])(); // first animation main page
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["menuSelection"])(); // open context clue
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openContextClue"])(); // first animation main page
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["firstAnimation"])(); // form in the main page
 
@@ -16469,6 +16471,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openCloseSearch", function() { return openCloseSearch; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeSearch", function() { return closeSearch; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "menuSelection", function() { return menuSelection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openContextClue", function() { return openContextClue; });
 // drop last header
 function dropLastHeader() {
   if (document.querySelector('.header_main')) {
@@ -16525,8 +16528,10 @@ function closeSearch() {
   if (document.querySelector('.searchСross_js')) {
     var parent = document.querySelector('.headerSearch_js');
     var сross = parent.querySelector('.searchСross_js');
+    var clue = document.querySelector('.searchContextual_js');
     сross.addEventListener("click", function (e) {
       parent.classList.remove('show');
+      clue.classList.remove('show');
     });
   }
 } // header menu selection
@@ -16659,6 +16664,21 @@ function menuSelection() {
         });
         menuProceduresForEach();
       });
+    });
+  }
+} // open context clue
+
+function openContextClue() {
+  if (document.querySelector('.searchContextual_js')) {
+    var parent = document.querySelector('.headerMenu_js');
+    var clue = parent.querySelector('.searchContextual_js');
+    var input = parent.querySelector('.searchInput_js');
+    input.addEventListener("keyup", function (e) {
+      if (input.value.length > 2) {
+        clue.classList.add('show');
+      } else {
+        clue.classList.remove('show');
+      }
     });
   }
 }

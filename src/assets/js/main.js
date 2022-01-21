@@ -15,7 +15,7 @@ import {mainSlider, specialistSlider} from "./blocks/_sliders.js";
 import {specialistHover, blogArticlesHover, showReviews, animMainDolce1, animMainDolce2, animMainDolce3, animationForText, firstAnimation, hideErrorForm} from "./blocks/index.js";
 
 //📁 /assets/js/blocks  _header.js
-import {dropLastHeader, openCloseHamburger, openCloseSearch, closeSearch, menuSelection} from "./blocks/_header.js";
+import {dropLastHeader, openCloseHamburger, openCloseSearch, closeSearch, menuSelection, openContextClue} from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  validation.js
 import {signConsultation} from "./blocks/validations.js";
@@ -62,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // header menu selection
     menuSelection();
+
+    // open context clue
+    openContextClue();
 
     // first animation main page
     firstAnimation();
