@@ -94,8 +94,8 @@ main {
     &__link {
         position: relative;
         margin-left: 60px;
-        font-size: 20px;
-        line-height: 34px;
+        font-size: 22px;
+        line-height: 38px;
         color: $black;
         vertical-align: text-bottom;
         transition: $transition;
@@ -159,8 +159,8 @@ main {
     cursor: pointer;
     &_black {
         padding-top: 2px;
-        font-size: 20px;
-        line-height: 34px;
+        font-size: 22px;
+        line-height: 38px;
         color: $white;
         background: $black;
         @media (max-width:$md) {
@@ -176,8 +176,8 @@ main {
     }
     &_blackBorder {
         padding-top: 2px;
-        font-size: 20px;
-        line-height: 34px;
+        font-size: 22px;
+        line-height: 38px;
         color: $black;
         border: 1px solid $blackLight2;
         background: transparent;

@@ -11,7 +11,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     <div class="mainSlider__wrapper">
                         <div class="mainSlider__title">Ultherapy лифтинг омоложение</div>
                         <div class="mainSlider__text">
-                            Процедура увлажнения и&nbsp;омоложения кожи на&nbsp;5&ndash;15 лет впервые в&nbsp;Омске, методика без осложнений
+                            Процедура увлажнения и&nbsp;омоложения <br>кожи на&nbsp;5&ndash;15 лет впервые в&nbsp;Омске, <br>методика без осложнений
                         </div>
                     </div>
                     <div class="btn btn_blackBorder mainSlider__btn">Подробнее</div>
@@ -23,7 +23,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     <div class="mainSlider__wrapper">
                         <div class="mainSlider__title">Ultherapy лифтинг омоложение 2</div>
                         <div class="mainSlider__text">
-                            Процедура увлажнения и&nbsp;омоложения кожи на&nbsp;5&ndash;15 лет впервые в&nbsp;Омске, методика без осложнений
+                            Процедура увлажнения и&nbsp;омоложения <br>кожи на&nbsp;5&ndash;15 лет впервые в&nbsp;Омске, <br>методика без осложнений
                         </div>
                     </div>
                     <div class="btn btn_blackBorder mainSlider__btn">Подробнее</div>
