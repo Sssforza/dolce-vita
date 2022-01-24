@@ -15,6 +15,10 @@
             padding-left: 21px;
             padding-right: 16px;
         }
+        @media (max-width:$xs) {
+            padding-left: 30px;
+            padding-right: 26px;
+        }
     }
     &__content {
         padding: 21px 0;
@@ -81,8 +85,14 @@
             font-size: 14px;
             line-height: 26px;
         }
+        @media (max-width:$xs) {
+            display: none;
+        }
     }
     &__basket {
+        @media (max-width:$xs) {
+            display: none;
+        }
         &:hover {
             svg {
                 path {
@@ -142,21 +152,33 @@
             @media (max-width:$lg) {
                 width: 374px;
             }
+            @media (max-width:$xs) {
+                width: auto;
+            }
         }
         .header__content {
             padding: 37px 0 18px;
             @media (max-width:$lg) {
                 padding: 20px 0;
             }
+            @media (max-width:$xs) {
+                padding: 9px 0;
+            }
         }
         .header__wrapper {
             &_basket {
                 margin-left: 0;
+                @media (max-width:$xs) {
+                    margin-left: 16px;
+                }
             }
         }
         .headerSocial {
             @media (max-width:$lg) {
                 margin-left: 11px;
+            }
+            @media (max-width:$xs) {
+                margin-left: 0;
             }
         }
         .hamburger {
@@ -165,6 +187,9 @@
             }
             @media (max-width:$lg) {
                 margin-left: 12px;
+            }
+            @media (max-width:$xs) {
+                margin-left: 0;
             }
         }
     }
@@ -184,8 +209,37 @@
         margin-left: 21px;
         gap: 10px;
     }
+    &__item {
+        @media (max-width:$xs) {
+            display: none;
+        }
+        &_phone {
+            display: none;
+            @media (max-width:$xs) {
+                display: block;
+            }
+            .headerSocial__link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            svg {
+                @media (max-width:$xs) {
+                    width: auto;
+                    height: auto;
+                }
+            }
+        }
+    }
     &__link {
         display: block;
+        @media (max-width:$xs) {
+            width: 36px;
+            height: 36px;
+            background: $black;
+            border-radius: 50%;
+            overflow: hidden;
+        }
         &:hover {
             svg {
                 path {
@@ -226,6 +280,10 @@
         margin-left: 28px;
         width: 40px;
         height: 40px;
+    }
+    @media (max-width:$xs) {
+        width: 36px;
+        height: 36px;
     }
     @media (max-width:$lg) {
         margin-left: 35px;
