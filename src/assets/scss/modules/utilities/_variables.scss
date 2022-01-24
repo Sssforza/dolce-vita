@@ -60,6 +60,9 @@ $transition5: all .5s;
 	@media (max-width:$lg) {
 		padding-left: 106px;
 	}
+	@media (max-width:$xs) {
+		padding-left: 30px;
+	}
 }
 %indentRight {
 	padding-right: 180px;
@@ -68,6 +71,9 @@ $transition5: all .5s;
 	}
 	@media (max-width:$lg) {
 		padding-right: 106px;
+	}
+	@media (max-width:$xs) {
+		padding-right: 30px;
 	}
 }
 

@@ -13,6 +13,10 @@
     @media (max-width:$lg) {
         padding: 61px 0;
     }
+    @media (max-width:$xs) {
+        position: relative;
+        padding: 50px 0;
+    }
     &__content {
         @extend %indentRight;
         @extend %indentLeft;
@@ -21,6 +25,10 @@
     &__bottom {
         display: flex;
         justify-content: space-between;
+        @media (max-width:$xs) {
+            justify-content: flex-start;
+            flex-direction: column;
+        }
     }
     &__top {
         color: $white;
@@ -29,6 +37,13 @@
         @media (max-width:$md) {
             font-size: 14px;
             line-height: 26px;
+        }
+        .footer__box {
+            &:not(:first-child) {
+                @media (max-width:$xs) {
+                    margin-top: 50px;
+                }
+            }
         }
     }
     &__bottom {
@@ -44,6 +59,23 @@
         @media (max-width:$lg) {
             margin-top: 136px;
         }
+        @media (max-width:$xs) {
+            margin-top: 50px;
+            padding-top: 50px;
+            border-top: 1px solid #a2a2a380;
+        }
+        .footer__box {
+            &:not(:first-child) {
+                @media (max-width:$xs) {
+                    margin-top: 20px;
+                }
+            }
+            &:last-child {
+                @media (max-width:$xs) {
+                    margin-top: 40px;
+                }
+            }
+        }
     }
     &__box {
         &:first-child {
@@ -54,6 +86,9 @@
             @media (max-width:$lg) {
                 width: 380px;
             }
+            @media (max-width:$xs) {
+                width: 100%;
+            }
         }
         &:nth-child(2) {
             width: 504px;
@@ -63,6 +98,9 @@
             @media (max-width:$lg) {
                 width: 420px;
             }
+            @media (max-width:$xs) {
+                width: 100%;
+            }
         }
         &:last-child {
             width: 156px;
@@ -71,6 +109,9 @@
             }
             @media (max-width:$lg) {
                 width: 111px;
+            }
+            @media (max-width:$xs) {
+                width: 100%;
             }
         }
     }
@@ -90,7 +131,7 @@
         margin-left: 33px;
         @media (max-width:$md) {
             top: -10px;
-            margin-left: 5px;
+            margin-left: 98px;
         }
         &:hover {
             svg {
@@ -118,6 +159,11 @@
             @media (max-width:$lg) {
                 left: -98px;
             }
+            @media (max-width:$xs) {
+                left: -98px;
+                width: 88px;
+                height: 33px;
+            }
             path {
                 transition: $transition;
             }
@@ -136,11 +182,17 @@
 }
 .footerTime {
     margin-top: 30px;
+    @media (max-width:$xs) {
+        margin-top: 20px;
+    }
     &__li {
         display: flex;
         gap: 0 30px;
         @media (max-width:$md) {
             gap: 0 20px;
+        }
+        @media (max-width:$xs) {
+            gap: 2px 0;
         }
         &:not(:first-child) {
             margin-top: 2px;
@@ -153,6 +205,9 @@
             @media (max-width:$md) {
                 width: 60px;
             }
+            @media (max-width:$xs) {
+                width: 70px;
+            }
         }
     }
 }
@@ -164,9 +219,16 @@
         gap: 10px 0px;
         max-width: 80%;
     }
+    @media (max-width:$xs) {
+        gap: 20px 76px;
+        max-width: 100%;
+    }
     &__li {
         flex: none;
         width: 133px;
+        @media (max-width:$xs) {
+            width: 93px;
+        }
     }
     &__link {
         transition: $transition;
@@ -184,6 +246,9 @@
     gap: 0 38px;
     @media (max-width:$md) {
         gap: 0 19px;
+    }
+    @media (max-width:$xs) {
+        gap: 0 38px;
     }
     &__link {
         display: block;
@@ -205,6 +270,9 @@
     svg {
         @media (max-width:$md) {
             zoom: 0.75;
+        }
+        @media (max-width:$xs) {
+            zoom: 1;
         }
         path {
             transition: $transition;

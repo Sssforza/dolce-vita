@@ -74,6 +74,9 @@ main {
     @media (max-width:$md) {
         margin-bottom: 420px;
     }
+    @media (max-width:$xs) {
+        margin-bottom: 0;
+    }
 }
 .page {
     &_main {
