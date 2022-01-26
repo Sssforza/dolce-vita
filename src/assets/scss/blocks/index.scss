@@ -515,8 +515,12 @@
     &__content {
         position: relative;
         display: flex;
-        padding-right: 25px;
+        justify-content: space-between;
+        padding-right: 40px;
         @extend %indentLeft;
+        @media (max-width:$md) {
+            padding-right: 25px;
+        }
         @media (max-width:$lg) {
             padding-right: 22px;
         }
@@ -578,18 +582,10 @@
         top: 100px;
         right: 0;
         display: flex;
-        margin-left: 158px;
         padding-bottom: 80px;
-        @media (max-width:$md) {
-            margin-left: 40px;
-        }
-        @media (max-width:$lg) {
-            margin-left: 36px;
-        }
         @media (max-width:$xs) {
             position: relative;
             top: 0;
-            margin-left: 0;
             padding-bottom: 0;
         }
         &:after {

@@ -30,11 +30,16 @@
         }
     }
     &__box {
+        margin-right: -12px;
         padding-left: 46px;
         display: flex;
         justify-content: space-between;
         @media (max-width:$md) {
+            margin-right: -4px;
             padding-left: 63px;
+        }
+        @media (max-width:$lg) {
+            margin-right: 0;
         }
     }
     &__wrapper {
@@ -54,6 +59,7 @@
         }
     }
     &__logo {
+        display: block;
         transition: $transition;
         svg {
             @media (max-width:$md) {
@@ -73,6 +79,7 @@
         }
     }
     &__tel {
+        padding-top: 4px;
         font-size: 22px;
         line-height: 38px;
         color: $black;
@@ -162,8 +169,11 @@
         }
         .header__content {
             padding: 37px 0 18px;
+            @media (max-width:$md) {
+                padding: 18px 0;
+            }
             @media (max-width:$lg) {
-                padding: 20px 0;
+                padding: 12px 0;
             }
             @media (max-width:$xs) {
                 padding: 9px 0;
@@ -369,10 +379,13 @@
         @media (max-width:$lg) {
             padding-right: 11px;
         }
+        @media (max-width:$xs) {
+            position: relative;
+        }
     }
     &__container {
         height: 100%;
-        padding-top: 49px;
+        padding-top: 186px;
         padding-bottom: 70px;
         @media (max-width:$md) {
             padding-top: 133px;
@@ -382,22 +395,71 @@
             padding-bottom: 42px;
         }
     }
-    &__logo {
-        transform: translateY(-30px);
-        opacity: 0;
-        transition: transform .9s 1.2s, opacity 1s 1.2s;
-    }
     .header {
+        &__wrap {
+            width: calc(100% - 1075px);
+            min-width: 336px;
+            transform: translateY(-30px);
+            opacity: 0;
+            transition: transform .9s 1.2s, opacity 1s 1.2s;
+            @media (max-width:$md) {
+                min-width: 320px;
+            }
+            @media (max-width:$lg) {
+                min-width: 220px;
+                width: calc(100% - 686px);
+            }
+        }
         &__container {
-            padding: 0;
+            padding-right: 28px;
+            padding-left: 138px;
+            @media (max-width:$md) {
+                padding-left: 80px;
+            }
+            @media (max-width:$lg) {
+                padding-left: 22px;
+            }
         }
         &__box {
+            width: 100%;
             padding: 0;
+            justify-content: flex-start;
+            &_white {
+                padding-left: 57px;
+                margin-right: 0;
+                @media (max-width:$md) {
+                    padding-left: 47px;
+                }
+                @media (max-width:$lg) {
+                    padding-left: 34px;
+                }
+            }
+        }
+        &__envelope {
+            position: relative;
+            margin-left: 20px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transform: translateY(-30px);
+            opacity: 0;
+            transition: transform .9s 2s, opacity 1s 2s;
+            @media (max-width:$md) {
+                margin-left: 43px;
+            }
         }
         &__wrapper {
             margin-left: 0;
             &_basket {
                 gap: 0 30px;
+            }
+            &_contacts {
+                width: 287px;
+                flex: none;
+                @media (max-width:$md) {
+                    width: 211px;
+                }
             }
         }
         &__basket {
@@ -454,12 +516,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-top: 109px;
-        height: calc(100% - 140px);
-        @media (max-width:$md) {
-            margin-top: 70px;
-            height: calc(100% - 91px);
-        }
+        height: 100%;
     }
     &__ul {
         &_big {
@@ -562,7 +619,6 @@
     .headerMenu__container {
         padding-left: 138px;
         @media (max-width:$md) {
-            padding-top: 43px;
             padding-left: 80px
         }
         @media (max-width:$lg) {
@@ -618,12 +674,15 @@
     @media (max-width:$lg) {
         margin-left: 34px;
     }
+    @media (max-width:$xs) {
+        margin-left: 0;
+        top: 0;
+        height: 170px;
+    }
     &__content {
-        margin-top: 106px;
         display: flex;
         gap: 0 40px;
         @media (max-width:$md) {
-            margin-top: 69px;
             gap: 0 45px;
         }
     }
@@ -710,12 +769,6 @@
             }
         }
     }
-    .headerMenu__container {
-        padding-top: 45px;
-        @media (max-width:$md) {
-            padding-top: 40px;
-        }
-    }
 }
 .menuProcedures {
     margin-left: 80px;
@@ -729,18 +782,18 @@
     @media (max-width:$lg) {
         margin-left: 56px;
     }
+    @media (max-width:$xs) {
+        margin-left: 0;
+        top: 170px;
+    }
     &__content {
         position: relative;
         padding-right: 23px;
-        padding-top: 0 !important;
-        margin-top: 95px;
-        padding-bottom: 0 !important;
-        margin-bottom: 70px;
+        margin-top: -9px;
         height: auto;
         @media (max-width:$md) {
-            margin-top: 52px;
             margin-bottom: 44px;
-            padding-right: 17px;
+            padding-right: 24px;
         }
         @media (max-width:$lg) {
             margin-bottom: 22px;
@@ -764,7 +817,7 @@
     }
     &__list {
         padding-top: 9px;
-        padding-right: 66px;
+        padding-right: 10px;
         padding-bottom: 6px;
         display: flex;
         flex-wrap: wrap;
@@ -831,12 +884,6 @@
             color: $activeColor;
         }
     }
-    .headerMenu__container {
-        padding-top: 36px;
-        @media (max-width:$md) {
-            padding-top: 30px;
-        }
-    }
     .header__box {
         margin-left: -20px;
         margin-right: -16px;
@@ -846,9 +893,20 @@
         }
     }
 }
+.menuMiddle, .menuProcedures {
+    @media (max-width:$xs) {
+        position: absolute;
+        right: 0;
+        left: 0;
+        background: $white;
+    }
+}
 .headerSearch {
     position: absolute;
-    right: 120px;
+    right: 139px;
+    @media (max-width:$md) {
+        right: 121px;
+    }
     &__content {
         position: relative;
     }
@@ -857,12 +915,12 @@
         overflow: hidden;
         transition: all .5s;
         &.show {
-            width: 750px;
+            width: 770px;
             @media (max-width:$md) {
-                width: 440px;
+                width: 418px;
             }
             @media (max-width:$lg) {
-                width: 368px;
+                width: 350px;
             }
             input {
                 opacity: 1;
@@ -890,6 +948,12 @@
                     pointer-events: auto;
                 }
             }
+            .headerSearch__loupe {
+                top: 16px;
+                @media (max-width:$md) {
+                    top: 13px;
+                }
+            }
         }
     }
     &__input {
@@ -914,14 +978,14 @@
     }
     &__loupe {
         position: absolute;
-        top: 17px;
+        top: 18px;
         left: 0;
         z-index: 1;
         cursor: pointer;
         transition: all .5s;
         @media (max-width:$md) {
             left: 8px;
-            top: 13px;
+            top: 15px;
         }
         svg {
             @media (max-width:$md) {
@@ -951,7 +1015,7 @@
     position: absolute;
     top: 73px;
     left: 0;
-    width: 750px;
+    width: 770px;
     height: 563px;
     background: $white;
     border: 1px solid rgba(23, 23, 25, 0.4);
@@ -962,11 +1026,13 @@
     transform: translateY(-30px);
     transition: $transition5;
     @media (max-width:$md) {
-        width: 440px;
+        top: 57px;
+        width: 418px;
         height: calc(100vh - 130px);
     }
     @media (max-width:$lg) {
-        width: 368px;
+        top: 55px;
+        width: 350px;
         height: calc(100vh - 260px);
     }
     &__content {
