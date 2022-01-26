@@ -84,6 +84,9 @@ main {
         @media (max-width:$md) {
             padding-bottom: 127px;
         }
+        @media (max-width:$xs) {
+            padding-bottom: 90px;
+        }
     }
 }
 .container {
@@ -109,6 +112,10 @@ main {
         }
         @media (max-width:$lg) {
             margin-left: 45px;
+        }
+        @media (max-width:$xs) {
+            margin-left: 0;
+            margin-top: 10px;
         }
         &:hover {
             color: $dolceColor;
@@ -136,6 +143,10 @@ main {
     &__wrapper {
         display: inline-flex;
         align-items: center;
+        @media (max-width:$xs) {
+            align-items: flex-start;
+            flex-direction: column;
+        }
     }
     span {
         font-size: 66px;
@@ -148,6 +159,10 @@ main {
         @media (max-width:$md) {
             font-size: 34px;
             line-height: 40px;
+        }
+        @media (max-width:$xs) {
+            font-size: 30px;
+            line-height: 36px;
         }
     }
 }
@@ -260,12 +275,18 @@ main {
         @media (max-width:$md) {
             margin-top: 17px;
         }
+        @media (max-width:$xs) {
+            margin-top: 11px;
+        }
     }
     &.error {
         input {
             color: $error;
             border-bottom: 2px solid $error;
             @include placeholder(34px, $error, 'SuisseIntl');
+            @media (max-width:$md) {
+                @include placeholder(22px, $error, 'SuisseIntl');
+            }
             &:hover {
                 border-bottom: 1px solid $error;
             }
@@ -305,6 +326,9 @@ main {
             font-size: 22px;
             line-height: 26px;
             @include placeholder(22px, $blackLight2, 'SuisseIntl');
+        }
+        @media (max-width:$xs) {
+            height: 47px;
         }
         &:hover {
             border-bottom: 1px solid $black;

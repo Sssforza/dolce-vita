@@ -16248,7 +16248,8 @@ $.magnificPopup.registerModule(RETINA_NS, {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mainSlider", function() { return mainSlider; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "specialistSlider", function() { return specialistSlider; });
-// mainSlider
+var xs = 376; // mainSlider
+
 function mainSlider() {
   var slickMain = $(".mainSlider_js");
 
@@ -16275,7 +16276,7 @@ function mainSlider() {
 function specialistSlider() {
   var slickSpecialist = $(".specialistSlider_js");
 
-  if (slickSpecialist.length) {
+  if (slickSpecialist.length && document.documentElement.clientWidth > xs) {
     slickSpecialist.slick({
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -16307,7 +16308,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animationForText", function() { return animationForText; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "firstAnimation", function() { return firstAnimation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hideErrorForm", function() { return hideErrorForm; });
-// specialist hover
+var xs = 376; // specialist hover
+
 function specialistHover() {
   if (document.querySelector('.specialistHover_js')) {
     var list = document.querySelector('.specialist__list');
@@ -16386,6 +16388,11 @@ function animMainDolce1() {
     var dolceItem1 = document.querySelector('.mainDolceItem1_js');
     var clientHeight = document.documentElement.clientHeight / 2;
     var clientRectTop;
+
+    if (document.documentElement.clientWidth <= xs) {
+      clientHeight = document.documentElement.clientHeight;
+    }
+
     window.addEventListener('scroll', function () {
       clientRectTop = dolceItem1.getBoundingClientRect().top;
 
@@ -16402,6 +16409,11 @@ function animMainDolce2() {
     var clientHeight = document.documentElement.clientHeight / 2;
     var headerHeight = document.querySelector('.header_main').clientHeight;
     var clientRectTop;
+
+    if (window.screen.availWidth <= xs) {
+      clientHeight = document.documentElement.clientHeight;
+    }
+
     window.addEventListener('scroll', function () {
       clientRectTop = dolceItem2.getBoundingClientRect().top;
 
@@ -16418,6 +16430,11 @@ function animMainDolce3() {
     var clientHeight = document.documentElement.clientHeight / 2;
     var headerHeight = document.querySelector('.header_main').clientHeight;
     var clientRectTop;
+
+    if (window.screen.availWidth <= xs) {
+      clientHeight = document.documentElement.clientHeight;
+    }
+
     window.addEventListener('scroll', function () {
       clientRectTop = dolceItem3.getBoundingClientRect().top;
 
@@ -16434,6 +16451,11 @@ function animationForText() {
     var clientHeight = document.documentElement.clientHeight / 2;
     var headerHeight = document.querySelector('.header_main').clientHeight;
     var clientRectTop;
+
+    if (window.screen.availWidth <= xs) {
+      clientHeight = document.documentElement.clientHeight;
+    }
+
     window.addEventListener('scroll', function () {
       clientRectTop = dolceAbout.getBoundingClientRect().top;
 
@@ -16472,13 +16494,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeSearch", function() { return closeSearch; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "menuSelection", function() { return menuSelection; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openContextClue", function() { return openContextClue; });
-// drop last header
+var xs = 376; // drop last header
+
 function dropLastHeader() {
-  if (document.querySelector('.header_main')) {
+  if (document.querySelector('.header_main') && document.documentElement.clientWidth > xs) {
     var header = document.querySelector('.header_main');
     var headerHeight = document.querySelector('.header_main').offsetHeight;
     var emergence = document.querySelector('.firstSection_js').offsetHeight;
     window.addEventListener('scroll', function () {
+      console.log(152);
+
       if (pageYOffset > emergence - headerHeight) {
         header.classList.remove('hide');
       } else {

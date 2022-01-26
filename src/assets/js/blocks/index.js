@@ -1,3 +1,4 @@
+let xs = 376
 // specialist hover
 export function specialistHover () {
     if(document.querySelector('.specialistHover_js')) {
@@ -72,6 +73,9 @@ export function animMainDolce1 () {
         const dolceItem1 = document.querySelector('.mainDolceItem1_js');
         let clientHeight = document.documentElement.clientHeight/2;
         let clientRectTop;
+        if(document.documentElement.clientWidth <= xs) {
+            clientHeight = document.documentElement.clientHeight;
+        }
         window.addEventListener('scroll', function() {
             clientRectTop = dolceItem1.getBoundingClientRect().top;
             if(clientRectTop < clientHeight) {
@@ -87,6 +91,9 @@ export function animMainDolce2 () {
         let clientHeight = document.documentElement.clientHeight/2;
         let headerHeight = document.querySelector('.header_main').clientHeight;
         let clientRectTop;
+        if(window.screen.availWidth <= xs) {
+            clientHeight = document.documentElement.clientHeight;
+        }
         window.addEventListener('scroll', function() {
             clientRectTop = dolceItem2.getBoundingClientRect().top;
             if(clientRectTop < clientHeight + headerHeight) {
@@ -102,6 +109,9 @@ export function animMainDolce3 () {
         let clientHeight = document.documentElement.clientHeight/2;
         let headerHeight = document.querySelector('.header_main').clientHeight;
         let clientRectTop;
+        if(window.screen.availWidth <= xs) {
+            clientHeight = document.documentElement.clientHeight;
+        }
         window.addEventListener('scroll', function() {
             clientRectTop = dolceItem3.getBoundingClientRect().top;
             if(clientRectTop < clientHeight + headerHeight) {
@@ -117,6 +127,9 @@ export function animationForText () {
         let clientHeight = document.documentElement.clientHeight/2;
         let headerHeight = document.querySelector('.header_main').clientHeight;
         let clientRectTop;
+        if(window.screen.availWidth <= xs) {
+            clientHeight = document.documentElement.clientHeight;
+        }
         window.addEventListener('scroll', function() {
             clientRectTop = dolceAbout.getBoundingClientRect().top;
             if(clientRectTop < clientHeight + headerHeight) {

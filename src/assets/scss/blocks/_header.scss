@@ -144,6 +144,10 @@
         }
     }
     &_first {
+        @media (max-width:$xs) {
+            position: fixed;
+            background: $white;
+        }
         .header__box {
             width: 627px;
             @media (max-width:$md) {

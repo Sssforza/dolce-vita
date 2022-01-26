@@ -1,3 +1,4 @@
+let xs = 376
 // mainSlider
 export function mainSlider () {
     const slickMain = $(".mainSlider_js");
@@ -25,7 +26,7 @@ export function mainSlider () {
 export function specialistSlider () {
     const slickSpecialist = $(".specialistSlider_js");
 
-	if (slickSpecialist.length) {
+	if (slickSpecialist.length && document.documentElement.clientWidth > xs) {
 		slickSpecialist.slick({
 			slidesToShow: 3,
 			slidesToScroll: 1,

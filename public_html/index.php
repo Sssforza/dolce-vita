@@ -33,8 +33,8 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
     </section>
     <section class="mainDolce">
         <div class="mainDolce__about mainDolceAbout_js">
-            Уже 15&nbsp;лет мы&nbsp;выбираем и&nbsp;привозим в&nbsp;Омск всё самое лучшее в&nbsp;области
-            косметологии и&nbsp;красоты: инновационные решения, передовые технологии
+            <span>Уже </span>15&nbsp;лет мы&nbsp;выбираем и&nbsp;привозим <br>в&nbsp;Омск <span>всё самое </span>лучшее<span> в&nbsp;области
+            косметологии и&nbsp;красоты</span>: инновационные решения, передовые технологии
         </div>
         <div class="mainDolce__content">
             <div class="mainDolce__item mainDolce__item_left mainDolceItem1_js">
@@ -339,7 +339,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                             <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/question.svg';?>
                         </div>
                         <div class="guestCard__discount">
-                            <span>&minus;20%</span>на процедуры
+                            <span>&minus;20%</span> <div class="guestCard__pretext">на </div>процедуры
                         </div>
                         <div class="guestCard__clue">
                             На&nbsp;первую процедуру по&nbsp;уходу&nbsp;за: лицом, телом, волосами, руками и&nbsp;ногами
@@ -350,7 +350,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                             <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/question.svg';?>
                         </div>
                         <div class="guestCard__discount">
-                            <span>&minus;10%</span>на косметику
+                            <span>&minus;10%</span> <div class="guestCard__pretext">на </div> косметику
                         </div>
                         <div class="guestCard__clue">
                             На&nbsp;лечебную, декоративную косметику
