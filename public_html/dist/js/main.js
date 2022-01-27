@@ -436,7 +436,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["closeSearch"])(); // header menu selection
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["menuSelection"])(); // open context clue
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["menuSelection"])(); // header menu back
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["headerMenuBack"])(); // open context clue
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openContextClue"])(); // first animation main page
 
@@ -16493,6 +16495,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openCloseSearch", function() { return openCloseSearch; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeSearch", function() { return closeSearch; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "menuSelection", function() { return menuSelection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerMenuBack", function() { return headerMenuBack; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openContextClue", function() { return openContextClue; });
 var xs = 376; // drop last header
 
@@ -16524,6 +16527,7 @@ function openCloseHamburger() {
           });
           document.body.classList.remove('overflowHidden');
           document.body.classList.remove('openHeaderMenu');
+          document.body.classList.remove('openHeaderMenuDetail');
         } else {
           hamburger.forEach(function (item) {
             item.classList.add('active');
@@ -16649,6 +16653,11 @@ function menuSelection() {
         menuMiddleForEach();
         menuInterimForEach();
         menuProceduresForEach();
+
+        if (document.documentElement.clientWidth <= xs) {
+          console.log(1);
+          document.body.classList.add('openHeaderMenuDetail');
+        }
       });
     });
     menuMiddleDetail.forEach(function (item) {
@@ -16689,6 +16698,15 @@ function menuSelection() {
         });
         menuProceduresForEach();
       });
+    });
+  }
+} // header menu back
+
+function headerMenuBack() {
+  if (document.querySelector('.menuBack_js')) {
+    var back = document.querySelector('.menuBack_js');
+    back.addEventListener("click", function (e) {
+      document.body.classList.remove('openHeaderMenuDetail');
     });
   }
 } // open context clue

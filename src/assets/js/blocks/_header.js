@@ -28,6 +28,7 @@ export function openCloseHamburger () {
                     });
                     document.body.classList.remove('overflowHidden');
                     document.body.classList.remove('openHeaderMenu');
+                    document.body.classList.remove('openHeaderMenuDetail');
                 } else {
                     hamburger.forEach((item) => {
                         item.classList.add('active');
@@ -149,6 +150,12 @@ export function menuSelection () {
                 menuMiddleForEach();
                 menuInterimForEach();
                 menuProceduresForEach();
+
+                if (document.documentElement.clientWidth <= xs) {
+                    console.log(1)
+                    document.body.classList.add('openHeaderMenuDetail');
+                }
+
             });
         });
 
@@ -194,6 +201,16 @@ export function menuSelection () {
 
                 menuProceduresForEach();
             });
+        });
+    }
+}
+
+// header menu back
+export function headerMenuBack () {
+    if(document.querySelector('.menuBack_js')) {
+        let back = document.querySelector('.menuBack_js');
+        back.addEventListener("click", (e) => {
+            document.body.classList.remove('openHeaderMenuDetail');
         });
     }
 }

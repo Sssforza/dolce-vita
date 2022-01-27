@@ -50,6 +50,7 @@ body {
             transform: translateY(0);
             border-radius: 0;
             opacity: 1;
+            pointer-events: auto;
         }
         .menuMain {
             &:after {
@@ -62,6 +63,20 @@ body {
         .header__tel, .headerSocial, .menuProcedures, .header__envelope, .header__wrap {
             transform: translateY(0px);
             opacity: 1;
+        }
+    }
+    &.openHeaderMenuDetail {
+        .menuMain, .headerMenu .header:before, .header__wrapper_contacts, .header__wrapper_btns {
+            transform: translateX(-160%);
+        }
+        .menuMiddle, .menuProcedures {
+            transform: translateX(0%)!important;
+        }
+        .headerMenu .header:after {
+            height: 66px;
+        }
+        .headerMenu .header__box_white {
+            border-top: 1px solid transparent;
         }
     }
 }
@@ -342,6 +357,9 @@ main {
     &::-webkit-scrollbar {
         background-color: transparent;
         width: 6px;
+        @media (max-width:$xs) {
+            width: 0;
+        }
     }
     &::-webkit-scrollbar-thumb {
         background-color: $black;
