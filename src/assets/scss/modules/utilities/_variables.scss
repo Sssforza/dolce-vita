@@ -47,7 +47,7 @@ $transition5: all .5s;
 
 %link {
 	pointer-events: none;
-	@media (max-width:$xs) {
+	@media (max-width:$lg) {
 		pointer-events: auto;
 	}
 }
