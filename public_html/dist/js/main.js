@@ -440,7 +440,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["headerMenuBack"])(); // open context clue
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openContextClue"])(); // first animation main page
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openContextClue"])(); // open/close contacts menu
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openCloseContactsMenu"])(); // first animation main page
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["firstAnimation"])(); // form in the main page
 
@@ -16497,6 +16499,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "menuSelection", function() { return menuSelection; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerMenuBack", function() { return headerMenuBack; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openContextClue", function() { return openContextClue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openCloseContactsMenu", function() { return openCloseContactsMenu; });
 var xs = 376; // drop last header
 
 function dropLastHeader() {
@@ -16721,6 +16724,23 @@ function openContextClue() {
         clue.classList.add('show');
       } else {
         clue.classList.remove('show');
+      }
+    });
+  }
+} // open/close contacts menu
+
+function openCloseContactsMenu() {
+  if (document.querySelector('.headerPhone_js')) {
+    var headerPhone = document.querySelector('.headerPhone_js');
+    headerPhone.addEventListener("click", function (e) {
+      if (headerPhone.classList.contains('active')) {
+        headerPhone.classList.remove('active');
+        document.body.classList.remove('overflowHidden');
+        document.body.classList.remove('openHeaderContactsMenu');
+      } else {
+        headerPhone.classList.add('active');
+        document.body.classList.add('overflowHidden');
+        document.body.classList.add('openHeaderContactsMenu');
       }
     });
   }

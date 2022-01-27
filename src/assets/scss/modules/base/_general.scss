@@ -79,6 +79,26 @@ body {
             border-top: 1px solid transparent;
         }
     }
+    &.openHeaderContactsMenu {
+        .menuContacts {
+            transform: translateY(0);
+            border-radius: 0;
+            opacity: 1;
+            pointer-events: auto;
+            &__content {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .headerSocial__item_phone {
+            .phone {
+                display: none;
+            }
+            .cross {
+                display: flex;
+            }
+        }
+    }
 }
 main {
     position: relative;

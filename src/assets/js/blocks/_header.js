@@ -230,3 +230,21 @@ export function openContextClue () {
         });
     }
 }
+
+// open/close contacts menu
+export function openCloseContactsMenu () {
+    if(document.querySelector('.headerPhone_js')) {
+        let headerPhone = document.querySelector('.headerPhone_js');
+        headerPhone.addEventListener("click", (e) => {
+            if(headerPhone.classList.contains('active')) {
+                headerPhone.classList.remove('active');
+                document.body.classList.remove('overflowHidden');
+                document.body.classList.remove('openHeaderContactsMenu');
+            } else {
+                headerPhone.classList.add('active');
+                document.body.classList.add('overflowHidden');
+                document.body.classList.add('openHeaderContactsMenu');
+            }
+        });
+    }
+}
