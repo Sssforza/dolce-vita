@@ -138,7 +138,6 @@ export function animationForText () {
         });
     }
 }
-
 // first animation main page
 export function firstAnimation () {
     if(document.querySelector('.firstAnimation') && pageYOffset === 0) {
@@ -146,7 +145,6 @@ export function firstAnimation () {
         // document.body.classList.add('firstAnimation');
     }
 }
-
 // hide error form
 export function hideErrorForm () {
     if (document.querySelector('.signMessageBtn_js')) {
@@ -154,6 +152,59 @@ export function hideErrorForm () {
         let btn = signMessage.querySelector('.signMessageBtn_js');
         btn.addEventListener("click", () => {
             signMessage.classList.remove('show');
+        });
+    }
+}
+// custom slider reviews
+export function sliderReviews () {
+    if (document.querySelector('.reviews_js')) {
+        const wrapper = document.querySelector('.reviews_js');
+        let list = wrapper.querySelector('.reviewsList_js');
+        let arrows = wrapper.querySelectorAll('.reviews__arrow');
+        let arrowLeft = wrapper.querySelector('.reviewsArrowLeft_js');
+        let arrowRight = wrapper.querySelector('.reviewsArrowRight_js');
+        let amount = wrapper.querySelectorAll('.reviews__item').length;
+        let count = 1;
+        let shift = 0;
+        const wrapperWhole = document.querySelector('.reviewsList_js');
+        let whole = wrapperWhole.querySelectorAll('.reviewsWhole_js');
+        let parent;
+        let text;
+        arrows.forEach((item) => {
+            item.addEventListener("click", () => {
+                if(item.classList.contains('reviews__arrow_right')) {
+                    count = count + 1;
+                    if(count != amount){
+                        shift = shift - xs;
+                        list.style.transform = `translateX(${shift}px)`;
+                        arrowLeft.classList.remove('disabled');
+                    }
+                    if(count === amount){
+                        shift = shift - xs;
+                        list.style.transform = `translateX(${shift}px)`;
+                        arrowRight.classList.add('disabled');
+                    }
+                } else {
+                    count = count - 1;
+                    if(count === 1){
+                        shift = shift + xs;
+                        list.style.transform = `translateX(${shift}px)`;
+                        arrowLeft.classList.add('disabled');
+                    } else {
+                        shift = shift + xs;
+                        list.style.transform = `translateX(${shift}px)`;
+                        arrowRight.classList.remove('disabled');
+                    }
+                }
+                whole.forEach((item) => {
+                    parent = item.closest('.reviews__item');
+                    text = item.querySelector('.reviewsWhole_js span');
+                    if(parent.classList.contains('show')) {
+                        parent.classList.remove('show');
+                        text.innerHTML = 'Весь отзыв';
+                    }
+                });
+            });
         });
     }
 }

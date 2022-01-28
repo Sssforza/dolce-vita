@@ -264,10 +264,18 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </div>
         </div>
     </section>
-    <section class="reviews">
+    <section class="reviews reviews_js">
         <div class="reviews__content">
             <div class="heading">
                 <span>Отзывы</span>
+                <div class="reviews__arrows">
+                    <div class="reviews__arrow reviews__arrow_left reviewsArrowLeft_js disabled">
+                        <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewsArrow.svg';?>
+                    </div>
+                    <div class="reviews__arrow reviews__arrow_right reviewsArrowRight_js">
+                        <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewsArrow.svg';?>
+                    </div>
+                </div>
             </div>
             <div class="reviews__list reviewsList_js">
                 <div class="reviews__item">
@@ -300,6 +308,49 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 <div class="reviews__item">
                     <div class="reviews__box">
                         <div class="reviews__name">Ольга 34 года</div>
+                        <div class="reviews__read">
+                            <a href="#" class="reviews__link" target="_blank">Читать в facebook</a>
+                        </div>
+                    </div>
+                    <div class="reviews__text">
+                        <div class="reviews__recall">
+                            Вот уже на&nbsp;протяжении 6&nbsp;лет никогда не&nbsp;забываю про своего лучшего врача
+                            Пащенко Екатерину Юрьевну. Ещё в&nbsp;2014 году она единственный врач которая смогла мне
+                            помочь с&nbsp;проблемой акне. Всегда внимательная, отзывчивая, супер врач и&nbsp;удивительный человек.
+                            Спасибо вам огромное
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__item">
+                    <div class="reviews__box">
+                        <div class="reviews__name">Виктория 27 лет</div>
+                        <div class="reviews__read">
+                            <a href="#" class="reviews__link" target="_blank">Читать в vkontakte</a>
+                        </div>
+                    </div>
+                    <div class="reviews__text">
+                        <div class="reviews__recall reviewsRecall_js">
+                            Вот уже на&nbsp;протяжении 6&nbsp;лет никогда не&nbsp;забываю про своего лучшего врача
+                            Пащенко Екатерину Юрьевну. Ещё в&nbsp;2014 году она единственный врач которая смогла мне
+                            помочь с&nbsp;проблемой акне. Всегда внимательная, отзывчивая, супер врач и&nbsp;удивительный...
+                            Вот уже на&nbsp;протяжении 6&nbsp;лет никогда не&nbsp;забываю про своего лучшего врача
+                            Пащенко Екатерину Юрьевну. Ещё в&nbsp;2014 году она единственный врач которая смогла мне
+                            помочь с&nbsp;проблемой акне. Всегда внимательная, отзывчивая, супер врач и&nbsp;удивительный.
+                            Вот уже на&nbsp;протяжении 6&nbsp;лет никогда не&nbsp;забываю про своего лучшего врача
+                            Пащенко Екатерину Юрьевну. Ещё в&nbsp;2014 году она единственный врач которая смогла мне
+                            помочь с&nbsp;проблемой акне. Всегда внимательная, отзывчивая, супер врач и&nbsp;удивительный.
+                        </div>
+                        <div class="reviews__all">
+                            <div class="reviews__whole reviewsWhole_js">
+                                <span>Весь отзыв</span>
+                                <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__item">
+                    <div class="reviews__box">
+                        <div class="reviews__name">Юлия 45 лет</div>
                         <div class="reviews__read">
                             <a href="#" class="reviews__link" target="_blank">Читать в facebook</a>
                         </div>

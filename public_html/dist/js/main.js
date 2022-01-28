@@ -448,7 +448,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_validations_js__WEBPACK_IMPORTED_MODULE_6__["signConsultation"])(); // hide error form in the main page
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["hideErrorForm"])();
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["hideErrorForm"])(); // custom slider reviews
+
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["sliderReviews"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -16312,6 +16314,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animationForText", function() { return animationForText; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "firstAnimation", function() { return firstAnimation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hideErrorForm", function() { return hideErrorForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderReviews", function() { return sliderReviews; });
 var xs = 376; // specialist hover
 
 function specialistHover() {
@@ -16482,6 +16485,64 @@ function hideErrorForm() {
     var btn = signMessage.querySelector('.signMessageBtn_js');
     btn.addEventListener("click", function () {
       signMessage.classList.remove('show');
+    });
+  }
+} // custom slider reviews
+
+function sliderReviews() {
+  if (document.querySelector('.reviews_js')) {
+    var wrapper = document.querySelector('.reviews_js');
+    var list = wrapper.querySelector('.reviewsList_js');
+    var arrows = wrapper.querySelectorAll('.reviews__arrow');
+    var arrowLeft = wrapper.querySelector('.reviewsArrowLeft_js');
+    var arrowRight = wrapper.querySelector('.reviewsArrowRight_js');
+    var amount = wrapper.querySelectorAll('.reviews__item').length;
+    var count = 1;
+    var shift = 0;
+    var wrapperWhole = document.querySelector('.reviewsList_js');
+    var whole = wrapperWhole.querySelectorAll('.reviewsWhole_js');
+    var parent;
+    var text;
+    arrows.forEach(function (item) {
+      item.addEventListener("click", function () {
+        if (item.classList.contains('reviews__arrow_right')) {
+          count = count + 1;
+
+          if (count != amount) {
+            shift = shift - xs;
+            list.style.transform = "translateX(".concat(shift, "px)");
+            arrowLeft.classList.remove('disabled');
+          }
+
+          if (count === amount) {
+            shift = shift - xs;
+            list.style.transform = "translateX(".concat(shift, "px)");
+            arrowRight.classList.add('disabled');
+          }
+        } else {
+          count = count - 1;
+
+          if (count === 1) {
+            shift = shift + xs;
+            list.style.transform = "translateX(".concat(shift, "px)");
+            arrowLeft.classList.add('disabled');
+          } else {
+            shift = shift + xs;
+            list.style.transform = "translateX(".concat(shift, "px)");
+            arrowRight.classList.remove('disabled');
+          }
+        }
+
+        whole.forEach(function (item) {
+          parent = item.closest('.reviews__item');
+          text = item.querySelector('.reviewsWhole_js span');
+
+          if (parent.classList.contains('show')) {
+            parent.classList.remove('show');
+            text.innerHTML = 'Весь отзыв';
+          }
+        });
+      });
     });
   }
 }

@@ -12,7 +12,7 @@ import 'magnific-popup';
 import {mainSlider, specialistSlider} from "./blocks/_sliders.js";
 
 //📁 /assets/js/blocks  index.js
-import {specialistHover, blogArticlesHover, showReviews, animMainDolce1, animMainDolce2, animMainDolce3, animationForText, firstAnimation, hideErrorForm} from "./blocks/index.js";
+import {specialistHover, blogArticlesHover, showReviews, animMainDolce1, animMainDolce2, animMainDolce3, animationForText, firstAnimation, hideErrorForm, sliderReviews} from "./blocks/index.js";
 
 //📁 /assets/js/blocks  _header.js
 import {dropLastHeader, openCloseHamburger, openCloseSearch, closeSearch, menuSelection, headerMenuBack, openContextClue, openCloseContactsMenu} from "./blocks/_header.js";
@@ -80,4 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // hide error form in the main page
     hideErrorForm();
+
+    // custom slider reviews
+    sliderReviews();
 });

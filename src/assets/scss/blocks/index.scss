@@ -1042,6 +1042,9 @@
         @media (max-width:$md) {
             gap: 0 22px;
         }
+        @media (max-width:$xs) {
+            display: none;
+        }
     }
     &__prev {
         transform: rotate(180deg);
@@ -1093,6 +1096,7 @@
     @media (max-width:$xs) {
         margin-top: 104px;
         padding: 52px 0;
+        overflow-x: hidden;
     }
     &__content {
         @extend %indentRight;
@@ -1105,7 +1109,11 @@
             margin-top: 41px;
         }
         @media (max-width:$xs) {
-            margin-top: 28px;
+            margin: 28px -30px 0 -30px;
+            display: flex;
+            flex-wrap: nowrap;
+            border-top: none;
+            transition: transform .5s;
         }
     }
     &__item {
@@ -1117,8 +1125,18 @@
             padding: 32px 0 30px;
         }
         @media (max-width:$xs) {
-            padding: 30px 0 28px;
+            flex: none;
+            position: relative;
+            padding: 30px 30px 28px;
+            width: 100%;
             flex-direction: column;
+            border: none;
+        }
+        &:nth-child(n+3) {
+            display: none;
+            @media (max-width:$xs) {
+                display: block;
+            }
         }
         &.show {
             .reviews__recall {
@@ -1128,6 +1146,27 @@
                 svg {
                     transform: rotate(-180deg);
                 }
+            }
+        }
+        &:after, &:before {
+            @media (max-width:$xs) {
+                content:'';
+                position: absolute;
+                right: 30px;
+                left: 30px;
+                height: 1px;
+                background: $blackLight2;
+            }
+        }
+        &:before {
+            @media (max-width:$xs) {
+                top: 0;
+            }
+        }
+        &:after {
+            @media (max-width:$xs) {
+                content:'';
+                bottom: 0;
             }
         }
     }
@@ -1284,6 +1323,28 @@
         @media (max-width:$xs) {
             margin-top: 29px;
             margin-left: 0;
+        }
+    }
+    &__arrows {
+        display: none;
+        @media (max-width:$xs) {
+            display: flex;
+            gap: 0 20px;
+        }
+    }
+    &__arrow {
+        &_left {
+            transform: rotate(180deg);
+        }
+        &.disabled {
+            opacity: .6;
+            pointer-events: none;
+        }
+    }
+    .heading {
+        @media (max-width:$xs) {
+            display: flex;
+            justify-content: space-between;
         }
     }
 }
