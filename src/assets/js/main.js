@@ -8,6 +8,9 @@ import 'slick-carousel';
 //📁 /node_modules/  magnific-popup 1.1.0
 import 'magnific-popup';
 
+//📁 /assets/js/blocks  _hover
+import {hover} from "./blocks/_hover.js";
+
 //📁 /assets/js/blocks  _sliders.js
 import {mainSlider, specialistSlider} from "./blocks/_sliders.js";
 
@@ -89,4 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // custom slider reviews
     sliderReviews();
+
+    // hover delete on mobile devices
+    hover();
 });
