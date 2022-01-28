@@ -90,8 +90,8 @@
 
 __webpack_require__(1);
 __webpack_require__(3);
-__webpack_require__(12);
-module.exports = __webpack_require__(13);
+__webpack_require__(13);
+module.exports = __webpack_require__(14);
 
 
 /***/ }),
@@ -390,9 +390,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 /* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(magnific_popup__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
-/* harmony import */ var _blocks_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
-/* harmony import */ var _blocks_header_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(10);
-/* harmony import */ var _blocks_validations_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(11);
+/* harmony import */ var _blocks_popup_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
+/* harmony import */ var _blocks_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(10);
+/* harmony import */ var _blocks_header_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(11);
+/* harmony import */ var _blocks_validations_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(12);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -400,6 +401,8 @@ global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁
  //📁 /node_modules/  magnific-popup 1.1.0
 
  //📁 /assets/js/blocks  _sliders.js
+
+ //📁 /assets/js/blocks  _popup.js
 
  //📁 /assets/js/blocks  index.js
 
@@ -412,45 +415,47 @@ document.addEventListener("DOMContentLoaded", function () {
   // slider main
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_3__["mainSlider"])(); // slider specialist
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_3__["specialistSlider"])(); // specialist hover
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_3__["specialistSlider"])(); // popup youtube
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["specialistHover"])(); // blogArticlesHover hover
+  Object(_blocks_popup_js__WEBPACK_IMPORTED_MODULE_4__["popupYoutube"])(); // specialist hover
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["blogArticlesHover"])(); // show reviews
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_5__["specialistHover"])(); // blogArticlesHover hover
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["showReviews"])(); // anim scroll main dolce pictures 1
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_5__["blogArticlesHover"])(); // show reviews
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["animMainDolce1"])(); // anim scroll main dolce pictures 2
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_5__["showReviews"])(); // anim scroll main dolce pictures 1
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["animMainDolce2"])(); // anim scroll main dolce pictures 3
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_5__["animMainDolce1"])(); // anim scroll main dolce pictures 2
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["animMainDolce3"])(); // animation for text
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_5__["animMainDolce2"])(); // anim scroll main dolce pictures 3
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["animationForText"])(); // drop last header
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_5__["animMainDolce3"])(); // animation for text
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["dropLastHeader"])(); // open/close hamburger
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_5__["animationForText"])(); // drop last header
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openCloseHamburger"])(); // open/close search
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_6__["dropLastHeader"])(); // open/close hamburger
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openCloseSearch"])(); // clear search
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_6__["openCloseHamburger"])(); // open/close search
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["closeSearch"])(); // header menu selection
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_6__["openCloseSearch"])(); // clear search
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["menuSelection"])(); // header menu back
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_6__["closeSearch"])(); // header menu selection
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["headerMenuBack"])(); // open context clue
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_6__["menuSelection"])(); // header menu back
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openContextClue"])(); // open/close contacts menu
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_6__["headerMenuBack"])(); // open context clue
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["openCloseContactsMenu"])(); // first animation main page
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_6__["openContextClue"])(); // open/close contacts menu
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["firstAnimation"])(); // form in the main page
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_6__["openCloseContactsMenu"])(); // first animation main page
 
-  Object(_blocks_validations_js__WEBPACK_IMPORTED_MODULE_6__["signConsultation"])(); // hide error form in the main page
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_5__["firstAnimation"])(); // form in the main page
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["hideErrorForm"])(); // custom slider reviews
+  Object(_blocks_validations_js__WEBPACK_IMPORTED_MODULE_7__["signConsultation"])(); // hide error form in the main page
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_4__["sliderReviews"])();
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_5__["hideErrorForm"])(); // custom slider reviews
+
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_5__["sliderReviews"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -16305,6 +16310,34 @@ function specialistSlider() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupYoutube", function() { return popupYoutube; });
+// popup youtube
+function popupYoutube() {
+  var popupYoutube = $(".popupYoutube_js"); // if (popupYoutube.length) {
+  // 	$('.popupYoutube_js').magnificPopup({
+  // 		disableOn: 700,
+  // 		type: 'iframe',
+  // 		mainClass: 'mfp-youtube',
+  // 		removalDelay: 160,
+  // 		preloader: false,
+  // 		fixedContentPos: false
+  // 	});
+  // }
+
+  $('.popupYoutube_js').magnificPopup({
+    type: 'iframe',
+    tClose: 'Закрыть (Esc)',
+    tLoading: 'Загрузка...'
+  });
+}
+;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "specialistHover", function() { return specialistHover; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showReviews", function() { return showReviews; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "blogArticlesHover", function() { return blogArticlesHover; });
@@ -16548,7 +16581,7 @@ function sliderReviews() {
 }
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16808,7 +16841,7 @@ function openCloseContactsMenu() {
 }
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16897,7 +16930,7 @@ function signConsultation() {
 }
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 var lg = 1024;
@@ -16913,7 +16946,7 @@ if (window.screen.availWidth <= xs || device.mobile()) {
 }
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }

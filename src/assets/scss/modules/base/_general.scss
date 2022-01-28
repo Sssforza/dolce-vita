@@ -127,7 +127,36 @@ main {
 .container {
     @extend %container;
 }
-
+// popup
+.mfp-bg {
+    background: $white !important;
+    opacity: 0.92 !important;
+}
+.mfp-iframe-scaler iframe {
+    box-shadow: none !important;
+}
+.mfp-iframe-holder .mfp-close,
+.mfp-image-holder .mfp-close {
+    color: transparent !important;
+    padding: 0 !important;
+    width: 30px !important;
+    height: 30px !important;
+    top: 0 !important;
+    right: -70px !important;
+    opacity: 1 !important;
+    background: {
+        image: url($imgUrl + "svg/crossPopup.svg");
+        repeat: no-repeat;
+        size: cover;
+    }
+    transition: $transition;
+    &:hover {
+        opacity: .8 !important;
+    }
+    &:active {
+        opacity: .6 !important;
+    }
+}
 // heading
 .heading {
     display: inline-flex;

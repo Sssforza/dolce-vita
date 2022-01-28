@@ -11,6 +11,9 @@ import 'magnific-popup';
 //📁 /assets/js/blocks  _sliders.js
 import {mainSlider, specialistSlider} from "./blocks/_sliders.js";
 
+//📁 /assets/js/blocks  _popup.js
+import {popupYoutube} from "./blocks/_popup.js";
+
 //📁 /assets/js/blocks  index.js
 import {specialistHover, blogArticlesHover, showReviews, animMainDolce1, animMainDolce2, animMainDolce3, animationForText, firstAnimation, hideErrorForm, sliderReviews} from "./blocks/index.js";
 
@@ -26,6 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // slider specialist
     specialistSlider();
+
+    // popup youtube
+    popupYoutube();
 
     // specialist hover
     specialistHover();

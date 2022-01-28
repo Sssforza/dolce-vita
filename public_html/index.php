@@ -52,7 +52,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </div>
                     </div>
                     <div class="mainDolce__img mainDolce__small" style="background-image:url(/dist/img/trash/mainDolceSmall1.jpg)">
-                        <a href="#" class="mainDolce__video">
+                        <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="mainDolce__video popupYoutube_js">
                             <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
                         </a>
                     </div>
@@ -98,7 +98,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </div>
                     </div>
                     <div class="mainDolce__img mainDolce__small" style="background-image:url(/dist/img/trash/mainDolceSmall3.jpg)">
-                        <a href="#" class="mainDolce__video">
+                        <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="mainDolce__video popupYoutube_js">
                             <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
                         </a>
                     </div>
