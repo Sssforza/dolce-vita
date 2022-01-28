@@ -44,6 +44,21 @@ export function showReviews () {
         });
     }
 }
+// guest card clue hover
+export function guestCardClueHover () {
+    if(document.querySelector('.guestCard_js')) {
+        const list = document.querySelector('.guestCardList_js');
+        const hoversElem = list.querySelectorAll('.guestCard_js');
+        hoversElem.forEach((item) => {
+            item.onmouseover = function(elem) {
+                item.classList.add('hover');
+            };
+            item.onmouseout = function(elem) {
+                item.classList.remove('hover');
+            };
+        });
+    }
+}
 // blogArticles hover
 export function blogArticlesHover () {
     if(document.querySelector('.blogArticles_js')) {

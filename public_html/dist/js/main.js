@@ -422,7 +422,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_popup_js__WEBPACK_IMPORTED_MODULE_5__["popupYoutube"])(); // specialist hover
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_6__["specialistHover"])(); // blogArticlesHover hover
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_6__["specialistHover"])(); // guest card clue hover
+
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_6__["guestCardClueHover"])(); // blogArticlesHover hover
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_6__["blogArticlesHover"])(); // show reviews
 
@@ -16381,6 +16383,7 @@ function popupYoutube() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "specialistHover", function() { return specialistHover; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showReviews", function() { return showReviews; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "guestCardClueHover", function() { return guestCardClueHover; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "blogArticlesHover", function() { return blogArticlesHover; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animMainDolce1", function() { return animMainDolce1; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animMainDolce2", function() { return animMainDolce2; });
@@ -16435,6 +16438,22 @@ function showReviews() {
           text.innerHTML = 'Скрыть';
         }
       });
+    });
+  }
+} // guest card clue hover
+
+function guestCardClueHover() {
+  if (document.querySelector('.guestCard_js')) {
+    var list = document.querySelector('.guestCardList_js');
+    var hoversElem = list.querySelectorAll('.guestCard_js');
+    hoversElem.forEach(function (item) {
+      item.onmouseover = function (elem) {
+        item.classList.add('hover');
+      };
+
+      item.onmouseout = function (elem) {
+        item.classList.remove('hover');
+      };
     });
   }
 } // blogArticles hover

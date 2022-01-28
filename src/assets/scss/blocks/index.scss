@@ -722,7 +722,7 @@
     &__bottom {
         margin-top: 51px;
         @media (max-width:$md) {
-            margin-top: 6px;
+            margin-top: 13px;
         }
         @media (max-width:$xs) {
             margin-top: 15px;
@@ -1446,7 +1446,7 @@
             width: 148px;
             height: 135.45px;
         }
-        &:hover {
+        &.hover {
             background: $bgCosmetic;
             .guestCard__clue {
                 opacity: 1;

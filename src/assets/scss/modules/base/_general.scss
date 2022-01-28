@@ -359,6 +359,9 @@ main {
             margin-top: 20px;
             opacity: 1;
             pointer-events: auto;
+            @media (max-width:$md) {
+                margin-top: 5px;
+            }
         }
     }
     &__warning {
@@ -369,6 +372,10 @@ main {
         opacity: 0;
         pointer-events: none;
         transition: $transition;
+        @media (max-width:$md) {
+            font-size: 12px;
+            line-height: 20px;
+        }
     }
     input {
         padding: 0 10px 0 0;

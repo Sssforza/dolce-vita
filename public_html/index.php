@@ -384,8 +384,8 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 <div class="heading guestCard__heading">
                     <span>Гостевая <br>карта</span>
                 </div>
-                <div class="guestCard__list">
-                    <div class="guestCard__item">
+                <div class="guestCard__list guestCardList_js">
+                    <div class="guestCard__item guestCard_js">
                         <div class="guestCard__question">
                             <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/question.svg';?>
                         </div>
@@ -396,7 +396,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                             На&nbsp;первую процедуру по&nbsp;уходу&nbsp;за: лицом, телом, волосами, руками и&nbsp;ногами
                         </div>
                     </div>
-                    <div class="guestCard__item">
+                    <div class="guestCard__item guestCard_js">
                         <div class="guestCard__question">
                             <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/question.svg';?>
                         </div>
