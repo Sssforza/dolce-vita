@@ -11,9 +11,11 @@ export function popupYoutube () {
 	// 		fixedContentPos: false
 	// 	});
     // }
-	$('.popupYoutube_js').magnificPopup({
-		type: 'iframe',
-		tClose: 'Закрыть (Esc)',
-		tLoading: 'Загрузка...',
-	});
+	if(document.querySelector('.popupYoutube_js')) {
+		$('.popupYoutube_js').magnificPopup({
+			type: 'iframe',
+			tClose: 'Закрыть (Esc)',
+			tLoading: 'Загрузка...',
+		});
+    }
 };

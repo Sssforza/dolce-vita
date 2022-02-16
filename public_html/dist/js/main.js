@@ -90,8 +90,8 @@
 
 __webpack_require__(1);
 __webpack_require__(3);
-__webpack_require__(14);
-module.exports = __webpack_require__(15);
+__webpack_require__(15);
+module.exports = __webpack_require__(16);
 
 
 /***/ }),
@@ -393,8 +393,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
 /* harmony import */ var _blocks_popup_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(10);
 /* harmony import */ var _blocks_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(11);
-/* harmony import */ var _blocks_header_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(12);
-/* harmony import */ var _blocks_validations_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(13);
+/* harmony import */ var _blocks_service_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(12);
+/* harmony import */ var _blocks_header_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(13);
+/* harmony import */ var _blocks_validations_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(14);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -409,6 +410,8 @@ global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁
 
  //📁 /assets/js/blocks  index.js
 
+ //📁 /assets/js/blocks  service.js
+
  //📁 /assets/js/blocks  _header.js
 
  //📁 /assets/js/blocks  validation.js
@@ -418,7 +421,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // slider main
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__["mainSlider"])(); // slider specialist
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__["specialistSlider"])(); // popup youtube
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__["specialistSlider"])(); // service stage slider
+
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__["serviceStageSlider"])(); // procedure slider
+
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__["procedureSlider"])(); // cosmetics slider
+
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__["cosmeticsSlider"])(); // result photo slider
+
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__["serviceResultPhotoSlider"])(); // popup youtube
 
   Object(_blocks_popup_js__WEBPACK_IMPORTED_MODULE_5__["popupYoutube"])(); // specialist hover
 
@@ -438,29 +449,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_6__["animationForText"])(); // drop last header
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_7__["dropLastHeader"])(); // open/close hamburger
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_8__["dropLastHeader"])(); // open/close hamburger
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_7__["openCloseHamburger"])(); // open/close search
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_8__["openCloseHamburger"])(); // open/close search
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_7__["openCloseSearch"])(); // clear search
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_8__["openCloseSearch"])(); // clear search
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_7__["closeSearch"])(); // header menu selection
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_8__["closeSearch"])(); // header menu selection
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_7__["menuSelection"])(); // header menu back
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_8__["menuSelection"])(); // header menu back
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_7__["headerMenuBack"])(); // open context clue
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_8__["headerMenuBack"])(); // open context clue
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_7__["openContextClue"])(); // open/close contacts menu
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_8__["openContextClue"])(); // open/close contacts menu
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_7__["openCloseContactsMenu"])(); // first animation main page
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_8__["openCloseContactsMenu"])(); // first animation main page
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_6__["firstAnimation"])(); // form in the main page
 
-  Object(_blocks_validations_js__WEBPACK_IMPORTED_MODULE_8__["signConsultation"])(); // hide error form in the main page
+  Object(_blocks_validations_js__WEBPACK_IMPORTED_MODULE_9__["signConsultation"])(); // hide error form in the main page
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_6__["hideErrorForm"])(); // custom slider reviews
 
-  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_6__["sliderReviews"])(); // hover delete on mobile devices
+  Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_6__["sliderReviews"])(); // first screen depiction clue hover
+
+  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["firstScreenDepictionClueHover"])(); // procedure hover
+
+  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["procedureHover"])(); // service anchor links
+
+  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["serviceAnchor"])(); // service benefits hover
+
+  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["benefitsHover"])(); // hover delete on mobile devices
 
   Object(_blocks_hover_js__WEBPACK_IMPORTED_MODULE_3__["hover"])();
 });
@@ -16302,6 +16321,10 @@ function hover() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mainSlider", function() { return mainSlider; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "specialistSlider", function() { return specialistSlider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceStageSlider", function() { return serviceStageSlider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "procedureSlider", function() { return procedureSlider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cosmeticsSlider", function() { return cosmeticsSlider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceResultPhotoSlider", function() { return serviceResultPhotoSlider; });
 var xs = 376; // mainSlider
 
 function mainSlider() {
@@ -16339,9 +16362,105 @@ function specialistSlider() {
       infinite: true,
       variableWidth: true,
       arrows: true,
-      appendArrows: '.specialist__arrows',
-      prevArrow: '<div class="specialist__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
-      nextArrow: '<div class="specialist__next"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>'
+      appendArrows: '.specialistSlider_js .slideArrows',
+      prevArrow: '<div class="slideArrows__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
+      nextArrow: '<div class="slideArrows__next"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>'
+    });
+  }
+}
+; // serviceStageSlider
+
+function serviceStageSlider() {
+  var slickStage = $(".serviceStageSlider_js");
+
+  if (slickStage.length && document.documentElement.clientWidth > xs) {
+    var currentSlide;
+    var slidesCount;
+    var sliderCounter = document.createElement('div');
+    sliderCounter.classList.add('serviceStage__counter');
+
+    var updateSliderCounter = function updateSliderCounter(slick, currentIndex) {
+      currentSlide = slick.slickCurrentSlide() + 1;
+      slidesCount = slick.slideCount;
+      $(sliderCounter).text(currentSlide + ' из ' + slidesCount);
+    };
+
+    slickStage.on('init', function (event, slick) {
+      slickStage.append(sliderCounter);
+      updateSliderCounter(slick);
+    });
+    slickStage.on('afterChange', function (event, slick, currentSlide) {
+      updateSliderCounter(slick, currentSlide);
+    });
+    slickStage.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      speed: 900,
+      draggable: false,
+      arrows: true,
+      appendArrows: '.serviceStage .slideArrows',
+      prevArrow: '<div class="slideArrows__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
+      nextArrow: '<div class="slideArrows__next"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>'
+    });
+  }
+}
+; // procedureSlider
+
+function procedureSlider() {
+  var slickProcedure = $(".serviceProcedureSlider_js");
+
+  if (slickProcedure.length && document.documentElement.clientWidth > xs) {
+    slickProcedure.slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 900,
+      draggable: false,
+      infinite: true,
+      arrows: true,
+      appendArrows: '.serviceProcedure .slideArrows',
+      prevArrow: '<div class="slideArrows__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
+      nextArrow: '<div class="slideArrows__next"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>'
+    });
+  }
+}
+; // cosmeticsSlider
+
+function cosmeticsSlider() {
+  var slickCosmetics = $(".serviceCosmeticsSlider_js");
+
+  if (slickCosmetics.length && document.documentElement.clientWidth > xs) {
+    slickCosmetics.slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 900,
+      draggable: false,
+      infinite: true,
+      variableWidth: true,
+      arrows: true,
+      appendArrows: '.serviceCosmetics .slideArrows',
+      prevArrow: '<div class="slideArrows__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
+      nextArrow: '<div class="slideArrows__next"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>'
+    });
+  }
+}
+; // serviceResultPhotoSlider
+
+function serviceResultPhotoSlider() {
+  var slickSpecialist = $(".serviceResultPhoto_js");
+
+  if (slickSpecialist.length && document.documentElement.clientWidth > xs) {
+    slickSpecialist.slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 900,
+      draggable: false,
+      infinite: true,
+      variableWidth: true,
+      arrows: true,
+      appendArrows: '.serviceResultPhoto .slideArrows',
+      prevArrow: '<div class="slideArrows__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
+      nextArrow: '<div class="slideArrows__next"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>'
     });
   }
 }
@@ -16367,11 +16486,13 @@ function popupYoutube() {
   // 	});
   // }
 
-  $('.popupYoutube_js').magnificPopup({
-    type: 'iframe',
-    tClose: 'Закрыть (Esc)',
-    tLoading: 'Загрузка...'
-  });
+  if (document.querySelector('.popupYoutube_js')) {
+    $('.popupYoutube_js').magnificPopup({
+      type: 'iframe',
+      tClose: 'Закрыть (Esc)',
+      tLoading: 'Загрузка...'
+    });
+  }
 }
 ;
 
@@ -16646,6 +16767,122 @@ function sliderReviews() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "firstScreenDepictionClueHover", function() { return firstScreenDepictionClueHover; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "procedureHover", function() { return procedureHover; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceAnchor", function() { return serviceAnchor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "benefitsHover", function() { return benefitsHover; });
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+// first screen depiction clue hover
+function firstScreenDepictionClueHover() {
+  if (document.querySelector('.firstScreenDepictionClue_js')) {
+    var list = document.querySelector('.firstScreenDepiction');
+    var hoversElem = list.querySelector('.firstScreenDepictionClue_js svg');
+    var parent;
+
+    hoversElem.onmouseover = function (elem) {
+      parent = hoversElem.closest('.firstScreenDepiction__item');
+      parent.classList.add('hover');
+    };
+
+    hoversElem.onmouseout = function (elem) {
+      parent = hoversElem.closest('.firstScreenDepiction__item');
+      parent.classList.remove('hover');
+    };
+  }
+} // procedure hover
+
+function procedureHover() {
+  if (document.querySelector('.serviceProcedureHover_js')) {
+    var list = document.querySelector('.serviceProcedureSlider_js');
+    var hoversElem = list.querySelectorAll('.serviceProcedureHover_js');
+    var parent;
+    hoversElem.forEach(function (item) {
+      item.onmouseover = function (elem) {
+        parent = item.closest('.serviceProcedure__item');
+        parent.classList.add('hover');
+      };
+
+      item.onmouseout = function (elem) {
+        parent = item.closest('.serviceProcedure__item');
+        parent.classList.remove('hover');
+        parent.classList.remove('active');
+      };
+
+      item.onmousedown = function (elem) {
+        parent = item.closest('.serviceProcedure__item');
+        parent.classList.add('active');
+      };
+    });
+  }
+} // service anchor links
+
+function serviceAnchor() {
+  if (document.querySelector('.serviceAnchor_js')) {
+    var anchors = document.querySelectorAll('.serviceAnchor_js');
+
+    var _iterator = _createForOfIteratorHelper(anchors),
+        _step;
+
+    try {
+      var _loop = function _loop() {
+        var anchor = _step.value;
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          var blockID = anchor.getAttribute('href');
+          document.querySelector(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        });
+      };
+
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        _loop();
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+  }
+} // service benefits hover
+
+function benefitsHover() {
+  if (document.querySelector('.serviceBenefitsHover_js')) {
+    var list = document.querySelector('.serviceBenefitsList_js');
+    var hoversElem = list.querySelectorAll('.serviceBenefitsHover_js');
+    var parent;
+    hoversElem.forEach(function (item) {
+      item.onmouseover = function (elem) {
+        parent = item.closest('.serviceBenefits__item');
+        parent.classList.add('hover');
+      };
+
+      item.onmouseout = function (elem) {
+        parent = item.closest('.serviceBenefits__item');
+        parent.classList.remove('hover');
+        parent.classList.remove('active');
+      };
+
+      item.onmousedown = function (elem) {
+        parent = item.closest('.serviceBenefits__item');
+        parent.classList.add('active');
+      };
+    });
+  }
+}
+
+/***/ }),
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dropLastHeader", function() { return dropLastHeader; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openCloseHamburger", function() { return openCloseHamburger; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openCloseSearch", function() { return openCloseSearch; });
@@ -16901,7 +17138,7 @@ function openCloseContactsMenu() {
 }
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16990,7 +17227,7 @@ function signConsultation() {
 }
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
 var lg = 1024;
@@ -17006,7 +17243,7 @@ if (window.screen.availWidth <= xs || device.mobile()) {
 }
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }

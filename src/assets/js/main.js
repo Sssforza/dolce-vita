@@ -12,16 +12,21 @@ import 'magnific-popup';
 import {hover} from "./blocks/_hover.js";
 
 //📁 /assets/js/blocks  _sliders.js
-import {mainSlider, specialistSlider} from "./blocks/_sliders.js";
+import {mainSlider, specialistSlider, serviceStageSlider, procedureSlider, cosmeticsSlider, serviceResultPhotoSlider} from "./blocks/_sliders.js";
 
 //📁 /assets/js/blocks  _popup.js
 import {popupYoutube} from "./blocks/_popup.js";
 
 //📁 /assets/js/blocks  index.js
-import {specialistHover, guestCardClueHover, blogArticlesHover, showReviews, animMainDolce1, animMainDolce2, animMainDolce3, animationForText, firstAnimation, hideErrorForm, sliderReviews} from "./blocks/index.js";
+import {specialistHover, guestCardClueHover, blogArticlesHover, showReviews, animMainDolce1, animMainDolce2, animMainDolce3, animationForText,
+        firstAnimation, hideErrorForm, sliderReviews} from "./blocks/index.js";
+
+//📁 /assets/js/blocks  service.js
+import {firstScreenDepictionClueHover, procedureHover, serviceAnchor, benefitsHover} from "./blocks/service.js";
 
 //📁 /assets/js/blocks  _header.js
-import {dropLastHeader, openCloseHamburger, openCloseSearch, closeSearch, menuSelection, headerMenuBack, openContextClue, openCloseContactsMenu} from "./blocks/_header.js";
+import {dropLastHeader, openCloseHamburger, openCloseSearch, closeSearch, menuSelection, headerMenuBack,
+        openContextClue, openCloseContactsMenu} from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  validation.js
 import {signConsultation} from "./blocks/validations.js";
@@ -32,6 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // slider specialist
     specialistSlider();
+
+    // service stage slider
+    serviceStageSlider();
+
+    // procedure slider
+    procedureSlider();
+
+    // cosmetics slider
+    cosmeticsSlider();
+
+    // result photo slider
+    serviceResultPhotoSlider();
 
     // popup youtube
     popupYoutube();
@@ -95,6 +112,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // custom slider reviews
     sliderReviews();
+
+    // first screen depiction clue hover
+    firstScreenDepictionClueHover();
+
+    // procedure hover
+    procedureHover();
+
+    // service anchor links
+    serviceAnchor();
+
+    // service benefits hover
+    benefitsHover();
 
     // hover delete on mobile devices
     hover();

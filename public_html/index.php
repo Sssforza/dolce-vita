@@ -52,7 +52,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </div>
                     </div>
                     <div class="mainDolce__img mainDolce__small" style="background-image:url(/dist/img/trash/mainDolceSmall1.jpg)">
-                        <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="mainDolce__video popupYoutube_js">
+                        <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="popupVideo mainDolce__video popupYoutube_js">
                             <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
                         </a>
                     </div>
@@ -98,7 +98,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </div>
                     </div>
                     <div class="mainDolce__img mainDolce__small" style="background-image:url(/dist/img/trash/mainDolceSmall3.jpg)">
-                        <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="mainDolce__video popupYoutube_js">
+                        <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="popupVideo mainDolce__video popupYoutube_js">
                             <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
                         </a>
                     </div>
@@ -210,7 +210,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     <span>Специалисты</span>
                     <a href="#" class="heading__link">Смотреть всех</a>
                 </div>
-                <div class="specialist__arrows"></div>
+                <div class="slideArrows specialist__arrows"></div>
             </div>
             <div class="specialist__list specialistSlider_js">
                 <div class="specialist__item">
