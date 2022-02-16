@@ -22,7 +22,7 @@ import {specialistHover, guestCardClueHover, blogArticlesHover, showReviews, ani
         firstAnimation, hideErrorForm, sliderReviews} from "./blocks/index.js";
 
 //📁 /assets/js/blocks  service.js
-import {firstScreenDepictionClueHover, procedureHover, serviceAnchor, benefitsHover} from "./blocks/service.js";
+import {firstScreenDepictionClueHover, procedureHover, serviceAnchor, benefitsHover, serviceTestimony} from "./blocks/service.js";
 
 //📁 /assets/js/blocks  _header.js
 import {dropLastHeader, openCloseHamburger, openCloseSearch, closeSearch, menuSelection, headerMenuBack,
@@ -124,6 +124,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // service benefits hover
     benefitsHover();
+
+    // service testimony dies
+    serviceTestimony();
 
     // hover delete on mobile devices
     hover();

@@ -83,3 +83,20 @@ export function benefitsHover () {
         });
     }
 }
+
+// service testimony dies
+export function serviceTestimony () {
+    if(document.querySelector('.serviceTestimonyRoster_js')) {
+		$('.serviceTestimonyRoster_js .serviceTestimonyHeader_js').on('click', serviceTestimonyDies);
+		function serviceTestimonyDies(){
+			$('.serviceTestimonyRoster_js .serviceTestimonyHeader_js').not($(this)).removeClass('show');
+			if($(this).hasClass('show')) {
+				$(this).removeClass('show');
+			} else {
+				$(this).addClass('show');
+			}
+			$('.serviceTestimonyRoster_js .serviceTestimonyList_js').not($(this).next()).slideUp(500);
+			$(this).next().slideToggle(500);
+		}
+	}
+}

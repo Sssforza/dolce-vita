@@ -2,7 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?>
 <link rel='stylesheet' href="/dist/css/blocks/service.css">
-<main class="main page page_cservice">
+<main class="main page page_service">
     <section class="firstScreen firstSection_js">
         <div class="firstScreen__content">
             <div class="firstScreen__wrapper">
@@ -160,13 +160,13 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 </div>
             </section>
             <section class="section serviceTestimony">
-                <div class="serviceTestimony__content">
+                <div class="serviceTestimony__content serviceTestimonyRoster_js">
                     <div class="serviceTestimony__item">
-                        <div class="serviceTestimony__header">
+                        <div class="serviceTestimony__header serviceTestimonyHeader_js">
                             <span>Показания к процедуре</span>
                             <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';?>
                         </div>
-                        <div class="serviceTestimony__list">
+                        <div class="serviceTestimony__list serviceTestimonyList_js">
                             <div class="serviceTestimony__li">
                                 Наличие локальных жировых отложений, которые не&nbsp;поддаются традиционным способам похудения&nbsp;&mdash; спорту, диетам и&nbsp;массажу
                             </div>
@@ -176,11 +176,11 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </div>
                     </div>
                     <div class="serviceTestimony__item">
-                        <div class="serviceTestimony__header">
+                        <div class="serviceTestimony__header serviceTestimonyHeader_js">
                             <span>Противопоказания</span>
                             <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';?>
                         </div>
-                        <div class="serviceTestimony__list">
+                        <div class="serviceTestimony__list serviceTestimonyList_js">
                             <div class="serviceTestimony__text">
                                 Вторым этапом измеряем толщину жировой складки и&nbsp;выбирает аппаратную насадку нужного размера.
                                 Измеряем жировой складки и&nbsp;выбирает аппаратную насадку нужного на&nbsp;процесс заживления раны размера:

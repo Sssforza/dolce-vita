@@ -719,23 +719,30 @@ main {
 // reviews
 .reviews {
     margin-top: 140px;
-    padding: 140px 0;
-    background: $bgGrey;
     @media (max-width:$md) {
         margin-top: 90px;
-        padding: 93px 0;
     }
     @media (max-width:$lg) {
         margin-top: 128px;
     }
     @media (max-width:$xs) {
         margin-top: 104px;
-        padding: 52px 0;
         overflow-x: hidden;
     }
     &__content {
+        padding-top: 140px;
+        padding-bottom: 140px;
+        background: $bgGrey;
         @extend %indentRight;
         @extend %indentLeft;
+        @media (max-width:$md) {
+            padding-top: 93px;
+            padding-bottom: 93px;
+        }
+        @media (max-width:$xs) {
+            padding-top: 52px;
+            padding-bottom: 52px;
+        }
     }
     &__list {
         margin-top: 70px;
