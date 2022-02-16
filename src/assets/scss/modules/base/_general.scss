@@ -115,6 +115,9 @@ main {
 }
 .page {
     padding-bottom: 140px;
+    @media (max-width:$md) {
+        padding-bottom: 90px;
+    }
     &_main {
         padding-bottom: 200px;
         @media (max-width:$md) {
@@ -187,6 +190,10 @@ main {
         font-size: 22px;
         line-height: 38px;
         color: $blackLight2;
+        @media (max-width:$md) {
+            font-size: 14px;
+            line-height: 26px;
+        }
     }
     &__link {
         transition: $transition;

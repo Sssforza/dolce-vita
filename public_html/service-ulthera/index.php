@@ -221,7 +221,6 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                     <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="popupVideo serviceStage__video popupYoutube_js">
                                         <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
                                     </a>
-                                    <div class="serviceStage__count"></div>
                                     <div class="serviceStage__description service__description">
                                         Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток
                                     </div>
@@ -235,7 +234,6 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                     <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="popupVideo serviceStage__video popupYoutube_js">
                                         <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
                                     </a>
-                                    <div class="serviceStage__count"></div>
                                     <div class="serviceStage__description service__description">
                                         Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
                                     </div>
@@ -387,7 +385,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     </div>
                 </div>
             </section>
-            <section class="section serviceProfessionals notBg">
+            <section class="serviceProfessionals notBg">
                 <div class="serviceProfessionals__content">
                     <div class="service__title">Работают профессионалы</div>
                     <div class="serviceProfessionals__list">
@@ -534,43 +532,43 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                             <div class="servicePrice__item">
                                 <div class="servicePrice__subitem">Все лицо</div>
                                 <div class="servicePrice__subitem servicePrice__subitem_discount">
-                                    <span>99 000<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
-                                    <span>69 300<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
+                                    <span>99 000</span>
+                                    <span>69 300 &#8381;</span>
                                 </div>
                             </div>
                             <div class="servicePrice__item">
                                 <div class="servicePrice__subitem">Шея</div>
                                 <div class="servicePrice__subitem servicePrice__subitem_discount">
-                                    <span>14 500<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
-                                    <span>26 500<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
+                                    <span>14 500</span>
+                                    <span>26 500 &#8381;</span>
                                 </div>
                             </div>
                             <div class="servicePrice__item">
                                 <div class="servicePrice__subitem">Декольте</div>
                                 <div class="servicePrice__subitem servicePrice__subitem_discount">
-                                    <span>14 500<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
-                                    <span>27 000<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
+                                    <span>14 500</span>
+                                    <span>27 000 &#8381;</span>
                                 </div>
                             </div>
                             <div class="servicePrice__item">
                                 <div class="servicePrice__subitem">Средняя-нижняя часть лица</div>
                                 <div class="servicePrice__subitem servicePrice__subitem_discount">
-                                    <span>14 500<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
-                                    <span>21 000<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
+                                    <span>14 500</span>
+                                    <span>21 000 &#8381;</span>
                                 </div>
                             </div>
                             <div class="servicePrice__item">
                                 <div class="servicePrice__subitem">Верхнее и нижнее веко</div>
                                 <div class="servicePrice__subitem servicePrice__subitem_discount">
-                                    <span>14 500<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
-                                    <span>19 300<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
+                                    <span>14 500</span>
+                                    <span>19 300 &#8381;</span>
                                 </div>
                             </div>
                             <div class="servicePrice__item">
                                 <div class="servicePrice__subitem">Подчелюстная зона</div>
                                 <div class="servicePrice__subitem servicePrice__subitem_discount">
-                                    <span>32 000<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
-                                    <span>22 400<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
+                                    <span>32 000</span>
+                                    <span>22 400 &#8381;</span>
                                 </div>
                             </div>
                         </div>
@@ -674,7 +672,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     <div class="serviceCosmetics__header">
                         <div class="service__title">
                             Рекомендуем <br>косметику
-                            <span>Для лучшего результата после <br>процедуры</span>
+                            <span>Для лучшего результата после процедуры</span>
                         </div>
                         <div class="slideArrows"></div>
                     </div>
