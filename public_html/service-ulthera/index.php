@@ -236,6 +236,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                     </a>
                                     <div class="serviceStage__description service__description">
                                         Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
+                                        Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
+                                        Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
+                                        Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
                                     </div>
                                 </div>
                             </div>
@@ -419,6 +422,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                             </div>
                         </div>
                     </div>
+                    <div class="slideArrows"></div>
                 </div>
             </section>
             <section class="reviews reviews_js" id="reviews">
@@ -578,6 +582,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                             </div>
                             <span>Только до&nbsp;конца года скидка &minus;30% на&nbsp;все протоколы</span>
                         </div>
+                        <div class="servicePrice__img servicePrice__img_mobile" style="background-image:url(/dist/img/trash/mainDolceBig3.jpg)"></div>
                         <div class="signConsultation">
                             <form class="signConsultation__form signConsultation_js">
                                 <div class="signConsultation__title">Запишитесь <br>на процедуру</div>

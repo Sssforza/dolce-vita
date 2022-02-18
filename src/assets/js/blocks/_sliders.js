@@ -43,7 +43,7 @@ export function specialistSlider () {
 // serviceStageSlider
 export function serviceStageSlider () {
     const slickStage = $(".serviceStageSlider_js");
-	if (slickStage.length && document.documentElement.clientWidth > xs) {
+	if (slickStage.length) {
 		var currentSlide;
 		var slidesCount;
 		var sliderCounter = document.createElement('div');
@@ -127,6 +127,24 @@ export function serviceResultPhotoSlider () {
 			variableWidth: true,
 			arrows: true,
 			appendArrows: '.serviceResultPhoto .slideArrows',
+			prevArrow: '<div class="slideArrows__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
+			nextArrow: '<div class="slideArrows__next"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
+		});
+    }
+};
+
+// serviceProfessionalsSlider
+export function serviceProfessionalsSlider () {
+    const slickProfessional = $(".serviceProfessionals__list");
+	if (slickProfessional.length && document.documentElement.clientWidth <= xs) {
+		slickProfessional.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			speed: 900,
+			draggable: false,
+			infinite: false,
+			arrows: true,
+			appendArrows: '.serviceProfessionals .slideArrows',
 			prevArrow: '<div class="slideArrows__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
 			nextArrow: '<div class="slideArrows__next"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
 		});

@@ -429,7 +429,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__["cosmeticsSlider"])(); // result photo slider
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__["serviceResultPhotoSlider"])(); // popup youtube
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__["serviceResultPhotoSlider"])(); // service professionals slider
+
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__["serviceProfessionalsSlider"])(); // popup youtube
 
   Object(_blocks_popup_js__WEBPACK_IMPORTED_MODULE_5__["popupYoutube"])(); // specialist hover
 
@@ -16327,6 +16329,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "procedureSlider", function() { return procedureSlider; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cosmeticsSlider", function() { return cosmeticsSlider; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceResultPhotoSlider", function() { return serviceResultPhotoSlider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceProfessionalsSlider", function() { return serviceProfessionalsSlider; });
 var xs = 376; // mainSlider
 
 function mainSlider() {
@@ -16375,7 +16378,7 @@ function specialistSlider() {
 function serviceStageSlider() {
   var slickStage = $(".serviceStageSlider_js");
 
-  if (slickStage.length && document.documentElement.clientWidth > xs) {
+  if (slickStage.length) {
     var currentSlide;
     var slidesCount;
     var sliderCounter = document.createElement('div');
@@ -16461,6 +16464,25 @@ function serviceResultPhotoSlider() {
       variableWidth: true,
       arrows: true,
       appendArrows: '.serviceResultPhoto .slideArrows',
+      prevArrow: '<div class="slideArrows__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
+      nextArrow: '<div class="slideArrows__next"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>'
+    });
+  }
+}
+; // serviceProfessionalsSlider
+
+function serviceProfessionalsSlider() {
+  var slickProfessional = $(".serviceProfessionals__list");
+
+  if (slickProfessional.length && document.documentElement.clientWidth <= xs) {
+    slickProfessional.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 900,
+      draggable: false,
+      infinite: false,
+      arrows: true,
+      appendArrows: '.serviceProfessionals .slideArrows',
       prevArrow: '<div class="slideArrows__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
       nextArrow: '<div class="slideArrows__next"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>'
     });
