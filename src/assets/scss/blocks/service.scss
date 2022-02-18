@@ -2245,6 +2245,9 @@
         @media (max-width:$lg) {
             padding-right: 191px;
         }
+        @media (max-width:$xs) {
+            padding-right: 30px;
+        }
     }
     @media (max-width:$xs) {
         margin-top: 90px;
