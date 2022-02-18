@@ -6,7 +6,6 @@ export function dropLastHeader () {
         const headerHeight = document.querySelector('.header_main').offsetHeight;
         const emergence = document.querySelector('.firstSection_js').offsetHeight;
         window.addEventListener('scroll', function() {
-            console.log(152)
             if(pageYOffset > (emergence - headerHeight)) {
                 header.classList.remove('hide');
             } else {
@@ -152,7 +151,6 @@ export function menuSelection () {
                 menuProceduresForEach();
 
                 if (document.documentElement.clientWidth <= xs) {
-                    console.log(1)
                     document.body.classList.add('openHeaderMenuDetail');
                 }
 

@@ -350,12 +350,12 @@
 .serviceAside {
     position: absolute;
     top: 0;
-    right: 131px;
+    right: 154px;
     @media (max-width:$md) {
-        right: 100px;
+        right: 92px;
     }
     @media (max-width:$lg) {
-        right: 51px;
+        right: 50px;
     }
     @media (max-width:$xs) {
         display: none;
@@ -389,11 +389,11 @@
             pointer-events: none
         }
         span {
-            position: relative;
+            position: absolute;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            top: -2px;
+            top: 0;
             margin-left: 20px;
             padding: 4px 10px 0;
             height: 28px;
@@ -417,6 +417,16 @@
                 bottom: -24px;
                 left: 0;
             }
+        }
+    }
+    &.fixed {
+        position: fixed;
+        top: 106px;
+        @media (max-width:$md) {
+            top: 76px;
+        }
+        @media (max-width:$lg) {
+            top: 64px;
         }
     }
 }
@@ -451,11 +461,11 @@
         &_middle {
             position: relative;
             margin-top: 140px;
-            width: 1563px;
+            width: 1562px;
             height: 586px;
             @media (max-width:$md) {
                 margin-top: 90px;
-                width: 1043px;
+                width: 1012px;
                 height: 390px;
             }
             @media (max-width:$lg) {
@@ -469,9 +479,11 @@
             }
         }
         &_big {
+            position: relative;
             margin-top: 140px;
             width: 100%;
             height: 1000px;
+            z-index: 1;
             @media (max-width:$md) {
                 margin-top: 90px;
                 height: 640px;
@@ -1062,7 +1074,9 @@
     }
 }
 .servicePrice {
+    position: relative;
     padding-top: 140px;
+    z-index: 1;
     @media (max-width:$md) {
         padding-top: 90px;
     }
@@ -1375,14 +1389,8 @@
         justify-content: space-between;
     }
     &__slider {
-        margin: 70px -30px 0;
+        margin-top: 70px;
         display: flex;
-        @media (max-width:$md) {
-            margin: 44px -20px 0;
-        }
-        @media (max-width:$lg) {
-            margin: 44px -16px 0;
-        }
         @media (max-width:$xs) {
             margin: 20px -30px 0;
             padding: 0 30px;
@@ -1397,16 +1405,6 @@
     }
     &__item {
         flex: none;
-        margin: 0 30px;
-        width: 415px !important;
-        @media (max-width:$md) {
-            margin: 0 20px;
-            width: 277px !important;
-        }
-        @media (max-width:$lg) {
-            margin: 0 16px;
-            width: 220px !important;
-        }
         @media (max-width:$xs) {
             flex: none;
             margin: 0;
@@ -1494,6 +1492,17 @@
             padding-bottom: 0;
         }
     }
+    .slick-slide {
+        margin: 0 30px;
+        width: 415px !important;
+        @media (max-width:$md) {
+            margin: 0 17px;
+            width: 271px !important;
+        }
+        @media (max-width:$lg) {
+            width: 220px !important;
+        }
+    }
 }
 .serviceCosmetics {
     &__content {
@@ -1515,13 +1524,10 @@
         justify-content: space-between;
     }
     &__list {
-        margin: 50px -30px 0;
+        margin-top: 50px;
         display: flex;
         @media (max-width:$md) {
-            margin: 32px -20px 0;
-        }
-        @media (max-width:$lg) {
-            margin: 32px -17px 0;
+            margin-top: 32px;
         }
         @media (max-width:$xs) {
             margin: 20px -30px 0;
@@ -1539,8 +1545,6 @@
         flex: none;
         padding-top: 50px;
         padding-bottom: 40px;
-        margin: 0 30px;
-        width: 415px !important;
         min-height: 563px;
         display: flex !important;
         flex-direction: column;
@@ -1549,19 +1553,25 @@
         @media (max-width:$md) {
             padding-top: 32px;
             padding-bottom: 20px;
-            margin: 0 20px;
-            width: 277px !important;
             min-height: 424px;
         }
         @media (max-width:$lg) {
-            margin: 0 17px;
-            width: 220px !important;
             min-height: 438px;
         }
         @media (max-width:$xs) {
-            margin: 0;
             width: 277px !important;
             min-height: 424px;
+        }
+    }
+    .slick-slide {
+        margin: 0 30px;
+        width: 415px !important;
+        @media (max-width:$md) {
+            margin: 0 17px;
+            width: 271px !important;
+        }
+        @media (max-width:$lg) {
+            width: 220px !important;
         }
     }
     &__img {
@@ -2023,6 +2033,9 @@
         @media (max-width:$md) {
             width: 382px;
         }
+        @media (max-width:$lg) {
+            width: 304px;
+        }
         @media (max-width:$xs) {
             flex: none;
             width: 252px;
@@ -2152,16 +2165,16 @@
         }
     }
     &__list {
-        margin: 50px -31px 0;
+        margin-top: 50px;
         display: flex;
         @media (max-width:$md) {
-            margin: 32px -36px 0;
+            margin-top: 32px;
         }
         @media (max-width:$lg) {
-            margin: 34px -15px 0;
+            margin-top: 34px;
         }
         @media (max-width:$xs) {
-            margin: 20px 0px 0;
+            margin-top: 20px;
             padding: 0 30px;
             gap: 0 20px;
             overflow-x: scroll;
@@ -2173,25 +2186,15 @@
         }
     }
     &__item {
-        margin: 0 31px;
+        flex: none;
         display: flex !important;
-        @media (max-width:$md) {
-            margin: 0 36px;
-        }
-        @media (max-width:$lg) {
-            margin: 0 15px;
-        }
-        @media (max-width:$xs) {
-            flex: none;
-            margin: 0;
-        }
     }
     &__img {
         width: 325px;
         height: 422px;
         @extend %imgBg;
         @media (max-width:$md) {
-            width: 218px;
+            width: 214px;
             height: 283px;
         }
         @media (max-width:$lg) {
@@ -2223,8 +2226,26 @@
             padding-bottom: 0;
         }
     }
+    .slick-slide {
+        margin: 0 31px;
+        @media (max-width:$md) {
+            margin: 0 13px;
+        }
+        @media (max-width:$lg) {
+            margin: 0 15px;
+        }
+    }
 }
 .reviews {
+    &__content {
+        padding-right: 360px;
+        @media (max-width:$md) {
+            padding-right: 237px;
+        }
+        @media (max-width:$lg) {
+            padding-right: 191px;
+        }
+    }
     @media (max-width:$xs) {
         margin-top: 90px;
     }

@@ -483,7 +483,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["benefitsHover"])(); // service testimony dies
 
-  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["serviceTestimony"])(); // hover delete on mobile devices
+  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["serviceTestimony"])(); // service fixed aside bar
+
+  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["serviceFixedAsideBar"])(); // hover delete on mobile devices
 
   Object(_blocks_hover_js__WEBPACK_IMPORTED_MODULE_3__["hover"])();
 });
@@ -16422,6 +16424,7 @@ function procedureSlider() {
       speed: 900,
       draggable: false,
       infinite: true,
+      variableWidth: true,
       arrows: true,
       appendArrows: '.serviceProcedure .slideArrows',
       prevArrow: '<div class="slideArrows__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
@@ -16796,6 +16799,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceAnchor", function() { return serviceAnchor; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "benefitsHover", function() { return benefitsHover; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceTestimony", function() { return serviceTestimony; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceFixedAsideBar", function() { return serviceFixedAsideBar; });
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -16919,7 +16923,45 @@ function serviceTestimony() {
 
     $('.serviceTestimonyRoster_js .serviceTestimonyHeader_js').on('click', serviceTestimonyDies);
   }
+} // service fixed aside bar
+
+function serviceFixedAsideBar() {
+  if (document.querySelector('.serviceAside')) {
+    var serviceAside = $(".serviceAside");
+    var serviceAsideTop = serviceAside.offset().top;
+    var serviceAsideHeight = serviceAside.outerHeight();
+    var headerHeight = $(".header").outerHeight();
+    var serviceHeight = $(".service").outerHeight();
+    var firstSectionHeight = $(".firstSection_js").outerHeight();
+    var page = document.querySelector(".page");
+    var paddingPage = getComputedStyle(page).paddingBottom.replace(/[\D]+/g, '');
+
+    if (document.documentElement.clientWidth <= 1024) {
+      var serviceAsideDopCount = $(".serviceAside__anchor span").length;
+      var serviceAsideDopHeight = $(".serviceAside__anchor span").outerHeight();
+      var serviceAsideDop = serviceAsideDopCount * serviceAsideDopHeight;
+      serviceAsideHeight = serviceAside.outerHeight() + serviceAsideDop;
+    }
+
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > serviceAsideTop - headerHeight) {
+        serviceAside.addClass("fixed");
+      } else {
+        serviceAside.removeClass("fixed");
+      }
+
+      if ($(window).scrollTop() > serviceHeight + firstSectionHeight - headerHeight - paddingPage) {
+        serviceAside.removeClass("fixed");
+        $(".serviceAside").css({
+          "top": serviceHeight - serviceAsideHeight
+        });
+      } else {
+        $('.serviceAside').attr('style', '');
+      }
+    });
+  }
 }
+;
 
 /***/ }),
 /* 13 */
@@ -16943,8 +16985,6 @@ function dropLastHeader() {
     var headerHeight = document.querySelector('.header_main').offsetHeight;
     var emergence = document.querySelector('.firstSection_js').offsetHeight;
     window.addEventListener('scroll', function () {
-      console.log(152);
-
       if (pageYOffset > emergence - headerHeight) {
         header.classList.remove('hide');
       } else {
@@ -17093,7 +17133,6 @@ function menuSelection() {
         menuProceduresForEach();
 
         if (document.documentElement.clientWidth <= xs) {
-          console.log(1);
           document.body.classList.add('openHeaderMenuDetail');
         }
       });
