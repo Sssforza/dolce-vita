@@ -16926,7 +16926,7 @@ function serviceTestimony() {
 } // service fixed aside bar
 
 function serviceFixedAsideBar() {
-  if (document.querySelector('.serviceAside')) {
+  if (document.querySelector('.serviceAside') && document.documentElement.clientWidth > 376) {
     var serviceAside = $(".serviceAside");
     var serviceAsideTop = serviceAside.offset().top;
     var serviceAsideHeight = serviceAside.outerHeight();
@@ -16935,6 +16935,7 @@ function serviceFixedAsideBar() {
     var firstSectionHeight = $(".firstSection_js").outerHeight();
     var page = document.querySelector(".page");
     var paddingPage = getComputedStyle(page).paddingBottom.replace(/[\D]+/g, '');
+    var top;
 
     if (document.documentElement.clientWidth <= 1024) {
       var serviceAsideDopCount = $(".serviceAside__anchor span").length;
