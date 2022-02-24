@@ -539,7 +539,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                 </div>
                             </div>
                         </div>
-                        <div class="reviews__item">
+                        <div class="reviews__item hide">
                             <div class="reviews__box">
                                 <div class="reviews__name">Ольга 34 года</div>
                                 <div class="reviews__read">
@@ -555,7 +555,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                 </div>
                             </div>
                         </div>
-                        <div class="reviews__item">
+                        <div class="reviews__item hide">
                             <div class="reviews__box">
                                 <div class="reviews__name">Виктория 27 лет</div>
                                 <div class="reviews__read">
@@ -582,7 +582,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                 </div>
                             </div>
                         </div>
-                        <div class="reviews__item">
+                        <div class="reviews__item hide">
                             <div class="reviews__box">
                                 <div class="reviews__name">Юлия 45 лет</div>
                                 <div class="reviews__read">

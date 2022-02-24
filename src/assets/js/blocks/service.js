@@ -158,7 +158,6 @@ export function serviceStageMore () {
                     text.innerHTML = 'Читать далее';
                 } else {
                     textHeight = parent.querySelector('.serviceStage__description').scrollHeight;
-                    console.log(textHeight);
                     parent.querySelector('.serviceStage__description').style.maxHeight = `${textHeight}px`;
                     parent.classList.add('show');
                     text.innerHTML = 'Скрыть';
@@ -182,7 +181,6 @@ export function sliderServiceStage () {
         let child
         let count = 1;
         let childCount;
-        let childShow;
         let shift = 0;
         counterRight.innerHTML = amount;
 

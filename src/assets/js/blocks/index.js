@@ -29,14 +29,18 @@ export function showReviews () {
         let whole = wrapper.querySelectorAll('.reviewsWhole_js');
         let parent;
         let text;
+        let textHeight;
         whole.forEach((item) => {
             item.addEventListener("click", (e) => {
                 parent = item.closest('.reviews__item');
                 text = item.querySelector('.reviewsWhole_js span');
                 if(parent.classList.contains('show')) {
+                    parent.querySelector('.reviewsRecall_js').setAttribute("style", "");
                     parent.classList.remove('show');
                     text.innerHTML = 'Весь отзыв';
                 } else {
+                    textHeight = parent.querySelector('.reviewsRecall_js').scrollHeight;
+                    parent.querySelector('.reviewsRecall_js').style.maxHeight = `${textHeight}px`;
                     parent.classList.add('show');
                     text.innerHTML = 'Скрыть';
                 }
@@ -182,13 +186,37 @@ export function sliderReviews () {
         let count = 1;
         let shift = 0;
         const wrapperWhole = document.querySelector('.reviewsList_js');
-        let whole = wrapperWhole.querySelectorAll('.reviewsWhole_js');
-        let parent;
-        let text;
+        let child
+        let childCount;
+
+        function hideRecall(){
+            const wrapper = document.querySelector('.reviews_js');
+            let whole = wrapper.querySelectorAll('.reviewsWhole_js span');
+            let items = wrapper.querySelectorAll('.reviews__item');
+            let descriptions = wrapper.querySelectorAll('.reviewsRecall_js');
+            items.forEach((item) => {
+                item.classList.remove('show');
+            });
+            whole.forEach((item) => {
+                item.innerHTML = 'Весь отзыв';
+            });
+            descriptions.forEach((item) => {
+                item.setAttribute("style", "");
+            });
+		}
+
         arrows.forEach((item) => {
             item.addEventListener("click", () => {
+                child = wrapper.querySelectorAll('.reviews__item');
                 if(item.classList.contains('reviews__arrow_right')) {
                     count = count + 1;
+
+                    childCount = count - 1;
+                    child.forEach((item) => {
+                        item.classList.add('hide');
+                    });
+                    child[childCount].classList.remove('hide');
+
                     if(count != amount){
                         shift = shift - xs;
                         list.style.transform = `translateX(${shift}px)`;
@@ -201,6 +229,13 @@ export function sliderReviews () {
                     }
                 } else {
                     count = count - 1;
+
+                    childCount = count - 1;
+                    child.forEach((item) => {
+                        item.classList.add('hide');
+                    });
+                    child[childCount].classList.remove('hide');
+
                     if(count === 1){
                         shift = shift + xs;
                         list.style.transform = `translateX(${shift}px)`;
@@ -211,14 +246,7 @@ export function sliderReviews () {
                         arrowRight.classList.remove('disabled');
                     }
                 }
-                whole.forEach((item) => {
-                    parent = item.closest('.reviews__item');
-                    text = item.querySelector('.reviewsWhole_js span');
-                    if(parent.classList.contains('show')) {
-                        parent.classList.remove('show');
-                        text.innerHTML = 'Весь отзыв';
-                    }
-                });
+                hideRecall();
             });
         });
     }

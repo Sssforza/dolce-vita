@@ -804,6 +804,12 @@ main {
             flex-direction: column;
             justify-content: flex-start;
             border: none;
+            overflow-y: hidden;
+        }
+        &.hide {
+            @media (max-width:$xs) {
+                height: 0px;
+            }
         }
         &:nth-child(n+3) {
             display: none;
