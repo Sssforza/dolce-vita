@@ -518,6 +518,10 @@ main {
                 }
             }
         }
+        &.disabled {
+            opacity: .6;
+            pointer-events: none;
+        }
         svg {
             @media (max-width:$md) {
                 width: 50px;

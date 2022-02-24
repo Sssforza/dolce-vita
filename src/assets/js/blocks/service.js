@@ -1,3 +1,6 @@
+let lg = 1024
+let xs = 376
+
 // first screen depiction clue hover
 export function firstScreenDepictionClueHover () {
     if(document.querySelector('.firstScreenDepictionClue_js')) {
@@ -103,7 +106,7 @@ export function serviceTestimony () {
 
 // service fixed aside bar
 export function serviceFixedAsideBar () {
-	if(document.querySelector('.serviceAside') && document.documentElement.clientWidth > 376) {
+	if(document.querySelector('.serviceAside') && document.documentElement.clientWidth > xs) {
         var serviceAside = $(".serviceAside");
 		var serviceAsideTop = serviceAside.offset().top;
 		var serviceAsideHeight = serviceAside.outerHeight();
@@ -113,7 +116,7 @@ export function serviceFixedAsideBar () {
 		var page = document.querySelector(".page");
 		var paddingPage = getComputedStyle(page).paddingBottom.replace(/[\D]+/g, '');
         var top;
-        if (document.documentElement.clientWidth <= 1024) {
+        if (document.documentElement.clientWidth <= lg) {
             var serviceAsideDopCount = $(".serviceAside__anchor span").length;
             var serviceAsideDopHeight = $(".serviceAside__anchor span").outerHeight();
             var serviceAsideDop = serviceAsideDopCount * serviceAsideDopHeight;
@@ -136,3 +139,114 @@ export function serviceFixedAsideBar () {
 		});
     }
 };
+
+// show stage description
+export function serviceStageMore () {
+    if (document.querySelector('.serviceStageMore_js')) {
+        const wrapper = document.querySelector('.serviceStageSlider_js');
+        let whole = wrapper.querySelectorAll('.serviceStageMore_js');
+        let parent;
+        let text;
+        let textHeight;
+        whole.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                parent = item.closest('.serviceStage__item');
+                text = item.querySelector('.serviceStageMore_js span');
+                if(parent.classList.contains('show')) {
+                    parent.querySelector('.serviceStage__description').setAttribute("style", "");
+                    parent.classList.remove('show');
+                    text.innerHTML = 'Читать далее';
+                } else {
+                    textHeight = parent.querySelector('.serviceStage__description').scrollHeight;
+                    console.log(textHeight);
+                    parent.querySelector('.serviceStage__description').style.maxHeight = `${textHeight}px`;
+                    parent.classList.add('show');
+                    text.innerHTML = 'Скрыть';
+                }
+            });
+        });
+    }
+}
+
+// custom slider service stage
+export function sliderServiceStage () {
+    if (document.querySelector('.serviceStage_js')) {
+        let serviceStage = document.querySelector('.serviceStage_js');
+        let arrowsParent = serviceStage.querySelector('.serviceStage__arrows');
+        let arrowPrev = serviceStage.querySelectorAll('.serviceStage__arrow_prev');
+        let arrowsNext = serviceStage.querySelectorAll('.serviceStage__arrow_next');
+        let amount = serviceStage.querySelectorAll('.serviceStage__item').length;
+        let list = serviceStage.querySelector('.serviceStageSlider_js');
+        let counterLeft = serviceStage.querySelector('.serviceStage__counter_left');
+        let counterRight = serviceStage.querySelector('.serviceStage__counter_right');
+        let child
+        let count = 1;
+        let childCount;
+        let childShow;
+        let shift = 0;
+        counterRight.innerHTML = amount;
+
+        function hideDescription(){
+			const wrapper = document.querySelector('.serviceStageSlider_js');
+            let whole = wrapper.querySelectorAll('.serviceStageMore_js span');
+            let items = wrapper.querySelectorAll('.serviceStage__item');
+            let descriptions = wrapper.querySelectorAll('.serviceStage__description');
+            items.forEach((item) => {
+                item.classList.remove('show');
+            });
+            whole.forEach((item) => {
+                item.innerHTML = 'Читать далее';
+            });
+            descriptions.forEach((item) => {
+                item.setAttribute("style", "");
+            });
+		}
+
+        arrowPrev.forEach((item) => {
+            item.addEventListener("click", () => {
+                child = serviceStage.querySelectorAll('.serviceStage__item');
+                arrowsNext.forEach((item) => {
+                    item.classList.remove('disabled');
+                });
+                count = count - 1;
+                counterLeft.innerHTML = count;
+                childCount = count - 1;
+                child.forEach((item) => {
+                    item.classList.add('hide');
+                });
+                child[childCount].classList.remove('hide');
+                shift = shift + xs;
+                list.style.transform = `translateX(${shift}px)`;
+                if (count === 1) {
+                    arrowPrev.forEach((item) => {
+                        item.classList.add('disabled');
+                    });
+                }
+                hideDescription();
+            });
+        });
+        arrowsNext.forEach((item) => {
+            item.addEventListener("click", () => {
+                child = serviceStage.querySelectorAll('.serviceStage__item');
+                arrowPrev.forEach((item) => {
+                    item.classList.remove('disabled');
+                });
+                count = count + 1;
+                counterLeft.innerHTML = count;
+                childCount = count - 1;
+                child.forEach((item) => {
+                    item.classList.add('hide');
+                });
+                child[childCount].classList.remove('hide');
+                shift = shift - xs;
+                list.style.transform = `translateX(${shift}px)`;
+                if (count === amount) {
+                    arrowsNext.forEach((item) => {
+                        item.classList.add('disabled');
+                    });
+                }
+                hideDescription();
+            });
+        });
+    }
+}

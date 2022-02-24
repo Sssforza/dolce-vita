@@ -211,9 +211,14 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     </div>
                 </div>
             </section>
-            <section class="section serviceStage">
+            <section class="section serviceStage serviceStage_js">
                 <div class="serviceStage__container">
                     <div class="service__title">Этапы <br>процедуры</div>
+                    <div class="serviceStage__counter serviceStage__counter_mobile">
+                        <div class="serviceStage__counter_left">1</div>
+                        <span> / </span>
+                        <div class="serviceStage__counter_right">5</div>
+                    </div>
                     <div class="serviceStage__slider serviceStageSlider_js">
                         <div class="serviceStage__item">
                             <div class="serviceStage__content">
@@ -224,21 +229,89 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                     <div class="serviceStage__description service__description">
                                         Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток
                                     </div>
+                                    <div class="serviceStage__arrows">
+                                        <div class="serviceStage__arrow serviceStage__arrow_prev disabled">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
+                                        <div class="serviceStage__arrow serviceStage__arrow_next">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="serviceStage__img" style="background-image:url(/dist/img/trash/serviceStage3.jpg)"></div>
                         </div>
-                        <div class="serviceStage__item">
+                        <div class="serviceStage__item hide">
                             <div class="serviceStage__content">
                                 <div class="serviceStage__box">
                                     <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="popupVideo serviceStage__video popupYoutube_js">
                                         <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
                                     </a>
                                     <div class="serviceStage__description service__description">
+                                        2Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
                                         Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
                                         Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
                                         Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
+                                    </div>
+                                    <div class="serviceStage__more serviceStageMore_js">
+                                        <span>Читать далее</span>
+                                        <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';?>
+                                    </div>
+                                    <div class="serviceStage__arrows">
+                                        <div class="serviceStage__arrow serviceStage__arrow_prev disabled">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
+                                        <div class="serviceStage__arrow serviceStage__arrow_next">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="serviceStage__img" style="background-image:url(/dist/img/trash/serviceStage3.jpg)"></div>
+                        </div>
+                        <div class="serviceStage__item hide">
+                            <div class="serviceStage__content">
+                                <div class="serviceStage__box">
+                                    <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="popupVideo serviceStage__video popupYoutube_js">
+                                        <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
+                                    </a>
+                                    <div class="serviceStage__description service__description">
+                                        3Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток
+                                    </div>
+                                    <div class="serviceStage__arrows">
+                                        <div class="serviceStage__arrow serviceStage__arrow_prev disabled">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
+                                        <div class="serviceStage__arrow serviceStage__arrow_next">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="serviceStage__img" style="background-image:url(/dist/img/trash/serviceStage3.jpg)"></div>
+                        </div>
+                        <div class="serviceStage__item hide">
+                            <div class="serviceStage__content">
+                                <div class="serviceStage__box">
+                                    <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="popupVideo serviceStage__video popupYoutube_js">
+                                        <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
+                                    </a>
+                                    <div class="serviceStage__description service__description">
+                                        4Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
                                         Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
+                                        Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
+                                    </div>
+                                    <div class="serviceStage__more serviceStageMore_js">
+                                        <span>Читать далее</span>
+                                        <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';?>
+                                    </div>
+                                    <div class="serviceStage__arrows">
+                                        <div class="serviceStage__arrow serviceStage__arrow_prev disabled">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
+                                        <div class="serviceStage__arrow serviceStage__arrow_next">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

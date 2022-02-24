@@ -485,7 +485,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["serviceTestimony"])(); // service fixed aside bar
 
-  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["serviceFixedAsideBar"])(); // hover delete on mobile devices
+  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["serviceFixedAsideBar"])(); // show stage description
+
+  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["serviceStageMore"])(); // show stage description
+
+  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["sliderServiceStage"])(); // custom slider service stage
 
   Object(_blocks_hover_js__WEBPACK_IMPORTED_MODULE_3__["hover"])();
 });
@@ -16380,7 +16384,7 @@ function specialistSlider() {
 function serviceStageSlider() {
   var slickStage = $(".serviceStageSlider_js");
 
-  if (slickStage.length) {
+  if (slickStage.length && document.documentElement.clientWidth > xs) {
     var currentSlide;
     var slidesCount;
     var sliderCounter = document.createElement('div');
@@ -16405,6 +16409,7 @@ function serviceStageSlider() {
       fade: true,
       speed: 900,
       draggable: false,
+      infinite: false,
       arrows: true,
       appendArrows: '.serviceStage .slideArrows',
       prevArrow: '<div class="slideArrows__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
@@ -16800,13 +16805,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "benefitsHover", function() { return benefitsHover; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceTestimony", function() { return serviceTestimony; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceFixedAsideBar", function() { return serviceFixedAsideBar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceStageMore", function() { return serviceStageMore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderServiceStage", function() { return sliderServiceStage; });
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-// first screen depiction clue hover
+var lg = 1024;
+var xs = 376; // first screen depiction clue hover
+
 function firstScreenDepictionClueHover() {
   if (document.querySelector('.firstScreenDepictionClue_js')) {
     var list = document.querySelector('.firstScreenDepiction');
@@ -16926,7 +16935,7 @@ function serviceTestimony() {
 } // service fixed aside bar
 
 function serviceFixedAsideBar() {
-  if (document.querySelector('.serviceAside') && document.documentElement.clientWidth > 376) {
+  if (document.querySelector('.serviceAside') && document.documentElement.clientWidth > xs) {
     var serviceAside = $(".serviceAside");
     var serviceAsideTop = serviceAside.offset().top;
     var serviceAsideHeight = serviceAside.outerHeight();
@@ -16937,7 +16946,7 @@ function serviceFixedAsideBar() {
     var paddingPage = getComputedStyle(page).paddingBottom.replace(/[\D]+/g, '');
     var top;
 
-    if (document.documentElement.clientWidth <= 1024) {
+    if (document.documentElement.clientWidth <= lg) {
       var serviceAsideDopCount = $(".serviceAside__anchor span").length;
       var serviceAsideDopHeight = $(".serviceAside__anchor span").outerHeight();
       var serviceAsideDop = serviceAsideDopCount * serviceAsideDopHeight;
@@ -16962,7 +16971,120 @@ function serviceFixedAsideBar() {
     });
   }
 }
-;
+; // show stage description
+
+function serviceStageMore() {
+  if (document.querySelector('.serviceStageMore_js')) {
+    var wrapper = document.querySelector('.serviceStageSlider_js');
+    var whole = wrapper.querySelectorAll('.serviceStageMore_js');
+    var parent;
+    var text;
+    var textHeight;
+    whole.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        parent = item.closest('.serviceStage__item');
+        text = item.querySelector('.serviceStageMore_js span');
+
+        if (parent.classList.contains('show')) {
+          parent.querySelector('.serviceStage__description').setAttribute("style", "");
+          parent.classList.remove('show');
+          text.innerHTML = 'Читать далее';
+        } else {
+          textHeight = parent.querySelector('.serviceStage__description').scrollHeight;
+          console.log(textHeight);
+          parent.querySelector('.serviceStage__description').style.maxHeight = "".concat(textHeight, "px");
+          parent.classList.add('show');
+          text.innerHTML = 'Скрыть';
+        }
+      });
+    });
+  }
+} // custom slider service stage
+
+function sliderServiceStage() {
+  if (document.querySelector('.serviceStage_js')) {
+    var hideDescription = function hideDescription() {
+      var wrapper = document.querySelector('.serviceStageSlider_js');
+      var whole = wrapper.querySelectorAll('.serviceStageMore_js span');
+      var items = wrapper.querySelectorAll('.serviceStage__item');
+      var descriptions = wrapper.querySelectorAll('.serviceStage__description');
+      items.forEach(function (item) {
+        item.classList.remove('show');
+      });
+      whole.forEach(function (item) {
+        item.innerHTML = 'Читать далее';
+      });
+      descriptions.forEach(function (item) {
+        item.setAttribute("style", "");
+      });
+    };
+
+    var serviceStage = document.querySelector('.serviceStage_js');
+    var arrowsParent = serviceStage.querySelector('.serviceStage__arrows');
+    var arrowPrev = serviceStage.querySelectorAll('.serviceStage__arrow_prev');
+    var arrowsNext = serviceStage.querySelectorAll('.serviceStage__arrow_next');
+    var amount = serviceStage.querySelectorAll('.serviceStage__item').length;
+    var list = serviceStage.querySelector('.serviceStageSlider_js');
+    var counterLeft = serviceStage.querySelector('.serviceStage__counter_left');
+    var counterRight = serviceStage.querySelector('.serviceStage__counter_right');
+    var child;
+    var count = 1;
+    var childCount;
+    var childShow;
+    var shift = 0;
+    counterRight.innerHTML = amount;
+    arrowPrev.forEach(function (item) {
+      item.addEventListener("click", function () {
+        child = serviceStage.querySelectorAll('.serviceStage__item');
+        arrowsNext.forEach(function (item) {
+          item.classList.remove('disabled');
+        });
+        count = count - 1;
+        counterLeft.innerHTML = count;
+        childCount = count - 1;
+        child.forEach(function (item) {
+          item.classList.add('hide');
+        });
+        child[childCount].classList.remove('hide');
+        shift = shift + xs;
+        list.style.transform = "translateX(".concat(shift, "px)");
+
+        if (count === 1) {
+          arrowPrev.forEach(function (item) {
+            item.classList.add('disabled');
+          });
+        }
+
+        hideDescription();
+      });
+    });
+    arrowsNext.forEach(function (item) {
+      item.addEventListener("click", function () {
+        child = serviceStage.querySelectorAll('.serviceStage__item');
+        arrowPrev.forEach(function (item) {
+          item.classList.remove('disabled');
+        });
+        count = count + 1;
+        counterLeft.innerHTML = count;
+        childCount = count - 1;
+        child.forEach(function (item) {
+          item.classList.add('hide');
+        });
+        child[childCount].classList.remove('hide');
+        shift = shift - xs;
+        list.style.transform = "translateX(".concat(shift, "px)");
+
+        if (count === amount) {
+          arrowsNext.forEach(function (item) {
+            item.classList.add('disabled');
+          });
+        }
+
+        hideDescription();
+      });
+    });
+  }
+}
 
 /***/ }),
 /* 13 */
