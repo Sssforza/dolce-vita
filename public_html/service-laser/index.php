@@ -30,7 +30,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </div>
                         <div class="firstScreenDepiction__item firstScreenDepictionItem_js">
                             <span class="firstScreenDepiction__span firstScreenDepiction__span_clue firstScreenDepictionClue_js">
-                                7 – 10 процедур
+                                7-10 процедур
                                 <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/question.svg';?>
                             </span>
                             <div class="firstScreenDepiction__clue">
@@ -123,9 +123,14 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 </div>
                 <div class="serviceAbout__img serviceAbout__img_big" style="background-image:url(/dist/img/trash/serviceAbout__img_big2.jpg)"></div>
             </section>
-            <section class="section serviceStage">
+            <section class="section serviceStage serviceStage_js">
                 <div class="serviceStage__container">
                     <div class="service__title">Этапы <br>процедуры</div>
+                    <div class="serviceStage__counter serviceStage__counter_mobile">
+                        <div class="serviceStage__counter_left">1</div>
+                        <span> / </span>
+                        <div class="serviceStage__counter_right">5</div>
+                    </div>
                     <div class="serviceStage__slider serviceStageSlider_js">
                         <div class="serviceStage__item">
                             <div class="serviceStage__content">
@@ -133,23 +138,65 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                     <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="popupVideo serviceStage__video popupYoutube_js">
                                         <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
                                     </a>
-                                    <div class="serviceStage__count"></div>
                                     <div class="serviceStage__description service__description">
                                         Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток
+                                    </div>
+                                    <div class="serviceStage__arrows">
+                                        <div class="serviceStage__arrow serviceStage__arrow_prev disabled">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
+                                        <div class="serviceStage__arrow serviceStage__arrow_next">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="serviceStage__img" style="background-image:url(/dist/img/trash/serviceStage3.jpg)"></div>
                         </div>
-                        <div class="serviceStage__item">
+                        <div class="serviceStage__item hide">
                             <div class="serviceStage__content">
                                 <div class="serviceStage__box">
                                     <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="popupVideo serviceStage__video popupYoutube_js">
                                         <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
                                     </a>
-                                    <div class="serviceStage__count"></div>
                                     <div class="serviceStage__description service__description">
+                                        2Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
                                         Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
+                                        Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
+                                        Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток 2
+                                    </div>
+                                    <div class="serviceStage__more serviceStageMore_js">
+                                        <span>Читать далее</span>
+                                        <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';?>
+                                    </div>
+                                    <div class="serviceStage__arrows">
+                                        <div class="serviceStage__arrow serviceStage__arrow_prev disabled">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
+                                        <div class="serviceStage__arrow serviceStage__arrow_next">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="serviceStage__img" style="background-image:url(/dist/img/trash/serviceStage3.jpg)"></div>
+                        </div>
+                        <div class="serviceStage__item hide">
+                            <div class="serviceStage__content">
+                                <div class="serviceStage__box">
+                                    <a href="https://www.youtube.com/watch?v=mVkjPGNDmTQ" class="popupVideo serviceStage__video popupYoutube_js">
+                                        <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/play.svg';?>
+                                    </a>
+                                    <div class="serviceStage__description service__description">
+                                        3Устанавливаем вакуумную насадку <br>с&nbsp;охлаждающими панелями. Запускается процесс разрушения жировых клеток
+                                    </div>
+                                    <div class="serviceStage__arrows">
+                                        <div class="serviceStage__arrow serviceStage__arrow_prev disabled">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
+                                        <div class="serviceStage__arrow serviceStage__arrow_next">
+                                            <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -224,7 +271,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     </div>
                 </div>
             </section>
-            <section class="section serviceProfessionals notBg">
+            <section class="serviceProfessionals notBg">
                 <div class="serviceProfessionals__content">
                     <div class="service__title">Работают профессионалы</div>
                     <div class="serviceProfessionals__list">
@@ -258,6 +305,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                             </div>
                         </div>
                     </div>
+                    <div class="slideArrows"></div>
                 </div>
             </section>
             <section class="reviews reviews_js" id="reviews">
@@ -301,7 +349,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                 </div>
                             </div>
                         </div>
-                        <div class="reviews__item">
+                        <div class="reviews__item hide">
                             <div class="reviews__box">
                                 <div class="reviews__name">Ольга 34 года</div>
                                 <div class="reviews__read">
@@ -317,7 +365,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                 </div>
                             </div>
                         </div>
-                        <div class="reviews__item">
+                        <div class="reviews__item hide">
                             <div class="reviews__box">
                                 <div class="reviews__name">Виктория 27 лет</div>
                                 <div class="reviews__read">
@@ -344,7 +392,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                 </div>
                             </div>
                         </div>
-                        <div class="reviews__item">
+                        <div class="reviews__item hide">
                             <div class="reviews__box">
                                 <div class="reviews__name">Юлия 45 лет</div>
                                 <div class="reviews__read">
@@ -369,18 +417,28 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         <div class="service__title">Стоимость</div>
                         <div class="servicePrice__list">
                             <div class="servicePrice__item">
-                                <div class="servicePrice__subitem">1 насадка</div>
-                                <div class="servicePrice__subitem">12 000<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></div>
+                                <div class="servicePrice__subitem">Бикини + подмышки</div>
+                                <div class="servicePrice__subitem">
+                                    <span>69 300 &#8381;</span>
+                                </div>
                             </div>
                             <div class="servicePrice__item">
-                                <div class="servicePrice__subitem">2 насадки</div>
-                                <div class="servicePrice__subitem">18 000<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></div>
+                                <div class="servicePrice__subitem">Бикини + подмышки</div>
+                                <div class="servicePrice__subitem">
+                                    <span>26 500 &#8381;</span>
+                                </div>
                             </div>
                             <div class="servicePrice__item">
-                                <div class="servicePrice__subitem">4 насадки</div>
+                                <div class="servicePrice__subitem">Бикини + голени</div>
+                                <div class="servicePrice__subitem">
+                                    <span>27 000 &#8381;</span>
+                                </div>
+                            </div>
+                            <div class="servicePrice__item">
+                                <div class="servicePrice__subitem">Бикини + голени + подмышки</div>
                                 <div class="servicePrice__subitem servicePrice__subitem_discount">
-                                    <span>32 000<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
-                                    <span>21 000<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/rub.svg';?></span>
+                                    <span>32 000</span>
+                                    <span>21 000 &#8381;</span>
                                 </div>
                             </div>
                         </div>
@@ -390,6 +448,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                             </div>
                             <span>Каждая 5-я процедура в подарок</span>
                         </div>
+                        <div class="servicePrice__img servicePrice__img_mobile" style="background-image:url(/dist/img/trash/mainDolceBig3.jpg)"></div>
                         <div class="signConsultation">
                             <form class="signConsultation__form signConsultation_js">
                                 <div class="signConsultation__title">Запишитесь <br>на процедуру</div>
