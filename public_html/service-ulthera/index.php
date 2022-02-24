@@ -35,19 +35,24 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                 <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/question.svg';?>
                             </span>
                             <div class="firstScreenDepiction__clue">
-                                <ul class="firstScreenDepiction__ul">
-                                    <li class="firstScreenDepiction__li firstScreenDepiction__li_name">Рекомендации</li>
-                                    <li class="firstScreenDepiction__li">2 – 3 раза в неделю</li>
-                                    <li class="firstScreenDepiction__li">10 – 12 процедур</li>
-                                </ul>
-                                <ul class="firstScreenDepiction__ul">
-                                    <li class="firstScreenDepiction__li firstScreenDepiction__li_name">Эффект</li>
-                                    <li class="firstScreenDepiction__li">до 9 месяцев</li>
-                                </ul>
-                                <ul class="firstScreenDepiction__ul">
-                                    <li class="firstScreenDepiction__li firstScreenDepiction__li_name">Периодичность</li>
-                                    <li class="firstScreenDepiction__li">1 – 2 раза в год</li>
-                                </ul>
+                                <div class="firstScreenDepiction__content">
+                                    <div class="firstScreenDepiction__close">
+                                        <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/cross.svg';?>
+                                    </div>
+                                    <ul class="firstScreenDepiction__ul">
+                                        <li class="firstScreenDepiction__li firstScreenDepiction__li_name">Рекомендации</li>
+                                        <li class="firstScreenDepiction__li">2 – 3 раза в неделю</li>
+                                        <li class="firstScreenDepiction__li">10 – 12 процедур</li>
+                                    </ul>
+                                    <ul class="firstScreenDepiction__ul">
+                                        <li class="firstScreenDepiction__li firstScreenDepiction__li_name">Эффект</li>
+                                        <li class="firstScreenDepiction__li">до 9 месяцев</li>
+                                    </ul>
+                                    <ul class="firstScreenDepiction__ul">
+                                        <li class="firstScreenDepiction__li firstScreenDepiction__li_name">Периодичность</li>
+                                        <li class="firstScreenDepiction__li">1 – 2 раза в год</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

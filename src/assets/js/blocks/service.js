@@ -4,19 +4,41 @@ let xs = 376
 // first screen depiction clue hover
 export function firstScreenDepictionClueHover () {
     if(document.querySelector('.firstScreenDepictionClue_js')) {
-        const list = document.querySelector('.firstScreenDepiction');
-        const hoversElem = list.querySelector('.firstScreenDepictionClue_js svg');
+        let list = document.querySelector('.firstScreenDepiction');
+        let hoversElem = list.querySelector('.firstScreenDepictionClue_js svg');
+        let close = list.querySelector('.firstScreenDepiction__close');
         let parent;
 
-        hoversElem.onmouseover = function(elem) {
-            parent = hoversElem.closest('.firstScreenDepiction__item');
-            parent.classList.add('hover');
-        };
-        hoversElem.onmouseout = function(elem) {
-            parent = hoversElem.closest('.firstScreenDepiction__item');
-            parent.classList.remove('hover');
-        };
+        if (document.documentElement.clientWidth > xs) {
+            hoversElem.onmouseover = function(elem) {
+                parent = hoversElem.closest('.firstScreenDepiction__item');
+                parent.classList.add('hover');
+            };
+            hoversElem.onmouseout = function(elem) {
+                parent = hoversElem.closest('.firstScreenDepiction__item');
+                parent.classList.remove('hover');
+            };
+        }
+        if (document.documentElement.clientWidth <= xs) {
+            hoversElem.addEventListener('click', function (e) {
+                parent = hoversElem.closest('.firstScreenDepiction__item');
+                parent.classList.add('hover');
+                document.body.classList.add('overflowHidden');
+            });
+            close.addEventListener('click', function (e) {
+                parent = close.closest('.firstScreenDepiction__item');
+                parent.classList.remove('hover');
+                document.body.classList.remove('overflowHidden');
+            });
+
+        }
     }
+    // if(document.querySelector('.firstScreenDepictionClue_js svg') && document.documentElement.clientWidth <= xs) {
+    //     hoversElem.addEventListener('click', function (e) {
+    //         parent = hoversElem.closest('.firstScreenDepiction__item');
+    //         parent.classList.add('hover');
+    //     })
+    // }
 }
 
 // procedure hover

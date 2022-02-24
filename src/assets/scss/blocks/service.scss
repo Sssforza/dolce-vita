@@ -213,10 +213,16 @@
     }
     &__item {
         position: relative;
+        @media (max-width:$xs) {
+            position: inherit;
+        }
         &.hover {
             .firstScreenDepiction__clue {
                 opacity: 1;
                 pointer-events: auto;
+                @media (max-width:$xs) {
+                    left: 0;
+                }
             }
             .firstScreenDepiction__span_clue {
                 color: $dolceColor;
@@ -239,25 +245,50 @@
         margin-left: -30px;
         padding: 44px 47px 36px 34px;
         width: 597px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 46px;
         background: $white;
         border: 1px solid rgba(23, 23, 25, 0.4);
         transition: $transition;
         opacity: 0;
         pointer-events: none;
-        @media (max-width:$lg) {
+        @media (max-width:$md) {
             zoom: .8;
+            bottom: 45px;
         }
         @media (max-width:$xs) {
-            left: -139px;
-            bottom: 30px;
             margin-left: 0;
-            padding: 30px 25px;
-            width: 316px;
-            gap: 30px;
+            padding: 77px 30px;
+            width: 100%;
             zoom: 1;
+            top: 0;
+            bottom: 0;
+            left: -100%;
+            background: #ffffffeb;
+            z-index: 5;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 46px;
+        @media (max-width:$xs) {
+            position: relative;
+            flex-direction: column;
+            padding: 40px;
+            gap: 24px 0;
+            background: $bgCold;
+        }
+    }
+    &__close {
+        display: none;
+        @media (max-width:$xs) {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        svg {
+            width: 20px;
+            height: 20px;
         }
     }
     &__li {
@@ -265,14 +296,11 @@
         line-height: 38px;
         color: $black;
         @media (max-width:$xs) {
-            font-size: 22px;
+            font-size: 14px;
             line-height: 26px;
         }
         &_name {
             color: $black50;
-            @media (max-width:$xs) {
-                margin-bottom: 5px;
-            }
         }
     }
 }

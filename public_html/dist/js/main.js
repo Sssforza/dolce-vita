@@ -16843,18 +16843,40 @@ function firstScreenDepictionClueHover() {
   if (document.querySelector('.firstScreenDepictionClue_js')) {
     var list = document.querySelector('.firstScreenDepiction');
     var hoversElem = list.querySelector('.firstScreenDepictionClue_js svg');
+    var close = list.querySelector('.firstScreenDepiction__close');
     var parent;
 
-    hoversElem.onmouseover = function (elem) {
-      parent = hoversElem.closest('.firstScreenDepiction__item');
-      parent.classList.add('hover');
-    };
+    if (document.documentElement.clientWidth > xs) {
+      hoversElem.onmouseover = function (elem) {
+        parent = hoversElem.closest('.firstScreenDepiction__item');
+        parent.classList.add('hover');
+      };
 
-    hoversElem.onmouseout = function (elem) {
-      parent = hoversElem.closest('.firstScreenDepiction__item');
-      parent.classList.remove('hover');
-    };
-  }
+      hoversElem.onmouseout = function (elem) {
+        parent = hoversElem.closest('.firstScreenDepiction__item');
+        parent.classList.remove('hover');
+      };
+    }
+
+    if (document.documentElement.clientWidth <= xs) {
+      hoversElem.addEventListener('click', function (e) {
+        parent = hoversElem.closest('.firstScreenDepiction__item');
+        parent.classList.add('hover');
+        document.body.classList.add('overflowHidden');
+      });
+      close.addEventListener('click', function (e) {
+        parent = close.closest('.firstScreenDepiction__item');
+        parent.classList.remove('hover');
+        document.body.classList.remove('overflowHidden');
+      });
+    }
+  } // if(document.querySelector('.firstScreenDepictionClue_js svg') && document.documentElement.clientWidth <= xs) {
+  //     hoversElem.addEventListener('click', function (e) {
+  //         parent = hoversElem.closest('.firstScreenDepiction__item');
+  //         parent.classList.add('hover');
+  //     })
+  // }
+
 } // procedure hover
 
 function procedureHover() {
