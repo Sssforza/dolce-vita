@@ -212,10 +212,107 @@
                 margin-left: 0;
             }
         }
+        &_sevice {
+            .header {
+                &__box {
+                    width: auto !important;
+                    gap: 0 40px;
+                }
+            }
+        }
     }
     &_main {
         position: fixed;
         background: $white;
+        &_sevice {
+            border-bottom: 1px solid #00000033;
+            @media (max-width:$xs) {
+                top: auto;
+                bottom: 0;
+                border-bottom: none;
+                background: $bgGrey;
+            }
+            &.hide {
+                @media (max-width:$xs) {
+                    transform: translateY(100%);
+                }
+            }
+            .header {
+                &__wrapper_phone,
+                &__logo {
+                    display: none;
+                }
+                &__content {
+                    @media (max-width:$xs) {
+                        position: relative;
+                        padding: 14px 0;
+                        &:before {
+                            content:'';
+                            position: absolute;
+                            top: 0;
+                            right: -30px;
+                            left: -30px;
+                            height: 1px;
+                            background: $blackLight;
+                        }
+                    }
+                }
+                &__box {
+                    padding-left: 61px;
+                    width: auto;
+                    @media (max-width:$md) {
+                        padding-left: 34px;
+                    }
+                    @media (max-width:$lg) {
+                        padding-left: 20px;
+                    }
+                }
+                &__wrapper {
+                    &_btns {
+                        margin-left: 0;
+                    }
+                    &_basket {
+                        margin-left: 40px;
+                        @media (max-width:$lg) {
+                            margin-left: 20px;
+                        }
+                        @media (max-width:$xs) {
+                            display: none;
+                        }
+                    }
+                }
+                &__btn {
+                    @media (max-width:$xs) {
+                        position: relative;
+                        order: 2;
+                        margin-left: 10px;
+                        width: 113.82px;
+                        height: 34px;
+                        z-index: 1;
+                    }
+                }
+                &__certificate {
+                    margin-left: 40px;
+                    @media (max-width:$lg) {
+                        display: none;
+                    }
+                    @media (max-width:$xs) {
+                        position: relative;
+                        display: block;
+                        order: 1;
+                        margin-left: 0;
+                        font-size: 12px;
+                        line-height: 16px;
+                        z-index: 1;
+                    }
+                }
+            }
+            .hamburger {
+                @media (max-width:$lg) {
+                    margin-left: 20px;
+                }
+            }
+        }
     }
     &.hide {
         transform: translateY(-100%);

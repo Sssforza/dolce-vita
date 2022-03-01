@@ -475,6 +475,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </ul>
         </aside>
     </section>
+    <div class="seviceHidden hidden"></div>
 </main>
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");

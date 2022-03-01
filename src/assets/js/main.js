@@ -22,8 +22,8 @@ import {specialistHover, guestCardClueHover, blogArticlesHover, showReviews, ani
         firstAnimation, hideErrorForm, sliderReviews} from "./blocks/index.js";
 
 //📁 /assets/js/blocks  service.js
-import {firstScreenDepictionClueHover, procedureHover, serviceAnchor, benefitsHover, serviceTestimony, 
-        serviceFixedAsideBar, serviceStageMore, sliderServiceStage} from "./blocks/service.js";
+import {firstScreenDepictionClueHover, procedureHover, serviceAnchor, benefitsHover, serviceTestimony, serviceFixedAsideBar,
+        serviceStageMore, sliderServiceStage, seviceHidden, serviceHeaderMenu, serviceHeaderMenuSelection, serviceHeaderMenuMobile} from "./blocks/service.js";
 
 //📁 /assets/js/blocks  _header.js
 import {dropLastHeader, openCloseHamburger, openCloseSearch, closeSearch, menuSelection, headerMenuBack,
@@ -140,6 +140,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // show stage description
     sliderServiceStage();
+
+    // seviceHidden
+    seviceHidden();
+
+    // sevice header menu
+    serviceHeaderMenu();
+
+    // sevice header menu selection
+    serviceHeaderMenuSelection();
+
+    // sevice header menu mobile
+    serviceHeaderMenuMobile();
 
     // custom slider service stage
     hover();

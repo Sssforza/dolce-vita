@@ -1,7 +1,7 @@
 let xs = 376
 // drop last header
 export function dropLastHeader () {
-    if(document.querySelector('.header_main') && document.documentElement.clientWidth > xs) {
+    if(document.querySelector('.header_main') && document.documentElement.clientWidth > xs || document.querySelector(".seviceHidden")) {
         const header = document.querySelector('.header_main');
         const headerHeight = document.querySelector('.header_main').offsetHeight;
         const emergence = document.querySelector('.firstSection_js').offsetHeight;

@@ -1,3 +1,5 @@
+import { contains } from "jquery";
+
 let lg = 1024
 let xs = 376
 
@@ -33,12 +35,6 @@ export function firstScreenDepictionClueHover () {
 
         }
     }
-    // if(document.querySelector('.firstScreenDepictionClue_js svg') && document.documentElement.clientWidth <= xs) {
-    //     hoversElem.addEventListener('click', function (e) {
-    //         parent = hoversElem.closest('.firstScreenDepiction__item');
-    //         parent.classList.add('hover');
-    //     })
-    // }
 }
 
 // procedure hover
@@ -266,6 +262,155 @@ export function sliderServiceStage () {
                     });
                 }
                 hideDescription();
+            });
+        });
+    }
+}
+
+// seviceHidden
+export function seviceHidden () {
+    if (document.querySelector(".seviceHidden")) {
+        var seviceHidden = document.querySelector(".seviceHidden");
+        var headerFirst = document.querySelector(".header_first");
+        var headerMain = document.querySelector(".header_main");
+        headerFirst.classList.add('header_first_sevice');
+        headerMain.classList.add('header_main_sevice');
+        if (document.documentElement.clientWidth <= xs ) {
+            headerFirst.style.position = `absolute`;
+        }
+    }
+}
+
+// sevice header menu
+export function serviceHeaderMenu () {
+    if (document.querySelector(".serviceHeaderMenuSelected_js")) {
+        var wrapper = document.querySelector(".serviceHeader__dt");
+        if (document.documentElement.clientWidth <= xs) {
+            wrapper = document.querySelector(".serviceHeader__drop");
+        }
+        var serviceHeaderMenu = wrapper.querySelector(".serviceHeaderMenu");
+        var serviceHeaderMenuSelected = wrapper.querySelector(".serviceHeaderMenuSelected_js");
+        var serviceHeaderMenuSpan = wrapper.querySelector(".serviceHeaderMenuSelected_js span");
+        var toggleMenu = function() {
+            serviceHeaderMenu.classList.toggle('show');
+        }
+        serviceHeaderMenuSelected.addEventListener('click', function(e) {
+            toggleMenu();
+        });
+        document.addEventListener('click', function(e) {
+            const target = e.target;
+            const its_serviceHeaderMenuSelected = target == serviceHeaderMenuSelected;
+            const its_serviceHeaderMenuSpan = target == serviceHeaderMenuSpan;
+            const menu_is_active = serviceHeaderMenu.classList.contains('show');
+            if (!its_serviceHeaderMenuSelected && !its_serviceHeaderMenuSpan && menu_is_active) {
+                toggleMenu();
+            }
+        });
+    }
+}
+
+// sevice header menu selection
+export function serviceHeaderMenuSelection () {
+    if (document.querySelector(".serviceHeaderMenuBox_js")) {
+        var wrapper = document.querySelector(".serviceHeader__dt");
+        if (document.documentElement.clientWidth <= xs) {
+            wrapper = document.querySelector(".serviceHeader__drop");
+        }
+        var menuSelected = wrapper.querySelector(".serviceHeaderMenuSelected_js span");
+        var menuBox = document.querySelector('.serviceHeader__box');
+        var menuItems = wrapper.querySelectorAll('.serviceHeaderMenuLi_js');
+        var menuItemsSpan;
+        var headerSeance = wrapper.querySelector('.serviceHeader__seance_sitting');
+        var headerTime = wrapper.querySelector('.serviceHeader__seance_time');
+        var dataSeance= '';
+        var dataTime= '';
+        var dataCost= '';
+        var dataCostIndividually= '';
+        var dataCostDiscount= '';
+        var dataCostBefore= '';
+        var dataCostAfter= '';
+        menuItems.forEach((item) => {
+            item.addEventListener("click", () => {
+                menuItems.forEach((i) => {
+                    i.classList.remove('active');
+                });
+                item.classList.add('active');
+                menuItemsSpan = item.querySelector('.serviceHeaderMenu__name').innerHTML;
+                menuSelected.innerHTML = menuItemsSpan;
+                if (item.hasAttribute('data-seance') === true) {
+                    dataSeance = item.getAttribute('data-seance');
+                    if (dataSeance != '') {
+                        headerSeance.innerHTML = dataSeance;
+                    }
+                }
+                if (item.hasAttribute('data-time') === true) {
+                    dataTime = item.getAttribute('data-time');
+                    if (dataTime != '') {
+                        headerTime.innerHTML = dataTime;
+                    }
+                }
+                if (item.hasAttribute('data-cost') === true) {
+                    dataCost = item.getAttribute('data-cost');
+                    if (dataCost != '') {
+                        document.querySelector('.serviceHeader__cost').remove();
+                        let divCost = document.createElement('div');
+                        divCost.className = "serviceHeader__cost";
+                        divCost.innerHTML = dataCost;
+                        menuBox.append(divCost);
+                    }
+                }
+                if (item.hasAttribute('data-individually') === true) {
+                    dataCostIndividually = item.getAttribute('data-individually');
+                    if (dataCostIndividually != '') {
+                        document.querySelector('.serviceHeader__cost').remove();
+                        let divCostIndividually = document.createElement('div');
+                        divCostIndividually.className = "serviceHeader__cost serviceHeader__cost_individually";
+                        divCostIndividually.innerHTML = "цена <br>индивидуальна";
+                        menuBox.append(divCostIndividually);
+                    }
+                }
+                if (item.hasAttribute('data-discount') === true) {
+                    dataCostDiscount = item.getAttribute('data-discount');
+                    dataCostBefore = item.getAttribute('data-before');
+                    dataCostAfter = item.getAttribute('data-after');
+                    if (dataCostBefore != '' && dataCostAfter != '') {
+                        document.querySelector('.serviceHeader__cost').remove();
+
+                        let divCostDiscount = document.createElement('div');
+                        divCostDiscount.className = "serviceHeader__cost serviceHeader__cost_discount";
+
+                        let divCostDiscountBefore = document.createElement('div');
+                        divCostDiscountBefore.className = "serviceHeader__sale";
+
+                        let divCostDiscountAfter = document.createElement('div');
+                        divCostDiscountAfter.className = "serviceHeader__total";
+
+                        divCostDiscountBefore.innerHTML = dataCostBefore;
+                        divCostDiscountAfter.innerHTML = dataCostAfter;
+
+                        menuBox.append(divCostDiscount);
+                        divCostDiscount.append(divCostDiscountBefore);
+                        divCostDiscount.append(divCostDiscountAfter);
+                    }
+                }
+            });
+        });
+    }
+}
+
+// sevice header menu mobile
+export function serviceHeaderMenuMobile () {
+    if (document.querySelector(".serviceHeaderArrow_js") && document.documentElement.clientWidth <= xs) {
+        var serviceHeader = document.querySelector(".serviceHeaderMenu_js");
+        var serviceHeaderArrow = document.querySelectorAll(".serviceHeaderArrow_js");
+
+        var toggleMenu = function() {
+            parent.classList.toggle('open');
+        }
+        serviceHeaderArrow.forEach((item) => {
+            item.addEventListener('click', function(e) {
+                parent = item.closest('.serviceHeaderMenu_js');
+                toggleMenu();
             });
         });
     }

@@ -853,7 +853,212 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </ul>
         </aside>
     </section>
+    <div class="seviceHidden hidden"></div>
 </main>
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>
+
+<!-- serviceHeader 1 +
+    <div class="serviceHeader serviceHeaderMenu_js">
+        <div class="serviceHeader__content">
+            <div class="serviceHeader__title">
+                Комплексное предложение по&nbsp;омоложению лица Ultherapy + IPL
+            </div>
+            <div class="serviceHeader__drop">
+                <div class="serviceHeader__session">
+                    <div class="serviceHeader__seance serviceHeader__seance_sitting">4 сеанса</div>
+                    <div class="serviceHeader__seance serviceHeader__seance_time">15 мин</div>
+                </div>
+            </div>
+            <div class="serviceHeader__box">
+                <div class="serviceHeader__session">
+                    <div class="serviceHeader__seance serviceHeader__seance_sitting">4 сеанса</div>
+                    <div class="serviceHeader__seance serviceHeader__seance_time">15 мин</div>
+                </div>
+                <div class="serviceHeader__cost">38 000 &#8381;</div>
+                <div class="serviceHeader__arrow serviceHeaderArrow_js">
+                <?
+                    // include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';
+                ?>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+
+<!-- serviceHeader 2 +
+    <div class="serviceHeader serviceHeaderMenu_js">
+        <div class="serviceHeader__content">
+            <div class="serviceHeader__title">
+                Ultherapy. Ульразвуковой лифтинг шеи и&nbsp;лица
+            </div>
+            <div class="serviceHeader__drop">
+                <div class="serviceHeader__session">
+                    <div class="serviceHeader__seance serviceHeader__seance_sitting">4 сеанса</div>
+                    <div class="serviceHeader__seance serviceHeader__seance_time">15 мин</div>
+                </div>
+            </div>
+            <div class="serviceHeader__box serviceHeader__box_individually">
+                <div class="serviceHeader__session">
+                    <div class="serviceHeader__seance serviceHeader__seance_sitting">4 сеанса</div>
+                    <div class="serviceHeader__seance serviceHeader__seance_time">15 мин</div>
+                </div>
+                <div class="serviceHeader__cost serviceHeader__cost_individually">цена <br>индивидуальна</div>
+                <div class="serviceHeader__arrow serviceHeaderArrow_js">
+                <?
+                    // include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';
+                ?>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+<!-- serviceHeader 3 +
+    <div class="serviceHeader serviceHeaderMenu_js">
+        <div class="serviceHeader__content">
+            <div class="serviceHeader__title">
+                Комплексное предложение по&nbsp;омоложению лица Ultherapy + IPL
+            </div>
+            <div class="serviceHeader__drop">
+                <div class="serviceHeader__session">
+                    <div class="serviceHeader__seance serviceHeader__seance_sitting">1 сеанс</div>
+                    <div class="serviceHeader__seance serviceHeader__seance_time">45 мин</div>
+                </div>
+            </div>
+            <div class="serviceHeader__box serviceHeader__box_discount">
+                <div class="serviceHeader__session">
+                    <div class="serviceHeader__seance serviceHeader__seance_sitting">1 сеанс</div>
+                    <div class="serviceHeader__seance serviceHeader__seance_time">45 мин</div>
+                </div>
+                <div class="serviceHeader__cost serviceHeader__cost_discount">
+                    <div class="serviceHeader__sale">12 450 &#8381;</div>
+                    <div class="serviceHeader__total">2 450 &#8381;</div>
+                </div>
+                <div class="serviceHeader__arrow serviceHeaderArrow_js">
+                <?
+                        // include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+<!-- serviceHeader 4 +
+    <div class="serviceHeader serviceHeaderMenu_js">
+        <div class="serviceHeader__content">
+            <div class="serviceHeader__title">
+                Альтера-терапия
+            </div>
+            <div class="serviceHeader__drop">
+                <div class="serviceHeader__session">
+                    <div class="serviceHeader__seance serviceHeader__seance_sitting">1 сеанс</div>
+                    <div class="serviceHeader__seance serviceHeader__seance_time">50 мин</div>
+                    <div class="serviceHeader__seance serviceHeaderMenu">
+                        <div class="serviceHeaderMenu__selected serviceHeaderMenuSelected_js">
+                            <span>Шея</span>
+                            <?
+                                // include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';
+                            ?>
+                        </div>
+                        <div class="serviceHeaderMenu__box serviceHeaderMenuBox_js">
+                            <ul class="serviceHeaderMenu__ul">
+                                <li class="serviceHeaderMenu__li serviceHeaderMenuLi_js active" data-seance="1 сеанс" data-time="50 мин" data-cost="38 000 &#8381;">
+                                    <span class="serviceHeaderMenu__name">Шея</span>
+                                </li>
+                                <li class="serviceHeaderMenu__li serviceHeaderMenuLi_js" data-seance="2 сеанса" data-time="15 мин" data-cost="17 000 &#8381;">
+                                    <span class="serviceHeaderMenu__name">Коррекция фигуры</span>
+                                </li>
+                                <li class="serviceHeaderMenu__li serviceHeaderMenuLi_js" data-seance="1 сеанс" data-time="35 мин" data-individually="true">
+                                    <span class="serviceHeaderMenu__name">Качество жизни</span>
+                                </li>
+                                <li class="serviceHeaderMenu__li serviceHeaderMenuLi_js" data-seance="2 сеанса" data-time="30 мин" data-discount="true" data-before="12 450 &#8381;" data-after="2 450 &#8381;">
+                                    <span class="serviceHeaderMenu__name">Салон красоты</span>
+                                </li>
+                                <li class="serviceHeaderMenu__li serviceHeaderMenuLi_js" data-seance="5 сенсов" data-time="120 мин" data-cost="68 900 &#8381;">
+                                    <span class="serviceHeaderMenu__name">Бренды</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="serviceHeader__dt">
+                <div class="serviceHeader__box">
+                    <div class="serviceHeader__session">
+                        <div class="serviceHeader__seance serviceHeader__seance_sitting">1 сеанс</div>
+                        <div class="serviceHeader__seance serviceHeader__seance_time">50 мин</div>
+                        <div class="serviceHeader__seance serviceHeaderMenu">
+                            <div class="serviceHeaderMenu__selected serviceHeaderMenuSelected_js">
+                                <span>Шея</span>
+                                <?
+                                    // include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';
+                                ?>
+                            </div>
+                            <div class="serviceHeaderMenu__box serviceHeaderMenuBox_js">
+                                <ul class="serviceHeaderMenu__ul">
+                                    <li class="serviceHeaderMenu__li serviceHeaderMenuLi_js active" data-seance="1 сеанс" data-time="50 мин" data-cost="38 000 &#8381;">
+                                        <span class="serviceHeaderMenu__name">Шея</span>
+                                    </li>
+                                    <li class="serviceHeaderMenu__li serviceHeaderMenuLi_js" data-seance="2 сеанса" data-time="15 мин" data-cost="17 000 &#8381;">
+                                        <span class="serviceHeaderMenu__name">Коррекция фигуры</span>
+                                    </li>
+                                    <li class="serviceHeaderMenu__li serviceHeaderMenuLi_js" data-seance="1 сеанс" data-time="35 мин" data-individually="true">
+                                        <span class="serviceHeaderMenu__name">Качество жизни</span>
+                                    </li>
+                                    <li class="serviceHeaderMenu__li serviceHeaderMenuLi_js" data-seance="2 сеанса" data-time="30 мин" data-discount="true" data-before="12 450 &#8381;" data-after="2 450 &#8381;">
+                                        <span class="serviceHeaderMenu__name">Салон красоты</span>
+                                    </li>
+                                    <li class="serviceHeaderMenu__li serviceHeaderMenuLi_js" data-seance="5 сенсов" data-time="120 мин" data-cost="68 900 &#8381;">
+                                        <span class="serviceHeaderMenu__name">Бренды</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="serviceHeader__cost">38 000 &#8381;</div>
+                    <div class="serviceHeader__arrow serviceHeaderArrow_js">
+                        <?
+                            // include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+<!-- serviceHeader 5 +
+    <div class="serviceHeader serviceHeaderMenu_js">
+        <div class="serviceHeader__content">
+            <div class="serviceHeader__title">
+                Идеальный овал лица
+            </div>
+            <div class="serviceHeader__drop">
+                <div class="serviceHeader__programm">
+                    Программа  2 в 1
+                </div>
+                <div class="serviceHeader__session">
+                    <div class="serviceHeader__wrapper">
+                        <div class="serviceHeader__procedure">Сложное удаление сосудов на теле</div>
+                        <div class="serviceHeader__seance serviceHeader__seance_sitting">4 сеанса</div>
+                    </div>
+                    <div class="serviceHeader__wrapper">
+                        <div class="serviceHeader__procedure">Ultherapy</div>
+                        <div class="serviceHeader__seance serviceHeader__seance_time">15 мин</div>
+                    </div>
+                </div>
+            </div>
+            <div class="serviceHeader__box">
+                <div class="serviceHeader__programm">
+                    Программа  2 в 1
+                </div>
+                <div class="serviceHeader__cost">78 000 &#8381;</div>
+                <div class="serviceHeader__arrow serviceHeaderArrow_js">
+                    <?
+                        // include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
