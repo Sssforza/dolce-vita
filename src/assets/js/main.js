@@ -23,7 +23,7 @@ import {specialistHover, guestCardClueHover, blogArticlesHover, showReviews, ani
 
 //📁 /assets/js/blocks  service.js
 import {firstScreenDepictionClueHover, procedureHover, serviceAnchor, benefitsHover, serviceTestimony, serviceFixedAsideBar,
-        serviceStageMore, sliderServiceStage, seviceHidden, serviceHeaderMenu, serviceHeaderMenuSelection, serviceHeaderMenuMobile} from "./blocks/service.js";
+        serviceStageMore, sliderServiceStage, seviceHidden, serviceHeaderMenu, serviceHeaderMenuSelection, serviceHeaderMenuMobile, asideBarActives} from "./blocks/service.js";
 
 //📁 /assets/js/blocks  _header.js
 import {dropLastHeader, openCloseHamburger, openCloseSearch, closeSearch, menuSelection, headerMenuBack,
@@ -152,6 +152,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // sevice header menu mobile
     serviceHeaderMenuMobile();
+
+    // aside bar actives
+    asideBarActives();
 
     // custom slider service stage
     hover();

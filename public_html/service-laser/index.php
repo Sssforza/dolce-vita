@@ -66,7 +66,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
     </section>
     <section class="service">
         <div class="service__content">
-            <section class="serviceAbout" id="procedure">
+            <section class="serviceAbout clientRect_js" id="procedure">
                 <div class="serviceAbout__img serviceAbout__img_small serviceAbout__img_small_two" style="background-image:url(/dist/img/trash/serviceAbout__img_small2.jpg)"></div>
                 <div class="serviceAbout__text">
                     <div class="service__title serviceAbout__title">Комфорт и&nbsp;максимум эффективности</div>
@@ -259,7 +259,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     </div>
                 </div>
             </section>
-            <section class="serviceDoctor" id="specialist">
+            <section class="serviceDoctor clientRect_js" id="specialist">
                 <div class="serviceDoctor__content">
                     <div class="serviceDoctor__box">
                         <div class="service__title">Процедуру <br>выполняет</div>
@@ -313,7 +313,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     <div class="slideArrows"></div>
                 </div>
             </section>
-            <section class="reviews reviews_js" id="reviews">
+            <section class="reviews reviews_js clientRect_js" id="reviews">
                 <div class="reviews__content">
                     <div class="heading">
                         <span>Отзывы</span>
@@ -416,7 +416,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     </div>
                 </div>
             </section>
-            <section class="servicePrice" id="price">
+            <section class="servicePrice clientRect_js" id="price">
                 <div class="servicePrice__content">
                     <div class="servicePrice__box">
                         <div class="service__title">Стоимость</div>

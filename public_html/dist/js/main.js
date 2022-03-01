@@ -497,7 +497,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["serviceHeaderMenuSelection"])(); // sevice header menu mobile
 
-  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["serviceHeaderMenuMobile"])(); // custom slider service stage
+  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["serviceHeaderMenuMobile"])(); // aside bar actives
+
+  Object(_blocks_service_js__WEBPACK_IMPORTED_MODULE_7__["asideBarActives"])(); // custom slider service stage
 
   Object(_blocks_hover_js__WEBPACK_IMPORTED_MODULE_3__["hover"])();
 });
@@ -16836,6 +16838,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "benefitsHover", function() { return benefitsHover; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceTestimony", function() { return serviceTestimony; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceFixedAsideBar", function() { return serviceFixedAsideBar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "asideBarActives", function() { return asideBarActives; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serviceStageMore", function() { return serviceStageMore; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderServiceStage", function() { return sliderServiceStage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "seviceHidden", function() { return seviceHidden; });
@@ -17044,7 +17047,37 @@ function serviceFixedAsideBar() {
     });
   }
 }
-; // show stage description
+; // aside bar actives
+
+function asideBarActives() {
+  if (document.querySelector(".clientRect_js") && document.documentElement.clientWidth > xs) {
+    var positions = [],
+        currentActive = null,
+        links = $('.serviceAnchor_js');
+    $(".clientRect_js").each(function () {
+      positions.push({
+        top: $(this).position().top + document.documentElement.clientHeight,
+        a: links.filter('[href="#' + $(this).attr('id') + '"]')
+      });
+    });
+    positions = positions.reverse();
+    $(window).on('scroll', function () {
+      var winTop = $(window).scrollTop();
+
+      for (var i = 0; i < positions.length; i++) {
+        if (positions[i].top < winTop) {
+          if (currentActive !== i) {
+            currentActive = i;
+            links.removeClass('active');
+            positions[i].a.addClass("active");
+          }
+
+          break;
+        }
+      }
+    });
+  }
+} // show stage description
 
 function serviceStageMore() {
   if (document.querySelector('.serviceStageMore_js')) {

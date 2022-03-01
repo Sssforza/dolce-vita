@@ -158,6 +158,35 @@ export function serviceFixedAsideBar () {
     }
 };
 
+// aside bar actives
+export function asideBarActives () {
+    if (document.querySelector(".clientRect_js") && document.documentElement.clientWidth > xs) {
+        var positions = [],
+        currentActive = null,
+        links = $('.serviceAnchor_js');
+        $(".clientRect_js").each(function(){
+            positions.push({
+                top: $(this).position().top + document.documentElement.clientHeight,
+                a: links.filter('[href="#'+$(this).attr('id')+'"]')
+            });
+        });
+        positions = positions.reverse();
+        $(window).on('scroll',function() {
+            var winTop = $(window).scrollTop();
+            for(var i = 0; i < positions.length; i++){
+                if(positions[i].top < winTop){
+                    if(currentActive !== i){
+                        currentActive = i;
+                        links.removeClass('active');
+                        positions[i].a.addClass("active");
+                    }
+                    break;
+                }
+            }
+        });
+    }
+}
+
 // show stage description
 export function serviceStageMore () {
     if (document.querySelector('.serviceStageMore_js')) {
