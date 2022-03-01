@@ -12,7 +12,8 @@ import 'magnific-popup';
 import {hover} from "./blocks/_hover.js";
 
 //📁 /assets/js/blocks  _sliders.js
-import {mainSlider, specialistSlider, serviceStageSlider, procedureSlider, cosmeticsSlider, serviceResultPhotoSlider, serviceProfessionalsSlider} from "./blocks/_sliders.js";
+import {mainSlider, specialistSlider, serviceStageSlider, procedureSlider, cosmeticsSlider, serviceResultPhotoSlider,
+        serviceProfessionalsSlider, serviceSliderImg} from "./blocks/_sliders.js";
 
 //📁 /assets/js/blocks  _popup.js
 import {popupYoutube} from "./blocks/_popup.js";
@@ -53,6 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // service professionals slider
     serviceProfessionalsSlider();
+
+    // service slider img
+    serviceSliderImg();
 
     // popup youtube
     popupYoutube();

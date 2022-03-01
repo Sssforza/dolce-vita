@@ -33,7 +33,7 @@ export function specialistSlider () {
 			infinite: true,
 			variableWidth: true,
 			arrows: true,
-			appendArrows: '.specialistSlider_js .slideArrows',
+			appendArrows: '.specialist .slideArrows',
 			prevArrow: '<div class="slideArrows__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
 			nextArrow: '<div class="slideArrows__next"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
 		});
@@ -149,6 +149,23 @@ export function serviceProfessionalsSlider () {
 			appendArrows: '.serviceProfessionals .slideArrows',
 			prevArrow: '<div class="slideArrows__prev"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
 			nextArrow: '<div class="slideArrows__next"><svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.761719 14.9231H78.9993" stroke="#171719" stroke-width="2"/><path d="M65.0615 0.983398L79.0005 14.9224L65.0615 28.8613" stroke="#171719" stroke-width="2"/></svg></svg></div>',
+		});
+    }
+};
+
+// serviceSliderImg
+export function serviceSliderImg () {
+    const slickProfessional = $(".serviceSlider_js");
+	if (slickProfessional.length) {
+		slickProfessional.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			fade: true,
+			speed: 900,
+			draggable: false,
+			infinite: true,
+			dots: true,
+			arrows: false,
 		});
     }
 };

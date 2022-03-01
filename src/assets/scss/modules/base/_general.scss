@@ -534,6 +534,42 @@ main {
         }
     }
 }
+// dots slider
+.slick-dots {
+    margin-top: 43px;
+    display: flex;
+    gap: 0 50px;
+    @media (max-width:$md) {
+        margin-top: 25px;
+        gap: 0 40px;
+    }
+    li {
+        width: 10px;
+        height: 10px;
+        background: $black;
+        border-radius: 50%;
+        opacity: 0.4;
+        overflow: hidden;
+        cursor: pointer;
+        transition: $transition;
+        @media (max-width:$md) {
+            width: 8px;
+            height: 8px;
+        }
+        &:hover {
+            opacity: 1;
+        }
+        &:active {
+            opacity: .8;
+        }
+        &.slick-active {
+            opacity: 1;
+        }
+        button {
+            display: none;
+        }
+    }
+}
 .popupVideo {
     display: flex;
     align-items: center;
@@ -1026,5 +1062,142 @@ main {
             display: flex;
             justify-content: space-between;
         }
+    }
+}
+// specialist
+.specialist {
+    margin-top: 202px;
+    @media (max-width:$md) {
+        margin-top: 128px;
+    }
+    @media (max-width:$lg) {
+        margin-top: 166px;
+    }
+    @media (max-width:$xs) {
+        margin-top: 102px;
+    }
+    &__content {
+        @extend %indentLeft;
+    }
+    &__list {
+        margin-top: 66px;
+        margin-left: -30px;
+        @media (max-width:$md) {
+            margin-top: 41px;
+            margin-left: -20px;
+        }
+        @media (max-width:$lg) {
+            margin-top: 47px;
+            margin-left: -17px;
+        }
+        @media (max-width:$xs) {
+            margin-top: 30px;
+            margin-left: -30px;
+            padding: 0 20px;
+            display: flex;
+            overflow-x: scroll;
+            &::-webkit-scrollbar {
+                height: 0;
+            }
+        }
+    }
+    &__item {
+        width: 534px !important;
+        margin: 0 30px;
+        @media (max-width:$md) {
+            width: 356px !important;
+            margin: 0 20px;
+        }
+        @media (max-width:$lg) {
+            width: 304px !important;
+            margin: 0 17px;
+        }
+        @media (max-width:$xs) {
+            flex: none;
+            width: 276px !important;
+            margin: 0 10px;
+        }
+        &.hover {
+            .specialist__img {
+                opacity: .8;
+            }
+            .specialist__title {
+                color: $dolceColor;
+            }
+        }
+        &.active {
+            .specialist__img {
+                opacity: .6;
+            }
+            .specialist__title {
+                color: $activeColor;
+            }
+        }
+    }
+    &__img {
+        flex: none;
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 536px;
+        background: $bgGrey;
+        transition: $transition;
+        @media (max-width:$md) {
+            height: 356px;
+        }
+        @media (max-width:$lg) {
+            height: 305px;
+        }
+        @media (max-width:$xs) {
+            height: 276px;
+        }
+    }
+    &__people {
+        width: 100%;
+        height: 100%;
+        @extend %imgBg;
+    }
+    &__box {
+        margin-top: 50px;
+        @media (max-width:$md) {
+            margin-top: 34px;
+        }
+        @media (max-width:$lg) {
+            margin-top: 33px;
+        }
+        @media (max-width:$xs) {
+            margin-top: 22px;
+        }
+    }
+    &__title {
+        font-size: 22px;
+        line-height: 38px;
+        color: $black;
+        transition: $transition;
+        @media (max-width:$md) {
+            font-size: 14px;
+            line-height: 26px;
+        }
+    }
+    &__text {
+        margin-top: 6px;
+        font-size: 22px;
+        line-height: 38px;
+        color: $blackLight2;
+        @media (max-width:$md) {
+            font-size: 14px;
+            line-height: 26px;
+        }
+        @media (max-width:$xs) {
+            margin-top: 8px;
+        }
+        span {
+            display: block;
+        }
+    }
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        @extend %indentRight;
     }
 }

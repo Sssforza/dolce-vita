@@ -302,10 +302,12 @@ export function seviceHidden () {
         var seviceHidden = document.querySelector(".seviceHidden");
         var headerFirst = document.querySelector(".header_first");
         var headerMain = document.querySelector(".header_main");
+        var footer = document.querySelector(".footer");
         headerFirst.classList.add('header_first_sevice');
         headerMain.classList.add('header_main_sevice');
         if (document.documentElement.clientWidth <= xs ) {
             headerFirst.style.position = `absolute`;
+            footer.style.paddingBottom = 100 + `px`;
         }
     }
 }
