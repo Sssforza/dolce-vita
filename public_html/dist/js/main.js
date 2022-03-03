@@ -474,7 +474,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["openContextClue"])(); // open/close contacts menu
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["openCloseContactsMenu"])(); // first animation main page
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["openCloseContactsMenu"])(); // small header
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["smallHeader"])(); // first animation main page
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_8__["firstAnimation"])(); // form in the main page
 
@@ -16360,6 +16362,7 @@ function hover() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "smallHeader", function() { return smallHeader; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dropLastHeader", function() { return dropLastHeader; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openCloseHamburger", function() { return openCloseHamburger; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openCloseSearch", function() { return openCloseSearch; });
@@ -16368,7 +16371,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerMenuBack", function() { return headerMenuBack; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openContextClue", function() { return openContextClue; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openCloseContactsMenu", function() { return openCloseContactsMenu; });
-var xs = 376; // drop last header
+var xs = 376; // small header
+
+function smallHeader() {
+  if (document.querySelector(".smallHeader_js")) {
+    var headerFirst = document.querySelector(".header_first");
+    headerFirst.classList.add("header_first_small");
+  }
+} // drop last header
 
 function dropLastHeader() {
   if (document.querySelector('.header_main') && document.documentElement.clientWidth > xs || document.querySelector(".seviceHidden")) {

@@ -1,4 +1,13 @@
 let xs = 376
+
+// small header
+export function smallHeader () {
+    if (document.querySelector(".smallHeader_js")) {
+        var headerFirst = document.querySelector(".header_first");
+        headerFirst.classList.add("header_first_small")
+    }
+}
+
 // drop last header
 export function dropLastHeader () {
     if(document.querySelector('.header_main') && document.documentElement.clientWidth > xs || document.querySelector(".seviceHidden")) {

@@ -13,7 +13,7 @@ import {hover} from "./blocks/_hover.js";
 
 //📁 /assets/js/blocks  _header.js
 import {dropLastHeader, openCloseHamburger, openCloseSearch, closeSearch, menuSelection, headerMenuBack,
-        openContextClue, openCloseContactsMenu} from "./blocks/_header.js";
+        openContextClue, openCloseContactsMenu, smallHeader} from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  validation.js
 import {signConsultation} from "./blocks/validations.js";
@@ -117,6 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // open/close contacts menu
     openCloseContactsMenu();
+
+    // small header
+    smallHeader();
 
     // first animation main page
     firstAnimation();

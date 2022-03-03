@@ -212,7 +212,8 @@
                 margin-left: 0;
             }
         }
-        &_sevice {
+        &_sevice,
+        &_small {
             .header {
                 &__box {
                     width: auto !important;
