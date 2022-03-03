@@ -90,8 +90,11 @@
         opacity: 0;
         pointer-events: none;
         transition: $transition;
-        @media (max-width:$lg) {
+        @media (max-width:$md) {
             top: 50px;
+        }
+        @media (max-width:$lg) {
+            top: 40px;
         }
     }
     &__li {
@@ -718,6 +721,9 @@
         width: 100%;
         @media (max-width:$md) {
             top: 66px;
+        }
+        @media (max-width:$lg) {
+            top: 56px;
         }
         &.hide {
             display: none;
