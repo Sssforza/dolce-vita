@@ -16939,7 +16939,8 @@ function popupYoutube() {
     $('.popupYoutube_js').magnificPopup({
       type: 'iframe',
       tClose: 'Закрыть (Esc)',
-      tLoading: 'Загрузка...'
+      tLoading: 'Загрузка...',
+      fixedContentPos: true
     });
   }
 }
@@ -16950,7 +16951,8 @@ function popupsliderInfo() {
     $('.sliderInfoBtn_js').magnificPopup({
       type: 'inline',
       tClose: 'Закрыть (Esc)',
-      tLoading: 'Загрузка...'
+      tLoading: 'Загрузка...',
+      fixedContentPos: true
     });
     $(document).on('click', '.popupClose_js', function (e) {
       e.preventDefault();

@@ -9,6 +9,10 @@
         padding-top: 120px;
         padding-bottom: 36px;
     }
+    @media (max-width:$lg) {
+        padding-top: 108px;
+        padding-bottom: 44px;
+    }
     &__container {
         @extend %indentRight;
         @extend %indentLeft;
@@ -32,6 +36,10 @@
         @media (max-width:$md) {
             font-size: 44px;
             line-height: 50px;
+        }
+        @media (max-width:$lg) {
+            font-size: 34px;
+            line-height: 40px;
         }
     }
     &__menu {
@@ -82,6 +90,9 @@
         opacity: 0;
         pointer-events: none;
         transition: $transition;
+        @media (max-width:$lg) {
+            top: 50px;
+        }
     }
     &__li {
         display: flex;
@@ -133,6 +144,9 @@
         width: 1049px;
         @media (max-width:$md) {
             width: 699px;
+        }
+        @media (max-width:$lg) {
+            width: 558px;
         }
     }
     &__envelope {
@@ -198,6 +212,9 @@
             height: 54px;
             font-size: 14px;
             @include placeholder(14px, $blackLight2, 'SuisseIntl');
+        }
+        @media (max-width:$lg) {
+            height: 46px;
         }
     }
     .searchContextual {
@@ -288,6 +305,9 @@
         @media (max-width:$md) {
             padding-right: 206px;
         }
+        @media (max-width:$lg) {
+            padding-right: 196px;
+        }
         &_procedure {
             .catalogCards__list {
                 margin-top: 70px;
@@ -314,6 +334,9 @@
         @media (max-width:$md) {
             gap: 40px;
         }
+        @media (max-width:$lg) {
+            gap: 40px 34px;
+        }
         &.hide {
             display: none;
         }
@@ -327,12 +350,18 @@
             width: 277px;
             height: 50px;
         }
+        @media (max-width:$lg) {
+            width: 219px;
+        }
     }
 }
 .card {
     width: 416px;
     @media (max-width:$md) {
         width: 277px;
+    }
+    @media (max-width:$lg) {
+        width: 218px;
     }
     &__img {
         display: block;
@@ -342,6 +371,9 @@
         transition: $transition;
         @media (max-width:$md) {
             height: 187px;
+        }
+        @media (max-width:$lg) {
+            height: 148px;
         }
     }
     &__content {
@@ -395,6 +427,7 @@
     &__composition {
         margin-top: 20px;
         display: flex;
+        flex-wrap: wrap;
     }
     &__device {
         width: 80px;
@@ -466,6 +499,9 @@
         @media (max-width:$md) {
             padding: 90px 132px;
         }
+        @media (max-width:$lg) {
+            padding: 90px 106px;
+        }
     }
     &__list {
         position: relative;
@@ -480,6 +516,9 @@
             width: 563px;
             height: 494px;
         }
+        @media (max-width:$lg) {
+            width: 473px;
+        }
     }
     &__box {
         padding: 70px 60px 128px;
@@ -488,6 +527,9 @@
         justify-content: space-between;
         @media (max-width:$md) {
             padding: 44px 40px 96px;
+        }
+        @media (max-width:$lg) {
+            padding: 32px 35px 84px;
         }
     }
     &__item {
@@ -501,6 +543,10 @@
             font-size: 36px;
             line-height: 40px;
         }
+        @media (max-width:$lg) {
+            font-size: 28px;
+            line-height: 36px;
+        }
     }
     &__detail {
         margin-top: 50px;
@@ -511,6 +557,9 @@
             margin-top: 32px;
             font-size: 14px;
             line-height: 26px;
+        }
+        @media (max-width:$lg) {
+            margin-top: 24px;
         }
         span {
             display: block;
@@ -541,6 +590,9 @@
                         font-size: 14px;
                         line-height: 26px;
                     }
+                    @media (max-width:$lg) {
+                        margin-left: 10px;
+                    }
                     &:after {
                         content: '';
                         position: absolute;
@@ -570,6 +622,9 @@
         @media (max-width:$md) {
             bottom: 44px;
             left: 603px;
+        }
+        @media (max-width:$lg) {
+            left: 507px;
         }
     }
 }
@@ -654,6 +709,9 @@
             @media (max-width:$md) {
                 zoom: .8;
             }
+        }
+        @media (max-width:$lg) {
+            height: 46px;
         }
     }
     &__drop {

@@ -6,6 +6,7 @@ export function popupYoutube () {
 			type: 'iframe',
 			tClose: 'Закрыть (Esc)',
 			tLoading: 'Загрузка...',
+			fixedContentPos: true,
 		});
     }
 };
@@ -17,6 +18,7 @@ export function popupsliderInfo () {
 			type: 'inline',
 			tClose: 'Закрыть (Esc)',
 			tLoading: 'Загрузка...',
+			fixedContentPos: true,
 		});
 		$(document).on('click', '.popupClose_js', function (e) {
 			e.preventDefault();
