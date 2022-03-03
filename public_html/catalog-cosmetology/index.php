@@ -357,7 +357,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 </div>
                 <div class="btn btn_black catalogCards__btn">Показать еще</div>
             </div>
-            <div class="catalogCards__content catalogCards_js hide" data-category="apparatus">
+            <div class="catalogCards__content catalogCards__content_apparatus catalogCards_js hide" data-category="apparatus">
                 <div class="catalogCards__list">
                     <a href="#" class="card card_brend">
                         <img src="/dist/img/trash/cardBrend1.png" alt="">

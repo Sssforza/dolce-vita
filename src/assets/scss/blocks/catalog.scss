@@ -319,6 +319,13 @@
                 }
             }
         }
+        &_apparatus {
+            .catalogCards__list {
+                @media (max-width:$lg) {
+                    gap: 30px 34px;
+                }
+            }
+        }
         &.hide {
             position: absolute;
             top: 0;
@@ -464,6 +471,12 @@
         height: 150px;
         background: $bgCosmetic;
         transition: $transition;
+        @media (max-width:$md) {
+            height: 100px;
+        }
+        @media (max-width:$lg) {
+            height: 79px;
+        }
         &:hover {
             background: $bgCold;
         }
@@ -472,6 +485,7 @@
         }
         img {
             max-width: 70%;
+            max-height: 70%;
         }
     }
     &.hover {
