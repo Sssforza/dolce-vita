@@ -39,9 +39,9 @@ export function firstScreenDepictionClueHover () {
 
 // procedure hover
 export function procedureHover () {
-    if(document.querySelector('.serviceProcedureHover_js')) {
-        const list = document.querySelector('.serviceProcedureSlider_js');
-        const hoversElem = list.querySelectorAll('.serviceProcedureHover_js');
+    if(document.querySelector('.serviceProcedure')) {
+        const list = document.querySelector('.serviceProcedure');
+        const hoversElem = document.querySelectorAll('.serviceProcedureHover_js');
         let parent;
         hoversElem.forEach((item) => {
             item.onmouseover = function(elem) {

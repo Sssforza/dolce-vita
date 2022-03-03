@@ -11,12 +11,19 @@ import 'magnific-popup';
 //📁 /assets/js/blocks  _hover
 import {hover} from "./blocks/_hover.js";
 
+//📁 /assets/js/blocks  _header.js
+import {dropLastHeader, openCloseHamburger, openCloseSearch, closeSearch, menuSelection, headerMenuBack,
+        openContextClue, openCloseContactsMenu} from "./blocks/_header.js";
+
+//📁 /assets/js/blocks  validation.js
+import {signConsultation} from "./blocks/validations.js";
+
 //📁 /assets/js/blocks  _sliders.js
 import {mainSlider, specialistSlider, serviceStageSlider, procedureSlider, cosmeticsSlider, serviceResultPhotoSlider,
-        serviceProfessionalsSlider, serviceSliderImg} from "./blocks/_sliders.js";
+        serviceProfessionalsSlider, serviceSliderImg, sliderInfo} from "./blocks/_sliders.js";
 
 //📁 /assets/js/blocks  _popup.js
-import {popupYoutube} from "./blocks/_popup.js";
+import {popupYoutube, popupsliderInfo} from "./blocks/_popup.js";
 
 //📁 /assets/js/blocks  index.js
 import {specialistHover, guestCardClueHover, blogArticlesHover, showReviews, animMainDolce1, animMainDolce2, animMainDolce3, animationForText,
@@ -26,12 +33,8 @@ import {specialistHover, guestCardClueHover, blogArticlesHover, showReviews, ani
 import {firstScreenDepictionClueHover, procedureHover, serviceAnchor, benefitsHover, serviceTestimony, serviceFixedAsideBar,
         serviceStageMore, sliderServiceStage, seviceHidden, serviceHeaderMenu, serviceHeaderMenuSelection, serviceHeaderMenuMobile, asideBarActives} from "./blocks/service.js";
 
-//📁 /assets/js/blocks  _header.js
-import {dropLastHeader, openCloseHamburger, openCloseSearch, closeSearch, menuSelection, headerMenuBack,
-        openContextClue, openCloseContactsMenu} from "./blocks/_header.js";
-
-//📁 /assets/js/blocks  validation.js
-import {signConsultation} from "./blocks/validations.js";
+//📁 /assets/js/blocks  catalog.js
+import {catalogOpenContextClue, sampleMenu, sampleDetailed, catalogCardsHover, sampleContenChange, innerContenChange} from "./blocks/catalog.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     // slider main
@@ -58,8 +61,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // service slider img
     serviceSliderImg();
 
+    // info slider
+    sliderInfo();
+
     // popup youtube
     popupYoutube();
+
+    // popup slider info
+    popupsliderInfo();
 
     // specialist hover
     specialistHover();
@@ -162,4 +171,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // custom slider service stage
     hover();
+
+    // catalog open context clue
+    catalogOpenContextClue();
+
+    // sample header menu show/hide
+    sampleMenu();
+
+    // sample header menu detailed show/hide
+    sampleDetailed();
+
+    // sample content change
+    sampleContenChange();
+
+    // inner content change
+    innerContenChange();
+
+    // catalog cards hover
+    catalogCardsHover();
 });

@@ -169,3 +169,20 @@ export function serviceSliderImg () {
 		});
     }
 };
+
+// sliderInfo
+export function sliderInfo () {
+    const slickProfessional = $(".sliderInfo_js");
+	if (slickProfessional.length) {
+		slickProfessional.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			fade: true,
+			speed: 900,
+			draggable: false,
+			infinite: true,
+			dots: true,
+			arrows: false,
+		});
+    }
+};
