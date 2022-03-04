@@ -1,0 +1,311 @@
+@import "../modules/utilities/_variables.scss";
+
+.price {
+    position: relative;
+    margin-top: 70px;
+    &__container {
+        padding-right: 198px;
+        transition: $transition;
+        @extend %indentLeft;
+    }
+    &__list {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 0 60px;
+        &.hide {
+            display: none;
+        }
+    }
+    &__content {
+        width: 1004px;
+        &.hide {
+            position: absolute;
+            top: 0;
+            right: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: $transition;
+        }
+    }
+}
+.priceAside {
+    width: 445px;
+    flex: none;
+    &__item {
+        position: relative;
+        width: 100%;
+        padding: 20px 30px 18px;
+        cursor: pointer;
+        transition: $transition;
+        &_action {
+            &:after {
+                content:'Акция';
+                padding: 3px 10px 1px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                margin-top: -14px;
+                right: 30px;
+                font-size: 16px;
+                line-height: 24px;
+                color: $white;
+                background: $dolceColor;
+                border-radius: 50px;
+            }
+        }
+        &:hover {
+            background: $bgGrey;
+        }
+        &:active {
+            background: $bgWarm;
+        }
+        span {
+            display: block;
+            max-width: 77%;
+            font-size: 22px;
+            line-height: 38px;
+            color: $black;
+        }
+        &.active {
+            background: $bgCold;
+            pointer-events: none;
+        }
+    }
+}
+.priceAction {
+    position: relative;
+    margin-bottom: 70px;
+    background: $bgResult;
+    border-radius: 4px;
+    z-index: 1;
+    &:before {
+        content:'';
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        border: 1px solid $blackLight2;
+        border-radius: 2px;
+        z-index: -1;
+    }
+    &__content {
+        padding: 60px 170px 60px 158px;
+    }
+    &__title {
+        margin-left: -98px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 0 30px;
+        font-size: 22px;
+        line-height: 38px;
+        color: $black;
+    }
+    &__present {
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 68px;
+        height: 68px;
+        background: $dolceColor;
+        border-radius: 20px;
+        overflow: hidden;
+        @media (max-width:$md) {
+            width: 44px;
+            height: 44px;
+            border-radius: 15px;
+        }
+        svg {
+            @media (max-width:$md) {
+                width: 21px;
+                height: 21px;
+            }
+        }
+    }
+    &__cost {
+        margin-top: 20px;
+    }
+    &__seance {
+        margin-top: 1px;
+        font-size: 22px;
+        line-height: 38px;
+        color: $black50;
+    }
+    &__bottom {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        gap: 0 40px;
+    }
+    &__btn {
+        width: 392px;
+        height: 80px;
+    }
+    &__certificate {
+        &_link {
+            position: relative;
+            font-weight: 450;
+            font-size: 22px;
+            line-height: 22px;
+            color: $dolceColor;
+            transition: $transition;
+            &:after {
+                content:'';
+                position: absolute;
+                right: 0;
+                bottom: -4px;
+                left: 0;
+                height: 1px;
+                background: $dolceColor;
+                pointer-events: none;
+                transition: $transition;
+            }
+            &:hover {
+                color: $black;
+                &:after {
+                    background: $black;
+                }
+            }
+            &:active {
+                color: $activeColor;
+                &:after {
+                    background: $activeColor;
+                }
+            }
+        }
+    }
+    .costDiscont {
+        display: flex;
+        gap: 0 26px;
+        &__total {
+            font-size: 34px;
+            line-height: 40px;
+        }
+        &__old {
+            font-size: 22px;
+            line-height: 38px;
+        }
+    }
+}
+.priceList {
+    &__title {
+        font-size: 34px;
+        line-height: 40px;
+        color: $black;
+    }
+    &__box {
+        &:not(:first-child) {
+            margin-top: 70px;
+        }
+    }
+    &__roster {
+        margin-top: 30px;
+        padding-top: 50px;
+        border-top: 1px solid $blackLight2;
+    }
+    &__item {
+        position: relative;
+        padding: 23px 20px 19px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 0 40px;
+        font-size: 22px;
+        line-height: 38px;
+        color: $black;
+        z-index: 1;
+        &:after {
+            content:'';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: -40px;
+            background: $bgCold;
+            opacity: 0;
+            pointer-events: none;
+            transition: $transition;
+            z-index: -1;
+        }
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+            .priceList__name {
+                color: $dolceColor;
+            }
+            .priceList__btn {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+        &:active {
+            .priceList__name {
+                color: $activeColor;
+            }
+            &:after {
+                opacity: 1;
+                background: #DAF2F8;
+            }
+        }
+    }
+    &__wrapper {
+        &_right {
+            display: flex;
+            align-items: center;
+            gap: 0 30px;
+        }
+    }
+    &__name {
+        transition: $transition;
+    }
+    &__btn {
+        width: 152px;
+        height: 36px;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 450;
+        opacity: 0;
+        pointer-events: none;
+        transition: $transition;
+    }
+    &__cost {
+        width: 114px;
+    }
+    &__program {
+        padding: 0 17px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        line-height: 36px;
+        color: $black;
+        background: $bgCold;
+        border-radius: 50px;
+    }
+    .costDiscont {
+        height: 38px;
+        &__total {
+            font-size: 22px;
+            line-height: 22px;
+        }
+        &__old {
+            top: -10px;
+            display: inline-block;
+            font-size: 16px;
+            line-height: 16px;
+            color: $blackLight2;
+            &:before {
+                margin-top: -2px;
+                right: -4px;
+                left: -4px;
+                height: 1px;
+                background: $blackLight2;
+            }
+        }
+    }
+}

@@ -122,7 +122,7 @@ export function catalogCardsHover () {
 export function sampleContenChange () {
     if (document.querySelector(".sampleChoice_js")) {
         var sampleChoice = document.querySelectorAll(".sampleChoice_js");
-        var catalogCards = document.querySelectorAll(".catalogCards_js");
+        var catalogCards = document.querySelectorAll(".sampleContent_js");
         var choice;
         sampleChoice.forEach((item) => {
             item.addEventListener("click", () => {

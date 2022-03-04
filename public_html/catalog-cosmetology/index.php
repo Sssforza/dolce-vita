@@ -99,7 +99,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </div>
         </section>
         <section class="catalogCards">
-            <div class="catalogCards__content catalogCards_js hide" data-category="all">
+            <div class="catalogCards__content sampleContent_js catalogCards_js hide" data-category="all">
                 <div class="catalogCards__list">
                     <div class="card">
                         <a href="#" class="card__img cardHover_js" style="background-image:url(/dist/img/trash/card1.jpg)"></a>
@@ -129,7 +129,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 </div>
                 <div class="btn btn_black catalogCards__btn">Показать еще</div>
             </div>
-            <div class="catalogCards__content catalogCards_js hide" data-category="problem">
+            <div class="catalogCards__content sampleContent_js catalogCards_js hide" data-category="problem">
                 <div class="catalogCards__list">
                     <div class="serviceProcedure__item">
                         <a href="#" class="serviceProcedure__img serviceProcedureHover_js" style="background-image:url(/dist/img/trash/serviceProcedure2.jpg)"></a>
@@ -144,7 +144,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 </div>
                 <div class="btn btn_black catalogCards__btn">Показать еще</div>
             </div>
-            <div class="catalogCards__content catalogCards__content_procedure catalogCards_js" data-category="procedure">
+            <div class="catalogCards__content sampleContent_js catalogCards__content_procedure catalogCards_js" data-category="procedure">
                 <div class="sampleSelected sampleSelected_middle">
                     <div class="sampleSelected__content">
                         <div class="sampleSelected__list">
@@ -272,7 +272,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 </div>
                 <div class="btn btn_black catalogCards__btn">Показать еще</div>
             </div>
-            <div class="catalogCards__content catalogCards_js hide" data-category="programm">
+            <div class="catalogCards__content sampleContent_js catalogCards_js hide" data-category="programm">
                 <div class="catalogCards__list">
                     <div class="card">
                         <a href="#" class="card__img cardHover_js" style="background-image:url(/dist/img/trash/card1.jpg)"></a>
@@ -361,7 +361,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 </div>
                 <div class="btn btn_black catalogCards__btn">Показать еще</div>
             </div>
-            <div class="catalogCards__content catalogCards__content_apparatus catalogCards_js hide" data-category="apparatus">
+            <div class="catalogCards__content sampleContent_js catalogCards__content_apparatus catalogCards_js hide" data-category="apparatus">
                 <div class="catalogCards__list">
                     <a href="#" class="card card_brend">
                         <img src="/dist/img/trash/cardBrend1.png" alt="">
