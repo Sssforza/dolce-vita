@@ -13,6 +13,10 @@
         padding-top: 108px;
         padding-bottom: 44px;
     }
+    @media (max-width:$xs) {
+        padding-top: 74px;
+        padding-bottom: 41px;
+    }
     &__container {
         @extend %indentRight;
         @extend %indentLeft;
@@ -22,6 +26,62 @@
         @media (max-width:$md) {
             margin-top: 32px;
         }
+        @media (max-width:$xs) {
+            margin-top: 20px;
+        }
+    }
+    .sampleSelected {
+        &__list {
+            @media (max-width:$xs) {
+                position: absolute;
+                top: 56px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background: $white;
+                border: 1px solid $blackLight2;
+                z-index: 1;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(-30px);
+                transition: $transition;
+            }
+        }
+        &__item {
+            @media (max-width:$xs) {
+                padding: 0 20px;
+                height: 39px;
+                line-height: 38px;
+            }
+            &.active {
+                @media (max-width:$xs) {
+                    color: $black;
+                    background: $bgCold;
+                    pointer-events: none;
+                }
+                &:after {
+                    @media (max-width:$xs) {
+                        top: 50%;
+                        margin-top: -6px;
+                        right: 10px;
+                        bottom: auto;
+                        left: auto;
+                        width: 12px;
+                        height: 12px;
+                        background: $black;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            &:first-child {
+                &.active {
+                    @media (max-width:$xs) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
     }
 }
 .sampleHeader {
@@ -29,6 +89,9 @@
     display: flex;
     align-items: center;
     gap: 0 20px;
+    @media (max-width:$xs) {
+        gap: 0 10px;
+    }
     &__title {
         font-size: 66px;
         line-height: 72px;
@@ -40,6 +103,10 @@
         @media (max-width:$lg) {
             font-size: 34px;
             line-height: 40px;
+        }
+        @media (max-width:$xs) {
+            font-size: 30px;
+            line-height: 36px;
         }
     }
     &__menu {
@@ -73,6 +140,9 @@
         }
         svg {
             pointer-events: none;
+            @media (max-width:$xs) {
+                zoom: .85;
+            }
             path {
                 transition: $transition;
             }
@@ -95,6 +165,9 @@
         }
         @media (max-width:$lg) {
             top: 40px;
+        }
+        @media (max-width:$xs) {
+            width: 100%;
         }
     }
     &__li {
@@ -142,6 +215,9 @@
     @media (max-width:$md) {
         margin-top: 44px;
     }
+    @media (max-width:$xs) {
+        margin-top: 40px;
+    }
     &__content {
         position: relative;
         width: 1049px;
@@ -150,6 +226,9 @@
         }
         @media (max-width:$lg) {
             width: 558px;
+        }
+        @media (max-width:$xs) {
+            width: 100%;
         }
     }
     &__envelope {
@@ -170,6 +249,9 @@
         margin-top: -14px;
         top: 50%;
         left: 24px;
+        @media (max-width:$xs) {
+            left: 20px;
+        }
         svg {
             @media (max-width:$md) {
                 width: 22px;
@@ -219,6 +301,10 @@
         @media (max-width:$lg) {
             height: 46px;
         }
+        @media (max-width:$xs) {
+            padding-right: 15px;
+            padding-left: 50px;
+        }
     }
     .searchContextual {
         width: 100%;
@@ -229,6 +315,12 @@
     margin-top: 55px;
     @media (max-width:$md) {
         margin-top: 36px;
+    }
+    @media (max-width:$xs) {
+        margin-top: 20px;
+    }
+    &__content {
+        position: relative;
     }
     &__list {
         display: flex;
@@ -258,6 +350,11 @@
         &.active {
             color: $white;
             pointer-events: none;
+            @media (max-width:$xs) {
+                color: $black;
+                background: $bgCold;
+                pointer-events: none;
+            }
             &:after {
                 content:'';
                 position: absolute;
@@ -283,8 +380,38 @@
             }
         }
     }
+    &__opted {
+        display: none;
+        @media (max-width:$xs) {
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 46px;
+            border: 1px solid $black;
+            border-radius: 50px;
+        }
+        span {
+            font-size: 14px;
+            line-height: 26px;
+            color: $black;
+        }
+        svg {
+            position: absolute;
+            top: 27px;
+            right: 27px;
+            zoom: .7;
+            pointer-events: none;
+            transition: $transition;
+        }
+    }
     &_middle {
         margin-top: 0;
+        .sampleSelected__list {
+            @media (max-width:$xs) {
+                flex-wrap: wrap;
+            }
+        }
         .sampleSelected__item {
             &.active {
                 color: $black;
@@ -294,12 +421,29 @@
             }
         }
     }
+    &.show {
+        .sampleSelected__list {
+            @media (max-width:$xs) {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateY(0px);
+            }
+        }
+        .sampleSelected__opted {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
 }
 .catalogCards {
     position: relative;
     margin-top: 70px;
     @media (max-width:$md) {
         margin-top: 44px;
+    }
+    @media (max-width:$xs) {
+        margin-top: 40px;
     }
     &__content {
         padding-right: 339px;
@@ -311,11 +455,17 @@
         @media (max-width:$lg) {
             padding-right: 196px;
         }
+        @media (max-width:$xs) {
+            padding-right: 30px;
+        }
         &_procedure {
             .catalogCards__list {
                 margin-top: 70px;
                 @media (max-width:$md) {
                     margin-top: 44px;
+                }
+                @media (max-width:$xs) {
+                    margin-top: 40px;
                 }
             }
         }
@@ -347,6 +497,9 @@
         @media (max-width:$lg) {
             gap: 40px 34px;
         }
+        @media (max-width:$xs) {
+            gap: 40px 0;
+        }
         &.hide {
             display: none;
         }
@@ -363,6 +516,9 @@
         @media (max-width:$lg) {
             width: 219px;
         }
+        @media (max-width:$xs) {
+            width: 100%;
+        }
     }
 }
 .card {
@@ -372,6 +528,9 @@
     }
     @media (max-width:$lg) {
         width: 218px;
+    }
+    @media (max-width:$xs) {
+        width: 100%;
     }
     &__img {
         display: block;
@@ -384,6 +543,9 @@
         }
         @media (max-width:$lg) {
             height: 148px;
+        }
+        @media (max-width:$xs) {
+            height: 214px;
         }
     }
     &__content {
@@ -511,6 +673,9 @@
     @media (max-width:$md) {
         margin-top: 90px;
     }
+    @media (max-width:$xs) {
+        margin-top: 70px;
+    }
     &__content {
         padding: 140px 198px;
         @media (max-width:$md) {
@@ -518,6 +683,9 @@
         }
         @media (max-width:$lg) {
             padding: 90px 106px;
+        }
+        @media (max-width:$xs) {
+            padding: 70px 30px;
         }
     }
     &__list {
@@ -535,6 +703,11 @@
         }
         @media (max-width:$lg) {
             width: 473px;
+            height: 460px;
+        }
+        @media (max-width:$xs) {
+            width: 100%;
+            height: 220px;
         }
     }
     &__box {
@@ -548,9 +721,15 @@
         @media (max-width:$lg) {
             padding: 32px 35px 84px;
         }
+        @media (max-width:$xs) {
+            padding: 30px 30px 68px;
+        }
     }
     &__item {
         display: flex !important;
+        @media (max-width:$xs) {
+            flex-direction: column;
+        }
     }
     &__title {
         font-size: 56px;
@@ -577,6 +756,9 @@
         }
         @media (max-width:$lg) {
             margin-top: 24px;
+        }
+        @media (max-width:$xs) {
+            margin-top: 10px;
         }
         span {
             display: block;
@@ -631,6 +813,9 @@
             width: 206px;
             height: 50px;
         }
+        @media (max-width:$xs) {
+            margin-top: 40px;
+        }
     }
     .slick-dots {
         position: absolute;
@@ -641,7 +826,12 @@
             left: 603px;
         }
         @media (max-width:$lg) {
+            bottom: 32px;
             left: 507px;
+        }
+        @media (max-width:$xs) {
+            bottom: 30px;
+            left: 30px;
         }
     }
 }
@@ -650,9 +840,16 @@
     @media (max-width:$md) {
         margin-top: 90px;
     }
+    @media (max-width:$xs) {
+        margin-top: 70px;
+    }
     &__content {
         max-width: 64vw;
         @extend %indentLeft;
+        @media (max-width:$xs) {
+            padding-right: 30px;
+            max-width: 100vw;
+        }
     }
     &__title {
         font-size: 56px;
@@ -661,6 +858,10 @@
         @media (max-width:$md) {
             font-size: 36px;
             line-height: 40px;
+        }
+        @media (max-width:$xs) {
+            font-size: 28px;
+            line-height: 36px;
         }
     }
     &__txt {
@@ -673,11 +874,19 @@
             font-size: 14px;
             line-height: 26px;
         }
+        @media (max-width:$xs) {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 24px;
+        }
         p {
             &:not(:first-child) {
                 margin-top: 28px;
                 @media (max-width:$md) {
                     margin-top: 22px;
+                }
+                @media (max-width:$xs) {
+                    margin-top: 10px;
                 }
             }
         }
@@ -693,6 +902,12 @@
         width: 890px;
         @media (max-width:$md) {
             width: 540px;
+        }
+        @media (max-width:$lg) {
+            width: 558px;
+        }
+        @media (max-width:$xs) {
+            width: 100%;
         }
     }
     &__selected {

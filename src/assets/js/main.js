@@ -34,7 +34,7 @@ import {firstScreenDepictionClueHover, procedureHover, serviceAnchor, benefitsHo
         serviceStageMore, sliderServiceStage, seviceHidden, serviceHeaderMenu, serviceHeaderMenuSelection, serviceHeaderMenuMobile, asideBarActives} from "./blocks/service.js";
 
 //📁 /assets/js/blocks  catalog.js
-import {catalogOpenContextClue, sampleMenu, sampleDetailed, catalogCardsHover, sampleContenChange, innerContenChange} from "./blocks/catalog.js";
+import {catalogOpenContextClue, sampleMenu, sampleMenuMiddle, sampleDetailed, catalogCardsHover, sampleContenChange, innerContenChange} from "./blocks/catalog.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     // slider main
@@ -180,6 +180,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // sample header menu show/hide
     sampleMenu();
+
+    // sample header menu middle show/hide
+    sampleMenuMiddle();
 
     // sample header menu detailed show/hide
     sampleDetailed();

@@ -82,6 +82,10 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     </div>
                     <div class="sampleSelected">
                         <div class="sampleSelected__content">
+                            <div class="sampleSelected__opted sampleSelectedOpted_js">
+                                <span>По процедуре</span>
+                                <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';?>
+                            </div>
                             <div class="sampleSelected__list">
                                 <div class="sampleSelected__item sampleChoice_js" data-choice="all">Все услуги</div>
                                 <div class="sampleSelected__item sampleChoice_js" data-choice="problem">По проблеме</div>

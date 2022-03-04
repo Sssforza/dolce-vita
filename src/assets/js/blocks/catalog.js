@@ -44,6 +44,30 @@ export function sampleMenu () {
         });
     }
 }
+// sample header menu middle show/hide
+export function sampleMenuMiddle () {
+    if (document.querySelector(".sampleSelectedOpted_js")) {
+        var sampleSelected = document.querySelector(".sampleSelected");
+        var sampleSelectedClick = sampleSelected.querySelector(".sampleSelectedOpted_js");
+        var sampleSelectedSpan = sampleSelected.querySelector(".sampleSelectedOpted_js span");
+        var sampleSelectedClass = document.querySelector(".sampleSelected");
+        var toggleMenu = function() {
+            sampleSelectedClass.classList.toggle('show');
+        }
+        sampleSelectedClick.addEventListener('click', function(e) {
+            toggleMenu();
+        });
+        document.addEventListener('click', function(e) {
+            const target = e.target;
+            const its_sampleSelectedClick = target == sampleSelectedClick;
+            const its_sampleSelectedSpan = target == sampleSelectedSpan;
+            const menu_is_active = sampleSelectedClass.classList.contains('show');
+            if (!its_sampleSelectedClick && !its_sampleSelectedSpan && menu_is_active) {
+                toggleMenu();
+            }
+        });
+    }
+}
 
 // sample header menu detailed show/hide
 export function sampleDetailed () {

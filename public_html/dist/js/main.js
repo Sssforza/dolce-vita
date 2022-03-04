@@ -516,7 +516,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_10__["catalogOpenContextClue"])(); // sample header menu show/hide
 
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_10__["sampleMenu"])(); // sample header menu detailed show/hide
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_10__["sampleMenu"])(); // sample header menu middle show/hide
+
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_10__["sampleMenuMiddle"])(); // sample header menu detailed show/hide
 
   Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_10__["sampleDetailed"])(); // sample content change
 
@@ -17789,6 +17791,7 @@ function serviceHeaderMenuMobile() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "catalogOpenContextClue", function() { return catalogOpenContextClue; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sampleMenu", function() { return sampleMenu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sampleMenuMiddle", function() { return sampleMenuMiddle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sampleDetailed", function() { return sampleDetailed; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "catalogCardsHover", function() { return catalogCardsHover; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sampleContenChange", function() { return sampleContenChange; });
@@ -17837,6 +17840,33 @@ function sampleMenu() {
       var menu_is_active = sampleHeaderClass.classList.contains('show');
 
       if (!its_sampleHeaderClick && menu_is_active) {
+        toggleMenu();
+      }
+    });
+  }
+} // sample header menu middle show/hide
+
+function sampleMenuMiddle() {
+  if (document.querySelector(".sampleSelectedOpted_js")) {
+    var sampleSelected = document.querySelector(".sampleSelected");
+    var sampleSelectedClick = sampleSelected.querySelector(".sampleSelectedOpted_js");
+    var sampleSelectedSpan = sampleSelected.querySelector(".sampleSelectedOpted_js span");
+    var sampleSelectedClass = document.querySelector(".sampleSelected");
+
+    var toggleMenu = function toggleMenu() {
+      sampleSelectedClass.classList.toggle('show');
+    };
+
+    sampleSelectedClick.addEventListener('click', function (e) {
+      toggleMenu();
+    });
+    document.addEventListener('click', function (e) {
+      var target = e.target;
+      var its_sampleSelectedClick = target == sampleSelectedClick;
+      var its_sampleSelectedSpan = target == sampleSelectedSpan;
+      var menu_is_active = sampleSelectedClass.classList.contains('show');
+
+      if (!its_sampleSelectedClick && !its_sampleSelectedSpan && menu_is_active) {
         toggleMenu();
       }
     });
