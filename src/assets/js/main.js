@@ -37,7 +37,7 @@ import {firstScreenDepictionClueHover, procedureHover, serviceAnchor, benefitsHo
 import {catalogOpenContextClue, sampleMenu, sampleMenuMiddle, sampleDetailed, catalogCardsHover, sampleContenChange, innerContenChange} from "./blocks/catalog.js";
 
 //📁 /assets/js/blocks  price.js
-import {priceContentChange, priceDetailContentChange} from "./blocks/price.js";
+import {priceContentChange, priceDetailContentChange, priceServiceMenu, pagePriceHidden} from "./blocks/price.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     // slider main
@@ -201,6 +201,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // price detail content change
     priceDetailContentChange();
+
+    // price service menu
+    priceServiceMenu();
+
+    // price service menu
+    pagePriceHidden();
 
     // catalog cards hover
     catalogCardsHover();

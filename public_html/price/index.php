@@ -90,6 +90,11 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
     </section>
     <section class="price">
         <div class="price__container">
+            <div class="priceAside__choice">Выберите услугу:</div>
+            <div class="price__opted priceAsideOpted_js">
+                <span>FOTONA</span>
+                <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';?>
+            </div>
             <div class="price__list sampleContent_js" data-category="cosmetology">
                 <div class="price__aside priceAside">
                     <ul class="priceAside__list">
@@ -159,7 +164,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">FOTONA  4D</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">15 680 &#8381;</div>
                                         </div>
                                     </a>
@@ -168,7 +175,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">4D Fotona 4D  /  от 3 процедур  /  цена за сеанс</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost costDiscont">
                                                 <div class="costDiscont__total">30 000 &#8381;</div>
                                                 <div class="costDiscont__old">40 000 &#8381;</div>
@@ -180,7 +189,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">SMOOTHEye</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">95 780 &#8381;</div>
                                         </div>
                                     </a>
@@ -189,7 +200,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">SMOOTHLips</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">65 000 &#8381;</div>
                                         </div>
                                     </a>
@@ -198,17 +211,21 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">ThightSculping  /  1 зона 10х10см</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">14 000 &#8381;</div>
                                         </div>
                                     </a>
                                     <a href="#" class="priceList__item">
-                                        <div class="priceList__wrapper">
+                                        <div class="priceList__wrapper priceList__wrapper_program">
                                             <div class="priceList__name">Комплекс лечения кожи головы</div>
                                             <div class="priceList__program">Программа  2 в 1</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">30 000 &#8381;</div>
                                         </div>
                                     </a>
@@ -222,7 +239,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Простое удаление сосудов на&nbsp;теле&nbsp;/ 15&nbsp;мин</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">15 680 &#8381;</div>
                                         </div>
                                     </a>
@@ -231,7 +250,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Сложное удаление сосудов на&nbsp;теле&nbsp;/ 30&nbsp;мин</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">65 780 &#8381;</div>
                                         </div>
                                     </a>
@@ -240,7 +261,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Лечение сосудистых патологий лица простое</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">95 780 &#8381;</div>
                                         </div>
                                     </a>
@@ -249,7 +272,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Лечение сосудистых патологий лица сложное</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">65 000 &#8381;</div>
                                         </div>
                                     </a>
@@ -258,7 +283,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Удаление сосудов на&nbsp;крыльях носа</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">7 599 &#8381;</div>
                                         </div>
                                     </a>
@@ -267,7 +294,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Лечение винного пятна&nbsp;/ до&nbsp;7&nbsp;кв.&nbsp;см</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">4 250 &#8381;</div>
                                         </div>
                                     </a>
@@ -276,7 +305,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Лечение единичных сосудистых патологий  /  шт</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">500 &#8381;</div>
                                         </div>
                                     </a>
@@ -296,7 +327,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">FOTONA  4D</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">15 680 &#8381;</div>
                                         </div>
                                     </a>
@@ -305,7 +338,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">4D Fotona 4D  /  от 3 процедур  /  цена за сеанс</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost costDiscont">
                                                 <div class="costDiscont__total">30 000 &#8381;</div>
                                                 <div class="costDiscont__old">40 000 &#8381;</div>
@@ -317,7 +352,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">SMOOTHEye</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">95 780 &#8381;</div>
                                         </div>
                                     </a>
@@ -326,7 +363,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">SMOOTHLips</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">65 000 &#8381;</div>
                                         </div>
                                     </a>
@@ -335,17 +374,21 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">ThightSculping  /  1 зона 10х10см</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">14 000 &#8381;</div>
                                         </div>
                                     </a>
                                     <a href="#" class="priceList__item">
-                                        <div class="priceList__wrapper">
+                                        <div class="priceList__wrapper priceList__wrapper_program">
                                             <div class="priceList__name">Комплекс лечения кожи головы</div>
                                             <div class="priceList__program">Программа  2 в 1</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">30 000 &#8381;</div>
                                         </div>
                                     </a>
@@ -359,7 +402,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Простое удаление сосудов на&nbsp;теле&nbsp;/ 15&nbsp;мин</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">15 680 &#8381;</div>
                                         </div>
                                     </a>
@@ -368,7 +413,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Сложное удаление сосудов на&nbsp;теле&nbsp;/ 30&nbsp;мин</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">65 780 &#8381;</div>
                                         </div>
                                     </a>
@@ -377,7 +424,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Лечение сосудистых патологий лица простое</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">95 780 &#8381;</div>
                                         </div>
                                     </a>
@@ -386,7 +435,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Лечение сосудистых патологий лица сложное</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">65 000 &#8381;</div>
                                         </div>
                                     </a>
@@ -395,7 +446,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Удаление сосудов на&nbsp;крыльях носа</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">7 599 &#8381;</div>
                                         </div>
                                     </a>
@@ -404,7 +457,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Лечение винного пятна&nbsp;/ до&nbsp;7&nbsp;кв.&nbsp;см</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">4 250 &#8381;</div>
                                         </div>
                                     </a>
@@ -413,7 +468,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                             <div class="priceList__name">Лечение единичных сосудистых патологий  /  шт</div>
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
-                                            <div class="btn btn_black priceList__btn">Записаться</div>
+                                            <object type="owo/uwu">
+                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                            </object>
                                             <div class="priceList__cost">500 &#8381;</div>
                                         </div>
                                     </a>
@@ -489,7 +546,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                         </div>
                                     </a>
                                     <a href="#" class="priceList__item">
-                                        <div class="priceList__wrapper">
+                                        <div class="priceList__wrapper priceList__wrapper_program">
                                             <div class="priceList__name">Комплекс лечения кожи головы</div>
                                             <div class="priceList__program">Программа  2 в 1</div>
                                         </div>
@@ -647,6 +704,14 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 </div>
             </div>
         </div>
+        <div class="price__clickbait">
+            <div class="priceAction__bottom">
+                <a href="#" class="btn btn_black priceAction__btn">Записаться<span> со скидкой</span></a>
+                <div class="priceAction__certificate">
+                    <a href="#" class="priceAction__certificate_link">Подарить сертификат</a>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="sliderInfo">
         <div class="sliderInfo__content">
@@ -718,7 +783,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
         </div>
     </div>
 </div>
-<div class="smallHeader_js hidden"></div>
+<div class="smallHeader_js pagePrice_js hidden"></div>
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>

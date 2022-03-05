@@ -128,7 +128,7 @@ main {
         }
     }
     &_price {
-        padding-bottom: 0;
+        padding-bottom: 0 !important;
     }
 }
 .container {
@@ -1109,6 +1109,10 @@ main {
             left: -6px;
             height: 1.5px;
             background: $black50;
+            @media (max-width:$xs) {
+                margin-top: -2px;
+                height: 1px;
+            }
         }
     }
 }
@@ -1643,6 +1647,11 @@ main {
             display: flex;
             align-items: center;
             gap: 0 60px;
+            @media (max-width:$xs) {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 10px 0;
+            }
         }
     }
     &__menu {
@@ -1749,6 +1758,9 @@ main {
         display: flex;
         align-items: center;
         gap: 0 40px;
+        @media (max-width:$xs) {
+            gap: 0 20px;
+        }
         li {
             display: inline-flex;
         }
@@ -1760,6 +1772,10 @@ main {
         line-height: 22px;
         color: $black;
         transition: $transition;
+        @media (max-width:$md) {
+            font-size: 14px;
+            line-height: 26px;
+        }
         &:after {
             content:'';
             position: absolute;
@@ -1770,6 +1786,9 @@ main {
             background: $blackLight2;
             pointer-events: none;
             transition: $transition;
+            @media (max-width:$md) {
+                bottom: 0;
+            }
         }
         &:hover {
             color: $dolceColor;

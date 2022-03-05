@@ -3,27 +3,170 @@
 .price {
     position: relative;
     margin-top: 70px;
+    @media (max-width:$md) {
+        margin-top: 44px;
+    }
+    @media (max-width:$xs) {
+        margin-top: 40px;
+    }
     &__container {
         padding-right: 198px;
         transition: $transition;
         @extend %indentLeft;
+        @media (max-width:$md) {
+            padding-right: 131px;
+        }
+        @media (max-width:$lg) {
+            padding-right: 107px;
+        }
+        @media (max-width:$xs) {
+            padding-right: 30px;
+        }
+        &.show {
+            .priceAside__list {
+                @media (max-width:$xs) {
+                    opacity: 1;
+                    pointer-events: auto;
+                    transform: translateY(0px);
+                }
+            }
+            .price__opted {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
     }
     &__list {
         position: relative;
         display: flex;
         justify-content: space-between;
         gap: 0 60px;
+        @media (max-width:$md) {
+            gap: 0 40px;
+        }
+        @media (max-width:$lg) {
+            gap: 0 33px;
+        }
+        @media (max-width:$xs) {
+            margin-top: 10px;
+            display: block;
+        }
         &.hide {
             display: none;
         }
     }
     &__content {
         width: 1004px;
+        @media (max-width:$md) {
+            width: 649px;
+        }
+        @media (max-width:$lg) {
+            width: 557px;
+        }
+        @media (max-width:$xs) {
+            width: 100%;
+        }
         &.hide {
+            display: none;
+        }
+    }
+    &__clickbait {
+        display: none;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 12px 107px;
+        align-items: center;
+        justify-content: flex-end;
+        background: $bgGrey;
+        @media (max-width:$lg) {
+            z-index: 1;
+            display: flex;
+        }
+        @media (max-width:$xs) {
+            margin-top: 60px;
+            padding: 12px 30px;
+        }
+        .priceAction {
+            &__bottom {
+                margin-top: 0;
+                align-items: center;
+                flex-direction: row;
+                gap: 0 20px;
+                @media (max-width:$xs) {
+                    justify-content: space-between;
+                }
+            }
+            &__btn {
+                order: 2;
+                width: 219px;
+                height: 38px;
+                span {
+                    @media (max-width:$xs) {
+                        display: none;
+                    }
+                }
+            }
+            &__certificate {
+                order: 1;
+                &_link {
+                    @media (max-width:$xs) {
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    &__opted {
+        display: none;
+        @media (max-width:$xs) {
+            position: relative;
+            padding: 10px 24px 8px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            min-height: 46px;
+            background: $bgCold;
+            border-radius: 50px;
+        }
+        &_action {
+            &:after {
+                @media (max-width:$xs) {
+                    content:'Акция';
+                    padding: 3px 10px 1px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 50%;
+                    color: $white;
+                    background: $dolceColor;
+                    border-radius: 50px;
+                    padding: 1px 9px 0px;
+                    margin-top: -11px;
+                    font-size: 12px;
+                    line-height: 20px;
+                    right: 45px;
+                }
+            }
+        }
+        span {
+            font-size: 14px;
+            line-height: 22px;
+            color: $black;
+        }
+        svg {
             position: absolute;
-            top: 0;
-            right: 0;
-            opacity: 0;
+            top: 50%;
+            margin-top: -6px;
+            right: 27px;
+            zoom: .7;
             pointer-events: none;
             transition: $transition;
         }
@@ -32,12 +175,28 @@
 .priceAside {
     width: 445px;
     flex: none;
+    @media (max-width:$md) {
+        width: 297px;
+    }
+    @media (max-width:$lg) {
+        width: 239px;
+    }
+    @media (max-width:$xs) {
+        width: 100%;
+        margin-bottom: 40px;
+    }
     &__item {
         position: relative;
         width: 100%;
         padding: 20px 30px 18px;
         cursor: pointer;
         transition: $transition;
+        @media (max-width:$md) {
+            padding: 19px 20px 15px;
+        }
+        @media (max-width:$xs) {
+            padding: 11px 20px 7px;
+        }
         &_action {
             &:after {
                 content:'Акция';
@@ -54,6 +213,16 @@
                 color: $white;
                 background: $dolceColor;
                 border-radius: 50px;
+                @media (max-width:$md) {
+                    padding: 1px 9px 0px;
+                    margin-top: -10px;
+                    right: 20px;
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+                @media (max-width:$lg) {
+                    right: 10px;
+                }
             }
         }
         &:hover {
@@ -68,10 +237,49 @@
             font-size: 22px;
             line-height: 38px;
             color: $black;
+            @media (max-width:$md) {
+                max-width: 74%;
+                font-size: 14px;
+                line-height: 22px;
+            }
         }
         &.active {
             background: $bgCold;
             pointer-events: none;
+            &:before {
+                @media (max-width:$xs) {
+                    content:'';
+                    width: 16px;
+                    height: 16px;
+                    background: $black;
+                    border-radius: 50%;
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+    }
+    &__choice {
+        display: none;
+        font-size: 14px;
+        line-height: 26px;
+        color: $black;
+        @media (max-width:$xs) {
+            display: block;
+        }
+    }
+    &__list {
+        @media (max-width:$xs) {
+            position: absolute;
+            top: -30px;
+            left: 0;
+            width: 100%;
+            background: $white;
+            border: 1px solid $blackLight2;
+            z-index: 2;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-30px);
         }
     }
 }
@@ -81,6 +289,12 @@
     background: $bgResult;
     border-radius: 4px;
     z-index: 1;
+    @media (max-width:$md) {
+        margin-bottom: 44px;
+    }
+    @media (max-width:$xs) {
+        margin-bottom: 40px;
+    }
     &:before {
         content:'';
         position: absolute;
@@ -91,9 +305,21 @@
         border: 1px solid $blackLight2;
         border-radius: 2px;
         z-index: -1;
+        @media (max-width:$xs) {
+            top: 6px;
+            right: 6px;
+            bottom: 6px;
+            left: 6px;
+        }
     }
     &__content {
         padding: 60px 170px 60px 158px;
+        @media (max-width:$md) {
+            padding: 40px 100px 40px 104px;
+        }
+        @media (max-width:$xs) {
+            padding: 30px;
+        }
     }
     &__title {
         margin-left: -98px;
@@ -104,6 +330,25 @@
         font-size: 22px;
         line-height: 38px;
         color: $black;
+        @media (max-width:$md) {
+            margin-left: -64px;
+            gap: 0 20px;
+            font-size: 14px;
+            line-height: 26px;
+        }
+        @media (max-width:$xs) {
+            margin-left: 0;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 20px 0;
+        }
+        span {
+            br {
+                @media (max-width:$xs) {
+                    display: none;
+                }
+            }
+        }
     }
     &__present {
         flex: none;
@@ -135,16 +380,40 @@
         font-size: 22px;
         line-height: 38px;
         color: $black50;
+        @media (max-width:$md) {
+            margin-top: 0;
+            font-size: 14px;
+            line-height: 26px;
+        }
     }
     &__bottom {
         margin-top: 50px;
         display: flex;
         align-items: center;
         gap: 0 40px;
+        @media (max-width:$md) {
+            margin-top: 32px;
+        }
+        @media (max-width:$lg) {
+            gap: 20px 0;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        @media (max-width:$xs) {
+            margin-top: 40px;
+            align-items: center;
+        }
     }
     &__btn {
         width: 392px;
         height: 80px;
+        @media (max-width:$md) {
+            width: 248px;
+            height: 50px;
+        }
+        @media (max-width:$xs) {
+            width: 255px;
+        }
     }
     &__certificate {
         &_link {
@@ -154,6 +423,11 @@
             line-height: 22px;
             color: $dolceColor;
             transition: $transition;
+            @media (max-width:$md) {
+                font-weight: 450;
+                font-size: 14px;
+                line-height: 26px;
+            }
             &:after {
                 content:'';
                 position: absolute;
@@ -182,13 +456,27 @@
     .costDiscont {
         display: flex;
         gap: 0 26px;
+        @media (max-width:$md) {
+            gap: 0 17px;
+        }
+        @media (max-width:$xs) {
+            gap: 0 15px;
+        }
         &__total {
             font-size: 34px;
             line-height: 40px;
+            @media (max-width:$md) {
+                font-size: 22px;
+                line-height: 26px;
+            }
         }
         &__old {
             font-size: 22px;
             line-height: 38px;
+            @media (max-width:$md) {
+                font-size: 14px;
+                line-height: 26px;
+            }
         }
     }
 }
@@ -197,16 +485,36 @@
         font-size: 34px;
         line-height: 40px;
         color: $black;
+        @media (max-width:$md) {
+            font-size: 22px;
+            line-height: 26px;
+        }
+        @media (max-width:$xs) {
+            font-size: 20px;
+        }
     }
     &__box {
         &:not(:first-child) {
             margin-top: 70px;
+            @media (max-width:$md) {
+                margin-top: 44px;
+            }
+            @media (max-width:$xs) {
+                margin-top: 70px;
+            }
         }
     }
     &__roster {
         margin-top: 30px;
         padding-top: 50px;
         border-top: 1px solid $blackLight2;
+        @media (max-width:$md) {
+            padding-top: 32px;
+        }
+        @media (max-width:$xs) {
+            margin-top: 20px;
+            padding-top: 20px;
+        }
     }
     &__item {
         position: relative;
@@ -218,6 +526,15 @@
         line-height: 38px;
         color: $black;
         z-index: 1;
+        @media (max-width:$md) {
+            padding: 6px 16px 5px 0;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        @media (max-width:$xs) {
+            padding: 14px 16px 10px 0;
+            gap: 0 20px;
+        }
         &:after {
             content:'';
             position: absolute;
@@ -230,6 +547,13 @@
             pointer-events: none;
             transition: $transition;
             z-index: -1;
+            @media (max-width:$md) {
+                left: -24px;
+            }
+            @media (max-width:$xs) {
+                left: -30px;
+                right: -30px;
+            }
         }
         &:hover {
             &:after {
@@ -241,6 +565,10 @@
             .priceList__btn {
                 opacity: 1;
                 pointer-events: auto;
+                @media (max-width:$lg) {
+                    opacity: 0;
+                    pointer-events: none;
+                }
             }
         }
         &:active {
@@ -254,14 +582,24 @@
         }
     }
     &__wrapper {
+        display: flex;
+        align-items: center;
         &_right {
-            display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 0 30px;
+            @media (max-width:$md) {
+                gap: 0 20px;
+            }
+        }
+        &_program {
+            display: block;
         }
     }
     &__name {
         transition: $transition;
+        @media (max-width:$xs) {
+            color: $dolceColor;
+        }
     }
     &__btn {
         width: 152px;
@@ -272,9 +610,23 @@
         opacity: 0;
         pointer-events: none;
         transition: $transition;
+        @media (max-width:$md) {
+            width: 135px;
+            height: 34px;
+            font-weight: 400;
+        }
+        @media (max-width:$lg) {
+            display: none;
+        }
     }
     &__cost {
         width: 114px;
+        @media (max-width:$md) {
+            width: 74px;
+        }
+        @media (max-width:$xs) {
+            width: 62px;
+        }
     }
     &__program {
         padding: 0 17px;
@@ -286,19 +638,40 @@
         color: $black;
         background: $bgCold;
         border-radius: 50px;
+        @media (max-width:$md) {
+            margin-top: 4px;
+            padding: 0 10px;
+            font-size: 12px;
+            line-height: 24px;
+        }
+        @media (max-width:$xs) {
+            margin-top: 6px;
+            padding: 0 17px;
+            line-height: 30px;
+        }
     }
     .costDiscont {
         height: 38px;
+        @media (max-width:$md) {
+            padding-top: 6px;
+        }
         &__total {
             font-size: 22px;
-            line-height: 22px;
+            line-height: 100%;
+            @media (max-width:$md) {
+                font-size: 14px;
+            }
         }
         &__old {
             top: -10px;
             display: inline-block;
             font-size: 16px;
-            line-height: 16px;
+            line-height: 100%;
             color: $blackLight2;
+            @media (max-width:$md) {
+                top: -3px;
+                font-size: 12px;
+            }
             &:before {
                 margin-top: -2px;
                 right: -4px;
@@ -307,5 +680,14 @@
                 background: $blackLight2;
             }
         }
+    }
+}
+.sliderInfo {
+    margin-top: 187px;
+    @media (max-width:$md) {
+        margin-top: 120px;
+    }
+    @media (max-width:$xs) {
+        margin-top: 70px;
     }
 }

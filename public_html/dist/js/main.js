@@ -531,7 +531,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_price_js__WEBPACK_IMPORTED_MODULE_11__["priceContentChange"])(); // price detail content change
 
-  Object(_blocks_price_js__WEBPACK_IMPORTED_MODULE_11__["priceDetailContentChange"])(); // catalog cards hover
+  Object(_blocks_price_js__WEBPACK_IMPORTED_MODULE_11__["priceDetailContentChange"])(); // price service menu
+
+  Object(_blocks_price_js__WEBPACK_IMPORTED_MODULE_11__["priceServiceMenu"])(); // price service menu
+
+  Object(_blocks_price_js__WEBPACK_IMPORTED_MODULE_11__["pagePriceHidden"])(); // catalog cards hover
 
   Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_10__["catalogCardsHover"])();
 });
@@ -18027,18 +18031,24 @@ function innerContenChange() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "priceContentChange", function() { return priceContentChange; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "priceDetailContentChange", function() { return priceDetailContentChange; });
-// price content change
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "priceServiceMenu", function() { return priceServiceMenu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pagePriceHidden", function() { return pagePriceHidden; });
+var lg = 1024;
+var xs = 376; // price content change
+
 function priceContentChange() {
   if (document.querySelector(".samplePrice_js")) {
     var samplePrice = document.querySelectorAll(".samplePrice_js");
     var sampleContent = document.querySelectorAll(".sampleContent_js");
     var priceContent = document.querySelectorAll(".priceContent_js");
     var priceAsideItems = document.querySelectorAll(".priceAsideItem_js");
+    var sampleSelectedSpan = document.querySelector(".sampleSelectedOpted_js span");
     var samplePriceAside;
     var samplePriceAsideOne;
     var samplePriceContent;
     var samplePriceContentOne;
     var choice;
+    var name;
     samplePrice.forEach(function (item) {
       item.addEventListener("click", function () {
         priceContent.forEach(function (i) {
@@ -18052,6 +18062,8 @@ function priceContentChange() {
         });
         item.classList.add('active');
         choice = item.getAttribute('data-choice');
+        name = item.innerHTML;
+        sampleSelectedSpan.innerHTML = name;
         sampleContent.forEach(function (elem) {
           if (elem.getAttribute('data-category') === choice) {
             sampleContent.forEach(function (i) {
@@ -18075,7 +18087,10 @@ function priceDetailContentChange() {
   if (document.querySelector(".priceAsideItem_js")) {
     var priceAsideItem = document.querySelectorAll(".priceAsideItem_js");
     var priceContent = document.querySelectorAll(".priceContent_js");
+    var priceInput = document.querySelector(".priceAsideOpted_js");
+    var priceInputSpan = document.querySelector(".priceAsideOpted_js span");
     var choice;
+    var name;
     priceAsideItem.forEach(function (item) {
       item.addEventListener("click", function () {
         priceAsideItem.forEach(function (i) {
@@ -18083,6 +18098,14 @@ function priceDetailContentChange() {
         });
         item.classList.add('active');
         choice = item.getAttribute('data-aside');
+        priceInput.classList.remove("price__opted_action");
+        name = item.querySelector("span").innerHTML;
+        priceInputSpan.innerHTML = name;
+
+        if (item.classList.contains('priceAside__item_action')) {
+          priceInput.classList.add("price__opted_action");
+        }
+
         priceContent.forEach(function (elem) {
           if (elem.getAttribute('data-detail') === choice) {
             priceContent.forEach(function (i) {
@@ -18093,6 +18116,40 @@ function priceDetailContentChange() {
         });
       });
     });
+  }
+} // price service menu
+
+function priceServiceMenu() {
+  if (document.querySelector(".priceAsideOpted_js")) {
+    var sampleDetailed = document.querySelector(".price__container");
+    var sampleHeaderClass = document.querySelector(".price__container");
+    var sampleHeaderClick = sampleDetailed.querySelector(".priceAsideOpted_js");
+    var sampleHeaderSpan = sampleDetailed.querySelector(".priceAsideOpted_js span");
+
+    var toggleMenu = function toggleMenu() {
+      sampleHeaderClass.classList.toggle('show');
+    };
+
+    sampleHeaderClick.addEventListener('click', function (e) {
+      toggleMenu();
+    });
+    document.addEventListener('click', function (e) {
+      var target = e.target;
+      var its_sampleHeaderClick = target == sampleHeaderClick;
+      var its_sampleHeaderSpan = target == sampleHeaderSpan;
+      var menu_is_active = sampleHeaderClass.classList.contains('show');
+
+      if (!its_sampleHeaderClick && !its_sampleHeaderSpan && menu_is_active) {
+        toggleMenu();
+      }
+    });
+  }
+} // page price hidden
+
+function pagePriceHidden() {
+  if (document.querySelector(".pagePrice_js") && document.documentElement.clientWidth <= xs) {
+    var footer = document.querySelector(".footer");
+    footer.style.paddingBottom = 100 + "px";
   }
 }
 

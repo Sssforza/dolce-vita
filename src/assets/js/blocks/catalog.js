@@ -44,6 +44,7 @@ export function sampleMenu () {
         });
     }
 }
+
 // sample header menu middle show/hide
 export function sampleMenuMiddle () {
     if (document.querySelector(".sampleSelectedOpted_js")) {
