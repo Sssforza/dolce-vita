@@ -309,14 +309,10 @@
     }
     &__selected {
         display: flex;
-        align-items: center;
         justify-content: space-between;
         padding: 0 24px;
         width: 100%;
         height: 68px;
-        font-size: 22px;
-        line-height: 38px;
-        color: $black;
         border: 1px solid $blackLight2;
         border-radius: 50px;
         cursor: pointer;
@@ -325,6 +321,37 @@
             height: 54px;
             font-size: 14px;
             line-height: 26px;
+            overflow: hidden;
+        }
+        @media (max-width:$xs) {
+            position: relative;
+            align-items: center;
+            padding-top: 2px;
+        }
+        &:after {
+            @media (max-width:$xs) {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 44px;
+                bottom: 0;
+                width: 20px;
+                background: linear-gradient(-90deg,#FFFFFF 0,rgba(217,235,239,0) 100%);
+            }
+        }
+        span {
+            font-size: 22px;
+            line-height: 38px;
+            color: $black;
+            @media (max-width:$md) {
+                font-size: 14px;
+                line-height: 26px;
+            }
+            @media (max-width:$xs) {
+                max-width: 92%;
+                white-space: nowrap;
+                overflow: hidden;
+            }
         }
         &:hover {
             border: 1px solid $dolceColor;

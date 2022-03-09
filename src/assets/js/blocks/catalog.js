@@ -124,7 +124,12 @@ export function sampleContenChange () {
     if (document.querySelector(".sampleChoice_js")) {
         var sampleChoice = document.querySelectorAll(".sampleChoice_js");
         var catalogCards = document.querySelectorAll(".sampleContent_js");
+        var sampleSelectedSpan = document.querySelector(".sampleSelectedOpted_js span");
+        var sampleDetail = document.querySelectorAll(".sampleDetail_js");
+        var input = document.querySelector(".sampleDetailedSelected_js span");
+        var defaultValue = "Выберите проблему";
         var choice;
+        var name;
         sampleChoice.forEach((item) => {
             item.addEventListener("click", () => {
                 sampleChoice.forEach((i) => {
@@ -132,6 +137,12 @@ export function sampleContenChange () {
                 });
                 item.classList.add('active');
                 choice = item.getAttribute('data-choice');
+                name = item.innerHTML;
+                sampleSelectedSpan.innerHTML = name;
+                input.innerHTML = defaultValue;
+                sampleDetail.forEach((i) => {
+                    i.classList.remove('active');
+                });
                 catalogCards.forEach((elem) => {
                     if (elem.getAttribute('data-category') === choice) {
                         catalogCards.forEach((i) => {

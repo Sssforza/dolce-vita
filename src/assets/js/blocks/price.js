@@ -10,8 +10,10 @@ export function priceContentChange () {
         var priceContent = document.querySelectorAll(".priceContent_js");
         var priceAsideItems = document.querySelectorAll(".priceAsideItem_js");
         var sampleSelectedSpan = document.querySelector(".sampleSelectedOpted_js span");
+        var sampleHeaderSpan = document.querySelector(".priceAsideOpted_js span");
         var samplePriceAside;
         var samplePriceAsideOne;
+        var samplePriceAsideOneSpan;
         var samplePriceContent;
         var samplePriceContentOne;
         var choice;
@@ -40,9 +42,11 @@ export function priceContentChange () {
                         samplePriceAside = elem.querySelectorAll('.priceAsideItem_js');
                         samplePriceContent = elem.querySelectorAll('.priceContent_js');
                         samplePriceAsideOne = samplePriceAside[0];
+                        samplePriceAsideOneSpan = samplePriceAside[0].querySelector('span').innerHTML;
                         samplePriceContentOne = samplePriceContent[0];
                         samplePriceAsideOne.classList.add('active');
                         samplePriceContentOne.classList.remove('hide');
+                        sampleHeaderSpan.innerHTML = samplePriceAsideOneSpan;
                     }
                 });
             });

@@ -99,7 +99,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 <div class="price__aside priceAside">
                     <ul class="priceAside__list">
                         <li class="priceAside__item priceAside__item_action priceAsideItem_js active" data-aside="cosmetologyFototna">
-                            <span>FOTONA</span>
+                            <span>FOTONA косметология</span>
                         </li>
                         <li class="priceAside__item priceAsideItem_js" data-aside="cosmetologyUlthera">
                             <span>Ulthera (Альтера) System</span>
@@ -484,7 +484,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 <div class="price__aside priceAside">
                     <ul class="priceAside__list">
                         <li class="priceAside__item priceAside__item_action priceAsideItem_js active" data-aside="correctionFotona">
-                            <span>FOTONA</span>
+                            <span>FOTONA фигура</span>
                         </li>
                         <li class="priceAside__item priceAsideItem_js" data-aside="correctionUlthera">
                             <span>Ulthera (Альтера) System</span>

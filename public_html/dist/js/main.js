@@ -17940,7 +17940,12 @@ function sampleContenChange() {
   if (document.querySelector(".sampleChoice_js")) {
     var sampleChoice = document.querySelectorAll(".sampleChoice_js");
     var catalogCards = document.querySelectorAll(".sampleContent_js");
+    var sampleSelectedSpan = document.querySelector(".sampleSelectedOpted_js span");
+    var sampleDetail = document.querySelectorAll(".sampleDetail_js");
+    var input = document.querySelector(".sampleDetailedSelected_js span");
+    var defaultValue = "Выберите проблему";
     var choice;
+    var name;
     sampleChoice.forEach(function (item) {
       item.addEventListener("click", function () {
         sampleChoice.forEach(function (i) {
@@ -17948,6 +17953,12 @@ function sampleContenChange() {
         });
         item.classList.add('active');
         choice = item.getAttribute('data-choice');
+        name = item.innerHTML;
+        sampleSelectedSpan.innerHTML = name;
+        input.innerHTML = defaultValue;
+        sampleDetail.forEach(function (i) {
+          i.classList.remove('active');
+        });
         catalogCards.forEach(function (elem) {
           if (elem.getAttribute('data-category') === choice) {
             catalogCards.forEach(function (i) {
@@ -18043,8 +18054,10 @@ function priceContentChange() {
     var priceContent = document.querySelectorAll(".priceContent_js");
     var priceAsideItems = document.querySelectorAll(".priceAsideItem_js");
     var sampleSelectedSpan = document.querySelector(".sampleSelectedOpted_js span");
+    var sampleHeaderSpan = document.querySelector(".priceAsideOpted_js span");
     var samplePriceAside;
     var samplePriceAsideOne;
+    var samplePriceAsideOneSpan;
     var samplePriceContent;
     var samplePriceContentOne;
     var choice;
@@ -18073,9 +18086,11 @@ function priceContentChange() {
             samplePriceAside = elem.querySelectorAll('.priceAsideItem_js');
             samplePriceContent = elem.querySelectorAll('.priceContent_js');
             samplePriceAsideOne = samplePriceAside[0];
+            samplePriceAsideOneSpan = samplePriceAside[0].querySelector('span').innerHTML;
             samplePriceContentOne = samplePriceContent[0];
             samplePriceAsideOne.classList.add('active');
             samplePriceContentOne.classList.remove('hide');
+            sampleHeaderSpan.innerHTML = samplePriceAsideOneSpan;
           }
         });
       });

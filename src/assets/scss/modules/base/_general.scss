@@ -1575,7 +1575,7 @@ main {
                 flex-direction: column;
                 background: $white;
                 border: 1px solid $blackLight2;
-                z-index: 1;
+                z-index: 2;
                 opacity: 0;
                 pointer-events: none;
                 transform: translateY(-30px);
@@ -1719,18 +1719,18 @@ main {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 40px;
-        height: 72px;
+        padding: 10px 40px;
+        min-height: 62px;
         font-size: 22px;
         line-height: 38px;
         color: $black;
         cursor: pointer;
         transition: $transition;
         @media (max-width:$md) {
-            padding: 0 20px;
-            height: 39px;
+            padding: 10px 20px;
+            min-height: 29px;
             font-size: 14px;
-            line-height: 38px;
+            line-height: 24px;
         }
         &:hover {
             background: $bgCosmetic;
@@ -1742,6 +1742,7 @@ main {
             background: $bgCold;
             pointer-events: none;
             &:after {
+                flex: none;
                 content:'';
                 width: 16px;
                 height: 16px;
@@ -1922,6 +1923,9 @@ main {
         @media (max-width:$md) {
             gap: 0 40px;
         }
+        @media (max-width:$xs) {
+            gap: 0 27px;
+        }
     }
     &__item {
         position: relative;
@@ -2009,8 +2013,14 @@ main {
         .sampleSelected__item {
             &.active {
                 color: $black;
+                @media (max-width:$xs) {
+                    color: $white;
+                }
                 &:after {
                     background: $bgCold;
+                    @media (max-width:$xs) {
+                        background: $black;
+                    }
                 }
             }
         }

@@ -127,13 +127,23 @@
         display: none;
         @media (max-width:$xs) {
             position: relative;
-            padding: 10px 24px 8px;
+            margin-top: 10px;
+            padding: 0px 24px 8px;
             display: flex;
-            align-items: center;
             width: 100%;
-            min-height: 46px;
+            height: 46px;
             background: $bgCold;
             border-radius: 50px;
+            overflow: hidden;
+        }
+        &:after {
+            content:"";
+            position: absolute;
+            top: 0;
+            right: 39px;
+            bottom: 0;
+            width: 20px;
+            background: linear-gradient(-90deg,#d9ebef 0,rgba(217,235,239,0) 100%);
         }
         &_action {
             &:after {
@@ -158,8 +168,14 @@
         }
         span {
             font-size: 14px;
-            line-height: 22px;
+            line-height: 46px;
             color: $black;
+            max-width: 94%;
+            white-space: nowrap;
+            overflow: hidden;
+            br {
+                display: none;
+            }
         }
         svg {
             position: absolute;
