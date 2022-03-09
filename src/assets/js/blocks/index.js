@@ -173,6 +173,13 @@ export function hideErrorForm () {
             signMessage.classList.remove('show');
         });
     }
+    if (document.querySelector('.signConsultationClose_js')) {
+        let signMessage = document.querySelector('.signMessageAccess_js');
+        let btn = signMessage.querySelector('.signConsultationClose_js');
+        btn.addEventListener("click", () => {
+            signMessage.classList.remove('show');
+        });
+    }
 }
 // custom slider reviews
 export function sliderReviews () {

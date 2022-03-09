@@ -445,7 +445,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_popup_js__WEBPACK_IMPORTED_MODULE_7__["popupYoutube"])(); // popup slider info
 
-  Object(_blocks_popup_js__WEBPACK_IMPORTED_MODULE_7__["popupsliderInfo"])(); // specialist hover
+  Object(_blocks_popup_js__WEBPACK_IMPORTED_MODULE_7__["popupsliderInfo"])(); // popup enroll
+
+  Object(_blocks_popup_js__WEBPACK_IMPORTED_MODULE_7__["popupEnroll"])(); // specialist hover
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_8__["specialistHover"])(); // guest card clue hover
 
@@ -16944,6 +16946,7 @@ function sliderInfo() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupYoutube", function() { return popupYoutube; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupsliderInfo", function() { return popupsliderInfo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupEnroll", function() { return popupEnroll; });
 // popup youtube
 function popupYoutube() {
   var popupYoutube = $(".popupYoutube_js");
@@ -16962,6 +16965,22 @@ function popupYoutube() {
 function popupsliderInfo() {
   if (document.querySelector('.sliderInfoBtn_js')) {
     $('.sliderInfoBtn_js').magnificPopup({
+      type: 'inline',
+      tClose: 'Закрыть (Esc)',
+      tLoading: 'Загрузка...',
+      fixedContentPos: true
+    });
+    $(document).on('click', '.popupClose_js', function (e) {
+      e.preventDefault();
+      $.magnificPopup.close();
+    });
+  }
+}
+; // popup enroll
+
+function popupEnroll() {
+  if (document.querySelector('.popupEnroll_js')) {
+    $('.popupEnroll_js').magnificPopup({
       type: 'inline',
       tClose: 'Закрыть (Esc)',
       tLoading: 'Загрузка...',
@@ -17182,6 +17201,16 @@ function hideErrorForm() {
     var btn = signMessage.querySelector('.signMessageBtn_js');
     btn.addEventListener("click", function () {
       signMessage.classList.remove('show');
+    });
+  }
+
+  if (document.querySelector('.signConsultationClose_js')) {
+    var _signMessage = document.querySelector('.signMessageAccess_js');
+
+    var _btn = _signMessage.querySelector('.signConsultationClose_js');
+
+    _btn.addEventListener("click", function () {
+      _signMessage.classList.remove('show');
     });
   }
 } // custom slider reviews

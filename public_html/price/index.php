@@ -147,7 +147,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                             </div>
                             <div class="priceAction__seance">цена за сеанс</div>
                             <div class="priceAction__bottom">
-                                <a href="#" class="btn btn_black priceAction__btn">Записаться со скидкой</a>
+                                <a href="#enroll" class="btn btn_black priceAction__btn popupEnroll_js">Записаться со скидкой</a>
                                 <div class="priceAction__certificate">
                                     <a href="#" class="priceAction__certificate_link">Подарить сертификат</a>
                                 </div>
@@ -165,7 +165,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
                                             <object type="owo/uwu">
-                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                                <a href="#enroll"  class="btn btn_black priceList__btn popupEnroll_js">Записаться</a>
                                             </object>
                                             <div class="priceList__cost">15 680 &#8381;</div>
                                         </div>
@@ -176,7 +176,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
                                             <object type="owo/uwu">
-                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                                <a href="#enroll"  class="btn btn_black priceList__btn popupEnroll_js">Записаться</a>
                                             </object>
                                             <div class="priceList__cost costDiscont">
                                                 <div class="costDiscont__total">30 000 &#8381;</div>
@@ -190,7 +190,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
                                             <object type="owo/uwu">
-                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                                <a href="#enroll"  class="btn btn_black priceList__btn popupEnroll_js">Записаться</a>
                                             </object>
                                             <div class="priceList__cost">95 780 &#8381;</div>
                                         </div>
@@ -201,7 +201,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                         </div>
                                         <div class="priceList__wrapper priceList__wrapper_right">
                                             <object type="owo/uwu">
-                                                <a href="#"  class="btn btn_black priceList__btn">Записаться</a>
+                                                <a href="#enroll"  class="btn btn_black priceList__btn popupEnroll_js">Записаться</a>
                                             </object>
                                             <div class="priceList__cost">65 000 &#8381;</div>
                                         </div>

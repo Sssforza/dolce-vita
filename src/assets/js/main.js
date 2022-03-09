@@ -23,7 +23,7 @@ import {mainSlider, specialistSlider, serviceStageSlider, procedureSlider, cosme
         serviceProfessionalsSlider, serviceSliderImg, sliderInfo} from "./blocks/_sliders.js";
 
 //📁 /assets/js/blocks  _popup.js
-import {popupYoutube, popupsliderInfo} from "./blocks/_popup.js";
+import {popupYoutube, popupsliderInfo, popupEnroll} from "./blocks/_popup.js";
 
 //📁 /assets/js/blocks  index.js
 import {specialistHover, guestCardClueHover, blogArticlesHover, showReviews, animMainDolce1, animMainDolce2, animMainDolce3, animationForText,
@@ -72,6 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // popup slider info
     popupsliderInfo();
+
+    // popup enroll
+    popupEnroll();
 
     // specialist hover
     specialistHover();

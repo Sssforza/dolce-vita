@@ -26,3 +26,19 @@ export function popupsliderInfo () {
 		});
     }
 };
+
+// popup enroll
+export function popupEnroll () {
+	if(document.querySelector('.popupEnroll_js')) {
+		$('.popupEnroll_js').magnificPopup({
+			type: 'inline',
+			tClose: 'Закрыть (Esc)',
+			tLoading: 'Загрузка...',
+			fixedContentPos: true,
+		});
+		$(document).on('click', '.popupClose_js', function (e) {
+			e.preventDefault();
+			$.magnificPopup.close();
+		});
+    }
+};
