@@ -1043,6 +1043,9 @@ main {
             .serviceProcedure__img {
                 opacity: .8;
             }
+            .serviceProcedure__body {
+                opacity: 1;
+            }
             .serviceProcedure__link {
                 color: $dolceColor;
             }
@@ -1071,6 +1074,7 @@ main {
         }
     }
     &__img {
+        position: relative;
         display: block;
         width: 415px;
         height: 420px;
@@ -1088,6 +1092,17 @@ main {
             width: 277px;
             height: 280px;
         }
+    }
+    &__body {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: $transition;
+        @extend %imgBg;
     }
     &__link,
     &__cost {

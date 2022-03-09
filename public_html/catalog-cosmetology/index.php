@@ -98,7 +98,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 </div>
             </div>
         </section>
-        <section class="catalogCards">
+        <section class="catalogCards serviceProcedure">
             <div class="catalogCards__content sampleContent_js catalogCards_js hide" data-category="all">
                 <div class="catalogCards__list">
                     <div class="card">
@@ -185,7 +185,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 <div class="catalogCards__list catalogCardsList_js" data-list="face">
                     face
                     <div class="serviceProcedure__item">
-                        <a href="#" class="serviceProcedure__img serviceProcedureHover_js" style="background-image:url(/dist/img/trash/serviceProcedure1.jpg)"></a>
+                        <a href="#" class="serviceProcedure__img serviceProcedureHover_js" style="background-image:url(/dist/img/trash/serviceProcedure1.jpg)">
+                            <div class="serviceProcedure__body" style="background-image:url(/dist/img/trash/serviceAbout__img_small1.jpg)"></div>
+                        </a>
                         <div class="serviceProcedure__box">
                             <div class="serviceProcedure__name">
                                 <a href="#" class="serviceProcedure__link serviceProcedureHover_js">Альтера-терапия</a>
@@ -198,7 +200,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 <div class="catalogCards__list catalogCardsList_js hide" data-list="body">
                     body
                     <div class="serviceProcedure__item">
-                        <a href="#" class="serviceProcedure__img serviceProcedureHover_js" style="background-image:url(/dist/img/trash/serviceProcedure1.jpg)"></a>
+                        <a href="#" class="serviceProcedure__img serviceProcedureHover_js" style="background-image:url(/dist/img/trash/serviceProcedure1.jpg)">
+                            <div class="serviceProcedure__body" style="background-image:url(/dist/img/trash/serviceAbout__img_small1.jpg)"></div>
+                        </a>
                         <div class="serviceProcedure__box">
                             <div class="serviceProcedure__name">
                                 <a href="#" class="serviceProcedure__link serviceProcedureHover_js">Альтера-терапия</a>
@@ -208,7 +212,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </div>
                     </div>
                     <div class="serviceProcedure__item">
-                        <a href="#" class="serviceProcedure__img serviceProcedureHover_js" style="background-image:url(/dist/img/trash/serviceProcedure2.jpg)"></a>
+                        <a href="#" class="serviceProcedure__img serviceProcedureHover_js" style="background-image:url(/dist/img/trash/serviceProcedure2.jpg)">
+                            <div class="serviceProcedure__body" style="background-image:url(/dist/img/trash/serviceAbout__img_small2.jpg)"></div>
+                        </a>
                         <div class="serviceProcedure__box">
                             <div class="serviceProcedure__name">
                                 <a href="#" class="serviceProcedure__link serviceProcedureHover_js">Лазерная эпияция LightSheer Duet</a>
