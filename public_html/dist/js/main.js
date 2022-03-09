@@ -18055,6 +18055,7 @@ function priceContentChange() {
     var priceAsideItems = document.querySelectorAll(".priceAsideItem_js");
     var sampleSelectedSpan = document.querySelector(".sampleSelectedOpted_js span");
     var sampleHeaderSpan = document.querySelector(".priceAsideOpted_js span");
+    var priceInput = document.querySelector(".priceAsideOpted_js");
     var samplePriceAside;
     var samplePriceAsideOne;
     var samplePriceAsideOneSpan;
@@ -18073,6 +18074,7 @@ function priceContentChange() {
         samplePrice.forEach(function (i) {
           i.classList.remove('active');
         });
+        priceInput.classList.remove('price__opted_action');
         item.classList.add('active');
         choice = item.getAttribute('data-choice');
         name = item.innerHTML;
@@ -18091,6 +18093,10 @@ function priceContentChange() {
             samplePriceAsideOne.classList.add('active');
             samplePriceContentOne.classList.remove('hide');
             sampleHeaderSpan.innerHTML = samplePriceAsideOneSpan;
+
+            if (samplePriceAside[0].classList.contains('priceAside__item_action')) {
+              priceInput.classList.add("price__opted_action");
+            }
           }
         });
       });

@@ -91,7 +91,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
     <section class="price">
         <div class="price__container">
             <div class="priceAside__choice">Выберите услугу:</div>
-            <div class="price__opted priceAsideOpted_js">
+            <div class="price__opted price__opted_action priceAsideOpted_js">
                 <span>FOTONA</span>
                 <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShowHide.svg';?>
             </div>
@@ -99,7 +99,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 <div class="price__aside priceAside">
                     <ul class="priceAside__list">
                         <li class="priceAside__item priceAside__item_action priceAsideItem_js active" data-aside="cosmetologyFototna">
-                            <span>FOTONA косметология</span>
+                            <span>FOTONA</span>
                         </li>
                         <li class="priceAside__item priceAsideItem_js" data-aside="cosmetologyUlthera">
                             <span>Ulthera (Альтера) System</span>
@@ -483,7 +483,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             <div class="price__list sampleContent_js hide" data-category="correction">
                 <div class="price__aside priceAside">
                     <ul class="priceAside__list">
-                        <li class="priceAside__item priceAside__item_action priceAsideItem_js active" data-aside="correctionFotona">
+                        <li class="priceAside__item priceAsideItem_js active" data-aside="correctionFotona">
                             <span>FOTONA фигура</span>
                         </li>
                         <li class="priceAside__item priceAsideItem_js" data-aside="correctionUlthera">

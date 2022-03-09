@@ -149,7 +149,8 @@
             &:after {
                 @media (max-width:$xs) {
                     content:'Акция';
-                    padding: 3px 10px 1px;
+                    height: 21px;
+                    width: 53px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -158,7 +159,6 @@
                     color: $white;
                     background: $dolceColor;
                     border-radius: 50px;
-                    padding: 1px 9px 0px;
                     margin-top: -11px;
                     font-size: 12px;
                     line-height: 20px;
@@ -265,12 +265,14 @@
             &:before {
                 @media (max-width:$xs) {
                     content:'';
-                    width: 16px;
-                    height: 16px;
                     background: $black;
                     border-radius: 50%;
                     width: 12px;
                     height: 12px;
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -6px;
+                    right: 10px;
                 }
             }
         }
