@@ -2,25 +2,72 @@
 
 .specialistInfo {
     padding-top: 150px;
+    @media (max-width:$lg) {
+        padding-top: 96px;
+    }
+    @media (max-width:$xs) {
+        padding-top: 54px;
+    }
     &__container {
         display: flex;
         justify-content: space-between;
         gap: 0 158px;
         @extend %indentLeft;
+        @media (max-width:$md) {
+            gap: 0 100px;
+        }
+        @media (max-width:$lg) {
+            gap: 0 60px;
+        }
+        @media (max-width:$xs) {
+            padding-right: 30px;
+            gap: 20px 0;
+            flex-direction: column;
+        }
+    }
+    &__content {
+        @media (max-width:$xs) {
+            order: 2;
+        }
     }
     &__box {
         margin-top: 70px;
+        @media (max-width:$md) {
+            margin-top: 44px;
+        }
+        @media (max-width:$xs) {
+            margin-top: 30px;
+        }
     }
     &__title {
         font-size: 66px;
         line-height: 72px;
         color: $black;
+        @media (max-width:$md) {
+            font-size: 44px;
+            line-height: 50px;
+        }
+        @media (max-width:$lg) {
+            font-size: 34px;
+            line-height: 40px;
+        }
+        @media (max-width:$xs) {
+            font-size: 30px;
+            line-height: 36px;
+        }
     }
     &__subtitle {
         margin-top: 20px;
         font-size: 22px;
         line-height: 38px;
         color: $black;
+        @media (max-width:$md) {
+            font-size: 14px;
+            line-height: 26px;
+        }
+        @media (max-width:$lg) {
+            margin-top: 10px;
+        }
     }
     &__description {
         margin-top: 50px;
@@ -28,12 +75,29 @@
         line-height: 38px;
         font-style: italic;
         color: $black;
+        @media (max-width:$md) {
+            margin-top: 32px;
+            font-size: 14px;
+            line-height: 26px;
+        }
+        @media (max-width:$xs) {
+            margin-top: 20px;
+            line-height: 24px;
+        }
     }
     &__experience {
         margin-top: 100px;
         font-size: 34px;
         line-height: 40px;
         color: $black;
+        @media (max-width:$md) {
+            margin-top: 64px;
+            font-size: 22px;
+            line-height: 26px;
+        }
+        @media (max-width:$xs) {
+            margin-top: 40px;
+        }
         span {
             display: block;
         }
@@ -43,35 +107,101 @@
         width: 930px;
         height: 732px;
         background: $bgCold;
+        @media (max-width:$md) {
+            width: 620px;
+            height: 465px;
+        }
+        @media (max-width:$lg) {
+            width: 494px;
+            height: 464px;
+        }
+        @media (max-width:$xs) {
+            order: 1;
+            width: 100%;
+            height: 264px;
+        }
     }
     &__img {
         width: 732px;
         height: 100%;
         @extend %imgBg;
+        @media (max-width:$md) {
+            width: 464px;
+        }
+        @media (max-width:$lg) {
+            width: 464px;
+        }
+        @media (max-width:$xs) {
+            width: 100%;
+        }
     }
 }
 .specialistEduc {
     margin-top: 140px;
+    @media (max-width:$md) {
+        margin-top: 90px;
+    }
+    @media (max-width:$xs) {
+        margin-top: 70px;
+    }
     &__content {
         display: flex;
         justify-content: space-between;
         gap: 0 93px;
         padding-right: 357px;
         @extend %indentLeft;
+        @media (max-width:$md) {
+            gap: 0 81px;
+            padding-right: 206px;
+        }
+        @media (max-width:$lg) {
+            gap: 0 74px;
+            padding-right: 66px;
+        }
+        @media (max-width:$xs) {
+            padding-right: 30px;
+            flex-direction: column;
+        }
     }
     &__title {
         font-size: 56px;
         line-height: 62px;
         color: $black;
+        @media (max-width:$md) {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        @media (max-width:$lg) {
+            font-size: 28px;
+            line-height: 36px;
+        }
+        @media (max-width:$xs) {
+            font-size: 30px;
+            line-height: 36px;
+        }
     }
     &__box {
         &:not(:first-child) {
             margin-top: 70px;
+            @media (max-width:$md) {
+                margin-top: 44px;
+            }
+            @media (max-width:$xs) {
+                margin-top: 30px;
+            }
         }
     }
     &__list {
         padding-top: 12px;
         width: 100%;
+        @media (max-width:$md) {
+            padding-top: 8px;
+        }
+        @media (max-width:$xs) {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid $blackLight2;
+        }
     }
     &__item {
         padding-right: 149px;
@@ -79,33 +209,79 @@
         display: flex;
         justify-content: space-between;
         gap: 0 45px;
+        @media (max-width:$md) {
+            padding-right: 117px;
+            gap: 0 49px;
+        }
+        @media (max-width:$xs) {
+            padding-right: 30px;
+            padding-bottom: 30px;
+            gap: 0;
+            flex-direction: column;
+        }
         &:not(:first-child) {
             padding-top: 50px;
             border-top: 1px solid $blackLight2;
+            @media (max-width:$md) {
+                padding-top: 32px;
+            }
+            @media (max-width:$xs) {
+                padding-top: 30px;
+            }
+        }
+        &:last-child {
+            padding-bottom: 0;
         }
     }
     &__date {
+        flex: none;
         width: 90px;
         font-size: 34px;
         line-height: 40px;
         color: $black;
+        @media (max-width:$md) {
+            width: 56px;
+            font-size: 22px;
+            line-height: 26px;
+        }
+        @media (max-width:$xs) {
+            width: 100%;
+        }
     }
     &__wrapper {
         width: 64%;
+        @media (max-width:$xs) {
+            margin-top: 50px;
+            width: 100%;
+        }
     }
     &__institution {
         max-width: 80%;
         font-size: 22px;
         line-height: 38px;
         color: $black;
+        @media (max-width:$md) {
+            max-width: 90%;
+            font-size: 14px;
+            line-height: 26px;
+        }
     }
     &__specialization {
         margin-top: 10px;
         font-size: 22px;
         line-height: 38px;
         color: $black50;
+        @media (max-width:$md) {
+            font-size: 14px;
+            line-height: 26px;
+        }
         span {
             display: block;
+        }
+    }
+    &__diploma {
+        @media (max-width:$xs) {
+            margin-top: 20px;
         }
     }
     &__popup {
@@ -115,6 +291,11 @@
         line-height: 38px;
         color: $dolceColor;
         transition: $transition;
+        @media (max-width:$md) {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 26px;
+        }
         &:hover {
             color: $black;
             &:after {
@@ -136,11 +317,20 @@
             height: 1px;
             background: $dolceColor;
             transition: $transition;
+            @media (max-width:$lg) {
+                bottom: -6px;
+            }
         }
     }
     &_bg {
         padding: 150px 0;
         background: $bgGrey;
+        @media (max-width:$md) {
+            padding: 90px 0;
+        }
+        @media (max-width:$xs) {
+            padding: 50px 0;
+        }
     }
     &_qualification {
         .specialistEduc {
@@ -153,17 +343,42 @@
                 padding-top: 50px;
                 border-top: 1px solid $blackLight2;
                 border-bottom: 1px solid $blackLight2;
+                @media (max-width:$md) {
+                    padding-top: 32px;
+                }
+                @media (max-width:$xs) {
+                    padding-top: 30px;
+                }
             }
             &__item {
                 padding-right: 0;
+                @media (max-width:$md) {
+                    padding-bottom: 32px;
+                }
+                @media (max-width:$xs) {
+                    padding-bottom: 30px;
+                }
             }
             &__specialization {
                 flex: none;
                 margin-top: 0;
                 width: 431px;
+                color: $blackLight2;
+                @media (max-width:$md) {
+                    width: 269px;
+                }
+                @media (max-width:$lg) {
+                    width: 206px;
+                }
+                @media (max-width:$xs) {
+                    width: 100%;
+                }
             }
             &__wrapper {
                 width: 100%;
+                @media (max-width:$xs) {
+                    margin-top: 10px;
+                }
             }
             &__institution {
                 max-width: 100%;
@@ -177,21 +392,56 @@
 .specialistRecord {
     margin-top: 140px;
     @extend %indentLeft;
+    @media (max-width:$md) {
+        margin-top: 90px;
+    }
+    @media (max-width:$xs) {
+        margin-top: 70px;
+        padding-left: 0;
+    }
     &__content {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
         background: $bgCold;
         @extend %indentRight;
+        @media (max-width:$lg) {
+            gap: 0 36px;
+        }
+        @media (max-width:$xs) {
+            flex-direction: column;
+        }
+        @media (max-width:$xs) {
+            padding-right: 0;
+            gap: 0;
+        }
     }
     &__form {
         position: relative;
         padding: 140px 0 140px 158px;
+        @media (max-width:$md) {
+            padding: 90px 0 90px 105px;
+        }
+        @media (max-width:$lg) {
+            padding: 60px 0 60px 84px;
+        }
+        @media (max-width:$xs) {
+            padding: 60px 30px 0 30px;
+        }
     }
     &__img {
         width: 732px;
         height: 732px;
         @extend %imgBg;
+        @media (max-width:$md) {
+            width: 464px;
+            height: 464px;
+        }
+        @media (max-width:$xs) {
+            margin: 0 auto;
+            width: 346px;
+            height: 346px;
+        }
     }
     .envelopeInput {
         &:not(:first-child) {
@@ -210,12 +460,36 @@
     .signConsultation {
         &__form {
             width: 594px;
+            @media (max-width:$md) {
+                width: 383px;
+            }
+            @media (max-width:$lg) {
+                width: 304px;
+            }
+            @media (max-width:$xs) {
+                width: 100%;
+            }
         }
         &__privacy {
             margin-top: 0;
+            @media (max-width:$xs) {
+                margin-top: 20px;
+            }
         }
         &__bottom {
             margin-right: -64px;
+            @media (max-width:$md) {
+                margin-top: 32px;
+            }
+            @media (max-width:$lg) {
+                margin-right: 0;
+            }
+        }
+        &__wrapper {
+            @media (max-width:$lg) {
+                align-items: flex-start;
+                flex-direction: column;
+            }
         }
     }
     .signMessage {
@@ -224,9 +498,46 @@
         align-items: center;
         justify-content: center;
         background: $bgCold;
+        @media (max-width:$md) {
+            right: -60px;
+            @media (max-width:$xs) {
+                right: 0;
+            }
+        }
+        &__content {
+            @media (max-width:$xs) {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        &__text {
+            @media (max-width:$md) {
+                max-width: 60%;
+            }
+        }
     }
 }
 .serviceResultPhoto,
 .serviceProcedure {
     margin-top: 140px;
+    @media (max-width:$md) {
+        margin-top: 90px;
+    }
+    @media (max-width:$xs) {
+        margin-top: 70px;
+    }
+    .specialistEduc__title {
+        @media (max-width:$lg) {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        @media (max-width:$xs) {
+            font-size: 28px;
+            line-height: 36px;
+        }
+    }
 }

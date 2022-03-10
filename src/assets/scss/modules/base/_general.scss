@@ -130,6 +130,11 @@ main {
     &_price {
         padding-bottom: 0 !important;
     }
+    &_specialist {
+        @media (max-width:$xs) {
+            padding-bottom: 0;
+        }
+    }
 }
 .container {
     @extend %container;

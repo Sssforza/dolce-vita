@@ -21,7 +21,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 </section>
                 <div class="specialistInfo__box">
                     <div class="specialistInfo__title">Людмила Буркина</div>
-                    <span class="specialistInfo__subtitle">Косметолог-эстетист</span>
+                    <div class="specialistInfo__subtitle">Косметолог-эстетист</div>
                     <div class="specialistInfo__description">
                         &laquo;Глаза и&nbsp;улыбка&nbsp;&mdash; наше самое мощное оружие! С&nbsp;возрастом они неизбежно становятся не&nbsp;так выразительны, появляются морщинки, расплывается контур лица. Здорово, что мы&nbsp;умеем это корректировать и&nbsp;продлевать молодость на&nbsp;долгие годы&raquo;
                     </div>
@@ -244,7 +244,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </div>
         </div>
     </section>
-    <div class="specialistRecord">
+    <section class="specialistRecord specialistRecord_js">
         <div class="specialistRecord__content">
             <div class="signConsultation specialistRecord__form">
                 <form class="signConsultation__form signConsultation_js">
@@ -283,8 +283,8 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </div>
             <div class="specialistRecord__img" style="background-image:url(/dist/img/trash/serviceDoctor2.png)"></div>
             </div>
-        </div>
-    </div>
+        </section>
+    </section>
 </main>
 <div class="smallHeader_js hidden"></div>
 <?
