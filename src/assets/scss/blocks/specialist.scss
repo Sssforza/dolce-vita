@@ -1,0 +1,232 @@
+@import "../modules/utilities/_variables.scss";
+
+.specialistInfo {
+    padding-top: 150px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 158px;
+        @extend %indentLeft;
+    }
+    &__box {
+        margin-top: 70px;
+    }
+    &__title {
+        font-size: 66px;
+        line-height: 72px;
+        color: $black;
+    }
+    &__subtitle {
+        margin-top: 20px;
+        font-size: 22px;
+        line-height: 38px;
+        color: $black;
+    }
+    &__description {
+        margin-top: 50px;
+        font-size: 22px;
+        line-height: 38px;
+        font-style: italic;
+        color: $black;
+    }
+    &__experience {
+        margin-top: 100px;
+        font-size: 34px;
+        line-height: 40px;
+        color: $black;
+        span {
+            display: block;
+        }
+    }
+    &__bg {
+        flex: none;
+        width: 930px;
+        height: 732px;
+        background: $bgCold;
+    }
+    &__img {
+        width: 732px;
+        height: 100%;
+        @extend %imgBg;
+    }
+}
+.specialistEduc {
+    margin-top: 140px;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 93px;
+        padding-right: 357px;
+        @extend %indentLeft;
+    }
+    &__title {
+        font-size: 56px;
+        line-height: 62px;
+        color: $black;
+    }
+    &__box {
+        &:not(:first-child) {
+            margin-top: 70px;
+        }
+    }
+    &__list {
+        padding-top: 12px;
+        width: 100%;
+    }
+    &__item {
+        padding-right: 149px;
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        gap: 0 45px;
+        &:not(:first-child) {
+            padding-top: 50px;
+            border-top: 1px solid $blackLight2;
+        }
+    }
+    &__date {
+        width: 90px;
+        font-size: 34px;
+        line-height: 40px;
+        color: $black;
+    }
+    &__wrapper {
+        width: 64%;
+    }
+    &__institution {
+        max-width: 80%;
+        font-size: 22px;
+        line-height: 38px;
+        color: $black;
+    }
+    &__specialization {
+        margin-top: 10px;
+        font-size: 22px;
+        line-height: 38px;
+        color: $black50;
+        span {
+            display: block;
+        }
+    }
+    &__popup {
+        position: relative;
+        font-weight: 450;
+        font-size: 22px;
+        line-height: 38px;
+        color: $dolceColor;
+        transition: $transition;
+        &:hover {
+            color: $black;
+            &:after {
+                background: $black;
+            }
+        }
+        &:active {
+            color: $activeColor;
+            &:after {
+                background: $activeColor;
+            }
+        }
+        &:after {
+            content:'';
+            position: absolute;
+            right: 0;
+            bottom: -4px;
+            left: 0;
+            height: 1px;
+            background: $dolceColor;
+            transition: $transition;
+        }
+    }
+    &_bg {
+        padding: 150px 0;
+        background: $bgGrey;
+    }
+    &_qualification {
+        .specialistEduc {
+            &__content {
+                flex-direction: column;
+                @extend %indentRight;
+            }
+            &__list {
+                margin-top: 20px;
+                padding-top: 50px;
+                border-top: 1px solid $blackLight2;
+                border-bottom: 1px solid $blackLight2;
+            }
+            &__item {
+                padding-right: 0;
+            }
+            &__specialization {
+                flex: none;
+                margin-top: 0;
+                width: 431px;
+            }
+            &__wrapper {
+                width: 100%;
+            }
+            &__institution {
+                max-width: 100%;
+            }
+            &__diploma {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+.specialistRecord {
+    margin-top: 140px;
+    @extend %indentLeft;
+    &__content {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        background: $bgCold;
+        @extend %indentRight;
+    }
+    &__form {
+        position: relative;
+        padding: 140px 0 140px 158px;
+    }
+    &__img {
+        width: 732px;
+        height: 732px;
+        @extend %imgBg;
+    }
+    .envelopeInput {
+        &:not(:first-child) {
+            margin-top: 52px;
+            @media (max-width:$md) {
+                margin-top: 17px;
+            }
+            @media (max-width:$xs) {
+                margin-top: 11px;
+            }
+        }
+        input {
+            background: transparent;
+        }
+    }
+    .signConsultation {
+        &__form {
+            width: 594px;
+        }
+        &__privacy {
+            margin-top: 0;
+        }
+        &__bottom {
+            margin-right: -64px;
+        }
+    }
+    .signMessage {
+        right: -40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $bgCold;
+    }
+}
+.serviceResultPhoto,
+.serviceProcedure {
+    margin-top: 140px;
+}
