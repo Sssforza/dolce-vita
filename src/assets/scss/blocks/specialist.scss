@@ -352,6 +352,7 @@
             }
             &__item {
                 padding-right: 0;
+                padding-bottom: 50px;
                 @media (max-width:$md) {
                     padding-bottom: 32px;
                 }
