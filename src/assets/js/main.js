@@ -39,6 +39,9 @@ import {catalogOpenContextClue, sampleMenu, sampleMenuMiddle, sampleDetailed, ca
 //📁 /assets/js/blocks  price.js
 import {priceContentChange, priceDetailContentChange, priceServiceMenu, pagePriceHidden} from "./blocks/price.js";
 
+//📁 /assets/js/blocks  team.js
+import {teamContentChange} from "./blocks/team.js";
+
 document.addEventListener("DOMContentLoaded", function () {
     // slider main
     mainSlider();
@@ -210,6 +213,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // price service menu
     pagePriceHidden();
+
+    // team content change
+    teamContentChange();
 
     // catalog cards hover
     catalogCardsHover();

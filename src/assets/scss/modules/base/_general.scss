@@ -1570,6 +1570,8 @@ main {
     &__list {
         margin-top: 66px;
         margin-left: -30px;
+        display: flex;
+        flex-wrap: wrap;
         @media (max-width:$md) {
             margin-top: 41px;
             margin-left: -20px;
@@ -1582,7 +1584,7 @@ main {
             margin-top: 30px;
             margin-left: -30px;
             padding: 0 20px;
-            display: flex;
+            flex-wrap: nowrap;
             overflow-x: scroll;
             &::-webkit-scrollbar {
                 height: 0;
@@ -1681,6 +1683,75 @@ main {
         }
         span {
             display: block;
+        }
+    }
+    &_team {
+        position: relative;
+        margin-top: 70px;
+        @media (max-width:$md) {
+            margin-top: 44px;
+        }
+        @media (max-width:$lg) {
+            margin-top: 44px;
+        }
+        @media (max-width:$xs) {
+            margin-top: 40px;
+        }
+        .specialist__content {
+            @media (max-width:$lg) {
+                padding-right: 30px;
+            }
+            &.hide {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateX(-100px);
+                transition: $transition;
+            }
+        }
+        .specialist__list {
+            margin: 0;
+            gap: 60px;
+            @media (max-width:$md) {
+                gap: 40px;
+            }
+            @media (max-width:$lg) {
+                gap: 40px 34px;
+            }
+            @media (max-width:$xs) {
+                gap: 40px 0;
+                padding: 0;
+                flex-wrap: wrap;
+                overflow-x: visible;
+            }
+        }
+        .specialist__item {
+            margin: 0;
+            width: 415px !important;
+            @media (max-width:$md) {
+                width: 277px !important;
+            }
+            @media (max-width:$lg) {
+                width: 218px !important;
+            }
+            @media (max-width:$xs) {
+                width: 100% !important;
+            }
+        }
+        .specialist__img {
+            height: 414px;
+            @media (max-width:$md) {
+                height: 277px;
+            }
+            @media (max-width:$lg) {
+                height: 218px;
+            }
+            @media (max-width:$xs) {
+                height: 276px;
+            }
         }
     }
     .heading {
@@ -2359,6 +2430,27 @@ main {
         @media (max-width:$xs) {
             bottom: 30px;
             left: 30px;
+        }
+    }
+}
+.showMore {
+    margin-top: 70px;
+    @media (max-width:$md) {
+        margin-top: 44px;
+    }
+    &__btn {
+        margin: 0 auto;
+        width: 415px;
+        height: 80px;
+        @media (max-width:$md) {
+            width: 277px;
+            height: 50px;
+        }
+        @media (max-width:$lg) {
+            width: 219px;
+        }
+        @media (max-width:$xs) {
+            width: 100%;
         }
     }
 }

@@ -90,8 +90,8 @@
 
 __webpack_require__(1);
 __webpack_require__(3);
-__webpack_require__(17);
-module.exports = __webpack_require__(18);
+__webpack_require__(18);
+module.exports = __webpack_require__(19);
 
 
 /***/ }),
@@ -398,6 +398,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_service_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(14);
 /* harmony import */ var _blocks_catalog_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(15);
 /* harmony import */ var _blocks_price_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(16);
+/* harmony import */ var _blocks_team_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(17);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -421,6 +422,8 @@ global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁
  //📁 /assets/js/blocks  catalog.js
 
  //📁 /assets/js/blocks  price.js
+
+ //📁 /assets/js/blocks  team.js
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -537,7 +540,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_price_js__WEBPACK_IMPORTED_MODULE_11__["priceServiceMenu"])(); // price service menu
 
-  Object(_blocks_price_js__WEBPACK_IMPORTED_MODULE_11__["pagePriceHidden"])(); // catalog cards hover
+  Object(_blocks_price_js__WEBPACK_IMPORTED_MODULE_11__["pagePriceHidden"])(); // team content change
+
+  Object(_blocks_team_js__WEBPACK_IMPORTED_MODULE_12__["teamContentChange"])(); // catalog cards hover
 
   Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_10__["catalogCardsHover"])();
 });
@@ -18205,6 +18210,43 @@ function pagePriceHidden() {
 
 /***/ }),
 /* 17 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "teamContentChange", function() { return teamContentChange; });
+// team content change
+function teamContentChange() {
+  if (document.querySelector(".sampleTeam_js")) {
+    var samplePrice = document.querySelectorAll(".sampleTeam_js");
+    var sampleContent = document.querySelectorAll(".teamContent_js");
+    var sampleSelectedSpan = document.querySelector(".sampleSelectedOpted_js span");
+    var choice;
+    var name;
+    samplePrice.forEach(function (item) {
+      item.addEventListener("click", function () {
+        samplePrice.forEach(function (i) {
+          i.classList.remove('active');
+        });
+        item.classList.add('active');
+        choice = item.getAttribute('data-choice');
+        name = item.innerHTML;
+        sampleSelectedSpan.innerHTML = name;
+        sampleContent.forEach(function (elem) {
+          if (elem.getAttribute('data-content') === choice) {
+            sampleContent.forEach(function (i) {
+              i.classList.add('hide');
+            });
+            elem.classList.remove('hide');
+          }
+        });
+      });
+    });
+  }
+}
+
+/***/ }),
+/* 18 */
 /***/ (function(module, exports) {
 
 var lg = 1024;
@@ -18220,7 +18262,7 @@ if (window.screen.availWidth <= xs || device.mobile()) {
 }
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
