@@ -50,7 +50,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </div>
                     </div>
                     <div class="specialistEduc__diploma">
-                        <a href="#" class="specialistEduc__popup">Диплом</a>
+                        <a href="/dist/img/trash/diploma.png" class="specialistEduc__popup popupImage_js">Диплом</a>
                     </div>
                 </div>
                 <div class="specialistEduc__item">
@@ -63,7 +63,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </div>
                     </div>
                     <div class="specialistEduc__diploma">
-                        <a href="#" class="specialistEduc__popup">Диплом</a>
+                        <a href="/dist/img/trash/diploma.png" class="specialistEduc__popup popupImage_js">Диплом</a>
                     </div>
                 </div>
                 <div class="specialistEduc__item">
@@ -76,7 +76,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </div>
                     </div>
                     <div class="specialistEduc__diploma">
-                        <a href="#" class="specialistEduc__popup">Диплом</a>
+                        <a href="/dist/img/trash/diploma.png" class="specialistEduc__popup popupImage_js">Диплом</a>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                     методикам компании Merz
                                 </div>
                                 <div class="specialistEduc__diploma">
-                                    <a href="#" class="specialistEduc__popup">Сертификат</a>
+                                    <a href="/dist/img/trash/certificate.png" class="specialistEduc__popup popupImage_js">Сертификат</a>
                                 </div>
                             </div>
                         </div>
@@ -127,7 +127,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                     тренер-эксперт по&nbsp;инъекционным и&nbsp;аппаратным методикам компании Merz
                                 </div>
                                 <div class="specialistEduc__diploma">
-                                    <a href="#" class="specialistEduc__popup">Диплом</a>
+                                    <a href="/dist/img/trash/diploma.png" class="specialistEduc__popup popupImage_js">Диплом</a>
                                 </div>
                             </div>
                         </div>

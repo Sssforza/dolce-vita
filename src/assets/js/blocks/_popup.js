@@ -42,3 +42,19 @@ export function popupEnroll () {
 		});
     }
 };
+
+// popup image
+export function popupImage () {
+    if(document.querySelector('.popupImage_js')) {
+        $('.popupImage_js').magnificPopup({
+            type: 'image',
+            tClose: 'Закрыть (Esc)',
+            tLoading: 'Загрузка...',
+            mainClass: 'mfp-img'
+        });
+		$(document).on('click', '.popupClose_js', function (e) {
+			e.preventDefault();
+			$.magnificPopup.close();
+		});
+    }
+}

@@ -450,7 +450,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_popup_js__WEBPACK_IMPORTED_MODULE_7__["popupsliderInfo"])(); // popup enroll
 
-  Object(_blocks_popup_js__WEBPACK_IMPORTED_MODULE_7__["popupEnroll"])(); // specialist hover
+  Object(_blocks_popup_js__WEBPACK_IMPORTED_MODULE_7__["popupEnroll"])(); // popup image
+
+  Object(_blocks_popup_js__WEBPACK_IMPORTED_MODULE_7__["popupImage"])(); // specialist hover
 
   Object(_blocks_index_js__WEBPACK_IMPORTED_MODULE_8__["specialistHover"])(); // guest card clue hover
 
@@ -16952,6 +16954,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupYoutube", function() { return popupYoutube; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupsliderInfo", function() { return popupsliderInfo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupEnroll", function() { return popupEnroll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupImage", function() { return popupImage; });
 // popup youtube
 function popupYoutube() {
   var popupYoutube = $(".popupYoutube_js");
@@ -16997,7 +17000,22 @@ function popupEnroll() {
     });
   }
 }
-;
+; // popup image
+
+function popupImage() {
+  if (document.querySelector('.popupImage_js')) {
+    $('.popupImage_js').magnificPopup({
+      type: 'image',
+      tClose: 'Закрыть (Esc)',
+      tLoading: 'Загрузка...',
+      mainClass: 'mfp-img'
+    });
+    $(document).on('click', '.popupClose_js', function (e) {
+      e.preventDefault();
+      $.magnificPopup.close();
+    });
+  }
+}
 
 /***/ }),
 /* 13 */
