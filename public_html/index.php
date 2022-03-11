@@ -428,7 +428,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
             </div>
             <div class="blogArticles__box">
                 <div class="blogArticles__list">
-                    <div class="blogArticles__item">
+                    <div class="blogArticles__item blogArticles__item_big">
                         <a href="#" class="blogArticles__img blogArticles_js" style="background-image:url(/dist/img/trash/blogArticles1.jpg)"></a>
                         <div class="blogArticles__title">
                             <a href="#" class="blogArticles__link blogArticles_js">
