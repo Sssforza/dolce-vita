@@ -42,6 +42,9 @@ import {priceContentChange, priceDetailContentChange, priceServiceMenu, pagePric
 //📁 /assets/js/blocks  team.js
 import {teamContentChange} from "./blocks/team.js";
 
+//📁 /assets/js/blocks  map.js
+import {map} from "./blocks/map.js";
+
 document.addEventListener("DOMContentLoaded", function () {
     // slider main
     mainSlider();
@@ -219,6 +222,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // team content change
     teamContentChange();
+
+    // map to get
+    map();
 
     // catalog cards hover
     catalogCardsHover();

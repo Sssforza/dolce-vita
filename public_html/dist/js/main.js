@@ -90,8 +90,8 @@
 
 __webpack_require__(1);
 __webpack_require__(3);
-__webpack_require__(18);
-module.exports = __webpack_require__(19);
+__webpack_require__(19);
+module.exports = __webpack_require__(20);
 
 
 /***/ }),
@@ -399,6 +399,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_catalog_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(15);
 /* harmony import */ var _blocks_price_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(16);
 /* harmony import */ var _blocks_team_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(17);
+/* harmony import */ var _blocks_map_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(18);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -424,6 +425,8 @@ global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁
  //📁 /assets/js/blocks  price.js
 
  //📁 /assets/js/blocks  team.js
+
+ //📁 /assets/js/blocks  map.js
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -544,7 +547,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_price_js__WEBPACK_IMPORTED_MODULE_11__["pagePriceHidden"])(); // team content change
 
-  Object(_blocks_team_js__WEBPACK_IMPORTED_MODULE_12__["teamContentChange"])(); // catalog cards hover
+  Object(_blocks_team_js__WEBPACK_IMPORTED_MODULE_12__["teamContentChange"])(); // map to get
+
+  Object(_blocks_map_js__WEBPACK_IMPORTED_MODULE_13__["map"])(); // catalog cards hover
 
   Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_10__["catalogCardsHover"])();
 });
@@ -18265,6 +18270,79 @@ function teamContentChange() {
 
 /***/ }),
 /* 18 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "map", function() { return map; });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+var lg = 1024;
+var xs = 376; // map
+
+function map() {
+  if (document.querySelector('.map_js')) {
+    console.log(1);
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map_ToGet', {
+        center: [54.9439, 73.3528],
+        zoom: 15,
+        // Добавим панель маршрутизации.
+        controls: ['routePanelControl']
+      });
+      var control = myMap.controls.get('routePanelControl'); // Зададим состояние панели для построения машрутов.
+
+      control.routePanel.state.set({
+        // Тип маршрутизации.
+        type: 'masstransit',
+        // Выключим возможность задавать пункт отправления в поле ввода.
+        fromEnabled: true,
+        // Адрес или координаты пункта отправления.
+        // from: 'Омск, Карла Маркса проспект, 24',
+        // Включим возможность задавать пункт назначения в поле ввода.
+        toEnabled: false,
+        // Адрес или координаты пункта назначения.
+        to: 'Омск, ул. Волочаевская, 15/1'
+      }); // Зададим опции панели для построения машрутов.
+
+      control.routePanel.options.set({
+        // Запрещаем показ кнопки, позволяющей менять местами начальную и конечную точки маршрута.
+        allowSwitch: false,
+        // Включим определение адреса по координатам клика.
+        // Адрес будет автоматически подставляться в поле ввода на панели, а также в подпись метки маршрута.
+        reverseGeocoding: true,
+        // Зададим виды маршрутизации, которые будут доступны пользователям для выбора.
+        types: {
+          masstransit: true,
+          pedestrian: true,
+          taxi: true
+        }
+      }); // Создаем кнопку, с помощью которой пользователи смогут менять местами начальную и конечную точки маршрута.
+
+      var switchPointsButton = new ymaps.control.Button({
+        data: {
+          content: "Поменять местами",
+          title: "Поменять точки местами"
+        },
+        options: {
+          selectOnClick: false,
+          maxWidth: 160
+        }
+      }); // Объявляем обработчик для кнопки.
+
+      switchPointsButton.events.add('click', function () {
+        // Меняет местами начальную и конечную точки маршрута.
+        control.routePanel.switchPoints();
+      });
+      myMap.behaviors.disable('scrollZoom');
+      myMap.controls.add(switchPointsButton);
+    });
+  }
+}
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports) {
 
 var lg = 1024;
@@ -18280,7 +18358,7 @@ if (window.screen.availWidth <= xs || device.mobile()) {
 }
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }

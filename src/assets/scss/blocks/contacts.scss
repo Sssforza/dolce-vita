@@ -1,0 +1,153 @@
+@import "../modules/utilities/_variables.scss";
+
+.map {
+    position: relative;
+    &__get {
+        width: 100vw;
+        height: 100vh;
+        @media (max-width:$md) {
+            height: 69vh;
+        }
+    }
+    &__card {
+        position: absolute;
+        top: 50%;
+        margin-top: -276px;
+        left: 0;
+        width: 772px;
+        height: 552px;
+        padding: 70px 134px 70px 199px;
+        background: $white;
+        z-index: 1;
+        @media (max-width:$md) {
+            margin-top: -193px;
+            width: 514px;
+            height: 386px;
+            padding: 44px 57px 44px 132px;
+        }
+        @media (max-width:$lg) {
+            width: 494px;
+            padding: 44px 57px 63px 106px;
+        }
+        @media (max-width:$xs) {
+            position: relative;
+            top: 0;
+            margin-top: 0;
+            right: 0;
+            width: 100%;
+            height: 392px;
+            padding: 94px 54px 41px 30px;
+        }
+    }
+    &__box {
+        margin-top: 50px;
+        @media (max-width:$md) {
+            margin-top: 32px;
+        }
+        @media (max-width:$xs) {
+            margin-top: 20px;
+        }
+        &_flex {
+            margin-top: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media (max-width:$md) {
+                margin-top: 44px;
+            }
+            @media (max-width:$xs) {
+                margin-top: 40px;
+            }
+        }
+    }
+    &__title {
+        font-size: 56px;
+        line-height: 62px;
+        color: $black;
+        @media (max-width:$md) {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        @media (max-width:$xs) {
+            font-size: 28px;
+            line-height: 36px;
+        }
+    }
+    &__address,
+    &__yandex,
+    &__span,
+    &__how,
+    &__mail {
+        font-size: 22px;
+        line-height: 38px;
+        color: $black;
+        @media (max-width:$md) {
+            font-size: 14px;
+            line-height: 26px;
+        }
+    }
+    &__yandex {
+        transition: $transition;
+        &:hover {
+            color: $dolceColor;
+        }
+        &:active {
+            color: $activeColor;
+        }
+    }
+    &__time {
+        margin-top: 20px;
+        @media (max-width:$xs) {
+            margin-top: 10px;
+        }
+    }
+    &__li {
+        display: flex;
+    }
+    &__span {
+        &:first-child {
+            flex: none;
+            display: block;
+            width: 108px;
+        }
+    }
+    &__video {
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+        @media (max-width:$md) {
+            gap: 0 15px;
+        }
+        @media (max-width:$xs) {
+            gap: 0 10px;
+        }
+    }
+    &__popup {
+        width: 56px;
+        height: 56px;
+        @media (max-width:$xs) {
+            width: 46px;
+            height: 46px;
+        }
+        svg {
+            zoom: .6;
+        }
+    }
+    &__how {
+        line-height: 28px;
+        @media (max-width:$md) {
+            line-height: 22px;
+        }
+    }
+    &__mail {
+        color: #8D5287;
+        pointer-events: none;
+        transition: $transition;
+        @media (max-width:$lg) {
+            pointer-events: auto;
+        }
+        &:active {
+            color: $activeColor;
+        }
+    }
+}

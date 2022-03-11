@@ -135,6 +135,9 @@ main {
             padding-bottom: 0;
         }
     }
+    &_contacts {
+        padding-bottom: 0 !important;
+    }
 }
 .container {
     @extend %container;
@@ -163,6 +166,9 @@ main {
         size: cover;
     }
     transition: $transition;
+    @media (max-width:$lg) {
+        right: -40px !important;
+    }
     &:hover {
         opacity: .8 !important;
     }
@@ -190,7 +196,43 @@ img.mfp-img {
         padding: 60px 0 !important;
     }
 }
-
+.ymaps-2-1-79-controls__control_toolbar {
+    position: absolute !important;
+    bottom: -88vh !important;
+    right: 64px !important;
+    height: 150px !important;
+    @media (max-width:$md) {
+        bottom: -90vh !important;
+        right: 42px !important;
+    }
+    @media (max-width:$xs) {
+        bottom: -60vh !important;
+        right: auto !important;
+        left: 20px !important;
+    }
+}
+.ymaps-2-1-79-control-popup__layout {
+    max-height: 264px !important;
+    @media (max-width:$xs) {
+        max-height: 140px !important;
+    }
+}
+.ymaps-2-1-79-control-popup.ymaps-2-1-79-control-popup_static {
+    width: 250px !important;
+    @media (max-width:$md) {
+        width: 226px !important;
+    }
+    @media (max-width:$xs) {
+        width: 181px !important;
+    }
+}
+.ymaps-2-1-79-inner-panes {
+    filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+}
 // breadCrumbs
 .breadCrumbs {
     &__list {
