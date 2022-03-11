@@ -172,10 +172,8 @@ main {
 }
 .mfp-zoom-out-cur,
 .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-    //position: relative;
     @media (max-width:$md) {
         top: 30px !important;
-        //right: 0px!important;
 
     }
     @media (max-width:$md) {
@@ -187,20 +185,12 @@ main {
 .mfp-figure:after {
     display: none !important;
 }
-// .mfp-container {
-//     padding: 30px;
-// }
 img.mfp-img {
     @media (max-width:$md) {
         padding: 60px 0 !important;
     }
 }
-// .mfp-container {
-//     padding: 50px !important;
-// }
-// .mfp-image-holder .mfp-content {
-//     max-height: 80vh;
-// }
+
 // breadCrumbs
 .breadCrumbs {
     &__list {
@@ -1841,6 +1831,9 @@ img.mfp-img {
                 pointer-events: none;
                 transform: translateX(-100px);
                 transition: $transition;
+                @media (max-width:$xs) {
+                    display: none;
+                }
             }
         }
         .specialist__list {
