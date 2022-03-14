@@ -166,8 +166,13 @@ main {
         size: cover;
     }
     transition: $transition;
-    @media (max-width:$lg) {
-        right: -40px !important;
+    @media (max-width:$md) {
+        width: 20px !important;
+        height: 20px !important;
+        right: -30px !important;
+    }
+    @media (max-width:$xs) {
+        right: 10px !important;
     }
     &:hover {
         opacity: .8 !important;
@@ -176,16 +181,15 @@ main {
         opacity: .6 !important;
     }
 }
-.mfp-zoom-out-cur,
-.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+.mfp-img button.mfp-close {
     @media (max-width:$md) {
         top: 30px !important;
-
     }
+}
+.mfp-video button.mfp-close {
+    top: -40px !important;
     @media (max-width:$md) {
-        top: 0px !important;
-        right: 20px !important;
-
+        top: -35px !important;
     }
 }
 .mfp-figure:after {

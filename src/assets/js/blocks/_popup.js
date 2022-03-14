@@ -6,6 +6,7 @@ export function popupYoutube () {
 			type: 'iframe',
 			tClose: 'Закрыть (Esc)',
 			tLoading: 'Загрузка...',
+			mainClass: 'mfp-video',
 			fixedContentPos: true,
 		});
     }

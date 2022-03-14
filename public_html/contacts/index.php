@@ -36,7 +36,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
         <div class="map__get" id="map_ToGet"></div>
     </section>
 </main>
-<div class="smallHeader_js pagePrice_js hidden"></div>
+<div class="smallHeader_js hidden"></div>
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>
